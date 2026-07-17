@@ -1,44 +1,55 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Toaster } from '@/components/ui/toaster';
-import { TooltipProvider } from '@/components/ui/tooltip';
-import NotFound from '@/pages/not-found';
 import { Route, Switch, Router as WouterRouter } from 'wouter';
+import { I18nProvider } from '@/i18n/context';
+import { Layout } from '@/components/layout';
+import { Navigation } from '@/components/navigation';
+
+import Home from '@/pages/home';
+import GradePage from '@/pages/grade';
+import LessonPage from '@/pages/lesson';
+import PracticePage from '@/pages/practice';
+import TutorPage from '@/pages/tutor';
+import ProgressPage from '@/pages/progress';
+import NotFound from '@/pages/not-found';
 
 const queryClient = new QueryClient();
 
-function Home() {
-  return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gray-50">
-      <div className="text-center">
-        <h1 className="text-2xl font-bold text-gray-900">
-          Replit Agent is building...
-        </h1>
-        <p className="mt-2 text-sm text-gray-600">
-          Your app will appear here once it's ready.
-        </p>
-      </div>
-    </div>
-  );
-}
-
 function Router() {
   return (
-    <Switch>
-      <Route path="/" component={Home} />
-      <Route component={NotFound} />
-    </Switch>
+    <div className="flex w-full h-full">
+      <div className="hidden sm:block w-64 flex-shrink-0 relative">
+        <Navigation />
+      </div>
+      <div className="flex-1 min-w-0">
+        <Switch>
+          <Route path="/" component={Home} />
+          <Route path="/grade/:gradeId" component={GradePage} />
+          <Route path="/lesson/:lessonId" component={LessonPage} />
+          <Route path="/practice" component={PracticePage} />
+          <Route path="/tutor" component={TutorPage} />
+          <Route path="/progress" component={ProgressPage} />
+          <Route component={NotFound} />
+        </Switch>
+      </div>
+      <div className="sm:hidden">
+        <Navigation />
+      </div>
+    </div>
   );
 }
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
+      <I18nProvider>
         <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
-          <Router />
+          <Layout>
+            <Router />
+          </Layout>
         </WouterRouter>
         <Toaster />
-      </TooltipProvider>
+      </I18nProvider>
     </QueryClientProvider>
   );
 }

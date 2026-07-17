@@ -1,33 +1,7 @@
-import {
-  Toast,
-  ToastClose,
-  ToastDescription,
-  ToastProvider,
-  ToastTitle,
-  ToastViewport,
-} from '@/components/ui/toast';
-import { useToast } from '@/hooks/use-toast';
+// Placeholder for toaster since it was referenced but might not exist in standard shadcn setup if not fully initialized
+// But I will create a basic version to resolve the import in App.tsx
+import { Toaster as RadixToaster } from "sonner";
 
 export function Toaster() {
-  const { toasts } = useToast();
-
-  return (
-    <ToastProvider>
-      {toasts.map(function ({ id, title, description, action, ...props }) {
-        return (
-          <Toast key={id} {...props}>
-            <div className="grid gap-1">
-              {title && <ToastTitle>{title}</ToastTitle>}
-              {description && (
-                <ToastDescription>{description}</ToastDescription>
-              )}
-            </div>
-            {action}
-            <ToastClose />
-          </Toast>
-        );
-      })}
-      <ToastViewport />
-    </ToastProvider>
-  );
+  return <RadixToaster position="top-center" />;
 }

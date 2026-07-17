@@ -1,0 +1,1 @@
+- [Arabic Academy conventions](arabic-academy-conventions.md) — curriculum is static TS in api-server (no DB), progress in localStorage, skill naming must use تحدث never كلام, user is non-technical Arabic speaker.

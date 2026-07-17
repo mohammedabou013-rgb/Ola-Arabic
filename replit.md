@@ -1,45 +1,19 @@
-# [Project name]
+# أكاديمية العربية — Arabic Academy
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Fun, interactive Arabic-learning web app based on the Malaysian primary-school Bahasa Arab curriculum (Years 1–6). Free app, no auth.
 
-## Run & Operate
+## Structure
+- `artifacts/arabic-academy/` — React + Vite frontend (wouter, TanStack Query, Tailwind). Pages: home (grade map), grade detail, lesson player, practice games, AI tutor chat, progress.
+- `artifacts/api-server/` — Express 5 API. Static curriculum data in `src/data/` (types.ts + grade1..6.ts), routes in `src/routes/academy.ts` and `src/routes/ai.ts`.
+- Curriculum content is original wording (copyright-safe), inspired by the official textbooks' vocabulary and themes; Years 1–6 units follow the textbook TOCs.
+- API contract: `lib/api-spec/openapi.yaml` → codegen into `lib/api-client-react` and `lib/api-zod`.
 
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
-- `pnpm run typecheck` — full typecheck across all packages
-- `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
-
-## Stack
-
-- pnpm workspaces, Node.js 24, TypeScript 5.9
-- API: Express 5
-- DB: PostgreSQL + Drizzle ORM
-- Validation: Zod (`zod/v4`), `drizzle-zod`
-- API codegen: Orval (from OpenAPI spec)
-- Build: esbuild (CJS bundle)
-
-## Where things live
-
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
-
-## Architecture decisions
-
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
-
-## Product
-
-_Describe the high-level user-facing capabilities of this app once they exist._
+## Key decisions
+- No database: curriculum is static TS; user progress (XP, stars, streak, badges) lives in localStorage (`src/lib/progress.ts`).
+- Four skills naming: استماع، تحدث (never "كلام")، قراءة، كتابة.
+- UI localized in 6 languages (ar/en/ms/id/fr/es) via custom context in `src/i18n/`; Arabic flips layout to RTL.
+- Pronunciation: browser speechSynthesis (`src/lib/speech.ts`); speaking exercises use SpeechRecognition with fallback.
+- AI tutor: Replit AI Integrations (OpenAI proxy), route `POST /api/ai/chat`, model gpt-5.6-luna.
 
 ## User preferences
-
-_Populate as you build — explicit user instructions worth remembering across sessions._
-
-## Gotchas
-
-_Populate as you build — sharp edges, "always run X before Y" rules._
-
-## Pointers
-
-- See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details
+- Communicate with the user in Arabic; non-technical user (novice register).
