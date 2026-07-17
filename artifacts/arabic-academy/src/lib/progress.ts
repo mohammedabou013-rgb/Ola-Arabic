@@ -1,4 +1,10 @@
-const PROGRESS_KEY = 'arabic_academy_progress';
+import { getCurriculum } from './curriculum';
+
+function getProgressKey(): string {
+  return `ola_progress_${getCurriculum()}`;
+}
+
+const PROGRESS_KEY = getProgressKey();
 
 export interface SkillProgress {
   listening: number;
@@ -30,7 +36,7 @@ const defaultProgress: UserProgress = {
 export const getProgress = (): UserProgress => {
   if (typeof window === 'undefined') return defaultProgress;
   try {
-    const saved = localStorage.getItem(PROGRESS_KEY);
+    const saved = localStorage.getItem(getProgressKey());
     if (!saved) return defaultProgress;
     const parsed = JSON.parse(saved);
     // basic migration / validation
@@ -42,7 +48,7 @@ export const getProgress = (): UserProgress => {
 
 export const saveProgress = (progress: UserProgress) => {
   if (typeof window === 'undefined') return;
-  localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
+  localStorage.setItem(getProgressKey(), JSON.stringify(progress));
 };
 
 export const addLessonCompletion = (lessonId: string, starsEarned: number, xpEarned: number, skillTypes: string[]) => {

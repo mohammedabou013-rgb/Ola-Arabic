@@ -29,4 +29,9 @@ export interface Exercise {
      * @nullable
      */
   answer?: string | null;
+  /**
+     * Optional image URL shown above writing/arrange exercises
+     * @nullable
+     */
+  imageUrl?: string | null;
 }

@@ -40,11 +40,33 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Overview"
+  /curricula:
+    get:
+      operationId: listCurricula
+      tags: [curriculum]
+      summary: List all available curricula
+      responses:
+        "200":
+          description: Curricula
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/CurriculumInfo"
   /grades:
     get:
       operationId: listGrades
       tags: [curriculum]
       summary: List all grades with unit summaries
+      parameters:
+        - name: curriculum
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: [malaysia, uae]
+          description: Filter grades by curriculum ID
       responses:
         "200":
           description: Grades
@@ -128,6 +150,21 @@ paths:
                 $ref: "#/components/schemas/ApiMessage"
 components:
   schemas:
+    CurriculumInfo:
+      type: object
+      required: [id, name, description, flag, gradeCount]
+      properties:
+        id:
+          type: string
+          enum: [malaysia, uae]
+        name:
+          $ref: "#/components/schemas/LocalizedText"
+        description:
+          $ref: "#/components/schemas/LocalizedText"
+        flag:
+          type: string
+        gradeCount:
+          type: integer
     HealthStatus:
       type: object
       properties:
@@ -281,6 +318,9 @@ components:
         answer:
           type: ["string", "null"]
           description: Expected answer for writing/arrange exercises
+        imageUrl:
+          type: ["string", "null"]
+          description: Optional image URL shown above writing/arrange exercises
     Lesson:
       type: object
       required: [id, unitId, gradeId, order, title, skills, intro, vocabulary, dialogue, exercises]

@@ -5,13 +5,13 @@
  * Arabic Academy API - Malaysian-curriculum-inspired Arabic learning
  * OpenAPI spec version: 0.1.0
  */
-export interface HealthStatus {
-  status: string;
-}
+export type CurriculumInfoId = typeof CurriculumInfoId[keyof typeof CurriculumInfoId];
 
-export interface ApiMessage {
-  error: string;
-}
+
+export const CurriculumInfoId = {
+  malaysia: 'malaysia',
+  uae: 'uae',
+} as const;
 
 /**
  * Text localized in the six UI languages
@@ -23,6 +23,22 @@ export interface LocalizedText {
   id: string;
   fr: string;
   es: string;
+}
+
+export interface CurriculumInfo {
+  id: CurriculumInfoId;
+  name: LocalizedText;
+  description: LocalizedText;
+  flag: string;
+  gradeCount: number;
+}
+
+export interface HealthStatus {
+  status: string;
+}
+
+export interface ApiMessage {
+  error: string;
 }
 
 export interface Overview {
@@ -114,6 +130,11 @@ export interface Exercise {
      * @nullable
      */
   answer?: string | null;
+  /**
+     * Optional image URL shown above writing/arrange exercises
+     * @nullable
+     */
+  imageUrl?: string | null;
 }
 
 export interface Lesson {
@@ -149,4 +170,19 @@ export interface ChatRequest {
 export interface ChatReply {
   reply: string;
 }
+
+export type ListGradesParams = {
+/**
+ * Filter grades by curriculum ID
+ */
+curriculum?: ListGradesCurriculum;
+};
+
+export type ListGradesCurriculum = typeof ListGradesCurriculum[keyof typeof ListGradesCurriculum];
+
+
+export const ListGradesCurriculum = {
+  malaysia: 'malaysia',
+  uae: 'uae',
+} as const;
 

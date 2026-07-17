@@ -17,49 +17,49 @@ export default function ProgressPage() {
   const maxSkill = Math.max(...skillsData.map(s => s.value), 10); // base for progress bar
 
   return (
-    <div className="max-w-4xl mx-auto space-y-8 pb-20 sm:pb-0 animate-in fade-in">
-      <div className="text-center space-y-4 mb-12">
-        <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-secondary text-secondary-foreground mb-4 shadow-xl border-b-4 border-secondary-border">
-          <Trophy className="w-12 h-12" />
+    <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8 pb-20 sm:pb-0 animate-in fade-in">
+      <div className="text-center space-y-4 mb-10 sm:mb-12">
+        <div className="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-secondary text-secondary-foreground mb-4 shadow-xl border-b-4 border-secondary-border">
+          <Trophy className="w-10 h-10 sm:w-12 sm:h-12" />
         </div>
-        <h1 className="text-4xl font-black text-foreground">{t('your_progress')}</h1>
+        <h1 className="text-2xl sm:text-4xl font-black text-foreground">{t('your_progress')}</h1>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
         <Card className="bg-primary text-primary-foreground border-primary-border border-b-4">
           <CardContent className="p-6 text-center space-y-2">
-            <Star className="w-10 h-10 mx-auto fill-current opacity-80" />
-            <p className="text-4xl font-black">{progress.xp}</p>
+            <Star className="w-8 h-8 sm:w-10 sm:h-10 mx-auto fill-current opacity-80" />
+            <p className="text-3xl sm:text-4xl font-black">{progress.xp}</p>
             <p className="text-sm font-bold opacity-80 uppercase tracking-widest">{t('xp')}</p>
           </CardContent>
         </Card>
         
         <Card className="bg-secondary text-secondary-foreground border-secondary-border border-b-4">
           <CardContent className="p-6 text-center space-y-2">
-            <Flame className="w-10 h-10 mx-auto fill-current opacity-80" />
-            <p className="text-4xl font-black">{progress.streak}</p>
+            <Flame className="w-8 h-8 sm:w-10 sm:h-10 mx-auto fill-current opacity-80" />
+            <p className="text-3xl sm:text-4xl font-black">{progress.streak}</p>
             <p className="text-sm font-bold opacity-80 uppercase tracking-widest">{t('streak')}</p>
           </CardContent>
         </Card>
         
         <Card className="bg-accent text-accent-foreground border-accent-border border-b-4">
           <CardContent className="p-6 text-center space-y-2">
-            <Target className="w-10 h-10 mx-auto opacity-80" />
-            <p className="text-4xl font-black">{progress.completedLessons.length}</p>
+            <Target className="w-8 h-8 sm:w-10 sm:h-10 mx-auto opacity-80" />
+            <p className="text-3xl sm:text-4xl font-black">{progress.completedLessons.length}</p>
             <p className="text-sm font-bold opacity-80 uppercase tracking-widest">{t('completed')}</p>
           </CardContent>
         </Card>
         
         <Card className="bg-card text-foreground border-b-4">
           <CardContent className="p-6 text-center space-y-2">
-            <Medal className="w-10 h-10 mx-auto text-primary" />
-            <p className="text-4xl font-black">{progress.badges.length}</p>
+            <Medal className="w-8 h-8 sm:w-10 sm:h-10 mx-auto text-primary" />
+            <p className="text-3xl sm:text-4xl font-black">{progress.badges.length}</p>
             <p className="text-sm font-bold text-muted-foreground uppercase tracking-widest">{t('badges')}</p>
           </CardContent>
         </Card>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mt-10 sm:mt-12">
         <Card className="border-2 shadow-sm">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">

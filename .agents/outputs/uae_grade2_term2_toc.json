@@ -1,0 +1,49 @@
+{
+  "term": "2",
+  "units": [
+    {
+      "order": 3,
+      "titleArabic": "الوقت",
+      "startPage": 6,
+      "lessons": [
+        {
+          "order": 1,
+          "titleArabic": "الساعة والتاريخ",
+          "page": 8
+        },
+        {
+          "order": 2,
+          "titleArabic": "الأيام",
+          "page": 18
+        },
+        {
+          "order": 3,
+          "titleArabic": "الشهور",
+          "page": 28
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "titleArabic": "في المدرسة",
+      "startPage": 36,
+      "lessons": [
+        {
+          "order": 1,
+          "titleArabic": "في غرفة الموسيقى",
+          "page": 38
+        },
+        {
+          "order": 2,
+          "titleArabic": "في الساحة",
+          "page": 48
+        },
+        {
+          "order": 3,
+          "titleArabic": "في الحافلة",
+          "page": 58
+        }
+      ]
+    }
+  ]
+}

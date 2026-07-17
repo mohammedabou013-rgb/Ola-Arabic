@@ -23,9 +23,11 @@ import type {
   ApiMessage,
   ChatReply,
   ChatRequest,
+  CurriculumInfo,
   Grade,
   HealthStatus,
   Lesson,
+  ListGradesParams,
   Overview
 } from './api.schemas';
 
@@ -211,20 +213,20 @@ export function useGetOverview<TData = Awaited<ReturnType<typeof getOverview>>, 
 
 
 
-export const getListGradesUrl = () => {
+export const getListCurriculaUrl = () => {
 
 
 
 
-  return `/api/grades`
+  return `/api/curricula`
 }
 
 /**
- * @summary List all grades with unit summaries
+ * @summary List all available curricula
  */
-export const listGrades = async ( options?: RequestInit): Promise<Grade[]> => {
+export const listCurricula = async ( options?: RequestInit): Promise<CurriculumInfo[]> => {
 
-  return customFetch<Grade[]>(getListGradesUrl(),
+  return customFetch<CurriculumInfo[]>(getListCurriculaUrl(),
   {
     ...options,
     method: 'GET'
@@ -237,23 +239,107 @@ export const listGrades = async ( options?: RequestInit): Promise<Grade[]> => {
 
 
 
-export const getListGradesQueryKey = () => {
+export const getListCurriculaQueryKey = () => {
     return [
-    `/api/grades`
+    `/api/curricula`
     ] as const;
     }
 
 
-export const getListGradesQueryOptions = <TData = Awaited<ReturnType<typeof listGrades>>, TError = ErrorType<unknown>>( options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof listGrades>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+export const getListCurriculaQueryOptions = <TData = Awaited<ReturnType<typeof listCurricula>>, TError = ErrorType<unknown>>( options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof listCurricula>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
 ) => {
 
 const {query: queryOptions, request: requestOptions} = options ?? {};
 
-  const queryKey =  queryOptions?.queryKey ?? getListGradesQueryKey();
+  const queryKey =  queryOptions?.queryKey ?? getListCurriculaQueryKey();
 
 
 
-    const queryFn: QueryFunction<Awaited<ReturnType<typeof listGrades>>> = ({ signal }) => listGrades({ signal, ...requestOptions });
+    const queryFn: QueryFunction<Awaited<ReturnType<typeof listCurricula>>> = ({ signal }) => listCurricula({ signal, ...requestOptions });
+
+
+
+
+
+   return  { queryKey, queryFn, ...queryOptions} as UseQueryOptions<Awaited<ReturnType<typeof listCurricula>>, TError, TData> & { queryKey: QueryKey }
+}
+
+export type ListCurriculaQueryResult = NonNullable<Awaited<ReturnType<typeof listCurricula>>>
+export type ListCurriculaQueryError = ErrorType<unknown>
+
+
+/**
+ * @summary List all available curricula
+ */
+
+export function useListCurricula<TData = Awaited<ReturnType<typeof listCurricula>>, TError = ErrorType<unknown>>(
+  options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof listCurricula>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+
+ ):  UseQueryResult<TData, TError> & { queryKey: QueryKey } {
+
+  const queryOptions = getListCurriculaQueryOptions(options)
+
+  const query = useQuery(queryOptions) as  UseQueryResult<TData, TError> & { queryKey: QueryKey };
+
+  return withQueryKey(query, queryOptions.queryKey);
+}
+
+
+
+
+
+
+
+export const getListGradesUrl = (params?: ListGradesParams,) => {
+  const normalizedParams = new URLSearchParams();
+
+  Object.entries(params || {}).forEach(([key, value]) => {
+
+    if (value !== undefined) {
+      normalizedParams.append(key, value === null ? 'null' : String(value))
+    }
+  });
+
+  const stringifiedParams = normalizedParams.toString();
+
+  return stringifiedParams.length > 0 ? `/api/grades?${stringifiedParams}` : `/api/grades`
+}
+
+/**
+ * @summary List all grades with unit summaries
+ */
+export const listGrades = async (params?: ListGradesParams, options?: RequestInit): Promise<Grade[]> => {
+
+  return customFetch<Grade[]>(getListGradesUrl(params),
+  {
+    ...options,
+    method: 'GET'
+
+
+  }
+);}
+
+
+
+
+
+export const getListGradesQueryKey = (params?: ListGradesParams,) => {
+    return [
+    `/api/grades`, ...(params ? [params] : [])
+    ] as const;
+    }
+
+
+export const getListGradesQueryOptions = <TData = Awaited<ReturnType<typeof listGrades>>, TError = ErrorType<unknown>>(params?: ListGradesParams, options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof listGrades>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+) => {
+
+const {query: queryOptions, request: requestOptions} = options ?? {};
+
+  const queryKey =  queryOptions?.queryKey ?? getListGradesQueryKey(params);
+
+
+
+    const queryFn: QueryFunction<Awaited<ReturnType<typeof listGrades>>> = ({ signal }) => listGrades(params, { signal, ...requestOptions });
 
 
 
@@ -271,11 +357,11 @@ export type ListGradesQueryError = ErrorType<unknown>
  */
 
 export function useListGrades<TData = Awaited<ReturnType<typeof listGrades>>, TError = ErrorType<unknown>>(
-  options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof listGrades>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+ params?: ListGradesParams, options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof listGrades>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
 
  ):  UseQueryResult<TData, TError> & { queryKey: QueryKey } {
 
-  const queryOptions = getListGradesQueryOptions(options)
+  const queryOptions = getListGradesQueryOptions(params,options)
 
   const query = useQuery(queryOptions) as  UseQueryResult<TData, TError> & { queryKey: QueryKey };
 

@@ -32,7 +32,8 @@ export type ExerciseType =
   | "speaking"
   | "writing"
   | "matching"
-  | "arrange";
+  | "arrange"
+  | "fill_in_blank";
 
 export type Skill = "listening" | "speaking" | "reading" | "writing";
 
@@ -46,6 +47,7 @@ export interface Exercise {
   correctIndex?: number | null;
   pairs?: ExercisePair[];
   answer?: string | null;
+  imageUrl?: string | null;
 }
 
 export interface Lesson {
@@ -70,8 +72,19 @@ export interface Unit {
   lessons: Lesson[];
 }
 
+export type CurriculumId = 'malaysia' | 'uae' | 'indonesia';
+
+export interface CurriculumInfo {
+  id: CurriculumId;
+  name: LocalizedText;
+  description: LocalizedText;
+  flag: string;
+  gradeCount: number;
+}
+
 export interface GradeData {
   id: string;
+  curriculumId?: CurriculumId;
   number: number;
   title: LocalizedText;
   description: LocalizedText;

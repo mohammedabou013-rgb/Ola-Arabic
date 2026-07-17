@@ -1,1 +1,3 @@
 - [Arabic Academy conventions](arabic-academy-conventions.md) — curriculum is static TS in api-server (no DB), progress in localStorage, skill naming must use تحدث never كلام, user is non-technical Arabic speaker.
+- [Curriculum registration](curriculum-registration.md) — new curricula must be added to both the `curricula` array and the `parseCurriculumParam` whitelist in api-server routes or they are invisible in the UI.
+- [Scanned PDF extraction](scanned-pdf-extraction.md) — vision-based OCR of scanned textbooks must be chunked and run in background/serial calls; a single ShellExec times out before finishing a full term.

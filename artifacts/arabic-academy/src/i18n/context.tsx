@@ -1,3 +1,4 @@
+// @refresh reset
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 export type SupportedLanguage = 'ar' | 'en' | 'ms' | 'id' | 'fr' | 'es';
@@ -55,7 +56,17 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     not_found: "الصفحة غير موجودة",
     return_home: "العودة للرئيسية",
     page_moved: "عفواً! الصفحة التي تبحث عنها غير موجودة أو تم نقلها.",
-    continue: "استمر"
+    continue: "استمر",
+    app_name: "أكاديمية العُلا",
+    choose_curriculum: "اختر منهجك",
+    curriculum_malaysia: "🇲🇾",
+    curriculum_uae: "🇦🇪",
+    curriculum_indonesia: "🇮🇩",
+    curriculum_malaysia_desc: "اللغة العربية للصفوف 1–6 · ماليزيا",
+    curriculum_uae_desc: "اللغة العربية للناطقين بغيرها · الإمارات",
+    curriculum_indonesia_desc: "اللغة العربية للصفوف 1–6 · إندونيسيا",
+    switch_curriculum: "تغيير المنهج",
+    grade_count: "يشمل {n} صفوف"
   },
   en: {
     home: "Home",
@@ -103,7 +114,17 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     not_found: "Page not found",
     return_home: "Return Home",
     page_moved: "Oops! The page you're looking for doesn't exist or has been moved.",
-    continue: "Continue"
+    continue: "Continue",
+    app_name: "Ola Arabic",
+    choose_curriculum: "Choose Your Curriculum",
+    curriculum_malaysia: "🇲🇾",
+    curriculum_uae: "🇦🇪",
+    curriculum_indonesia: "🇮🇩",
+    curriculum_malaysia_desc: "Arabic for Stages 1–6 · Malaysia",
+    curriculum_uae_desc: "Arabic for Non-Native Speakers · UAE",
+    curriculum_indonesia_desc: "Arabic for Grades 1–6 · Indonesia",
+    switch_curriculum: "Switch Curriculum",
+    grade_count: "{n} grades"
   },
   ms: {
     home: "Laman Utama",
@@ -151,7 +172,17 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     not_found: "Halaman tidak dijumpai",
     return_home: "Kembali ke Laman Utama",
     page_moved: "Alamak! Halaman yang anda cari tidak wujud atau telah dipindahkan.",
-    continue: "Teruskan"
+    continue: "Teruskan",
+    app_name: "Ola Arabic",
+    choose_curriculum: "Pilih Kurikulum Anda",
+    curriculum_malaysia: "🇲🇾",
+    curriculum_uae: "🇦🇪",
+    curriculum_indonesia: "🇮🇩",
+    curriculum_malaysia_desc: "Bahasa Arab Tahun 1–6 · Malaysia",
+    curriculum_uae_desc: "Bahasa Arab untuk Bukan Penutur Asli · UAE",
+    curriculum_indonesia_desc: "Bahasa Arab Tahun 1–6 · Indonesia",
+    switch_curriculum: "Tukar Kurikulum",
+    grade_count: "{n} darjah"
   },
   id: {
     home: "Beranda",
@@ -199,7 +230,17 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     not_found: "Halaman tidak ditemukan",
     return_home: "Kembali ke Beranda",
     page_moved: "Ups! Halaman yang Anda cari tidak ada atau telah dipindahkan.",
-    continue: "Lanjutkan"
+    continue: "Lanjutkan",
+    app_name: "Ola Arabic",
+    choose_curriculum: "Pilih Kurikulum Anda",
+    curriculum_malaysia: "🇲🇾",
+    curriculum_uae: "🇦🇪",
+    curriculum_indonesia: "🇮🇩",
+    curriculum_malaysia_desc: "Bahasa Arab Kelas 1–6 · Malaysia",
+    curriculum_uae_desc: "Bahasa Arab untuk Bukan Penutur Asli · UAE",
+    curriculum_indonesia_desc: "Bahasa Arab Kelas 1–6 · Indonesia",
+    switch_curriculum: "Ganti Kurikulum",
+    grade_count: "{n} kelas"
   },
   fr: {
     home: "Accueil",
@@ -247,7 +288,17 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     not_found: "Page non trouvée",
     return_home: "Retour à l'Accueil",
     page_moved: "Oups ! La page que vous cherchez n'existe pas ou a été déplacée.",
-    continue: "Continuer"
+    continue: "Continuer",
+    app_name: "Ola Arabic",
+    choose_curriculum: "Choisissez votre curriculum",
+    curriculum_malaysia: "🇲🇾",
+    curriculum_uae: "🇦🇪",
+    curriculum_indonesia: "🇮🇩",
+    curriculum_malaysia_desc: "Arabe Années 1–6 · Malaisie",
+    curriculum_uae_desc: "Arabe pour Non-Natifs · EAU",
+    curriculum_indonesia_desc: "Arabe Années 1–6 · Indonésie",
+    switch_curriculum: "Changer de curriculum",
+    grade_count: "{n} niveaux"
   },
   es: {
     home: "Inicio",
@@ -295,7 +346,17 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     not_found: "Página no encontrada",
     return_home: "Volver al Inicio",
     page_moved: "¡Ups! La página que buscas no existe o ha sido movida.",
-    continue: "Continuar"
+    continue: "Continuar",
+    app_name: "Ola Arabic",
+    choose_curriculum: "Elige tu currículo",
+    curriculum_malaysia: "🇲🇾",
+    curriculum_uae: "🇦🇪",
+    curriculum_indonesia: "🇮🇩",
+    curriculum_malaysia_desc: "Árabe Años 1–6 · Malasia",
+    curriculum_uae_desc: "Árabe para No Nativos · EAU",
+    curriculum_indonesia_desc: "Árabe Años 1–6 · Indonesia",
+    switch_curriculum: "Cambiar currículo",
+    grade_count: "{n} grados"
   }
 };
 

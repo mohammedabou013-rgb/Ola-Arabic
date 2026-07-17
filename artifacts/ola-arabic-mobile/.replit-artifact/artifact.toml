@@ -1,0 +1,23 @@
+kind = "mobile"
+previewPath = "/ola-arabic-mobile/"
+title = "Ola Arabic Mobile"
+version = "1.0.0"
+id = "artifacts/ola-arabic-mobile"
+router = "expo-domain"
+
+[[services]]
+name = "expo"
+ensurePreviewReachable = "/status"
+paths = [ "/ola-arabic-mobile/" ]
+localPort = 19334
+
+[services.development]
+run = "pnpm --filter @workspace/ola-arabic-mobile run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ola-arabic-mobile", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/ola-arabic-mobile", "run", "serve" ]
+
+[services.env]
+PORT = "19334"
+BASE_PATH = "/ola-arabic-mobile/"

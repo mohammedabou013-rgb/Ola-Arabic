@@ -31,8 +31,39 @@ export const GetOverviewResponse = zod.object({
 
 
 /**
+ * @summary List all available curricula
+ */
+export const ListCurriculaResponseItem = zod.object({
+  "id": zod.enum(['malaysia', 'uae']),
+  "name": zod.object({
+  "ar": zod.string(),
+  "en": zod.string(),
+  "ms": zod.string(),
+  "id": zod.string(),
+  "fr": zod.string(),
+  "es": zod.string()
+}).describe('Text localized in the six UI languages'),
+  "description": zod.object({
+  "ar": zod.string(),
+  "en": zod.string(),
+  "ms": zod.string(),
+  "id": zod.string(),
+  "fr": zod.string(),
+  "es": zod.string()
+}).describe('Text localized in the six UI languages'),
+  "flag": zod.string(),
+  "gradeCount": zod.number()
+})
+export const ListCurriculaResponse = zod.array(ListCurriculaResponseItem)
+
+
+/**
  * @summary List all grades with unit summaries
  */
+export const ListGradesQueryParams = zod.object({
+  "curriculum": zod.enum(['malaysia', 'uae']).optional().describe('Filter grades by curriculum ID')
+})
+
 export const ListGradesResponseItem = zod.object({
   "id": zod.string(),
   "number": zod.number(),
@@ -229,7 +260,8 @@ export const GetLessonResponse = zod.object({
   "a": zod.string().describe('Arabic side'),
   "b": zod.string().describe('Match target (translation or related Arabic)')
 })).optional(),
-  "answer": zod.string().nullish().describe('Expected answer for writing\/arrange exercises')
+  "answer": zod.string().nullish().describe('Expected answer for writing\/arrange exercises'),
+  "imageUrl": zod.string().nullish().describe('Optional image URL shown above writing\/arrange exercises')
 }))
 })
 
