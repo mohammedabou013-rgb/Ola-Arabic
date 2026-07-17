@@ -3,13 +3,17 @@ info:
   # Do not change the title, if the title changes, the import paths will be broken
   title: Api
   version: 0.1.0
-  description: API specification
+  description: Arabic Academy API - Malaysian-curriculum-inspired Arabic learning
 servers:
   - url: /api
     description: Base API path
 tags:
   - name: health
     description: Health operations
+  - name: curriculum
+    description: Grades, units and lessons
+  - name: ai
+    description: AI tutor
 paths:
   /healthz:
     get:
@@ -24,6 +28,104 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /overview:
+    get:
+      operationId: getOverview
+      tags: [curriculum]
+      summary: App-wide curriculum statistics
+      responses:
+        "200":
+          description: Overview stats
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Overview"
+  /grades:
+    get:
+      operationId: listGrades
+      tags: [curriculum]
+      summary: List all grades with unit summaries
+      responses:
+        "200":
+          description: Grades
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Grade"
+  /grades/{gradeId}:
+    get:
+      operationId: getGrade
+      tags: [curriculum]
+      summary: Get one grade with its units and lesson summaries
+      parameters:
+        - name: gradeId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Grade detail
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Grade"
+        "404":
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiMessage"
+  /lessons/{lessonId}:
+    get:
+      operationId: getLesson
+      tags: [curriculum]
+      summary: Get full lesson content (vocabulary, dialogue, exercises)
+      parameters:
+        - name: lessonId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Lesson detail
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Lesson"
+        "404":
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiMessage"
+  /ai/chat:
+    post:
+      operationId: aiChat
+      tags: [ai]
+      summary: Chat with the AI Arabic tutor
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ChatRequest"
+      responses:
+        "200":
+          description: Tutor reply
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ChatReply"
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiMessage"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +135,206 @@ components:
           type: string
       required:
         - status
-
+    ApiMessage:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+    LocalizedText:
+      type: object
+      description: Text localized in the six UI languages
+      required: [ar, en, ms, id, fr, es]
+      properties:
+        ar: { type: string }
+        en: { type: string }
+        ms: { type: string }
+        id: { type: string }
+        fr: { type: string }
+        es: { type: string }
+    Overview:
+      type: object
+      required: [totalGrades, totalUnits, totalLessons, totalWords, totalExercises, skills]
+      properties:
+        totalGrades: { type: integer }
+        totalUnits: { type: integer }
+        totalLessons: { type: integer }
+        totalWords: { type: integer }
+        totalExercises: { type: integer }
+        skills:
+          type: array
+          items:
+            type: string
+    Grade:
+      type: object
+      required: [id, number, title, description, color, icon, unitCount, lessonCount, units]
+      properties:
+        id: { type: string }
+        number: { type: integer }
+        title:
+          $ref: "#/components/schemas/LocalizedText"
+        description:
+          $ref: "#/components/schemas/LocalizedText"
+        color:
+          type: string
+          description: Accent hex color for the grade
+        icon:
+          type: string
+          description: Icon keyword (e.g. letters, family, kitchen)
+        unitCount: { type: integer }
+        lessonCount: { type: integer }
+        units:
+          type: array
+          items:
+            $ref: "#/components/schemas/Unit"
+    Unit:
+      type: object
+      required: [id, gradeId, order, title, theme, lessons]
+      properties:
+        id: { type: string }
+        gradeId: { type: string }
+        order: { type: integer }
+        title:
+          $ref: "#/components/schemas/LocalizedText"
+        theme:
+          type: string
+          description: Theme keyword (e.g. letters, greetings, food, animals)
+        lessons:
+          type: array
+          items:
+            $ref: "#/components/schemas/LessonSummary"
+    LessonSummary:
+      type: object
+      required: [id, unitId, gradeId, order, title, skills, exerciseCount, wordCount]
+      properties:
+        id: { type: string }
+        unitId: { type: string }
+        gradeId: { type: string }
+        order: { type: integer }
+        title:
+          $ref: "#/components/schemas/LocalizedText"
+        skills:
+          type: array
+          description: Which of the four skills this lesson trains (listening, speaking, reading, writing)
+          items:
+            type: string
+        exerciseCount: { type: integer }
+        wordCount: { type: integer }
+    VocabItem:
+      type: object
+      required: [id, arabic, transliteration, translation, emoji]
+      properties:
+        id: { type: string }
+        arabic:
+          type: string
+          description: Fully vocalized Arabic word or phrase
+        transliteration: { type: string }
+        translation:
+          $ref: "#/components/schemas/LocalizedText"
+        emoji:
+          type: string
+          description: Emoji used as visual cue in data only (UI may render differently)
+    DialogueLine:
+      type: object
+      required: [speaker, arabic, translation]
+      properties:
+        speaker: { type: string }
+        arabic: { type: string }
+        translation:
+          $ref: "#/components/schemas/LocalizedText"
+    ExercisePair:
+      type: object
+      required: [a, b]
+      properties:
+        a:
+          type: string
+          description: Arabic side
+        b:
+          type: string
+          description: Match target (translation or related Arabic)
+    Exercise:
+      type: object
+      required: [id, type, skill, prompt]
+      properties:
+        id: { type: string }
+        type:
+          type: string
+          description: One of mcq, listening, speaking, writing, matching, arrange
+        skill:
+          type: string
+          description: One of listening, speaking, reading, writing
+        prompt:
+          $ref: "#/components/schemas/LocalizedText"
+        arabicText:
+          type: ["string", "null"]
+          description: Arabic text to listen to, read aloud, or copy
+        options:
+          type: array
+          items:
+            type: string
+        correctIndex:
+          type: ["integer", "null"]
+        pairs:
+          type: array
+          items:
+            $ref: "#/components/schemas/ExercisePair"
+        answer:
+          type: ["string", "null"]
+          description: Expected answer for writing/arrange exercises
+    Lesson:
+      type: object
+      required: [id, unitId, gradeId, order, title, skills, intro, vocabulary, dialogue, exercises]
+      properties:
+        id: { type: string }
+        unitId: { type: string }
+        gradeId: { type: string }
+        order: { type: integer }
+        title:
+          $ref: "#/components/schemas/LocalizedText"
+        skills:
+          type: array
+          items:
+            type: string
+        intro:
+          $ref: "#/components/schemas/LocalizedText"
+        vocabulary:
+          type: array
+          items:
+            $ref: "#/components/schemas/VocabItem"
+        dialogue:
+          type: array
+          items:
+            $ref: "#/components/schemas/DialogueLine"
+        exercises:
+          type: array
+          items:
+            $ref: "#/components/schemas/Exercise"
+    ChatMessage:
+      type: object
+      required: [role, content]
+      properties:
+        role:
+          type: string
+          description: user or assistant
+        content:
+          type: string
+    ChatRequest:
+      type: object
+      required: [messages, language]
+      properties:
+        messages:
+          type: array
+          items:
+            $ref: "#/components/schemas/ChatMessage"
+        language:
+          type: string
+          description: UI language code (ar, en, ms, id, fr, es)
+        gradeNumber:
+          type: ["integer", "null"]
+          description: Optional learner grade for level-appropriate replies
+    ChatReply:
+      type: object
+      required: [reply]
+      properties:
+        reply:
+          type: string
