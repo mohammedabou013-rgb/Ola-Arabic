@@ -1,0 +1,11 @@
+.git/
+node_modules/
+.pnpm-store/
+apk-preview/
+attached_assets/
+screenshots/
+.cache/
+.local/
+.env
+.env.*
+*.log

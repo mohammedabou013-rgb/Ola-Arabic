@@ -6,6 +6,7 @@ import {
   ScrollView,
   TouchableOpacity,
   ActivityIndicator,
+  Image,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useListGrades } from '@workspace/api-client-react';
@@ -82,6 +83,7 @@ export default function HomeScreen() {
   return (
     <ScrollView style={[styles.container, { backgroundColor: colors.background }]}>
       <View style={styles.header}>
+        <Image source={require('../../assets/images/icon.png')} style={styles.logo} />
         <Text style={[styles.title, { color: colors.foreground }]}>{t('appName')}</Text>
         <Text style={[styles.subtitle, { color: colors.mutedForeground }]}>
           {t('start_learning')}
@@ -235,6 +237,7 @@ const styles = StyleSheet.create({
   container: { flex: 1 },
   center: { flex: 1, justifyContent: 'center', alignItems: 'center' },
   header: { padding: 20, paddingTop: 60, alignItems: 'center' },
+  logo: { width: 80, height: 80, borderRadius: 20, marginBottom: 12 },
   title: { fontSize: 28, fontFamily: 'Inter_700Bold', marginBottom: 4 },
   subtitle: { fontSize: 16, fontFamily: 'Inter_500Medium' },
   statsGrid: {

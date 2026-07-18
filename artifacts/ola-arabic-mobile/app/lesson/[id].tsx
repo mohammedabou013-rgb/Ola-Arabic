@@ -9,6 +9,7 @@ import {
   ActivityIndicator,
   KeyboardAvoidingView,
   Platform,
+  Image,
 } from 'react-native';
 import { useRouter, useLocalSearchParams } from 'expo-router';
 import { useGetLesson } from '@workspace/api-client-react';
@@ -21,6 +22,26 @@ import { Feather } from '@expo/vector-icons';
 import * as Speech from 'expo-speech';
 
 type Stage = 'intro' | 'vocab' | 'dialogue' | 'exercises' | 'summary';
+
+function getEmojiCodePoints(emoji: string): string {
+  return Array.from(emoji)
+    .map((char) => char.codePointAt(0)?.toString(16))
+    .filter(Boolean)
+    .join('-');
+}
+
+function emojiToImageUrl(emoji: string): string {
+  return `https://fonts.gstatic.com/s/e/notoemoji/latest/${getEmojiCodePoints(emoji)}/512.webp`;
+}
+
+function getExerciseImageUrl(exercise: any, vocabulary: any[]): string | null {
+  if (exercise?.imageUrl) return exercise.imageUrl;
+  const text = exercise?.arabicText || exercise?.answer || '';
+  const item = vocabulary.find((v: any) => text && (text === v.arabic || text.includes(v.arabic)));
+  if (item?.emoji) return emojiToImageUrl(item.emoji);
+  if (vocabulary[0]?.emoji) return emojiToImageUrl(vocabulary[0].emoji);
+  return null;
+}
 
 export default function LessonScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -163,6 +184,7 @@ export default function LessonScreen() {
       {stage === 'exercises' && (
         <ExerciseCard
           exercise={lesson.exercises[subIndex]}
+          vocabulary={lesson.vocabulary}
           language={language}
           colors={colors}
           t={t}
@@ -270,7 +292,7 @@ function DialogueCard({ lines, index, language, colors, t, onNext, onSpeak }: an
   );
 }
 
-function ExerciseCard({ exercise, language, colors, t, onCorrect, onWrong, feedback, onReset, onSpeak }: any) {
+function ExerciseCard({ exercise, vocabulary, language, colors, t, onCorrect, onWrong, feedback, onReset, onSpeak }: any) {
   const [selected, setSelected] = useState<number | null>(null);
   const [inputValue, setInputValue] = useState('');
   const [matchedA, setMatchedA] = useState<number[]>([]);
@@ -366,11 +388,17 @@ function ExerciseCard({ exercise, language, colors, t, onCorrect, onWrong, feedb
     else onWrong();
   };
 
+  const exerciseImageUrl = getExerciseImageUrl(exercise, vocabulary);
+
   return (
     <ScrollView style={[styles.container, { paddingHorizontal: 16 }]} contentContainerStyle={styles.center}>
       <Text style={[styles.prompt, { color: colors.foreground }]}>
         {getLocalizedText(exercise.prompt, language)}
       </Text>
+
+      {exerciseImageUrl && (
+        <Image source={{ uri: exerciseImageUrl }} style={styles.exerciseImage} resizeMode="contain" />
+      )}
 
       {exercise.type === 'listening' && (
         <TouchableOpacity
@@ -698,6 +726,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 6,
   },
   emoji: { fontSize: 64, marginBottom: 12 },
+  exerciseImage: { width: 140, height: 140, marginVertical: 16, borderRadius: 20, backgroundColor: '#f3f4f6' },
   arabic: { fontSize: 38, fontFamily: 'Inter_700Bold', textAlign: 'center' },
   translit: { fontSize: 16, fontFamily: 'Inter_400Regular', marginTop: 6 },
   translation: { fontSize: 20, fontFamily: 'Inter_600SemiBold', marginTop: 12 },
