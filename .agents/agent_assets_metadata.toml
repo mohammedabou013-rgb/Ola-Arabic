@@ -66,3 +66,9 @@ id = "e2PatcXISIkhjCH4CPCVV"
 uri = "file://screenshots/mobile-profile.jpg"
 type = "image"
 title = "10. Profile - الملف الشخصي"
+
+[[outputs]]
+id = "YDiUQusLNUl4Y95CJIkIf"
+uri = "file://apk-preview/ola-arabic-preview.apk"
+type = "unspecified"
+title = "Ola Arabic Preview APK"
