@@ -6,3 +6,9 @@ id = "hJgtd78N5mqTQRXLnU9e7"
 uri = "file://screenshots/mobile-home.jpg"
 type = "image"
 title = "Mobile home screen after title update"
+
+[[outputs]]
+id = "S5y2wqa4u8faEqNTMXN3y"
+uri = "file://artifacts/ola-arabic-mobile/builds/ola-arabic-mobile.aab"
+type = "unspecified"
+title = "Ola Arabic Android App Bundle (AAB) جاهز للرفع على Google Play"
