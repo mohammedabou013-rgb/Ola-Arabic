@@ -21,7 +21,18 @@ import { ActivityIndicator, View, Text, StyleSheet } from 'react-native';
 
 SplashScreen.preventAutoHideAsync();
 
-const queryClient = new QueryClient();
+// Retry up to 4 times with exponential back-off so a cold-start Replit
+// deployment (which can take 10-20 s to wake) doesn't permanently fail the
+// first batch of requests.
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 4,
+      retryDelay: (attempt) => Math.min(1500 * 2 ** attempt, 30_000),
+      staleTime: 60_000,
+    },
+  },
+});
 
 function RootLayoutNav() {
   return (

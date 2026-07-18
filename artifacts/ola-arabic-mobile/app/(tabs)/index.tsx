@@ -149,18 +149,24 @@ export default function HomeScreen() {
       </TouchableOpacity>
 
       {gradesError ? (
-        <View style={styles.errorBox}>
+        <TouchableOpacity
+          style={styles.errorBox}
+          onPress={() => refetchGrades()}
+          activeOpacity={0.8}
+        >
+          <Feather name="wifi-off" color={colors.mutedForeground} size={20} />
           <Text style={[styles.errorText, { color: colors.mutedForeground }]}>
-            {t('load_error') || 'Failed to load grades. Pull down to retry.'}
+            {t('load_error') || 'فشل تحميل الصفوف. اضغط لإعادة المحاولة.'}
           </Text>
-          <TouchableOpacity
-            style={[styles.retryButton, { backgroundColor: colors.primary + '20' }]}
-            onPress={() => refetchGrades()}
-          >
-            <Text style={[styles.retryText, { color: colors.primary }]}>
-              {t('retry') || 'Retry'}
+          <View style={[styles.retryButton, { backgroundColor: colors.primary }]}>
+            <Text style={[styles.retryText, { color: '#fff' }]}>
+              {t('retry') || 'إعادة المحاولة'}
             </Text>
-          </TouchableOpacity>
+          </View>
+        </TouchableOpacity>
+      ) : gradesLoading ? (
+        <View style={styles.errorBox}>
+          <ActivityIndicator color={colors.primary} />
         </View>
       ) : null}
 
