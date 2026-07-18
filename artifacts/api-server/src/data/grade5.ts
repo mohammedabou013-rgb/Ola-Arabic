@@ -148,7 +148,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "الْغَابَةُ خَضْرَاءُ وَجَمِيلَةٌ وَهَادِئَةٌ",
             },
-          ],
+          
+            { id: "g5u1l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَا أَجْمَلَ هَذِهِ الْغَابَةَ! أَنْظُرُ إِلَى الْأَشْجَارِ الْكَبِيرَةِ" },],
         },
         {
           id: "g5u1l2",
@@ -256,7 +257,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "أَرَى جَبَلًا عَالِيًا وَنَهْرًا جَمِيلًا",
             },
-          ],
+          
+            { id: "g5u1l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الْجَبَلُ" },],
         },
         {
           id: "g5u1l3",
@@ -364,7 +366,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "الطَّقْسُ الْيَوْمَ مُشْمِسٌ وَجَمِيلٌ",
             },
-          ],
+          
+            { id: "g5u1l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الطَّقْسُ" },],
         },
         {
           id: "g5u1l4",
@@ -476,7 +479,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "أُحِبُّ الزَّرَافَةَ لِأَنَّهَا طَوِيلَةٌ وَجَمِيلَةٌ",
             },
-          ],
+          
+            { id: "g5u1l4e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الْأَسَدُ" },],
         },
         {
           id: "g5u1l5",
@@ -584,7 +588,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "أَزْرَعُ الْأَشْجَارَ وَأُعِيدُ تَدْوِيرَ الْمُخَلَّفَاتِ",
             },
-          ],
+          
+            { id: "g5u1l5e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا نَحْمِي" },],
         },
         {
           id: "g5u1l6",
@@ -703,7 +708,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "ذَهَبْنَا إِلَى الْغَابَةِ وَنَصَبْنَا الْخَيْمَةَ بِجَانِبِ النَّهْرِ",
             },
-          ],
+          
+            { id: "g5u1l6e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "أَيْنَ سَنَنْصِبُ الْخَيْمَةَ يَا أَبِي" },],
         },
       ],
     },
@@ -845,7 +851,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "كُرَةُ الْقَدَمِ تُلْعَبُ بَيْنَ فَرِيقَيْنِ فِي الْمَلْعَبِ",
             },
-          ],
+          
+            { id: "g5u2l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَلْ شَاهَدْتَ مُبَارَاةَ الْأَمْسِ" },],
         },
         {
           id: "g5u2l2",
@@ -953,7 +960,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "أُحِبُّ السِّبَاحَةَ لِأَنَّهَا مُفِيدَةٌ لِلصِّحَّةِ",
             },
-          ],
+          
+            { id: "g5u2l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا السِّبَاحَةُ" },],
         },
         {
           id: "g5u2l3",
@@ -1061,7 +1069,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "الرِّيَاضَةُ تَجْعَلُنَا أَصِحَّاءَ وَتَمْنَحُنَا الطَّاقَةَ",
             },
-          ],
+          
+            { id: "g5u2l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الصِّحَّةُ" },],
         },
         {
           id: "g5u2l4",
@@ -1169,7 +1178,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "الْأُولِمْبِيَادُ يَجْمَعُ الرِّيَاضِيِّينَ مِنْ كُلِّ الدُّوَلِ",
             },
-          ],
+          
+            { id: "g5u2l4e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الْأُولِمْبِيَادُ" },],
         },
         {
           id: "g5u2l5",
@@ -1277,7 +1287,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "الرِّيَاضَةُ تُعَلِّمُنَا التَّعَاوُنَ وَاحْتِرَامَ الْآخَرِينَ",
             },
-          ],
+          
+            { id: "g5u2l5e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا التَّعَاوُنُ" },],
         },
         {
           id: "g5u2l6",
@@ -1396,7 +1407,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "أُفَضِّلُ كُرَةَ الْقَدَمِ لِأَنَّهَا تُنَمِّي رُوحَ الْفَرِيقِ",
             },
-          ],
+          
+            { id: "g5u2l6e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَا رِيَاضَتُكَ الْمُفَضَّلَةُ يَا دَانِيَال" },],
         },
       ],
     },
@@ -1538,7 +1550,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "كَمْ ثَمَنُ هَذَا؟ هَلْ هُوَ رَخِيصٌ أَمْ غَالٍ؟",
             },
-          ],
+          
+            { id: "g5u3l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "كَمْ ثَمَنُ هَذَا الْكِتَابِ" },],
         },
         {
           id: "g5u3l2",
@@ -1649,7 +1662,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "أَرْتَدِي قَمِيصًا أَبْيَضَ وَبَنْطَلُونًا أَزْرَقَ",
             },
-          ],
+          
+            { id: "g5u3l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الْقَمِيصُ" },],
         },
         {
           id: "g5u3l3",
@@ -1757,7 +1771,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "أَدْفَعُ ثَمَنَ الْكِتَابِ وَآخُذُ الْبَاقِيَ",
             },
-          ],
+          
+            { id: "g5u3l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الرِّيَالُ" },],
         },
         {
           id: "g5u3l4",
@@ -1876,7 +1891,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "نَحْتَاجُ خُبْزًا وَحَلِيبًا وَبَيْضًا",
             },
-          ],
+          
+            { id: "g5u3l4e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "أُرِيدُ خُبْزًا وَحَلِيبًا مِنَ الْبَقَالَةِ" },],
         },
         {
           id: "g5u3l5",
@@ -1984,7 +2000,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "كَمْ ثَمَنُهُ؟ هَلْ يُمْكِنُ التَّخْفِيضُ؟ لَا بَأْسَ، تَفَضَّلْ",
             },
-          ],
+          
+            { id: "g5u3l5e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا هَلْ يُمْكِنُ التَّخْفِيضُ" },],
         },
         {
           id: "g5u3l6",
@@ -2092,7 +2109,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "أَبْحَثُ عَنِ الْمُنْتَجِ وَأَضْغَطُ «طَلَبٌ» وَأَدْفَعُ إِلِكْتْرُونِيًّا",
             },
-          ],
+          
+            { id: "g5u3l6e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الْإِنْتَرْنِتُ" },],
         },
       ],
     },
@@ -2227,7 +2245,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "أَسْتَخْدِمُ الْحَاسُوبَ لِلتَّعَلُّمِ وَالْبَحْثِ",
             },
-          ],
+          
+            { id: "g5u4l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "أَسْتَخْدِمُ الْحَاسُوبَ لِلْبَحْثِ عَنِ الْمَعْلُومَاتِ" },],
         },
         {
           id: "g5u4l2",
@@ -2335,7 +2354,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "أَسْتَخْدِمُ الْهَاتِفَ لِلتَّعَلُّمِ وَالتَّوَاصُلِ بِحِكْمَةٍ",
             },
-          ],
+          
+            { id: "g5u4l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الْهَاتِفُ الذَّكِيُّ" },],
         },
         {
           id: "g5u4l3",
@@ -2443,7 +2463,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "أُفَضِّلُ التَّعَلُّمَ فِي الْفَصْلِ مَعَ الْأَصْدِقَاءِ",
             },
-          ],
+          
+            { id: "g5u4l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا التَّعَلُّمُ الْإِلِكْتْرُونِيُّ" },],
         },
         {
           id: "g5u4l4",
@@ -2551,7 +2572,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "الرُّوبُوتُ يُسَاعِدُ الْإِنْسَانَ فِي الْأَعْمَالِ الصَّعْبَةِ",
             },
-          ],
+          
+            { id: "g5u4l4e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الرُّوبُوتُ" },],
         },
         {
           id: "g5u4l5",
@@ -2659,7 +2681,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "لَا أُشَارِكُ مَعْلُومَاتِي الشَّخْصِيَّةَ وَأَسْتَخْدِمُ كَلِمَةَ مُرُورٍ قَوِيَّةً",
             },
-          ],
+          
+            { id: "g5u4l5e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الْخُصُوصِيَّةُ" },],
         },
         {
           id: "g5u4l6",
@@ -2767,7 +2790,8 @@ export const grade5: GradeData = {
               ),
               arabicText: "أَحْلُمُ بِسَيَّارَاتٍ طَائِرَةٍ وَطَاقَةٍ نَظِيفَةٍ فِي الْمُسْتَقْبَلِ",
             },
-          ],
+          
+            { id: "g5u4l6e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الْمُسْتَقْبَلُ" },],
         },
       ],
     },

@@ -64,7 +64,8 @@ export const indonesiaGrade5: GradeData = {
             { id: "indonesia-g5u1l1e4", type: "writing", skill: "writing", prompt: t("اكْتُبْ ثَلَاثَةَ أَعْضَاءِ الْجِسْمِ", "Write three body parts", "Tulis tiga anggota tubuh", "Tulis tiga anggota tubuh", "Écris trois parties du corps", "Escribe tres partes del cuerpo"), answer: "رَأْسٌ، يَدٌ، رِجْلٌ", imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Body_parts.png" },
             { id: "indonesia-g5u1l1e5", type: "matching", skill: "reading", prompt: t("صِلِ الْكَلِمَةَ بِالْمَعْنَى", "Match the word to the meaning", "Padankan perkataan dengan makna", "Cocokkan kata dengan makna", "Relie le mot au sens", "Relaciona la palabra con el significado"), pairs: [{ a: "عَيْنٌ", b: "eye" }, { a: "أُذُنٌ", b: "ear" }, { a: "فَمٌ", b: "mouth" }] },
             { id: "indonesia-g5u1l1e6", type: "fill_in_blank", skill: "writing", prompt: t("اِمْلَأِ الْفَرَاغَ: هٰذَا ....", "Fill in the blank: This is ...", "Isi tempat kosong: Ini ...", "Isi bagian kosong: Ini ...", "Complète : Voici ...", "Completa: Este es ..."), arabicText: "جِسْمِي", answer: "جِسْمِي" },
-          ],
+          
+            { id: "indonesia-g5u1l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَا هٰذَا" },],
         },
       ],
     },
@@ -115,7 +116,8 @@ export const indonesiaGrade5: GradeData = {
             { id: "indonesia-g5u2l1e4", type: "writing", skill: "writing", prompt: t("اكْتُبْ اسْمَ مِهْنَتَيْنِ", "Write two professions", "Tulis dua pekerjaan", "Tulis dua profesi", "Écris deux métiers", "Escribe dos profesiones"), answer: "طَبِيبٌ، مُعَلِّمٌ", imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Doctor_and_teacher.png" },
             { id: "indonesia-g5u2l1e5", type: "matching", skill: "reading", prompt: t("صِلِ الْمِهْنَةَ بِالصُّورَةِ", "Match the profession to the picture", "Padankan pekerjaan dengan gambar", "Cocokkan profesi dengan gambar", "Relie le métier à l'image", "Relaciona la profesión con la imagen"), pairs: [{ a: "طَبِيبٌ", b: "doctor" }, { a: "مُعَلِّمٌ", b: "teacher" }, { a: "فَلَّاحٌ", b: "farmer" }] },
             { id: "indonesia-g5u2l1e6", type: "fill_in_blank", skill: "writing", prompt: t("اِكْمِلِ: أَبِي ....", "Complete: My father ...", "Lengkapkan: Ayah saya ...", "Lengkapi: Ayah saya ...", "Complète : Mon père ...", "Completa: Mi padre ..."), arabicText: "طَبِيبٌ", answer: "طَبِيبٌ" },
-          ],
+          
+            { id: "indonesia-g5u2l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَاذَا يَعْمَلُ أَبُوكَ" },],
         },
       ],
     },
@@ -166,7 +168,8 @@ export const indonesiaGrade5: GradeData = {
             { id: "indonesia-g5u3l1e4", type: "writing", skill: "writing", prompt: t("اكْتُبْ ثَلَاثَةَ أَسْمَاءِ حَيَوَانَاتٍ", "Write three animal names", "Tulis tiga nama haiwan", "Tulis tiga nama hewan", "Écris trois noms d'animaux", "Escribe tres nombres de animales"), answer: "أَسَدٌ، فِيلٌ، زَرَافَةٌ", imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Zoo_animals.jpg" },
             { id: "indonesia-g5u3l1e5", type: "matching", skill: "reading", prompt: t("صِلِ الْحَيَوَانَ بِاسْمِهِ", "Match the animal to its name", "Padankan haiwan dengan namanya", "Cocokkan hewan dengan namanya", "Relie l'animal à son nom", "Relaciona el animal con su nombre"), pairs: [{ a: "أَسَدٌ", b: "lion" }, { a: "فِيلٌ", b: "elephant" }, { a: "قِرْدٌ", b: "monkey" }] },
             { id: "indonesia-g5u3l1e6", type: "fill_in_blank", skill: "writing", prompt: t("اِكْمِلِ: هٰذَا .... كَبِيرٌ", "Complete: This is a big ...", "Lengkapkan: Ini ... besar", "Lengkapi: Ini ... besar", "Complète : C'est un grand ...", "Completa: Este es un gran ..."), arabicText: "فِيلٌ", answer: "فِيلٌ" },
-          ],
+          
+            { id: "indonesia-g5u3l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَا هٰذَا يَا مُعَلِّمُ" },],
         },
       ],
     },
@@ -217,7 +220,8 @@ export const indonesiaGrade5: GradeData = {
             { id: "indonesia-g5u4l1e4", type: "writing", skill: "writing", prompt: t("اكْتُبْ اسْمَ أَثَاثَيْنِ", "Write the names of two pieces of furniture", "Tulis nama dua perabot", "Tulis nama dua perabot", "Écris le nom de deux meubles", "Escribe los nombres de dos muebles"), answer: "مَكْتَبٌ، كُرْسِيٌّ", imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Desk_and_chair.jpg" },
             { id: "indonesia-g5u4l1e5", type: "matching", skill: "reading", prompt: t("صِلِ الْكَلِمَاتِ بِالْمَعَانِي", "Match the words to the meanings", "Padankan perkataan dengan makna", "Cocokkan kata dengan maknanya", "Relie les mots à leurs sens", "Relaciona las palabras con sus significados"), pairs: [{ a: "أَرِيكَةٌ", b: "sofa" }, { a: "مِصْبَاحٌ", b: "lamp" }, { a: "سَاعَةٌ", b: "clock" }] },
             { id: "indonesia-g5u4l1e6", type: "fill_in_blank", skill: "writing", prompt: t("اِكْمِلِ: التِّلْفَازُ فِي ....", "Complete: The television is in ...", "Lengkapkan: Televisyen di ...", "Lengkapi: Televisi di ...", "Complète : La télévision est dans ...", "Completa: La televisión está en ..."), arabicText: "غُرْفَةِ الِاسْتِقْبَالِ", answer: "غُرْفَةِ الِاسْتِقْبَالِ" },
-          ],
+          
+            { id: "indonesia-g5u4l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "أَيْنَ تَجْلِسُ يَا أَحْمَدُ" },],
         },
       ],
     },
@@ -268,7 +272,8 @@ export const indonesiaGrade5: GradeData = {
             { id: "indonesia-g5u5l1e4", type: "writing", skill: "writing", prompt: t("اكْتُبْ ثَلَاثَةَ أَشْيَاءَ فِي الْمَعْمَلِ", "Write three things in the laboratory", "Tulis tiga benda dalam makmal", "Tulis tiga benda dalam laboratorium", "Écris trois choses dans le laboratoire", "Escribe tres cosas en el laboratorio"), answer: "مِجْهَرٌ، تَجْرِبَةٌ، عِلْمٌ", imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Laboratory.jpg" },
             { id: "indonesia-g5u5l1e5", type: "matching", skill: "reading", prompt: t("صِلِ الْكَلِمَاتِ بِالْمَعَانِي", "Match the words to the meanings", "Padankan perkataan dengan makna", "Cocokkan kata dengan maknanya", "Relie les mots à leurs sens", "Relaciona las palabras con sus significados"), pairs: [{ a: "قَامُوسٌ", b: "dictionary" }, { a: "خَرِيطَةٌ", b: "map" }, { a: "حَاسُوبٌ", b: "computer" }] },
             { id: "indonesia-g5u5l1e6", type: "fill_in_blank", skill: "writing", prompt: t("اِكْمِلِ: نَرَى بِالْمِجْهَرِ الأَشْيَاءَ ....", "Complete: We see with the microscope ... things", "Lengkapkan: Kita lihat dengan mikroskop benda ...", "Lengkapi: Kita melihat dengan mikroskop benda ...", "Complète : Nous voyons avec le microscope des choses ...", "Completa: Con el microscopio vemos cosas ..."), arabicText: "الصَّغِيرَةَ", answer: "الصَّغِيرَةَ" },
-          ],
+          
+            { id: "indonesia-g5u5l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَا هٰذَا يَا مُعَلِّمُ" },],
         },
       ],
     },
@@ -319,7 +324,8 @@ export const indonesiaGrade5: GradeData = {
             { id: "indonesia-g5u6l1e4", type: "writing", skill: "writing", prompt: t("اكْتُبْ خَمْسَةَ أَطْعِمَةٍ أَوْ مَشْرُوبَاتٍ", "Write five foods or drinks", "Tulis lima makanan atau minuman", "Tulis lima makanan atau minuman", "Écris cinq aliments ou boissons", "Escribe cinco comidas o bebidas"), answer: "خُبْزٌ، مَاءٌ، حَلِيبٌ، تُفَّاحَةٌ، أَرُزٌّ", imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Food_and_drinks.jpg" },
             { id: "indonesia-g5u6l1e5", type: "matching", skill: "reading", prompt: t("صِلِ الْكَلِمَاتِ بِالْمَعَانِي", "Match the words to the meanings", "Padankan perkataan dengan makna", "Cocokkan kata dengan maknanya", "Relie les mots à leurs sens", "Relaciona las palabras con sus significados"), pairs: [{ a: "خُبْزٌ", b: "bread" }, { a: "مَاءٌ", b: "water" }, { a: "دَجَاجَةٌ", b: "chicken" }] },
             { id: "indonesia-g5u6l1e6", type: "fill_in_blank", skill: "writing", prompt: t("اِكْمِلِ: أُرِيدُ .... وَمَاءً", "Complete: I want ... and water", "Lengkapkan: Saya mahu ... dan air", "Lengkapi: Saya ingin ... dan air", "Complète : Je veux ... et de l'eau", "Completa: Quiero ... y agua"), arabicText: "تُفَّاحَةً", answer: "تُفَّاحَةً" },
-          ],
+          
+            { id: "indonesia-g5u6l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَا هٰذَا" },],
         },
       ],
     },

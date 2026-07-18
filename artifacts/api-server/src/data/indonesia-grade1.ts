@@ -56,7 +56,8 @@ export const indonesiaGrade1: GradeData = {
             { id: "indonesia-g1u1l1e4", type: "speaking", skill: "speaking", prompt: t("تَحَدَّثْ: اِسْمِي ... وَأَنَا تِلْمِيذٌ", "Speak: My name is ... and I am a student", "تحدث: اسمي ... وأنا تلميذ", "Tحدث: Nama saya ... dan saya murid", "Parle : Je m'appelle ... et je suis élève", "Habla: Me llamo ... y soy estudiante"), arabicText: "اِسْمِي ... وَأَنَا تِلْمِيذٌ" },
             { id: "indonesia-g1u1l1e5", type: "writing", skill: "writing", prompt: t("اُكْتُبْ كَلِمَةَ: مَرْحَبًا", "Write the word: hello", "Tulis perkataan: halo", "Tulis kata: halo", "Écris le mot : bonjour", "Escribe la palabra: hola"), arabicText: "مَرْحَبًا", answer: "مَرْحَبًا", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/f/f8/Waving.png" },
             { id: "indonesia-g1u1l1e6", type: "listening", skill: "listening", prompt: t("اِسْمَعْ وَاخْتَرْ الجَوَابَ المُنَاسِبَ", "Listen and choose the suitable response", "Dengar dan pilih jawapan yang sesuai", "Dengarkan dan pilih jawaban yang sesuai", "Écoute et choisis la réponse appropriée", "Escucha y elige la respuesta adecuada"), arabicText: "بِخَيْرٍ", options: ["بِخَيْرٍ", "السَّلَامُ عَلَيْكُمْ", "اِسْمِي"], correctIndex: 0 },
-          ],
+          
+            { id: "indonesia-g1u1l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "السَّلَامُ عَلَيْكُمْ، يَا أَبْنَائِي" },],
         },
       ],
     },
@@ -98,7 +99,8 @@ export const indonesiaGrade1: GradeData = {
             { id: "indonesia-g1u2l1e4", type: "speaking", skill: "speaking", prompt: t("تَحَدَّثْ عَنْ ثَلَاثَةِ أَشْيَاءَ فِي فَصْلِكَ", "Speak about three things in your classroom", "Bercakap tentang tiga benda di kelas", "Berbicara tentang tiga benda di kelas", "Parle de trois choses dans ta classe", "Habla de tres cosas en tu clase"), arabicText: "هَذَا كِتَابٌ، وَهَذَا قَلَمٌ، وَتِلْكَ طَاوِلَةٌ" },
             { id: "indonesia-g1u2l1e5", type: "writing", skill: "writing", prompt: t("اُكْتُبْ: كِتَابٌ", "Write: book", "Tulis: buku", "Tulis: buku", "Écris : livre", "Escribe: libro"), arabicText: "كِتَابٌ", answer: "كِتَابٌ", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Reimski_evan%C4%91elistar.10.jpg/960px-Reimski_evan%C4%91elistar.10.jpg" },
             { id: "indonesia-g1u2l1e6", type: "listening", skill: "listening", prompt: t("اِسْمَعْ وَاخْتَرِ الكَلِمَةَ الَّتِي تَدُلُّ عَلَى الْحَقِيبَةِ", "Listen and choose the word for bag", "Dengar dan pilih perkataan bagi beg", "Dengarkan dan pilih kata untuk tas", "Écoute et choisis le mot pour sac", "Escucha y elige la palabra de bolso"), arabicText: "حَقِيبَةٌ", options: ["طَاوِلَةٌ", "حَقِيبَةٌ", "سَبُّورَةٌ"], correctIndex: 1 },
-          ],
+          
+            { id: "indonesia-g1u2l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَا هَذَا؟ هَذَا كِتَابٌ" },],
         },
       ],
     },
@@ -140,7 +142,8 @@ export const indonesiaGrade1: GradeData = {
             { id: "indonesia-g1u3l1e4", type: "speaking", skill: "speaking", prompt: t("تَحَدَّثْ عَنْ أُمِّكَ وَأَبِيكَ", "Speak about your mother and father", "Bercakap tentang ibu dan ayahmu", "Berbicara tentang ibu dan ayahmu", "Parle de ta mère et de ton père", "Habla de tu madre y tu padre"), arabicText: "هَذَا أَبِي وَهَذِهِ أُمِّي" },
             { id: "indonesia-g1u3l1e5", type: "writing", skill: "writing", prompt: t("اُكْتُبْ: أُمٌّ", "Write: mother", "Tulis: ibu", "Tulis: ibu", "Écris : mère", "Escribe: madre"), arabicText: "أُمٌّ", answer: "أُمٌّ", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/82/Mother_kissing_her_child.jpg" },
             { id: "indonesia-g1u3l1e6", type: "listening", skill: "listening", prompt: t("اِسْمَعْ وَاخْتَرْ الْكَلِمَةَ الَّتِي تَعْنِي الأُسْرَةَ", "Listen and choose the word meaning family", "Dengar dan pilih perkataan yang bermaksud keluarga", "Dengarkan dan pilih kata yang berarti keluarga", "Écoute et choisis le mot qui signifie famille", "Escucha y elige la palabra que significa familia"), arabicText: "أُسْرَةٌ", options: ["أُسْرَةٌ", "طَاوِلَةٌ", "بَابٌ"], correctIndex: 0 },
-          ],
+          
+            { id: "indonesia-g1u3l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا أَبِي وَهَذِهِ أُمِّي" },],
         },
       ],
     },
@@ -185,7 +188,8 @@ export const indonesiaGrade1: GradeData = {
             { id: "indonesia-g1u4l1e7", type: "writing", skill: "writing", prompt: t("اُكْتُبْ: أَقْرَأُ", "Write: I read", "Tulis: saya membaca", "Tulis: saya membaca", "Écris : je lis", "Escribe: yo leo"), arabicText: "أَقْرَأُ", answer: "أَقْرَأُ", imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Reading%20a%20book.jpg" },
             { id: "indonesia-g1u4l1e8", type: "writing", skill: "writing", prompt: t("اُكْتُبْ: أَلْعَبُ", "Write: I play", "Tulis: saya bermain", "Tulis: saya bermain", "Écris : je joue", "Escribe: yo juego"), arabicText: "أَلْعَبُ", answer: "أَلْعَبُ", imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Children%20playing%20football.jpg" },
             { id: "indonesia-g1u4l1e6", type: "listening", skill: "listening", prompt: t("اِسْمَعْ وَاخْتَرْ مَا يُحِبُّهُ التِّلْمِيذُ", "Listen and choose what the student likes", "Dengar dan pilih apa yang disukai murid", "Dengarkan dan pilih apa yang disukai murid", "Écoute et choisis ce que l’élève aime", "Escucha y elige lo que le gusta al estudiante"), arabicText: "أَقْرَأُ", options: ["أَكْتُبُ", "أَقْرَأُ", "أَسْمَعُ"], correctIndex: 1 },
-          ],
+          
+            { id: "indonesia-g1u4l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَا هِوَايَتُكِ" },],
         },
       ],
     },
@@ -229,7 +233,8 @@ export const indonesiaGrade1: GradeData = {
             { id: "indonesia-g1u5l1e5", type: "writing", skill: "writing", prompt: t("اُكْتُبْ: بَيْتٌ", "Write: house", "Tulis: rumah", "Tulis: rumah", "Écris : maison", "Escribe: casa"), arabicText: "بَيْتٌ", answer: "بَيْتٌ", imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/House%20front.jpg" },
             { id: "indonesia-g1u5l1e7", type: "writing", skill: "writing", prompt: t("اُكْتُبْ: بَابٌ", "Write: door", "Tulis: pintu", "Tulis: pintu", "Écris : porte", "Escribe: puerta"), arabicText: "بَابٌ", answer: "بَابٌ", imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Door%20with%20window.jpg" },
             { id: "indonesia-g1u5l1e6", type: "listening", skill: "listening", prompt: t("اِسْمَعْ وَاخْتَرْ شَيْئًا مِنَ الْبَيْتِ", "Listen and choose a house item", "Dengar dan pilih benda rumah", "Dengarkan dan pilih benda rumah", "Écoute et choisis un objet de la maison", "Escucha y elige un objeto de la casa"), arabicText: "مِفْتَاحٌ", options: ["مِفْتَاحٌ", "كُتُبٌ", "أَقْلَامٌ"], correctIndex: 0 },
-          ],
+          
+            { id: "indonesia-g1u5l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "أَيْنَ تَسْكُنُ" },],
         },
       ],
     },
@@ -272,7 +277,8 @@ export const indonesiaGrade1: GradeData = {
             { id: "indonesia-g1u6l1e4", type: "speaking", skill: "speaking", prompt: t("تَحَدَّثْ عَنْ أَلْوَانِ مَا تَرَى", "Speak about the colours you see", "Bercakap tentang warna yang kamu lihat", "Berbicara tentang warna yang kamu lihat", "Parle des couleurs que tu vois", "Habla de los colores que ves"), arabicText: "رَأَيْتُ كِتَابًا أَحْمَرَ وَقَلَمًا أَزْرَقَ" },
             { id: "indonesia-g1u6l1e5", type: "writing", skill: "writing", prompt: t("اُكْتُبْ: أَخْضَرُ", "Write: green", "Tulis: hijau", "Tulis: hijau", "Écris : vert", "Escribe: verde"), arabicText: "أَخْضَرُ", answer: "أَخْضَرُ", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Green_Colour.jpg/960px-Green_Colour.jpg" },
             { id: "indonesia-g1u6l1e6", type: "listening", skill: "listening", prompt: t("اِسْمَعْ وَاخْتَرِ الْكَلِمَةَ الَّتِي تَدُلُّ عَلَى الْمُورَدِ الْجَمِيلِ", "Listen and choose the word meaning beautiful", "Dengar dan pilih perkataan yang bermaksud cantik", "Dengarkan dan pilih kata yang berarti indah", "Écoute et choisis le mot qui signifie beau", "Escucha y elige la palabra que significa bonito"), arabicText: "جَمِيلٌ", options: ["جَمِيلٌ", "بَيْتٌ", "قَلَمٌ"], correctIndex: 0 },
-          ],
+          
+            { id: "indonesia-g1u6l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَا لَوْنُ هَذَا" },],
         },
       ],
     },

@@ -64,7 +64,8 @@ export const indonesiaGrade6: GradeData = {
             { id: "indonesia-g6u1l1e4", type: "writing", skill: "writing", prompt: t("اكْتُبْ الْأَوْقَاتَ: صَبَاحٌ، مَسَاءٌ، لَيْلٌ", "Write the times: morning, evening, night", "Tulis masa: pagi, petang, malam", "Tulis waktu: pagi, sore, malam", "Écris les moments : matin, soir, nuit", "Escribe los momentos: mañana, tarde, noche"), answer: "صَبَاحٌ، مَسَاءٌ، لَيْلٌ", imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Day_and_night.jpg" },
             { id: "indonesia-g6u1l1e5", type: "matching", skill: "reading", prompt: t("صِلِ الْوَقْتَ بِالصُّورَةِ", "Match the time to the picture", "Padankan masa dengan gambar", "Cocokkan waktu dengan gambar", "Relie le moment à l'image", "Relaciona el momento con la imagen"), pairs: [{ a: "صَبَاحٌ", b: "🌅" }, { a: "مَسَاءٌ", b: "🌆" }, { a: "لَيْلٌ", b: "🌙" }] },
             { id: "indonesia-g6u1l1e6", type: "fill_in_blank", skill: "writing", prompt: t("اِكْمِلِ: السَّاعَةُ الرَّابِعَةُ وَ....", "Complete: It is half past ...", "Lengkapkan: Pukul empat ...", "Lengkapi: Jam empat ...", "Complète : Il est quatre heures et ...", "Completa: Son las cuatro y ..."), arabicText: "النِّصْفُ", answer: "النِّصْفُ" },
-          ],
+          
+            { id: "indonesia-g6u1l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "كَمِ السَّاعَةُ يَا سَلْمَى" },],
         },
       ],
     },
@@ -115,7 +116,8 @@ export const indonesiaGrade6: GradeData = {
             { id: "indonesia-g6u2l1e4", type: "writing", skill: "writing", prompt: t("اكْتُبْ خَمْسَةَ أَفْعَالٍ مِنْ يَوْمِكَ", "Write five actions from your day", "Tulis lima perbuatan dari hari kamu", "Tulis lima kata kerja dari harimu", "Écris cinq actions de ta journée", "Escribe cinco acciones de tu día"), answer: "أَسْتَيْقِظُ، أَأْكُلُ، أَذْهَبُ، أَدْرُسُ، أَنَامُ", imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Daily_routine.jpg" },
             { id: "indonesia-g6u2l1e5", type: "matching", skill: "reading", prompt: t("صِلِ الْفِعْلَ بِالصُّورَةِ", "Match the verb to the picture", "Padangkan kata kerja dengan gambar", "Cocokkan kata kerja dengan gambar", "Relie le verbe à l'image", "Relaciona el verbo con la imagen"), pairs: [{ a: "يَأْكُلُ", b: "🍽️" }, { a: "يَنَامُ", b: "😴" }, { a: "يَكْتُبُ", b: "✍️" }] },
             { id: "indonesia-g6u2l1e6", type: "fill_in_blank", skill: "writing", prompt: t("اِكْمِلِ: أَذْهَبُ إِلَى الْمَدْرَسَةِ بَعْدَ ....", "Complete: I go to school after ...", "Lengkapkan: Saya pergi ke sekolah selepas ...", "Lengkapi: Saya pergi ke sekolah setelah ...", "Complète : Je vais à l'école après ...", "Completa: Voy a la escuela después de ..."), arabicText: "الْفَطُورِ", answer: "الْفَطُورِ" },
-          ],
+          
+            { id: "indonesia-g6u2l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَاذَا تَفْعَلُ صَبَاحًا" },],
         },
       ],
     },
@@ -166,7 +168,8 @@ export const indonesiaGrade6: GradeData = {
             { id: "indonesia-g6u3l1e4", type: "writing", skill: "writing", prompt: t("اكْتُبْ خَمْسَةَ مَوَادَّ دِرَاسِيَّةٍ", "Write five school subjects", "Tulis lima mata pelajaran", "Tulis lima mata pelajaran", "Écris cinq matières scolaires", "Escribe cinco asignaturas"), answer: "رِيَاضِيَاتٌ، عُلُومٌ، لُغَةٌ عَرَبِيَّةٌ، تَارِيخٌ، جُغْرَافِيَا", imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/School_subjects.jpg" },
             { id: "indonesia-g6u3l1e5", type: "matching", skill: "reading", prompt: t("صِلِ الْمَادَّةَ بِالصُّورَةِ", "Match the subject to the picture", "Padankan mata pelajaran dengan gambar", "Cocokkan mata pelajaran dengan gambar", "Relie la matière à l'image", "Relaciona la asignatura con la imagen"), pairs: [{ a: "رِيَاضِيَاتٌ", b: "🔢" }, { a: "عُلُومٌ", b: "🔬" }, { a: "فَنٌّ", b: "🎨" }] },
             { id: "indonesia-g6u3l1e6", type: "fill_in_blank", skill: "writing", prompt: t("اِكْمِلِ: مَادَّتِي الْمُفَضَّلَةُ ....", "Complete: My favorite subject is ...", "Lengkapkan: Mata pelajaran kegemaran saya ...", "Lengkapi: Mata pelajaran favoritku ...", "Complète : Ma matière préférée est ...", "Completa: Mi asignatura favorita es ..."), arabicText: "اللُّغَةُ الْعَرَبِيَّةُ", answer: "اللُّغَةُ الْعَرَبِيَّةُ" },
-          ],
+          
+            { id: "indonesia-g6u3l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَا مَادَّتُكَ الْمُفَضَّلَةُ" },],
         },
       ],
     },
@@ -217,7 +220,8 @@ export const indonesiaGrade6: GradeData = {
             { id: "indonesia-g6u4l1e4", type: "writing", skill: "writing", prompt: t("اكْتُبْ أَرْبَعَ هِوَايَاتٍ", "Write four hobbies", "Tulis empat hobi", "Tulis empat hobi", "Écris quatre loisirs", "Escribe cuatro aficiones"), answer: "قِرَاءَةٌ، رَسْمٌ، رِيَاضَةٌ، سِبَاحَةٌ", imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Hobbies.jpg" },
             { id: "indonesia-g6u4l1e5", type: "matching", skill: "reading", prompt: t("صِلِ الْهِوَايَةَ بِالصُّورَةِ", "Match the hobby to the picture", "Padankan hobi dengan gambar", "Cocokkan hobi dengan gambar", "Relie le loisir à l'image", "Relaciona la afición con la imagen"), pairs: [{ a: "رَسْمٌ", b: "🎨" }, { a: "سِبَاحَةٌ", b: "🏊" }, { a: "كُرَةُ الْقَدَمِ", b: "⚽" }] },
             { id: "indonesia-g6u4l1e6", type: "fill_in_blank", skill: "writing", prompt: t("اِكْمِلِ: أَلْعَبُ كُرَةَ ....", "Complete: I play ... football", "Lengkapkan: Saya bermain bola ...", "Lengkapi: Saya bermain sepak ...", "Complète : Je joue au football", "Completa: Juego al fútbol"), arabicText: "الْقَدَمِ", answer: "الْقَدَمِ" },
-          ],
+          
+            { id: "indonesia-g6u4l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَا هِوَايَتُكَ يَا سَارَةُ" },],
         },
       ],
     },
@@ -268,7 +272,8 @@ export const indonesiaGrade6: GradeData = {
             { id: "indonesia-g6u5l1e4", type: "writing", skill: "writing", prompt: t("اكْتُبْ خَمْسَةَ أَطْعِمَةٍ صِحِّيَّةٍ", "Write five healthy foods", "Tulis lima makanan sihat", "Tulis lima makanan sehat", "Écris cinq aliments sains", "Escribe cinco alimentos saludables"), answer: "فَاكِهَةٌ، خَضْرَوَاتٌ، سَمَكٌ، خُبْزٌ، مَاءٌ", imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Healthy_food.jpg" },
             { id: "indonesia-g6u5l1e5", type: "matching", skill: "reading", prompt: t("صِلِ الْكَلِمَاتِ بِالْمَعَانِي", "Match the words to the meanings", "Padankan perkataan dengan makna", "Cocokkan kata dengan makna", "Relie les mots à leurs sens", "Relaciona las palabras con sus significados"), pairs: [{ a: "فَاكِهَةٌ", b: "fruit" }, { a: "خَضْرَوَاتٌ", b: "vegetables" }, { a: "لَحْمٌ", b: "meat" }] },
             { id: "indonesia-g6u5l1e6", type: "fill_in_blank", skill: "writing", prompt: t("اِكْمِلِ: أَشْرَبُ .... فِي الصَّبَاحِ", "Complete: I drink ... in the morning", "Lengkapkan: Saya minum ... pada pagi", "Lengkapi: Saya minum ... di pagi hari", "Complète : Je bois ... le matin", "Completa: Bebo ... por la mañana"), arabicText: "مَاءً", answer: "مَاءً" },
-          ],
+          
+            { id: "indonesia-g6u5l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَاذَا تَأْكُلُ فِي الْفَطُورِ" },],
         },
       ],
     },
@@ -319,7 +324,8 @@ export const indonesiaGrade6: GradeData = {
             { id: "indonesia-g6u6l1e4", type: "writing", skill: "writing", prompt: t("اكْتُبْ خَمْسَ وَسَائِلِ سَفَرٍ", "Write five means of transport", "Tulis lima kenderaan", "Tulis lima kendaraan", "Écris cinq moyens de transport", "Escribe cinco medios de transporte"), answer: "سَيَّارَةٌ، حَافِلَةٌ، طَائِرَةٌ، قِطَارٌ، سَفِينَةٌ", imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Transport.jpg" },
             { id: "indonesia-g6u6l1e5", type: "matching", skill: "reading", prompt: t("صِلِ الْوَسِيلَةَ بِالْمَكَانِ", "Match the transport to the place", "Padankan kenderaan dengan tempat", "Cocokkan kendaraan dengan tempat", "Relie le transport au lieu", "Relaciona el transporte con el lugar"), pairs: [{ a: "طَائِرَةٌ", b: "airport" }, { a: "قِطَارٌ", b: "station" }, { a: "سَفِينَةٌ", b: "port" }] },
             { id: "indonesia-g6u6l1e6", type: "fill_in_blank", skill: "writing", prompt: t("اِكْمِلِ: نَذْهَبُ إِلَى جَاكَرْتَا بِالْ....", "Complete: We go to Jakarta by ...", "Lengkapkan: Kita pergi ke Jakarta dengan ...", "Lengkapi: Kita pergi ke Jakarta dengan ...", "Complète : Nous allons à Jakarta en ...", "Completa: Vamos a Yakarta en ..."), arabicText: "طَائِرَةِ", answer: "طَائِرَةِ" },
-          ],
+          
+            { id: "indonesia-g6u6l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "كَيْفَ نَذْهَبُ إِلَى جَاكَرْتَا" },],
         },
       ],
     },

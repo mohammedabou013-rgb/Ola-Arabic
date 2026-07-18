@@ -47,7 +47,8 @@ export const grade1: GradeData = {
             { id: "g1u1l1e1", type: "listening", skill: "listening", prompt: t("استمع واختر الحرف الصحيح", "Listen and choose the correct letter", "Dengar dan pilih huruf yang betul", "Dengarkan dan pilih huruf yang benar", "Écoute et choisis la bonne lettre", "Escucha y elige la letra correcta"), arabicText: "بَاء", options: ["أَلِفْ", "بَاء", "تَاء"], correctIndex: 1 },
             { id: "g1u1l1e2", type: "mcq", skill: "reading", prompt: t("ما الحرف الأول في كلمة بيت؟", "What is the first letter in the word 'bayt' (house)?", "Apa huruf pertama dalam perkataan 'bayt' (rumah)?", "Apa huruf pertama dalam kata 'bayt' (rumah)?", "Quelle est la première lettre du mot 'bayt' (maison) ?", "¿Cuál es la primera letra de la palabra 'bayt' (casa)?"), options: ["أَلِفْ", "بَاء", "تَاء"], correctIndex: 1 },
             { id: "g1u1l1e3", type: "speaking", skill: "speaking", prompt: t("انطق الحروف الأربعة بصوت واضح", "Pronounce the four letters clearly", "Sebut empat huruf dengan jelas", "Ucapkan empat huruf dengan jelas", "Prononce les quatre lettres clairement", "Pronuncia las cuatro letras claramente"), arabicText: "أَلِفْ — بَاء — تَاء — ثَاء" },
-          ],
+          
+            { id: "g1u1l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "قُولُوا مَعِي: أَلِفْ، بَاء، تَاء، ثَاء" },],
         },
         {
           id: "g1u1l2",
@@ -69,7 +70,8 @@ export const grade1: GradeData = {
             { id: "g1u1l2e1", type: "listening", skill: "listening", prompt: t("استمع واختر الحرف الصحيح", "Listen and choose the correct letter", "Dengar dan pilih huruf yang betul", "Dengarkan dan pilih huruf yang benar", "Écoute et choisis la bonne lettre", "Escucha y elige la letra correcta"), arabicText: "حَاء", options: ["جِيمْ", "حَاء", "خَاء"], correctIndex: 1 },
             { id: "g1u1l2e2", type: "mcq", skill: "reading", prompt: t("ما الحرف الأول في كلمة جمل؟", "What is the first letter in the word 'jamal' (camel)?", "Apa huruf pertama dalam perkataan 'jamal' (unta)?", "Apa huruf pertama dalam kata 'jamal' (unta)?", "Quelle est la première lettre du mot 'jamal' (chameau) ?", "¿Cuál es la primera letra de la palabra 'jamal' (camello)?"), options: ["حَاء", "جِيمْ", "دَال"], correctIndex: 1 },
             { id: "g1u1l2e3", type: "speaking", skill: "speaking", prompt: t("انطق الحروف الأربعة بصوت واضح", "Pronounce the four letters clearly", "Sebut empat huruf dengan jelas", "Ucapkan empat huruf dengan jelas", "Prononce les quatre lettres clairement", "Pronuncia las cuatro letras claramente"), arabicText: "جِيمْ — حَاء — خَاء — دَال" },
-          ],
+          
+            { id: "g1u1l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا جِيمْ" },],
         },
         {
           id: "g1u1l3",
@@ -91,7 +93,8 @@ export const grade1: GradeData = {
             { id: "g1u1l3e1", type: "listening", skill: "listening", prompt: t("استمع واختر الحرف الصحيح", "Listen and choose the correct letter", "Dengar dan pilih huruf yang betul", "Dengarkan dan pilih huruf yang benar", "Écoute et choisis la bonne lettre", "Escucha y elige la letra correcta"), arabicText: "زَاي", options: ["رَاء", "زَاي", "سِين"], correctIndex: 1 },
             { id: "g1u1l3e2", type: "mcq", skill: "reading", prompt: t("ما الحرف الأول في كلمة رأس؟", "What is the first letter in 'raʾs' (head)?", "Apa huruf pertama dalam 'raʾs' (kepala)?", "Apa huruf pertama dalam 'raʾs' (kepala)?", "Quelle est la première lettre de 'raʾs' (tête) ?", "¿Cuál es la primera letra de 'raʾs' (cabeza)?"), options: ["ذَال", "رَاء", "زَاي"], correctIndex: 1 },
             { id: "g1u1l3e3", type: "speaking", skill: "speaking", prompt: t("انطق الحروف الأربعة بصوت واضح", "Pronounce the four letters clearly", "Sebut empat huruf dengan jelas", "Ucapkan empat huruf dengan jelas", "Prononce les quatre lettres clairement", "Pronuncia las cuatro letras claramente"), arabicText: "ذَال — رَاء — زَاي — سِين" },
-          ],
+          
+            { id: "g1u1l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا ذَال" },],
         },
         {
           id: "g1u1l4",
@@ -113,7 +116,8 @@ export const grade1: GradeData = {
             { id: "g1u1l4e1", type: "listening", skill: "listening", prompt: t("استمع واختر الحرف الصحيح", "Listen and choose the correct letter", "Dengar dan pilih huruf yang betul", "Dengarkan dan pilih huruf yang benar", "Écoute et choisis la bonne lettre", "Escucha y elige la letra correcta"), arabicText: "صَاد", options: ["شِين", "صَاد", "ضَاد"], correctIndex: 1 },
             { id: "g1u1l4e2", type: "mcq", skill: "reading", prompt: t("ما الحرف الأول في كلمة شمس؟", "What is the first letter in 'shams' (sun)?", "Apa huruf pertama dalam 'shams' (matahari)?", "Apa huruf pertama dalam 'shams' (matahari)?", "Quelle est la première lettre de 'shams' (soleil) ?", "¿Cuál es la primera letra de 'shams' (sol)?"), options: ["صَاد", "شِين", "ضَاد"], correctIndex: 1 },
             { id: "g1u1l4e3", type: "speaking", skill: "speaking", prompt: t("انطق الحروف الأربعة بوضوح", "Pronounce the four letters clearly", "Sebut empat huruf dengan jelas", "Ucapkan empat huruf dengan jelas", "Prononce les quatre lettres clairement", "Pronuncia las cuatro letras claramente"), arabicText: "شِين — صَاد — ضَاد — طَاء" },
-          ],
+          
+            { id: "g1u1l4e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا شِين" },],
         },
         {
           id: "g1u1l5",
@@ -135,7 +139,8 @@ export const grade1: GradeData = {
             { id: "g1u1l5e1", type: "listening", skill: "listening", prompt: t("استمع واختر الحرف الصحيح", "Listen and choose the correct letter", "Dengar dan pilih huruf yang betul", "Dengarkan dan pilih huruf yang benar", "Écoute et choisis la bonne lettre", "Escucha y elige la letra correcta"), arabicText: "عَيْن", options: ["ظَاء", "عَيْن", "غَيْن"], correctIndex: 1 },
             { id: "g1u1l5e2", type: "mcq", skill: "reading", prompt: t("ما الحرف الأول في كلمة عين؟", "What is the first letter in 'ayn' (eye)?", "Apa huruf pertama dalam 'ayn' (mata)?", "Apa huruf pertama dalam 'ayn' (mata)?", "Quelle est la première lettre de 'ayn' (œil) ?", "¿Cuál es la primera letra de 'ayn' (ojo)?"), options: ["ظَاء", "عَيْن", "غَيْن"], correctIndex: 1 },
             { id: "g1u1l5e3", type: "speaking", skill: "speaking", prompt: t("انطق الأربعة حروف بوضوح", "Pronounce the four letters clearly", "Sebut empat huruf dengan jelas", "Ucapkan empat huruf dengan jelas", "Prononce les quatre lettres clairement", "Pronuncia las cuatro letras claramente"), arabicText: "ظَاء — عَيْن — غَيْن — فَاء" },
-          ],
+          
+            { id: "g1u1l5e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا ظَاء" },],
         },
         {
           id: "g1u1l6",
@@ -157,7 +162,8 @@ export const grade1: GradeData = {
             { id: "g1u1l6e1", type: "listening", skill: "listening", prompt: t("استمع واختر الحرف الصحيح", "Listen and choose the correct letter", "Dengar dan pilih huruf yang betul", "Dengarkan dan pilih huruf yang benar", "Écoute et choisis la bonne lettre", "Escucha y elige la letra correcta"), arabicText: "لَام", options: ["كَاف", "لَام", "مِيم"], correctIndex: 1 },
             { id: "g1u1l6e2", type: "mcq", skill: "reading", prompt: t("ما الحرف الأول في كلمة قمر؟", "What is the first letter in 'qamar' (moon)?", "Apa huruf pertama dalam 'qamar' (bulan)?", "Apa huruf pertama dalam 'qamar' (bulan)?", "Quelle est la première lettre de 'qamar' (lune) ?", "¿Cuál es la primera letra de 'qamar' (luna)?"), options: ["كَاف", "قَاف", "لَام"], correctIndex: 1 },
             { id: "g1u1l6e3", type: "speaking", skill: "speaking", prompt: t("انطق الحروف الأربعة بوضوح", "Pronounce the four letters clearly", "Sebut empat huruf dengan jelas", "Ucapkan empat huruf dengan jelas", "Prononce les quatre lettres clairement", "Pronuncia las cuatro letras claramente"), arabicText: "قَاف — كَاف — لَام — مِيم" },
-          ],
+          
+            { id: "g1u1l6e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا قَاف" },],
         },
       ],
     },
@@ -189,7 +195,8 @@ export const grade1: GradeData = {
             { id: "g1u2l1e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "كُرَةٌ", options: ["كِتَابٌ", "كُرَةٌ", "قَلَمٌ"], correctIndex: 1 },
             { id: "g1u2l1e2", type: "matching", skill: "reading", prompt: t("صل الكلمة بصورتها", "Match the word to its picture", "Padankan perkataan dengan gambarnya", "Cocokkan kata dengan gambarnya", "Relie le mot à son image", "Une la palabra con su imagen"), pairs: [{ a: "كِتَابٌ", b: "📚" }, { a: "قَلَمٌ", b: "✏️" }, { a: "كُرَةٌ", b: "⚽" }, { a: "حَقِيبَةٌ", b: "🎒" }] },
             { id: "g1u2l1e3", type: "speaking", skill: "speaking", prompt: t("سمِّ ثلاثة أشياء في فصلك", "Name three things in your classroom", "Namakan tiga benda di kelas anda", "Sebutkan tiga benda di kelasmu", "Nomme trois choses dans ta classe", "Nombra tres cosas en tu aula"), arabicText: "فِي فَصْلِي كِتَابٌ وَقَلَمٌ وَطَاوِلَةٌ" },
-          ],
+          
+            { id: "g1u2l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا كِتَابٌ" },],
         },
         {
           id: "g1u2l2",
@@ -211,7 +218,8 @@ export const grade1: GradeData = {
             { id: "g1u2l2e1", type: "listening", skill: "listening", prompt: t("استمع واختر اللون الصحيح", "Listen and choose the correct colour", "Dengar dan pilih warna yang betul", "Dengarkan dan pilih warna yang benar", "Écoute et choisis la bonne couleur", "Escucha y elige el color correcto"), arabicText: "أَصْفَرُ", options: ["أَحْمَرُ", "أَصْفَرُ", "أَزْرَقُ"], correctIndex: 1 },
             { id: "g1u2l2e2", type: "mcq", skill: "reading", prompt: t("ما لون البرتقالة؟", "What colour is an orange?", "Apa warna buah oren?", "Apa warna jeruk?", "De quelle couleur est une orange ?", "¿De qué color es una naranja?"), options: ["أَزْرَقُ", "أَصْفَرُ", "أَخْضَرُ"], correctIndex: 1 },
             { id: "g1u2l2e3", type: "speaking", skill: "speaking", prompt: t("قل لون ثلاثة أشياء حولك", "Say the colour of three things around you", "Sebut warna tiga benda di sekeliling anda", "Sebutkan warna tiga benda di sekitarmu", "Dis la couleur de trois choses autour de toi", "Di el color de tres cosas a tu alrededor"), arabicText: "قَلَمِي أَحْمَرُ وَكِتَابِي أَزْرَقُ وَحَقِيبَتِي خَضْرَاءُ" },
-          ],
+          
+            { id: "g1u2l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا أَحْمَرُ" },],
         },
         {
           id: "g1u2l3",
@@ -233,7 +241,8 @@ export const grade1: GradeData = {
             { id: "g1u2l3e1", type: "listening", skill: "listening", prompt: t("استمع واختر الحيوان الصحيح", "Listen and choose the correct animal", "Dengar dan pilih haiwan yang betul", "Dengarkan dan pilih hewan yang benar", "Écoute et choisis le bon animal", "Escucha y elige el animal correcto"), arabicText: "قِطَّةٌ", options: ["أَسَدٌ", "قِطَّةٌ", "كَلْبٌ"], correctIndex: 1 },
             { id: "g1u2l3e2", type: "mcq", skill: "reading", prompt: t("ما الحيوان الذي يعيش في الماء؟", "Which animal lives in water?", "Haiwan apa yang hidup dalam air?", "Hewan apa yang hidup di air?", "Quel animal vit dans l'eau ?", "¿Qué animal vive en el agua?"), options: ["أَسَدٌ", "سَمَكَةٌ", "طَائِرٌ"], correctIndex: 1 },
             { id: "g1u2l3e3", type: "speaking", skill: "speaking", prompt: t("قل حيوانك المفضل ولونه", "Say your favourite animal and its colour", "Sebut haiwan kegemaran anda dan warnanya", "Sebutkan hewan favoritmu dan warnanya", "Dis ton animal préféré et sa couleur", "Di tu animal favorito y su color"), arabicText: "حَيَوَانِي الْمُفَضَّلُ الْقِطَّةُ وَلَوْنُهَا أَبْيَضُ" },
-          ],
+          
+            { id: "g1u2l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا أَسَدٌ" },],
         },
         {
           id: "g1u2l4",
@@ -255,7 +264,8 @@ export const grade1: GradeData = {
             { id: "g1u2l4e1", type: "listening", skill: "listening", prompt: t("استمع واختر الطعام الصحيح", "Listen and choose the correct food", "Dengar dan pilih makanan yang betul", "Dengarkan dan pilih makanan yang benar", "Écoute et choisis le bon aliment", "Escucha y elige el alimento correcto"), arabicText: "مَوْزَةٌ", options: ["تُفَّاحَةٌ", "مَوْزَةٌ", "خُبْزٌ"], correctIndex: 1 },
             { id: "g1u2l4e2", type: "mcq", skill: "reading", prompt: t("ما الطعام الذي نشربه؟", "Which food item do we drink?", "Makanan apa yang kita minum?", "Makanan apa yang kita minum?", "Quel aliment boit-on ?", "¿Qué alimento bebemos?"), options: ["خُبْزٌ", "لَبَنٌ", "أَرُزٌّ"], correctIndex: 1 },
             { id: "g1u2l4e3", type: "speaking", skill: "speaking", prompt: t("قل طعامك المفضل", "Say your favourite food", "Sebut makanan kegemaran anda", "Sebutkan makanan favoritmu", "Dis ta nourriture préférée", "Di tu comida favorita"), arabicText: "طَعَامِي الْمُفَضَّلُ هُوَ الْأَرُزُّ" },
-          ],
+          
+            { id: "g1u2l4e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا خُبْزٌ" },],
         },
         {
           id: "g1u2l5",
@@ -277,7 +287,8 @@ export const grade1: GradeData = {
             { id: "g1u2l5e1", type: "listening", skill: "listening", prompt: t("استمع واختر العضو الصحيح", "Listen and choose the correct body part", "Dengar dan pilih anggota badan yang betul", "Dengarkan dan pilih anggota tubuh yang benar", "Écoute et choisis la bonne partie du corps", "Escucha y elige la parte del cuerpo correcta"), arabicText: "أَنْفٌ", options: ["عَيْنٌ", "أَنْفٌ", "يَدٌ"], correctIndex: 1 },
             { id: "g1u2l5e2", type: "mcq", skill: "reading", prompt: t("بماذا نرى؟", "What do we see with?", "Dengan apa kita melihat?", "Dengan apa kita melihat?", "Avec quoi voit-on ?", "¿Con qué vemos?"), options: ["بِالْأَنْفِ", "بِالْعَيْنِ", "بِالْيَدِ"], correctIndex: 1 },
             { id: "g1u2l5e3", type: "speaking", skill: "speaking", prompt: t("أشر إلى ثلاثة أعضاء وسمِّها", "Point to three body parts and name them", "Tunjuk tiga anggota badan dan namakan", "Tunjuk tiga anggota tubuh dan sebutkan", "Montre trois parties du corps et nomme-les", "Señala tres partes del cuerpo y nómbralas"), arabicText: "هَذِهِ عَيْنِي وَهَذَا أَنْفِي وَهَذِهِ يَدِي" },
-          ],
+          
+            { id: "g1u2l5e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا رَأْسٌ" },],
         },
         {
           id: "g1u2l6",
@@ -299,7 +310,8 @@ export const grade1: GradeData = {
             { id: "g1u2l6e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "نَجْمٌ", options: ["قَمَرٌ", "نَجْمٌ", "شَمْسٌ"], correctIndex: 1 },
             { id: "g1u2l6e2", type: "mcq", skill: "reading", prompt: t("ماذا نرى في السماء ليلًا؟", "What do we see in the sky at night?", "Apa yang kita lihat di langit waktu malam?", "Apa yang kita lihat di langit waktu malam?", "Que voit-on dans le ciel la nuit ?", "¿Qué vemos en el cielo de noche?"), options: ["الشَّمْسَ", "الْقَمَرَ وَالنُّجُومَ", "الزَّهْرَةَ"], correctIndex: 1 },
             { id: "g1u2l6e3", type: "speaking", skill: "speaking", prompt: t("قل ما تراه في السماء", "Say what you see in the sky", "Sebut apa yang anda lihat di langit", "Sebutkan apa yang kamu lihat di langit", "Dis ce que tu vois dans le ciel", "Di qué ves en el cielo"), arabicText: "أَرَى فِي السَّمَاءِ شَمْسًا وَقَمَرًا وَنُجُومًا" },
-          ],
+          
+            { id: "g1u2l6e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا شَمْسٌ" },],
         },
         {
           id: "g1u2l7",
@@ -321,7 +333,8 @@ export const grade1: GradeData = {
             { id: "g1u2l7e1", type: "listening", skill: "listening", prompt: t("استمع واختر الملبس الصحيح", "Listen and choose the correct clothing", "Dengar dan pilih pakaian yang betul", "Dengarkan dan pilih pakaian yang benar", "Écoute et choisis le bon vêtement", "Escucha y elige la prenda correcta"), arabicText: "قُبَّعَةٌ", options: ["قَمِيصٌ", "قُبَّعَةٌ", "حِذَاءٌ"], correctIndex: 1 },
             { id: "g1u2l7e2", type: "mcq", skill: "reading", prompt: t("ماذا نلبس في قدمينا؟", "What do we wear on our feet?", "Apa yang kita pakai di kaki?", "Apa yang kita kenakan di kaki?", "Que met-on à ses pieds ?", "¿Qué ponemos en los pies?"), options: ["قُبَّعَةً", "قَمِيصًا", "حِذَاءً وَجَوْرَبًا"], correctIndex: 2 },
             { id: "g1u2l7e3", type: "speaking", skill: "speaking", prompt: t("قل ما ترتديه اليوم", "Say what you are wearing today", "Sebut apa yang anda pakai hari ini", "Sebutkan apa yang kamu kenakan hari ini", "Dis ce que tu portes aujourd'hui", "Di qué llevas puesto hoy"), arabicText: "أَرْتَدِي الْيَوْمَ قَمِيصًا أَخْضَرَ وَبَنْطَلُونًا أَزْرَقَ" },
-          ],
+          
+            { id: "g1u2l7e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا قَمِيصٌ" },],
         },
         {
           id: "g1u2l8",
@@ -343,7 +356,8 @@ export const grade1: GradeData = {
             { id: "g1u2l8e1", type: "listening", skill: "listening", prompt: t("استمع واختر الأداة الصحيحة", "Listen and choose the correct tool", "Dengar dan pilih alatan yang betul", "Dengarkan dan pilih alat yang benar", "Écoute et choisis le bon outil", "Escucha y elige el útil correcto"), arabicText: "مِسْطَرَةٌ", options: ["مِقَصٌّ", "مِسْطَرَةٌ", "صَمْغٌ"], correctIndex: 1 },
             { id: "g1u2l8e2", type: "mcq", skill: "reading", prompt: t("بماذا نقطع الورق؟", "What do we use to cut paper?", "Apa yang kita gunakan untuk memotong kertas?", "Apa yang kita gunakan untuk memotong kertas?", "Avec quoi coupe-t-on le papier ?", "¿Con qué cortamos el papel?"), options: ["بِالصَّمْغِ", "بِالْمِقَصِّ", "بِالدَّفْتَرِ"], correctIndex: 1 },
             { id: "g1u2l8e3", type: "speaking", skill: "speaking", prompt: t("سمِّ ثلاث أدوات في حقيبتك", "Name three tools in your bag", "Namakan tiga alatan dalam beg anda", "Sebutkan tiga alat dalam tasmu", "Nomme trois outils dans ton sac", "Nombra tres útiles en tu mochila"), arabicText: "فِي حَقِيبَتِي مِسْطَرَةٌ وَمِقَصٌّ وَأَلْوَانٌ" },
-          ],
+          
+            { id: "g1u2l8e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا مِقَصٌّ" },],
         },
       ],
     },
@@ -378,7 +392,8 @@ export const grade1: GradeData = {
             { id: "g1u3l1e1", type: "listening", skill: "listening", prompt: t("استمع واختر التحية الصحيحة", "Listen and choose the correct greeting", "Dengar dan pilih ucapan salam yang betul", "Dengarkan dan pilih salam yang benar", "Écoute et choisis la bonne salutation", "Escucha y elige el saludo correcto"), arabicText: "مَرْحَبًا", options: ["صَبَاحُ الْخَيْرِ", "مَرْحَبًا", "أَهْلًا وَسَهْلًا"], correctIndex: 1 },
             { id: "g1u3l1e2", type: "mcq", skill: "reading", prompt: t("ماذا نقول صباحًا عند اللقاء؟", "What do we say in the morning when we meet?", "Apa yang kita ucapkan di pagi hari ketika bertemu?", "Apa yang kita ucapkan di pagi hari saat bertemu?", "Que dit-on le matin quand on se rencontre ?", "¿Qué decimos por la mañana al encontrarnos?"), options: ["مَسَاءُ الْخَيْرِ", "صَبَاحُ الْخَيْرِ", "تُصْبِحُ عَلَى خَيْرٍ"], correctIndex: 1 },
             { id: "g1u3l1e3", type: "speaking", skill: "speaking", prompt: t("سلّم على زميلك بالعربية", "Greet your classmate in Arabic", "Beri salam kepada rakan anda dalam bahasa Arab", "Beri salam kepada temanmu dalam bahasa Arab", "Salue ton camarade en arabe", "Saluda a tu compañero en árabe"), arabicText: "السَّلَامُ عَلَيْكُمْ! صَبَاحُ الْخَيْرِ يَا صَدِيقِي!" },
-          ],
+          
+            { id: "g1u3l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "السَّلَامُ عَلَيْكُمْ" },],
         },
         {
           id: "g1u3l2",
@@ -403,7 +418,8 @@ export const grade1: GradeData = {
             { id: "g1u3l2e1", type: "listening", skill: "listening", prompt: t("استمع واختر الإجابة الصحيحة", "Listen and choose the correct answer", "Dengar dan pilih jawapan yang betul", "Dengarkan dan pilih jawaban yang benar", "Écoute et choisis la bonne réponse", "Escucha y elige la respuesta correcta"), arabicText: "بِخَيْرٍ", options: ["شُكْرًا", "بِخَيْرٍ", "عَفْوًا"], correctIndex: 1 },
             { id: "g1u3l2e2", type: "mcq", skill: "reading", prompt: t("ماذا نقول عندما يشكرنا أحد؟", "What do we say when someone thanks us?", "Apa yang kita ucapkan ketika seseorang berterima kasih?", "Apa yang kita ucapkan ketika seseorang berterima kasih?", "Que dit-on quand quelqu'un nous remercie ?", "¿Qué decimos cuando alguien nos agradece?"), options: ["شُكْرًا", "عَفْوًا", "مَرْحَبًا"], correctIndex: 1 },
             { id: "g1u3l2e3", type: "speaking", skill: "speaking", prompt: t("اسأل زميلك عن حاله وردّ عليه", "Ask your classmate how they are and reply", "Tanya rakan anda tentang khabarnya dan balas", "Tanya temanmu tentang kabarnya dan balas", "Demande à ton camarade comment il va et réponds", "Pregunta a tu compañero cómo está y responde"), arabicText: "كَيْفَ حَالُكَ؟ بِخَيْرٍ الْحَمْدُ لِلَّهِ، شُكْرًا!" },
-          ],
+          
+            { id: "g1u3l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "كَيْفَ حَالُكَ يَا زَيْنَب" },],
         },
         {
           id: "g1u3l3",
@@ -428,7 +444,8 @@ export const grade1: GradeData = {
             { id: "g1u3l3e1", type: "listening", skill: "listening", prompt: t("استمع واختر كلمة الوداع الصحيحة", "Listen and choose the correct farewell", "Dengar dan pilih kata perpisahan yang betul", "Dengarkan dan pilih kata perpisahan yang benar", "Écoute et choisis le bon au revoir", "Escucha y elige la despedida correcta"), arabicText: "إِلَى اللِّقَاءِ", options: ["مَعَ السَّلَامَةِ", "إِلَى اللِّقَاءِ", "نَرَاكَ غَدًا"], correctIndex: 1 },
             { id: "g1u3l3e2", type: "mcq", skill: "reading", prompt: t("ماذا نقول لصديقنا عند الذهاب للنوم؟", "What do we say to our friend before going to sleep?", "Apa yang kita ucapkan kepada teman sebelum tidur?", "Apa yang kita ucapkan kepada teman sebelum tidur?", "Que dit-on à son ami avant d'aller dormir ?", "¿Qué decimos a nuestro amigo antes de dormir?"), options: ["صَبَاحُ الْخَيْرِ", "تُصْبِحُ عَلَى خَيْرٍ", "مَرْحَبًا"], correctIndex: 1 },
             { id: "g1u3l3e3", type: "speaking", skill: "speaking", prompt: t("ودّع زميلك بعبارات جميلة", "Say farewell to your classmate with beautiful phrases", "Ucapkan selamat tinggal kepada rakan dengan kata-kata indah", "Ucapkan selamat tinggal kepada temanmu dengan kata-kata indah", "Dis au revoir à ton camarade avec de belles phrases", "Despídete de tu compañero con frases hermosas"), arabicText: "مَعَ السَّلَامَةِ يَا صَدِيقِي! إِلَى اللِّقَاءِ!" },
-          ],
+          
+            { id: "g1u3l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَعَ السَّلَامَةِ يَا مُعَلِّمَةُ" },],
         },
       ],
     },
@@ -463,7 +480,8 @@ export const grade1: GradeData = {
             { id: "g1u4l1e1", type: "listening", skill: "listening", prompt: t("استمع واختر الرقم الصحيح", "Listen and choose the correct number", "Dengar dan pilih nombor yang betul", "Dengarkan dan pilih angka yang benar", "Écoute et choisis le bon chiffre", "Escucha y elige el número correcto"), arabicText: "ثَلَاثَةٌ", options: ["اثْنَانِ", "ثَلَاثَةٌ", "أَرْبَعَةٌ"], correctIndex: 1 },
             { id: "g1u4l1e2", type: "mcq", skill: "reading", prompt: t("كم عدد أصابع يدٍ واحدة؟", "How many fingers are on one hand?", "Berapa banyak jari di satu tangan?", "Berapa banyak jari di satu tangan?", "Combien y a-t-il de doigts sur une main ?", "¿Cuántos dedos hay en una mano?"), options: ["أَرْبَعَةٌ", "خَمْسَةٌ", "ثَلَاثَةٌ"], correctIndex: 1 },
             { id: "g1u4l1e3", type: "speaking", skill: "speaking", prompt: t("عُدَّ من واحد إلى خمسة بصوت واضح", "Count from one to five clearly", "Kira dari satu hingga lima dengan jelas", "Hitung dari satu sampai lima dengan jelas", "Compte de un à cinq clairement", "Cuenta del uno al cinco claramente"), arabicText: "وَاحِد، اثنانِ، ثَلَاثَة، أَرْبَعَة، خَمْسَة" },
-          ],
+          
+            { id: "g1u4l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "عُدُّوا مَعِي: وَاحِد، اثنانِ، ثَلَاثَة، أَرْبَعَة، خَمْسَة" },],
         },
         {
           id: "g1u4l2",
@@ -485,7 +503,8 @@ export const grade1: GradeData = {
             { id: "g1u4l2e1", type: "listening", skill: "listening", prompt: t("استمع واختر الرقم الصحيح", "Listen and choose the correct number", "Dengar dan pilih nombor yang betul", "Dengarkan dan pilih angka yang benar", "Écoute et choisis le bon chiffre", "Escucha y elige el número correcto"), arabicText: "سَبْعَةٌ", options: ["سِتَّةٌ", "سَبْعَةٌ", "ثَمَانِيَةٌ"], correctIndex: 1 },
             { id: "g1u4l2e2", type: "mcq", skill: "reading", prompt: t("ما الرقم الذي يأتي بعد تسعة؟", "What number comes after nine?", "Nombor apa yang datang selepas sembilan?", "Angka apa yang datang setelah sembilan?", "Quel chiffre vient après neuf ?", "¿Qué número viene después del nueve?"), options: ["ثَمَانِيَةٌ", "عَشَرَةٌ", "سِتَّةٌ"], correctIndex: 1 },
             { id: "g1u4l2e3", type: "speaking", skill: "speaking", prompt: t("عُدَّ من ستة إلى عشرة بصوت واضح", "Count from six to ten clearly", "Kira dari enam hingga sepuluh dengan jelas", "Hitung dari enam sampai sepuluh dengan jelas", "Compte de six à dix clairement", "Cuenta del seis al diez claramente"), arabicText: "سِتَّة، سَبْعَة، ثَمَانِيَة، تِسْعَة، عَشَرَة" },
-          ],
+          
+            { id: "g1u4l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا سِتَّةٌ" },],
         },
         {
           id: "g1u4l3",
@@ -510,7 +529,8 @@ export const grade1: GradeData = {
             { id: "g1u4l3e1", type: "listening", skill: "listening", prompt: t("استمع واختر العدد الصحيح", "Listen and choose the correct number", "Dengar dan pilih nombor yang betul", "Dengarkan dan pilih angka yang benar", "Écoute et choisis le bon nombre", "Escucha y elige el número correcto"), arabicText: "خَمْسَةٌ", options: ["أَرْبَعَةٌ", "خَمْسَةٌ", "سِتَّةٌ"], correctIndex: 1 },
             { id: "g1u4l3e2", type: "mcq", skill: "reading", prompt: t("كم عدد أيام الأسبوع؟", "How many days are in a week?", "Berapa hari dalam seminggu?", "Berapa hari dalam seminggu?", "Combien de jours y a-t-il dans une semaine ?", "¿Cuántos días hay en una semana?"), options: ["خَمْسَةٌ", "سَبْعَةٌ", "عَشَرَةٌ"], correctIndex: 1 },
             { id: "g1u4l3e3", type: "speaking", skill: "speaking", prompt: t("عُدَّ الأشياء الموجودة أمامك", "Count the objects in front of you", "Kira benda-benda yang ada di hadapan anda", "Hitung benda-benda yang ada di depanmu", "Compte les objets devant toi", "Cuenta los objetos frente a ti"), arabicText: "هُنَاكَ وَاحِد، اثنانِ، ثَلَاثَة — ثَلَاثَةُ أَشْيَاءَ!" },
-          ],
+          
+            { id: "g1u4l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "كَمْ كِتَابًا عَلَى الطَّاوِلَةِ" },],
         },
       ],
     },

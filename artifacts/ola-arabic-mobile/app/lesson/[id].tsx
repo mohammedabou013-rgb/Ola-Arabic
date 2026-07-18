@@ -276,6 +276,8 @@ function ExerciseCard({ exercise, language, colors, t, onCorrect, onWrong, feedb
   const [matchedA, setMatchedA] = useState<number[]>([]);
   const [selA, setSelA] = useState<number | null>(null);
   const [selB, setSelB] = useState<number | null>(null);
+  const [arranged, setArranged] = useState<string[]>([]);
+  const [pool, setPool] = useState<string[]>([]);
 
   useEffect(() => {
     setSelected(null);
@@ -283,6 +285,13 @@ function ExerciseCard({ exercise, language, colors, t, onCorrect, onWrong, feedb
     setMatchedA([]);
     setSelA(null);
     setSelB(null);
+    setArranged([]);
+    if (exercise.type === 'arrange' && exercise.answer) {
+      const words = exercise.answer.split(' ').filter(Boolean);
+      setPool(shuffle([...words]));
+    } else {
+      setPool([]);
+    }
   }, [exercise]);
 
   useEffect(() => {
@@ -312,6 +321,22 @@ function ExerciseCard({ exercise, language, colors, t, onCorrect, onWrong, feedb
       .replace(/\s+/g, ' ')
       .trim()
       .toLowerCase();
+
+  const shuffle = (array: string[]) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  };
+
+  const handleArrange = () => {
+    if (feedback || arranged.length === 0) return;
+    const input = normalize(arranged.join(' '));
+    const expected = normalize(exercise.answer || '');
+    if (input === expected) onCorrect();
+    else onWrong();
+  };
 
   const handleMCQ = (idx: number) => {
     if (feedback) return;
@@ -517,6 +542,54 @@ function ExerciseCard({ exercise, language, colors, t, onCorrect, onWrong, feedb
         </View>
       )}
 
+      {exercise.type === 'arrange' && (
+        <View style={{ width: '100%', gap: 16 }}>
+          <View style={[styles.arrangeSlot, { borderColor: colors.border, backgroundColor: colors.card }]}>
+            {arranged.length === 0 ? (
+              <Text style={[styles.arrangeHint, { color: colors.mutedForeground }]}>{t('tap_words')}</Text>
+            ) : (
+              arranged.map((word, i) => (
+                <TouchableOpacity
+                  key={`sel-${i}-${word}`}
+                  style={[styles.arrangeChip, { backgroundColor: colors.primary }]}
+                  onPress={() => {
+                    setPool((p) => [...p, word]);
+                    setArranged((a) => a.filter((_, idx) => idx !== i));
+                    if (feedback === 'wrong') onReset();
+                  }}
+                  disabled={feedback === 'correct'}
+                >
+                  <Text style={[styles.arrangeChipText, { color: colors.primaryForeground }]}>{word}</Text>
+                </TouchableOpacity>
+              ))
+            )}
+          </View>
+          <View style={styles.arrangePool}>
+            {pool.map((word, i) => (
+              <TouchableOpacity
+                key={`pool-${i}-${word}`}
+                style={[styles.arrangeChip, { backgroundColor: colors.secondary }]}
+                onPress={() => {
+                  setArranged((a) => [...a, word]);
+                  setPool((p) => p.filter((_, idx) => idx !== i));
+                  if (feedback === 'wrong') onReset();
+                }}
+                disabled={feedback === 'correct'}
+              >
+                <Text style={[styles.arrangeChipText, { color: colors.secondaryForeground }]}>{word}</Text>
+              </TouchableOpacity>
+            ))}
+          </View>
+          <TouchableOpacity
+            style={[styles.button, { backgroundColor: colors.primary }]}
+            onPress={handleArrange}
+            disabled={feedback === 'correct' || arranged.length === 0}
+          >
+            <Text style={[styles.buttonText, { color: colors.primaryForeground }]}>{t('check')}</Text>
+          </TouchableOpacity>
+        </View>
+      )}
+
       {feedback && (
         <View
           style={[
@@ -529,9 +602,16 @@ function ExerciseCard({ exercise, language, colors, t, onCorrect, onWrong, feedb
               <Feather name="check" color="#166534" size={20} /> {t('correct')}
             </Text>
           ) : (
-            <Text style={[styles.feedbackText, { color: '#991b1b' }]}>
-              <Feather name="x" color="#991b1b" size={20} /> {t('wrong')}
-            </Text>
+            <View style={{ alignItems: 'center' }}>
+              <Text style={[styles.feedbackText, { color: '#991b1b' }]}>
+                <Feather name="x" color="#991b1b" size={20} /> {t('wrong')}
+              </Text>
+              {exercise.answer && (
+                <Text style={[styles.correctAnswerText, { color: '#166534' }]}>
+                  {t('correct_answer')}: {exercise.answer}
+                </Text>
+              )}
+            </View>
           )}
         </View>
       )}
@@ -695,6 +775,33 @@ const styles = StyleSheet.create({
     borderRadius: 16,
   },
   feedbackText: { fontSize: 18, fontFamily: 'Inter_700Bold' },
+  correctAnswerText: { fontSize: 16, fontFamily: 'Inter_600SemiBold', marginTop: 6 },
+  arrangeSlot: {
+    width: '100%',
+    minHeight: 64,
+    borderWidth: 2,
+    borderRadius: 16,
+    padding: 12,
+    flexDirection: 'row-reverse',
+    flexWrap: 'wrap',
+    gap: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  arrangePool: {
+    width: '100%',
+    flexDirection: 'row-reverse',
+    flexWrap: 'wrap',
+    gap: 8,
+    justifyContent: 'center',
+  },
+  arrangeChip: {
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    borderRadius: 12,
+  },
+  arrangeChipText: { fontSize: 18, fontFamily: 'Inter_700Bold' },
+  arrangeHint: { fontSize: 14, fontFamily: 'Inter_500Medium' },
   summaryTitle: { fontSize: 36, fontFamily: 'Inter_700Bold', marginTop: 20 },
   starsRow: { flexDirection: 'row', gap: 12, marginVertical: 20 },
   xpText: { fontSize: 24, fontFamily: 'Inter_700Bold', marginBottom: 20 },

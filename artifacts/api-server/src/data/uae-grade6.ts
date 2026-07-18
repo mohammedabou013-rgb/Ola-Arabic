@@ -62,7 +62,8 @@ export const uaeGrade6: GradeData = {
             { id: "uae-g6u1l1e6", type: "speaking", skill: "speaking", prompt: t("تَحَدَّثْ عَنْ طَرِيقَتِكَ فِي التَّخْطِيطِ الْمَالِيِّ", "Talk about your method of financial planning", "Bercakap tentang cara anda merancang kewangan", "Bicarakan metode perencanaan keuanganmu", "Parle de ta méthode de planification financière", "Habla sobre tu método de planificación financiera"), arabicText: "أُخَطِّطُ لِمَالِي بِأَنْ..." },
             { id: "uae-g6u1l1e7", type: "matching", skill: "reading", prompt: t("صِلِ الْكَلِمَةَ بِرَمْزِهَا", "Match the word to its symbol", "Padankan perkataan dengan simbolnya", "Cocokkan kata dengan simbolnya", "Relie le mot à son symbole", "Une la palabra con su símbolo"), pairs: [{ a: "تَوْفِيرٌ", b: "🏦" }, { a: "إِنْفَاقٌ", b: "💸" }, { a: "كَمَالِيَّاتٌ", b: "💎" }] },
             { id: "uae-g6u1l1e8", type: "writing", skill: "writing", prompt: t("اكْتُبْ خُطَّةً مَالِيَّةً أُسْبُوعِيَّةً بَسِيطَةً", "Write a simple weekly financial plan", "Tulis pelan kewangan mingguan yang mudah", "Tulis rencana keuangan mingguan yang sederhana", "Écris un plan financier hebdomadaire simple", "Escribe un plan financiero semanal simple"), answer: "خُطَّتِي الْمَالِيَّةُ: أُوَفِّرُ نِصْفَ مَصْرُوفِي وَأُنْفِقُ النِّصْفَ الآخَرَ عَلَى الاحْتِيَاجَاتِ الضَّرُورِيَّةِ" },
-          ],
+          
+            { id: "uae-g6u1l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "يَا سَارَة، مَاذَا تَحْتَاجِينَ لِشِرَاءٍ هَذَا الشَّهْرَ" },],
         },
         {
           id: "uae-g6u1l2",
@@ -104,7 +105,8 @@ export const uaeGrade6: GradeData = {
             { id: "uae-g6u1l2e6", type: "writing", skill: "writing", prompt: t("اكْتُبْ سِيرَةً ذَاتِيَّةً قَصِيرَةً عَنْ نَفْسِكَ", "Write a short CV about yourself", "Tulis resume pendek tentang diri anda", "Tulis resume singkat tentang dirimu", "Écris un court CV sur toi-même", "Escribe un breve currículum sobre ti mismo"), answer: "اسْمِي... أَمْتَلِكُ مَهَارَاتِ اللُّغَةِ وَالْحَاسُوبِ وَأَسْعَى لِلنَّجَاحِ فِي مِهْنَتِي" },
             { id: "uae-g6u1l2e7", type: "matching", skill: "reading", prompt: t("صِلِ كُلَّ كَلِمَةٍ بِمَعْنَاهَا", "Match each word to its meaning", "Padankan setiap perkataan dengan maknanya", "Cocokkan setiap kata dengan artinya", "Relie chaque mot à son sens", "Une cada palabra con su significado"), pairs: [{ a: "رَاتِبٌ", b: "salary" }, { a: "تَدْرِيبٌ", b: "training" }, { a: "خِبْرَةٌ", b: "experience" }] },
             { id: "uae-g6u1l2e8", type: "listening", skill: "listening", prompt: t("اسْتَمِعْ وَحَدِّدِ الْمِهْنَةَ الصَّحِيحَةَ", "Listen and identify the correct profession", "Dengar dan kenal pasti profesion yang betul", "Dengarkan dan identifikasi profesi yang benar", "Écoute et identifie la bonne profession", "Escucha e identifica la profesión correcta"), arabicText: "مِهْنَةٌ", options: ["رَاتِبٌ", "مِهْنَةٌ", "تَدْرِيبٌ"], correctIndex: 1 },
-          ],
+          
+            { id: "uae-g6u1l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَرْحَبًا بِكَ يَا مُتَقَدِّم! مَا الْمَهَارَاتِ الَّتِي تَمْتَلِكُهَا لِهَذِهِ الْوَظِيفَةِ" },],
         },
         {
           id: "uae-g6u1l3",
@@ -146,7 +148,8 @@ export const uaeGrade6: GradeData = {
             { id: "uae-g6u1l3e6", type: "speaking", skill: "speaking", prompt: t("تَحَدَّثْ عَنْ فَائِدَةِ تَحْوِيلِ الأَمْوَالِ إِلِكْتِرُونِيًّا", "Talk about the benefit of electronic money transfer", "Bercakap tentang faedah pemindahan wang secara elektronik", "Bicarakan manfaat transfer uang secara elektronik", "Parle de l'avantage du virement électronique", "Habla sobre el beneficio de la transferencia electrónica de dinero"), arabicText: "التَّحْوِيلُ الإِلِكْتِرُونِيُّ مُفِيدٌ لِأَنَّهُ..." },
             { id: "uae-g6u1l3e7", type: "matching", skill: "reading", prompt: t("صِلِ الْعُمْلَةَ بِرَمْزِهَا", "Match the currency to its symbol", "Padankan mata wang dengan simbolnya", "Cocokkan mata uang dengan simbolnya", "Relie la monnaie à son symbole", "Une la moneda con su símbolo"), pairs: [{ a: "يُورُوٌ", b: "💶" }, { a: "جُنَيْهٌ", b: "💷" }, { a: "دِرْهَمٌ", b: "💵" }] },
             { id: "uae-g6u1l3e8", type: "writing", skill: "writing", prompt: t("اكْتُبْ عَنِ الْفَرْقِ بَيْنَ الْعُمْلَاتِ الْوَرَقِيَّةِ وَالرَّقْمِيَّةِ", "Write about the difference between paper and digital currencies", "Tulis tentang perbezaan antara mata wang kertas dan digital", "Tulis tentang perbedaan antara mata uang kertas dan digital", "Écris sur la différence entre les monnaies papier et numériques", "Escribe sobre la diferencia entre monedas en papel y digitales"), answer: "الْعُمْلَةُ الْوَرَقِيَّةُ مَلْمُوسَةٌ، أَمَّا الرَّقْمِيَّةُ فَتُسْتَخْدَمُ عَبْرَ الإِنِتِرْنِتِ" },
-          ],
+          
+            { id: "uae-g6u1l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "أَهْلًا! هَلْ تُرِيدُ صَرْفَ الدُّولَارِ إِلَى دِرْهَمٍ" },],
         },
         {
           id: "uae-g6u1l4",
@@ -188,7 +191,8 @@ export const uaeGrade6: GradeData = {
             { id: "uae-g6u1l4e6", type: "speaking", skill: "speaking", prompt: t("تَحَدَّثْ عَنِ الصَّادِرَاتِ وَالْوَارِدَاتِ فِي الإِمَارَاتِ", "Talk about exports and imports in the UAE", "Bercakap tentang eksport dan import di UAE", "Bicarakan tentang ekspor dan impor di UAE", "Parle des exportations et importations aux EAU", "Habla sobre exportaciones e importaciones en los EAU"), arabicText: "تَصْدُرُ الإِمَارَاتُ... وَتَسْتَوْرِدُ..." },
             { id: "uae-g6u1l4e7", type: "matching", skill: "reading", prompt: t("صِلِ الْكَلِمَةَ بِرَمْزِهَا", "Match the word to its symbol", "Padankan perkataan dengan simbolnya", "Cocokkan kata dengan simbolnya", "Relie le mot à son symbole", "Une la palabra con su símbolo"), pairs: [{ a: "صَادِرَاتٌ", b: "🚢" }, { a: "وَارِدَاتٌ", b: "🛬" }, { a: "تَاجِرٌ", b: "🧑‍💼" }] },
             { id: "uae-g6u1l4e8", type: "writing", skill: "writing", prompt: t("اكْتُبْ عَنْ دَوْرِ التَّاجِرِ فِي التِّجَارَةِ الْقَدِيمَةِ", "Write about the role of the merchant in ancient trade", "Tulis tentang peranan pedagang dalam perdagangan kuno", "Tulis tentang peran pedagang dalam perdagangan kuno", "Écris sur le rôle du marchand dans le commerce ancien", "Escribe sobre el papel del comerciante en el comercio antiguo"), answer: "كَانَ التَّاجِرُ يَحْمِلُ الْبَضَائِعَ عَلَى طَرِيقِ الْحَرِيرِ وَيُبَادِلُهَا مَعَ التُّجَّارِ الآخَرِينَ" },
-          ],
+          
+            { id: "uae-g6u1l4e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "كَيْفَ كَانَتِ التِّجَارَةُ تَتِمُّ فِي الْعُصُورِ الْقَدِيمَةِ" },],
         },
         {
           id: "uae-g6u1l5",
@@ -230,7 +234,8 @@ export const uaeGrade6: GradeData = {
             { id: "uae-g6u1l5e6", type: "writing", skill: "writing", prompt: t("اكْتُبْ خُطُوَاتِ الشِّرَاءِ الإِلِكْتِرُونِيِّ", "Write the steps of online shopping", "Tulis langkah-langkah pembelian dalam talian", "Tulis langkah-langkah belanja online", "Écris les étapes de l'achat en ligne", "Escribe los pasos de la compra en línea"), answer: "خُطُوَاتُ الشِّرَاءِ الإِلِكْتِرُونِيِّ: اخْتَرِ الْمُنْتَجَ، أَضِفْهُ لِلسَّلَّةِ، ادْفَعْ، انْتَظِرِ التَّوْصِيلَ" },
             { id: "uae-g6u1l5e7", type: "matching", skill: "reading", prompt: t("صِلِ الْكَلِمَةَ بِمَعْنَاهَا", "Match the word to its meaning", "Padankan perkataan dengan maknanya", "Cocokkan kata dengan artinya", "Relie le mot à son sens", "Une la palabra con su significado"), pairs: [{ a: "خَصْمٌ", b: "discount" }, { a: "ضَمَانٌ", b: "guarantee" }, { a: "تَطْبِيقٌ", b: "app" }] },
             { id: "uae-g6u1l5e8", type: "listening", skill: "listening", prompt: t("اسْتَمِعْ وَاخْتَرِ الْكَلِمَةَ الصَّحِيحَةَ", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "تَطْبِيقٌ", options: ["ضَمَانٌ", "تَطْبِيقٌ", "خَصْمٌ"], correctIndex: 1 },
-          ],
+          
+            { id: "uae-g6u1l5e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "كَيْفَ اشْتَرَيْتِ هَذِهِ الْحَقِيبَةَ الْجَمِيلَةَ يَا نَوَال" },],
         },
       ],
     },
@@ -281,7 +286,8 @@ export const uaeGrade6: GradeData = {
             { id: "uae-g6u2l1e6", type: "speaking", skill: "speaking", prompt: t("تَحَدَّثْ عَنْ كَيْفِيَّةِ اخْتِيَارِ الْفَاكِهَةِ وَالْخِضَارِ الطَّازَجِ", "Talk about how to choose fresh fruit and vegetables", "Bercakap tentang cara memilih buah dan sayuran segar", "Bicarakan cara memilih buah dan sayuran segar", "Parle de comment choisir des fruits et légumes frais", "Habla sobre cómo elegir fruta y verdura fresca"), arabicText: "عِنْدَ اخْتِيَارِ الْفَاكِهَةِ أَنْظُرُ إِلَى..." },
             { id: "uae-g6u2l1e7", type: "matching", skill: "reading", prompt: t("صِلِ الْمُنْتَجَ بِرَمْزِهِ", "Match the product to its symbol", "Padankan produk dengan simbolnya", "Cocokkan produk dengan simbolnya", "Relie le produit à son symbole", "Une el producto con su símbolo"), pairs: [{ a: "فَاكِهَةٌ", b: "🍎" }, { a: "لَبَنٌ", b: "🥛" }, { a: "خِضَارٌ", b: "🥦" }] },
             { id: "uae-g6u2l1e8", type: "writing", skill: "writing", prompt: t("اكْتُبْ عَنْ فَوَائِدِ الشِّرَاءِ بِكَمِّيَّاتٍ مُحَدَّدَةٍ", "Write about the benefits of buying in specific quantities", "Tulis tentang faedah membeli dalam kuantiti tertentu", "Tulis tentang manfaat membeli dalam jumlah tertentu", "Écris sur les avantages d'acheter en quantités précises", "Escribe sobre los beneficios de comprar en cantidades específicas"), answer: "الشِّرَاءُ بِكَمِّيَّاتٍ مُحَدَّدَةٍ يَمْنَعُ الْهَدَرَ وَيُوَفِّرُ الْمَالَ" },
-          ],
+          
+            { id: "uae-g6u2l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَيَّا نَكْتُبْ قَائِمَةَ التَّسَوُّقِ قَبْلَ الذَّهَابِ إِلَى السُّوقِ" },],
         },
         {
           id: "uae-g6u2l2",
@@ -323,7 +329,8 @@ export const uaeGrade6: GradeData = {
             { id: "uae-g6u2l2e6", type: "writing", skill: "writing", prompt: t("اكْتُبْ عَنْ مَزَايَا وَعُيُوبِ الدَّفْعِ النَّقْدِيِّ", "Write about the advantages and disadvantages of cash payment", "Tulis tentang kelebihan dan kelemahan pembayaran tunai", "Tulis tentang kelebihan dan kekurangan pembayaran tunai", "Écris sur les avantages et les inconvénients du paiement en espèces", "Escribe sobre las ventajas y desventajas del pago en efectivo"), answer: "مَزَايَا النَّقْدِ: سَهْلُ الاسْتِخْدَامِ. عُيُوبُهُ: يُمْكِنُ سَرِقَتُهُ وَصَعْبُ الْحَمْلِ بِكَمِّيَّاتٍ كَبِيرَةٍ" },
             { id: "uae-g6u2l2e7", type: "matching", skill: "reading", prompt: t("صِلِ الْكَلِمَةَ بِمَعْنَاهَا", "Match the word to its meaning", "Padankan perkataan dengan maknanya", "Cocokkan kata dengan artinya", "Relie le mot à son sens", "Une la palabra con su significado"), pairs: [{ a: "رَصِيدٌ", b: "balance" }, { a: "إِيصَالٌ", b: "receipt" }, { a: "مَصْرُوفَاتٌ", b: "expenses" }] },
             { id: "uae-g6u2l2e8", type: "listening", skill: "listening", prompt: t("اسْتَمِعْ وَاخْتَرِ الْكَلِمَةَ الصَّحِيحَةَ", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "رَمْزٌ سِرِّيٌّ", options: ["رَصِيدٌ", "إِيصَالٌ", "رَمْزٌ سِرِّيٌّ"], correctIndex: 2 },
-          ],
+          
+            { id: "uae-g6u2l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَلْ تُرِيدُ الدَّفْعَ نَقْدًا أَوْ بِبِطَاقَةِ الائْتِمَانِ" },],
         },
         {
           id: "uae-g6u2l3",
@@ -407,7 +414,8 @@ export const uaeGrade6: GradeData = {
             { id: "uae-g6u2l4e6", type: "speaking", skill: "speaking", prompt: t("تَحَدَّثْ عَنْ فُنُونٍ وَحِرَفٍ مِنْ بَلَدِكَ", "Talk about arts and crafts from your country", "Bercakap tentang seni dan kraf dari negara anda", "Bicarakan seni dan kerajinan dari negaramu", "Parle des arts et artisanats de ton pays", "Habla sobre artes y artesanías de tu país"), arabicText: "مِنْ فُنُونِ وَحِرَفِ بَلَدِي..." },
             { id: "uae-g6u2l4e7", type: "matching", skill: "reading", prompt: t("صِلِ الْكَلِمَةَ بِرَمْزِهَا", "Match the word to its symbol", "Padankan perkataan dengan simbolnya", "Cocokkan kata dengan simbolnya", "Relie le mot à son symbole", "Une la palabra con su símbolo"), pairs: [{ a: "تَنَوُّعٌ", b: "🌈" }, { a: "تَقَالِيدُ", b: "🎭" }, { a: "فُنُونٌ", b: "🎨" }] },
             { id: "uae-g6u2l4e8", type: "writing", skill: "writing", prompt: t("اكْتُبْ عَنْ أَهَمِّيَّةِ الْحِفَاظِ عَلَى التُّرَاثِ الثَّقَافِيِّ", "Write about the importance of preserving cultural heritage", "Tulis tentang kepentingan memelihara warisan budaya", "Tulis tentang pentingnya melestarikan warisan budaya", "Écris sur l'importance de la préservation du patrimoine culturel", "Escribe sobre la importancia de preservar el patrimonio cultural"), answer: "الْحِفَاظُ عَلَى التُّرَاثِ الثَّقَافِيِّ مُهِمٌّ لِأَنَّهُ يَرْبُطُنَا بِتَارِيخِنَا وَهُوِيَّتِنَا" },
-          ],
+          
+            { id: "uae-g6u2l4e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الْمَهْرَجَانُ رَائِعٌ! كَيْفَ تَجْمَعُ الْقَرْيَةُ الْعَالَمِيَّةُ كُلَّ هَذِهِ الثَّقَافَاتِ" },],
         },
         {
           id: "uae-g6u2l5",
@@ -449,7 +457,8 @@ export const uaeGrade6: GradeData = {
             { id: "uae-g6u2l5e6", type: "speaking", skill: "speaking", prompt: t("تَحَدَّثْ عَنْ كَيْفِيَّةِ اخْتِيَارِ هَدِيَّةٍ مُنَاسِبَةٍ", "Talk about how to choose an appropriate gift", "Bercakap tentang cara memilih hadiah yang sesuai", "Bicarakan cara memilih hadiah yang tepat", "Parle de comment choisir un cadeau approprié", "Habla sobre cómo elegir un regalo apropiado"), arabicText: "عِنْدَ اخْتِيَارِ الْهَدِيَّةِ أُفَكِّرُ فِي..." },
             { id: "uae-g6u2l5e7", type: "matching", skill: "reading", prompt: t("صِلِ الْكَلِمَةَ بِمَعْنَاهَا", "Match the word to its meaning", "Padankan perkataan dengan maknanya", "Cocokkan kata dengan artinya", "Relie le mot à son sens", "Une la palabra con su significado"), pairs: [{ a: "آمِنٌ", b: "safe" }, { a: "تَصْمِيمٌ", b: "design" }, { a: "عُلْبَةٌ", b: "box" }] },
             { id: "uae-g6u2l5e8", type: "writing", skill: "writing", prompt: t("اكْتُبْ وَصْفًا لِلُعْبَتِكَ الْمُفَضَّلَةِ", "Write a description of your favourite toy", "Tulis huraian mainan kegemaran anda", "Tulis deskripsi mainan favoritmu", "Écris une description de ton jouet préféré", "Escribe una descripción de tu juguete favorito"), answer: "لُعْبَتِي الْمُفَضَّلَةُ لَوْنُهَا... وَحَجْمُهَا... وَتُسَاعِدُنِي عَلَى..." },
-          ],
+          
+            { id: "uae-g6u2l5e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "يَا أَبِي، هَذِهِ اللُّعْبَةُ عَلَى الرَّفِّ جَمِيلَةٌ جِدًّا! مَا سِعْرُهَا" },],
         },
       ],
     },
@@ -500,7 +509,8 @@ export const uaeGrade6: GradeData = {
             { id: "uae-g6u3l1e6", type: "speaking", skill: "speaking", prompt: t("تَحَدَّثْ عَنْ أَجْمَلِ رِحْلَةٍ قُمْتَ بِهَا", "Talk about the most beautiful trip you took", "Bercakap tentang perjalanan paling indah yang pernah anda lakukan", "Bicarakan perjalanan paling indah yang pernah kamu lakukan", "Parle du plus beau voyage que tu as fait", "Habla sobre el viaje más hermoso que hiciste"), arabicText: "أَجْمَلُ رِحْلَةٍ قُمْتُ بِهَا كَانَتْ إِلَى..." },
             { id: "uae-g6u3l1e7", type: "matching", skill: "reading", prompt: t("صِلِ الْكَلِمَةَ بِرَمْزِهَا", "Match the word to its symbol", "Padankan perkataan dengan simbolnya", "Cocokkan kata dengan simbolnya", "Relie le mot à son symbole", "Une la palabra con su símbolo"), pairs: [{ a: "إِجَازَةٌ", b: "🏖️" }, { a: "تَصْوِيرٌ", b: "📷" }, { a: "رَاحَةٌ", b: "😌" }] },
             { id: "uae-g6u3l1e8", type: "writing", skill: "writing", prompt: t("اكْتُبْ فَقْرَةً عَنْ فَوَائِدِ السَّفَرِ لِلصِّحَّةِ النَّفْسِيَّةِ", "Write a paragraph about the benefits of travel for mental health", "Tulis perenggan tentang faedah perjalanan untuk kesihatan mental", "Tulis paragraf tentang manfaat perjalanan untuk kesehatan mental", "Écris un paragraphe sur les bienfaits du voyage pour la santé mentale", "Escribe un párrafo sobre los beneficios del viaje para la salud mental"), answer: "السَّفَرُ يُفِيدُ الصِّحَّةَ النَّفْسِيَّةَ لِأَنَّهُ يُقَلِّلُ التَّوَتُّرَ وَيَمْنَحُ الرَّاحَةَ وَالسَّعَادَةَ" },
-          ],
+          
+            { id: "uae-g6u3l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "لِمَاذَا تُحِبُّ السَّفَرَ كَثِيرًا يَا سَلْمَى" },],
         },
         {
           id: "uae-g6u3l2",
@@ -542,7 +552,8 @@ export const uaeGrade6: GradeData = {
             { id: "uae-g6u3l2e6", type: "speaking", skill: "speaking", prompt: t("تَحَدَّثْ عَنْ كَيْفِيَّةِ حَجْزِ فُنْدُقٍ أَوْ طَائِرَةٍ", "Talk about how to book a hotel or flight", "Bercakap tentang cara menempah hotel atau penerbangan", "Bicarakan cara memesan hotel atau penerbangan", "Parle de comment réserver un hôtel ou un vol", "Habla sobre cómo reservar un hotel o vuelo"), arabicText: "لِحَجْزِ الْفُنْدُقِ أَوِ الطَّائِرَةِ أَتَّبِعُ الْخُطُوَاتِ التَّالِيَةَ..." },
             { id: "uae-g6u3l2e7", type: "matching", skill: "reading", prompt: t("صِلِ الْكَلِمَةَ بِمَعْنَاهَا", "Match the word to its meaning", "Padankan perkataan dengan maknanya", "Cocokkan kata dengan artinya", "Relie le mot à son sens", "Une la palabra con su significado"), pairs: [{ a: "مَطَارٌ", b: "airport" }, { a: "فُنْدُقٌ", b: "hotel" }, { a: "دَلِيلٌ سِيَاحِيٌّ", b: "tourist guide" }] },
             { id: "uae-g6u3l2e8", type: "writing", skill: "writing", prompt: t("اكْتُبْ عَنْ أَهَمِّيَّةِ التَّخْطِيطِ قَبْلَ السَّفَرِ", "Write about the importance of planning before travel", "Tulis tentang kepentingan merancang sebelum perjalanan", "Tulis tentang pentingnya merencanakan sebelum bepergian", "Écris sur l'importance de planifier avant le voyage", "Escribe sobre la importancia de planificar antes del viaje"), answer: "التَّخْطِيطُ الْجَيِّدُ قَبْلَ السَّفَرِ يَضْمَنُ رِحْلَةً آمِنَةً وَمُمْتِعَةً بِلَا مُفَاجَآتٍ" },
-          ],
+          
+            { id: "uae-g6u3l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَلِ اسْتَعْدَدْتَ لِلرِّحْلَةِ يَا أَحْمَد؟ هَلْ حَزَمْتَ حَقِيبَتَكَ" },],
         },
         {
           id: "uae-g6u3l3",
@@ -584,7 +595,8 @@ export const uaeGrade6: GradeData = {
             { id: "uae-g6u3l3e6", type: "speaking", skill: "speaking", prompt: t("تَحَدَّثْ عَنْ تَطْبِيقٍ تِقْنِيٍّ يُسَاعِدُكَ فِي السَّفَرِ", "Talk about a tech app that helps you in travel", "Bercakap tentang aplikasi teknologi yang membantu anda dalam perjalanan", "Bicarakan aplikasi teknologi yang membantumu dalam perjalanan", "Parle d'une application technologique qui t'aide dans le voyage", "Habla sobre una aplicación tecnológica que te ayuda en el viaje"), arabicText: "التَّطْبِيقُ الَّذِي يُسَاعِدُنِي فِي السَّفَرِ هُوَ..." },
             { id: "uae-g6u3l3e7", type: "matching", skill: "reading", prompt: t("صِلِ التِّقْنِيَةَ بِاسْتِخْدَامِهَا", "Match the technology to its use", "Padankan teknologi dengan kegunaannya", "Cocokkan teknologi dengan penggunaannya", "Relie la technologie à son utilisation", "Une la tecnología con su uso"), pairs: [{ a: "ذَكَاءٌ اصْطِنَاعِيٌّ", b: "🤖" }, { a: "شَبَكَةٌ", b: "📡" }, { a: "سَاعَةٌ ذَكِيَّةٌ", b: "⌚" }] },
             { id: "uae-g6u3l3e8", type: "writing", skill: "writing", prompt: t("اكْتُبْ عَنْ مُسْتَقْبَلِ السَّفَرِ مَعَ التِّكْنُولُوجِيَا", "Write about the future of travel with technology", "Tulis tentang masa depan perjalanan dengan teknologi", "Tulis tentang masa depan perjalanan dengan teknologi", "Écris sur l'avenir du voyage avec la technologie", "Escribe sobre el futuro del viaje con la tecnología"), answer: "فِي الْمُسْتَقْبَلِ سَتَجْعَلُ التِّكْنُولُوجِيَا السَّفَرَ أَسْرَعَ وَأَكْثَرَ أَمَانًا وَأَقَلَّ تَعَبًا" },
-          ],
+          
+            { id: "uae-g6u3l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "كَيْفَ أَجِدُ الطَّرِيقَ إِلَى الْفُنْدُقِ دُونَ دَلِيلٍ سِيَاحِيٍّ" },],
         },
       ],
     },
@@ -635,7 +647,8 @@ export const uaeGrade6: GradeData = {
             { id: "uae-g6u4l1e6", type: "writing", skill: "writing", prompt: t("اكْتُبْ عَنِ الْمَعَالِمِ السِّيَاحِيَّةِ فِي الإِمَارَاتِ", "Write about tourist landmarks in the UAE", "Tulis tentang tempat menarik pelancongan di UAE", "Tulis tentang tempat wisata di UAE", "Écris sur les attractions touristiques aux EAU", "Escribe sobre los atractivos turísticos en los EAU"), answer: "مِنْ أَبْرَزِ الْمَعَالِمِ السِّيَاحِيَّةِ فِي الإِمَارَاتِ: بُرْجُ خَلِيفَةَ وَجُمَيْرَا وَالصَّحْرَاءُ الْجَمِيلَةُ" },
             { id: "uae-g6u4l1e7", type: "matching", skill: "reading", prompt: t("صِلِ الْكَلِمَةَ بِمَعْنَاهَا", "Match the word to its meaning", "Padankan perkataan dengan maknanya", "Cocokkan kata dengan artinya", "Relie le mot à son sens", "Une la palabra con su significado"), pairs: [{ a: "مَعَالِمُ", b: "landmarks" }, { a: "اسْتِقْبَالٌ", b: "reception" }, { a: "مَوْسِمٌ سِيَاحِيٌّ", b: "tourist season" }] },
             { id: "uae-g6u4l1e8", type: "listening", skill: "listening", prompt: t("اسْتَمِعْ وَاخْتَرِ الْكَلِمَةَ الصَّحِيحَةَ", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "مَنْطِقَةٌ سِيَاحِيَّةٌ", options: ["إِقَامَةٌ", "مَنْطِقَةٌ سِيَاحِيَّةٌ", "اسْتِقْبَالٌ"], correctIndex: 1 },
-          ],
+          
+            { id: "uae-g6u4l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَلْ أَنْتَ مُقِيمٌ هُنَا أَمْ سَائِحٌ يَزُورُ الْمَدِينَةَ" },],
         },
         {
           id: "uae-g6u4l2",
@@ -677,7 +690,8 @@ export const uaeGrade6: GradeData = {
             { id: "uae-g6u4l2e6", type: "speaking", skill: "speaking", prompt: t("تَحَدَّثْ عَنْ طَبِيعَةِ الإِمَارَاتِ وَجَمَالِهَا", "Talk about the nature and beauty of the UAE", "Bercakap tentang alam semula jadi dan keindahan UAE", "Bicarakan tentang alam dan keindahan UAE", "Parle de la nature et de la beauté des EAU", "Habla sobre la naturaleza y belleza de los EAU"), arabicText: "تَتَمَيَّزُ الإِمَارَاتُ بِطَبِيعَتِهَا الرَّائِعَةِ مِنْ..." },
             { id: "uae-g6u4l2e7", type: "matching", skill: "reading", prompt: t("صِلِ الْمَكَانَ بِرَمْزِهِ", "Match the place to its symbol", "Padankan tempat dengan simbolnya", "Cocokkan tempat dengan simbolnya", "Relie le lieu à son symbole", "Une el lugar con su símbolo"), pairs: [{ a: "صَحْرَاءُ", b: "🏜️" }, { a: "جَزِيرَةٌ", b: "🏝️" }, { a: "حَدِيقَةٌ وَطَنِيَّةٌ", b: "🌿" }] },
             { id: "uae-g6u4l2e8", type: "writing", skill: "writing", prompt: t("اكْتُبْ مُقَارَنَةً بَيْنَ السَّاحِلِ وَالصَّحْرَاءِ كَوِجْهَتَيْنِ سِيَاحِيَّتَيْنِ", "Write a comparison between the coast and the desert as tourist destinations", "Tulis perbandingan antara pantai dan gurun sebagai destinasi pelancongan", "Tulis perbandingan antara pantai dan gurun sebagai destinasi wisata", "Écris une comparaison entre la côte et le désert comme destinations touristiques", "Escribe una comparación entre la costa y el desierto como destinos turísticos"), answer: "السَّاحِلُ يَمْنَحُ السِّبَاحَةَ وَالاسْتِرْخَاءَ أَمَّا الصَّحْرَاءُ فَتَمْنَحُ مُغَامَرَاتٍ فَرِيدَةً" },
-          ],
+          
+            { id: "uae-g6u4l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "أَيُّ الْوِجْهَاتِ السِّيَاحِيَّةِ تُفَضِّلُونَ: الْجِبَالَ أَمِ السَّوَاحِلَ" },],
         },
         {
           id: "uae-g6u4l3",
@@ -719,7 +733,8 @@ export const uaeGrade6: GradeData = {
             { id: "uae-g6u4l3e6", type: "speaking", skill: "speaking", prompt: t("تَحَدَّثْ عَنِ الْكَوَاكِبِ فِي الْمَجْمُوعَةِ الشَّمْسِيَّةِ", "Talk about the planets in the solar system", "Bercakap tentang planet-planet dalam sistem suria", "Bicarakan tentang planet-planet di tata surya", "Parle des planètes du système solaire", "Habla sobre los planetas del sistema solar"), arabicText: "فِي الْمَجْمُوعَةِ الشَّمْسِيَّةِ تُوجَدُ كَوَاكِبُ مِنْهَا..." },
             { id: "uae-g6u4l3e7", type: "matching", skill: "reading", prompt: t("صِلِ الْكَلِمَةَ بِرَمْزِهَا", "Match the word to its symbol", "Padankan perkataan dengan simbolnya", "Cocokkan kata dengan simbolnya", "Relie le mot à son symbole", "Une la palabra con su símbolo"), pairs: [{ a: "صَارُوخٌ", b: "🚀" }, { a: "رَائِدُ فَضَاءٍ", b: "👨‍🚀" }, { a: "قَمَرٌ", b: "🌙" }] },
             { id: "uae-g6u4l3e8", type: "writing", skill: "writing", prompt: t("اكْتُبْ عَنْ مُسَاهَمَةِ الإِمَارَاتِ فِي اسْتِكْشَافِ الْفَضَاءِ", "Write about the UAE's contribution to space exploration", "Tulis tentang sumbangan UAE dalam penerokaan angkasa", "Tulis tentang kontribusi UAE dalam eksplorasi luar angkasa", "Écris sur la contribution des EAU à l'exploration spatiale", "Escribe sobre la contribución de los EAU a la exploración espacial"), answer: "أَطْلَقَتِ الإِمَارَاتُ مِسْبَارَ الأَمَلِ لِاسْتِكْشَافِ الْمَرِّيخِ وَأَصْبَحَتْ رَائِدَةً فِي عُلُومِ الْفَضَاءِ" },
-          ],
+          
+            { id: "uae-g6u4l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَلْ تَعْتَقِدُ أَنَّ سِيَاحَةَ الْفَضَاءِ ستصبح شَائِعَةً فِي الْمُسْتَقْبَلِ" },],
         },
       ],
     },
@@ -770,7 +785,8 @@ export const uaeGrade6: GradeData = {
             { id: "uae-g6u5l1e6", type: "speaking", skill: "speaking", prompt: t("تَحَدَّثْ عَنْ وَجْبَتِكَ الصِّحِّيَّةِ الْمُفَضَّلَةِ", "Talk about your favourite healthy meal", "Bercakap tentang hidangan sihat kegemaran anda", "Bicarakan makanan sehat favoritmu", "Parle de ton repas sain préféré", "Habla sobre tu comida saludable favorita"), arabicText: "وَجْبَتِي الصِّحِّيَّةُ الْمُفَضَّلَةُ هِيَ..." },
             { id: "uae-g6u5l1e7", type: "matching", skill: "reading", prompt: t("صِلِ الْعُنْصُرَ بِمَصْدَرِهِ الْغِذَائِيِّ", "Match the element to its food source", "Padankan elemen dengan sumber makanannya", "Cocokkan elemen dengan sumber makanannya", "Relie l'élément à sa source alimentaire", "Une el elemento con su fuente alimentaria"), pairs: [{ a: "أَلْيَافٌ", b: "🥗" }, { a: "مَاءٌ", b: "💧" }, { a: "مَعَادِنُ", b: "🦴" }] },
             { id: "uae-g6u5l1e8", type: "writing", skill: "writing", prompt: t("اكْتُبْ وَجْبَةً مُتَوَازِنَةً لِيَوْمٍ كَامِلٍ", "Write a balanced meal plan for a full day", "Tulis pelan makanan seimbang untuk satu hari penuh", "Tulis rencana makanan seimbang untuk satu hari penuh", "Écris un plan de repas équilibré pour une journée complète", "Escribe un plan de comidas equilibrado para un día completo"), answer: "الإِفْطَارُ: بَيْضٌ وَخُبْزٌ. الْغَدَاءُ: أَرُزٌّ وَدَجَاجٌ وَسَلَطَةٌ. الْعَشَاءُ: خَضَارٌ وَشُوْرَبَةٌ" },
-          ],
+          
+            { id: "uae-g6u5l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "الْغِذَاءُ الصِّحِّيُّ يَحْتَوِي عَلَى خَمْسَةِ عَنَاصِرَ أَسَاسِيَّةٍ، هَلْ تَعْرِفُونَهَا" },],
         },
         {
           id: "uae-g6u5l2",
@@ -812,7 +828,8 @@ export const uaeGrade6: GradeData = {
             { id: "uae-g6u5l2e6", type: "writing", skill: "writing", prompt: t("اكْتُبْ عَنْ فَوَائِدِ الرِّيَاضَةِ الْيَوْمِيَّةِ", "Write about the benefits of daily exercise", "Tulis tentang faedah senaman harian", "Tulis tentang manfaat olahraga harian", "Écris sur les bienfaits de l'exercice quotidien", "Escribe sobre los beneficios del ejercicio diario"), answer: "الرِّيَاضَةُ الْيَوْمِيَّةُ تُقَوِّي الْعَضَلَاتِ وَتُحَسِّنُ الْمَزَاجَ وَتَحْمِي مِنَ الأَمْرَاضِ" },
             { id: "uae-g6u5l2e7", type: "matching", skill: "reading", prompt: t("صِلِ الْكَلِمَةَ بِمَعْنَاهَا", "Match the word to its meaning", "Padankan perkataan dengan maknanya", "Cocokkan kata dengan artinya", "Relie le mot à son sens", "Une la palabra con su significado"), pairs: [{ a: "إِحْمَاءٌ", b: "warm-up" }, { a: "عَضَلَاتٌ", b: "muscles" }, { a: "نَبْضُ الْقَلْبِ", b: "heartbeat" }] },
             { id: "uae-g6u5l2e8", type: "listening", skill: "listening", prompt: t("اسْتَمِعْ وَاخْتَرِ الْكَلِمَةَ الصَّحِيحَةَ", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "دَرَّاجَةٌ", options: ["إِحْمَاءٌ", "دَرَّاجَةٌ", "لِيَاقَةٌ"], correctIndex: 1 },
-          ],
+          
+            { id: "uae-g6u5l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "لِلْحُصُولِ عَلَى لِيَاقَةٍ جَيِّدَةٍ يَجِبُ أَنْ تَمْزُجَ بَيْنَ أَنْوَاعٍ مُخْتَلِفَةٍ مِنَ التَّمَارِينِ" },],
         },
         {
           id: "uae-g6u5l3",
@@ -854,7 +871,8 @@ export const uaeGrade6: GradeData = {
             { id: "uae-g6u5l3e6", type: "speaking", skill: "speaking", prompt: t("تَحَدَّثْ عَنْ طَرِيقَتِكَ فِي الْحِفَاظِ عَلَى صِحَّتِكَ النَّفْسِيَّةِ", "Talk about your way of maintaining your mental health", "Bercakap tentang cara anda mengekalkan kesihatan mental anda", "Bicarakan cara kamu menjaga kesehatan mentalmu", "Parle de ta façon de maintenir ta santé mentale", "Habla sobre tu forma de mantener tu salud mental"), arabicText: "أَحْرِصُ عَلَى صِحَّتِي النَّفْسِيَّةِ بِـ..." },
             { id: "uae-g6u5l3e7", type: "matching", skill: "reading", prompt: t("صِلِ الْكَلِمَةَ بِمَعْنَاهَا", "Match the word to its meaning", "Padankan perkataan dengan maknanya", "Cocokkan kata dengan artinya", "Relie le mot à son sens", "Une la palabra con su significado"), pairs: [{ a: "ثِقَةٌ بِالنَّفْسِ", b: "self-confidence" }, { a: "إِيجَابِيَّةٌ", b: "positivity" }, { a: "تَوَازُنٌ", b: "balance" }] },
             { id: "uae-g6u5l3e8", type: "writing", skill: "writing", prompt: t("اكْتُبْ عَنْ أَهَمِّيَّةِ الدَّعْمِ الاجْتِمَاعِيِّ لِلصِّحَّةِ النَّفْسِيَّةِ", "Write about the importance of social support for mental health", "Tulis tentang kepentingan sokongan sosial untuk kesihatan mental", "Tulis tentang pentingnya dukungan sosial untuk kesehatan mental", "Écris sur l'importance du soutien social pour la santé mentale", "Escribe sobre la importancia del apoyo social para la salud mental"), answer: "الدَّعْمُ الاجْتِمَاعِيُّ مِنَ الأَصْدِقَاءِ وَالْعَائِلَةِ يُقَوِّي الصِّحَّةَ النَّفْسِيَّةَ وَيَمْنَعُ الْوُحْدَةَ" },
-          ],
+          
+            { id: "uae-g6u5l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "إِذَا شَعَرْتَ بِالتَّوَتُّرِ فَجَرِّبْ تَقْنِيَاتِ التَّأَمُّلِ وَالتَّنَفُّسِ الْعَمِيقِ" },],
         },
       ],
     },
@@ -905,7 +923,8 @@ export const uaeGrade6: GradeData = {
             { id: "uae-g6u6l1e6", type: "speaking", skill: "speaking", prompt: t("تَحَدَّثْ عَنْ إِنْجَازٍ تُرِيدُ تَحْقِيقَهُ فِي الْمُسْتَقْبَلِ", "Talk about an achievement you want to accomplish in the future", "Bercakap tentang pencapaian yang ingin anda capai pada masa depan", "Bicarakan pencapaian yang ingin kamu raih di masa depan", "Parle d'un accomplissement que tu veux réaliser à l'avenir", "Habla sobre un logro que quieres alcanzar en el futuro"), arabicText: "الإِنْجَازُ الَّذِي أُرِيدُ تَحْقِيقَهُ هُوَ..." },
             { id: "uae-g6u6l1e7", type: "matching", skill: "reading", prompt: t("صِلِ الْكَلِمَةَ بِمَعْنَاهَا", "Match the word to its meaning", "Padankan perkataan dengan maknanya", "Cocokkan kata dengan artinya", "Relie le mot à son sens", "Une la palabra con su significado"), pairs: [{ a: "عَالِمٌ", b: "scientist" }, { a: "إِنْجَازٌ", b: "achievement" }, { a: "تَكْرِيمٌ", b: "tribute" }] },
             { id: "uae-g6u6l1e8", type: "writing", skill: "writing", prompt: t("اكْتُبْ عَنْ عَالِمٍ عَرَبِيٍّ مَشْهُورٍ وَإِنْجَازَاتِهِ", "Write about a famous Arab scientist and their achievements", "Tulis tentang saintis Arab terkenal dan pencapaiannya", "Tulis tentang ilmuwan Arab terkenal dan pencapaiannya", "Écris sur un scientifique arabe célèbre et ses réalisations", "Escribe sobre un científico árabe famoso y sus logros"), answer: "ابْنُ سِينَا عَالِمٌ عَرَبِيٌّ مَشْهُورٌ أَسْهَمَ فِي الطِّبِّ وَالْفَلْسَفَةِ وَالْعُلُومِ وَتُرْجِمَتْ كُتُبُهُ لِلُّغَاتٍ عَدِيدَةٍ" },
-          ],
+          
+            { id: "uae-g6u6l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَا هِيَ جَائِزَةُ نُوبِلَ وَمَنِ الَّذِي أَسَّسَهَا" },],
         },
         {
           id: "uae-g6u6l2",
@@ -947,7 +966,8 @@ export const uaeGrade6: GradeData = {
             { id: "uae-g6u6l2e6", type: "speaking", skill: "speaking", prompt: t("تَحَدَّثْ عَنْ رِيَاضَتِكَ الْمُفَضَّلَةِ وَتَارِيخِهَا", "Talk about your favourite sport and its history", "Bercakap tentang sukan kegemaran anda dan sejarahnya", "Bicarakan olahraga favoritmu dan sejarahnya", "Parle de ton sport préféré et de son histoire", "Habla sobre tu deporte favorito y su historia"), arabicText: "رِيَاضَتِي الْمُفَضَّلَةُ هِيَ... وَبَدَأَتْ تَارِيخُهَا..." },
             { id: "uae-g6u6l2e7", type: "matching", skill: "reading", prompt: t("صِلِ الْكَلِمَةَ بِرَمْزِهَا", "Match the word to its symbol", "Padankan perkataan dengan simbolnya", "Cocokkan kata dengan simbolnya", "Relie le mot à son symbole", "Une la palabra con su símbolo"), pairs: [{ a: "بُطُولَةٌ", b: "🥇" }, { a: "مِلْعَبٌ", b: "🏟️" }, { a: "مَيْدَالِيَةٌ", b: "🥈" }] },
             { id: "uae-g6u6l2e8", type: "writing", skill: "writing", prompt: t("اكْتُبْ عَنِ الرِّيَاضَةِ فِي الإِمَارَاتِ وَأَبْرَزِ إِنْجَازَاتِهَا", "Write about sports in the UAE and its most notable achievements", "Tulis tentang sukan di UAE dan pencapaian terbaiknya", "Tulis tentang olahraga di UAE dan pencapaian terbaiknya", "Écris sur le sport aux EAU et ses réalisations les plus remarquables", "Escribe sobre el deporte en los EAU y sus logros más destacados"), answer: "حَقَّقَتِ الإِمَارَاتُ إِنْجَازَاتٍ رِيَاضِيَّةٍ بَارِزَةٍ فِي رِيَاضَةِ الْجُودُو وَالتَّايْكُوَوَانْدُو وَالرِّمَايَةِ" },
-          ],
+          
+            { id: "uae-g6u6l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَتَى بَدَأَتِ الأَلْعَابُ الأُولِمْبِيَّةُ وَفِي أَيِّ بَلَدٍ" },],
         },
         {
           id: "uae-g6u6l3",
@@ -989,7 +1009,8 @@ export const uaeGrade6: GradeData = {
             { id: "uae-g6u6l3e6", type: "speaking", skill: "speaking", prompt: t("تَحَدَّثْ عَنِ اخْتِرَاعٍ غَيَّرَ حَيَاةَ الْإِنْسَانِ", "Talk about an invention that changed human life", "Bercakap tentang ciptaan yang mengubah kehidupan manusia", "Bicarakan penemuan yang mengubah kehidupan manusia", "Parle d'une invention qui a changé la vie humaine", "Habla sobre un invento que cambió la vida humana"), arabicText: "الاخْتِرَاعُ الَّذِي غَيَّرَ حَيَاةَ الْإِنْسَانِ هُوَ... لِأَنَّهُ..." },
             { id: "uae-g6u6l3e7", type: "matching", skill: "reading", prompt: t("صِلِ الْكَلِمَةَ بِمَعْنَاهَا", "Match the word to its meaning", "Padankan perkataan dengan maknanya", "Cocokkan kata dengan artinya", "Relie le mot à son sens", "Une la palabra con su significado"), pairs: [{ a: "مُخْتَبَرٌ", b: "laboratory" }, { a: "اكْتِشَافٌ", b: "discovery" }, { a: "بَحْثٌ عِلْمِيٌّ", b: "scientific research" }] },
             { id: "uae-g6u6l3e8", type: "writing", skill: "writing", prompt: t("اكْتُبْ عَنْ دَوْرِ الإِمَارَاتِ فِي مَجَالِ التِّقْنِيَةِ وَالاخْتِرَاعَاتِ", "Write about the UAE's role in technology and inventions", "Tulis tentang peranan UAE dalam teknologi dan ciptaan", "Tulis tentang peran UAE dalam teknologi dan penemuan", "Écris sur le rôle des EAU dans la technologie et les inventions", "Escribe sobre el papel de los EAU en tecnología e inventos"), answer: "تَسْعَى الإِمَارَاتُ لِأَنْ تَكُونَ رَائِدَةً فِي الذَّكَاءِ الاصْطِنَاعِيِّ وَالطَّاقَةِ الشَّمْسِيَّةِ وَاسْتِكْشَافِ الْفَضَاءِ" },
-          ],
+          
+            { id: "uae-g6u6l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "الْعِلْمُ هُوَ الْأَدَاةُ الَّتِي بِهَا غَيَّرَ الإِنْسَانُ الْعَالَمَ وَاخْتَرَعَ الْعَجَائِبَ" },],
         },
       ],
     },

@@ -16,6 +16,7 @@ import {
 } from '@expo-google-fonts/inter';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
+import { ActivityIndicator, View, Text, StyleSheet } from 'react-native';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -33,6 +34,29 @@ function RootLayoutNav() {
   );
 }
 
+function LoadingScreen() {
+  return (
+    <View style={styles.loadingContainer}>
+      <ActivityIndicator size="large" color="#007CF8" />
+      <Text style={styles.loadingText}>أكاديمية العُلا</Text>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#ffffff',
+  },
+  loadingText: {
+    marginTop: 16,
+    fontSize: 20,
+    color: '#007CF8',
+  },
+});
+
 export default function RootLayout() {
   const [fontsLoaded, fontError] = useFonts({
     Inter_400Regular,
@@ -47,7 +71,7 @@ export default function RootLayout() {
     }
   }, [fontsLoaded, fontError]);
 
-  if (!fontsLoaded && !fontError) return null;
+  if (!fontsLoaded && !fontError) return <LoadingScreen />;
 
   return (
     <SafeAreaProvider>

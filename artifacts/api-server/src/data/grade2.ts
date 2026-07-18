@@ -79,7 +79,8 @@ export const grade2: GradeData = {
               prompt: t("قدِّم أفراد عائلتك", "Introduce your family members", "Perkenalkan ahli keluarga anda", "Perkenalkan anggota keluargamu", "Présente les membres de ta famille", "Presenta a los miembros de tu familia"),
               arabicText: "عَائِلَتِي: أَبِي وَأُمِّي وَأَخِي وَأُخْتِي",
             },
-          ],
+          
+            { id: "g2u1l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَنْ هَذَا" },],
         },
         {
           id: "g2u1l2",
@@ -129,7 +130,8 @@ export const grade2: GradeData = {
               prompt: t("قل كيف تحب جدّك وجدّتك", "Say how you love your grandparents", "Sebut cara anda menyayangi datuk nenek", "Sebutkan bagaimana kamu menyayangi kakek nenek", "Dis comment tu aimes tes grands-parents", "Di cómo amas a tus abuelos"),
               arabicText: "أُحِبُّ جَدِّي وَجَدَّتِي وَأَزُورُهُمَا كَثِيرًا",
             },
-          ],
+          
+            { id: "g2u1l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الْجَدَّةُ" },],
         },
         {
           id: "g2u1l3",
@@ -179,7 +181,8 @@ export const grade2: GradeData = {
               prompt: t("قل اسم عمّك أو خالك", "Say your uncle's name", "Sebut nama bapa saudara anda", "Sebutkan nama pamanmu", "Dis le nom de ton oncle", "Di el nombre de tu tío"),
               arabicText: "عَمِّي اسْمُهُ مُحَمَّد وَأَزُورُهُ كُلَّ أُسْبُوع",
             },
-          ],
+          
+            { id: "g2u1l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الْعَمُّ" },],
         },
         {
           id: "g2u1l4",
@@ -229,7 +232,8 @@ export const grade2: GradeData = {
               prompt: t("قل أين تسكن عائلتك", "Say where your family lives", "Sebut di mana keluarga anda tinggal", "Sebutkan di mana keluargamu tinggal", "Dis où habite ta famille", "Di dónde vive tu familia"),
               arabicText: "عَائِلَتِي تَسْكُنُ فِي شَقَّةٍ فِي الْمَدِينَةِ",
             },
-          ],
+          
+            { id: "g2u1l4e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا يَسْكُنُ" },],
         },
         {
           id: "g2u1l5",
@@ -282,7 +286,8 @@ export const grade2: GradeData = {
               prompt: t("قل لماذا تحب عائلتك", "Say why you love your family", "Sebut kenapa anda sayang keluarga anda", "Sebutkan mengapa kamu menyayangi keluargamu", "Dis pourquoi tu aimes ta famille", "Di por qué amas a tu familia"),
               arabicText: "أُحِبُّ عَائِلَتِي لِأَنَّهَا تَجْعَلُنِي سَعِيدًا",
             },
-          ],
+          
+            { id: "g2u1l5e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "أُحِبُّ عَائِلَتِي كَثِيرًا" },],
         },
       ],
     },
@@ -349,7 +354,8 @@ export const grade2: GradeData = {
               prompt: t("سمِّ ما في حقيبتك", "Name what is in your bag", "Namakan isi beg anda", "Sebutkan isi tasku", "Nomme ce qu'il y a dans ton sac", "Nombra lo que hay en tu mochila"),
               arabicText: "فِي حَقِيبَتِي قَلَمٌ وَدَفْتَرٌ وَكِتَابٌ",
             },
-          ],
+          
+            { id: "g2u2l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "افْتَحُوا كُتُبَكُمْ وَأَخْرِجُوا أَقْلَامَكُمْ" },],
         },
         {
           id: "g2u2l2",
@@ -399,7 +405,8 @@ export const grade2: GradeData = {
               prompt: t("قل لون كل شيء حولك", "Say the colour of things around you", "Sebut warna benda di sekeliling anda", "Sebutkan warna benda-benda di sekitarmu", "Dis la couleur des choses autour de toi", "Di el color de las cosas a tu alrededor"),
               arabicText: "قَلَمِي أَحْمَرُ وَدَفْتَرِي أَزْرَقُ",
             },
-          ],
+          
+            { id: "g2u2l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا أَحْمَرُ" },],
         },
         {
           id: "g2u2l3",
@@ -449,7 +456,8 @@ export const grade2: GradeData = {
               prompt: t("صف فصلك الدراسي", "Describe your classroom", "Huraikan bilik darjah anda", "Gambarkan ruang kelasmu", "Décris ta salle de classe", "Describe tu aula"),
               arabicText: "فِي فَصْلِي سَبُّورَةٌ وَمَقَاعِدُ وَبَابٌ كَبِيرٌ",
             },
-          ],
+          
+            { id: "g2u2l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا السَّبُّورَةُ" },],
         },
         {
           id: "g2u2l4",
@@ -499,7 +507,8 @@ export const grade2: GradeData = {
               prompt: t("قل ما تفعله في الفصل", "Say what you do in class", "Sebut apa yang anda buat di kelas", "Sebutkan apa yang kamu lakukan di kelas", "Dis ce que tu fais en classe", "Di qué haces en clase"),
               arabicText: "فِي الْفَصْلِ أَسْتَمِعُ وَأَكْتُبُ وَأُجِيبُ",
             },
-          ],
+          
+            { id: "g2u2l4e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا أَسْتَمِعُ" },],
         },
         {
           id: "g2u2l5",
@@ -549,7 +558,8 @@ export const grade2: GradeData = {
               prompt: t("قل ماذا تضع في حقيبتك كل يوم", "Say what you put in your bag every day", "Sebut apa yang anda masukkan ke dalam beg setiap hari", "Sebutkan apa yang kamu masukkan ke tas setiap hari", "Dis ce que tu mets dans ton sac chaque jour", "Di qué pones en tu mochila cada día"),
               arabicText: "كُلَّ يَوْمٍ أَضَعُ كِتَابِي وَدَفْتَرِي وَقَلَمِي فِي حَقِيبَتِي",
             },
-          ],
+          
+            { id: "g2u2l5e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا أُعِدُّ" },],
         },
       ],
     },
@@ -613,7 +623,8 @@ export const grade2: GradeData = {
               prompt: t("أشر إلى أعضاء جسمك وسمِّها", "Point to and name your body parts", "Tunjuk dan namakan anggota badan anda", "Tunjuk dan sebutkan anggota tubuhmu", "Montre et nomme les parties de ton corps", "Señala y nombra las partes de tu cuerpo"),
               arabicText: "هَذَا رَأْسِي وَهَذِهِ يَدِي وَهَذِهِ رِجْلِي",
             },
-          ],
+          
+            { id: "g2u3l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الرَّأْسُ" },],
         },
         {
           id: "g2u3l2",
@@ -663,7 +674,8 @@ export const grade2: GradeData = {
               prompt: t("صف وجهك", "Describe your face", "Huraikan wajah anda", "Gambarkan wajahmu", "Décris ton visage", "Describe tu cara"),
               arabicText: "وَجْهِي فِيهِ عَيْنَانِ وَأَنْفٌ وَفَمٌ",
             },
-          ],
+          
+            { id: "g2u3l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الْعَيْنَانِ" },],
         },
         {
           id: "g2u3l3",
@@ -713,7 +725,8 @@ export const grade2: GradeData = {
               prompt: t("قل كيف تعتني بصحتك", "Say how you take care of your health", "Sebut cara anda menjaga kesihatan", "Sebutkan cara kamu merawat kesehatanmu", "Dis comment tu prends soin de ta santé", "Di cómo cuidas tu salud"),
               arabicText: "أَغْسِلُ يَدَيَّ وَأَتَنَظَّفُ وَأَنَامُ مُبَكِّرًا",
             },
-          ],
+          
+            { id: "g2u3l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا أَغْسِلُ يَدَيَّ" },],
         },
         {
           id: "g2u3l4",
@@ -766,7 +779,8 @@ export const grade2: GradeData = {
               prompt: t("قل كيف تشعر عندما تمرض", "Say how you feel when you are sick", "Sebut bagaimana anda rasa apabila sakit", "Sebutkan bagaimana perasaanmu saat sakit", "Dis comment tu te sens quand tu es malade", "Di cómo te sientes cuando estás enfermo"),
               arabicText: "عِنْدَمَا أَمْرَضُ أَشْعُرُ بِأَلَمٍ وَأَذْهَبُ إِلَى الطَّبِيبِ",
             },
-          ],
+          
+            { id: "g2u3l4e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "يَا أُمِّي، رَأْسِي يُؤْلِمُنِي" },],
         },
         {
           id: "g2u3l5",
@@ -816,7 +830,8 @@ export const grade2: GradeData = {
               prompt: t("قل كيف تتمرن", "Say how you exercise", "Sebut cara anda bersenam", "Sebutkan cara kamu berolahraga", "Dis comment tu fais de l'exercice", "Di cómo haces ejercicio"),
               arabicText: "أَتَمَرَّنُ بِالرَّكْضِ وَالْقَفْزِ كُلَّ يَوْمٍ",
             },
-          ],
+          
+            { id: "g2u3l5e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا أَرْكُضُ" },],
         },
       ],
     },
@@ -879,7 +894,8 @@ export const grade2: GradeData = {
               prompt: t("قل وجباتك المفضلة", "Say your favourite meals", "Sebut hidangan kegemaran anda", "Sebutkan makanan favoritmu", "Dis tes repas préférés", "Di tus comidas favoritas"),
               arabicText: "وَجْبَتِي الْمُفَضَّلَةُ هِيَ الْغَدَاءُ مَعَ الْعَائِلَةِ",
             },
-          ],
+          
+            { id: "g2u4l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَاذَا تُرِيدُ لِلْغَدَاءِ يَا وَلَدِي" },],
         },
         {
           id: "g2u4l2",
@@ -929,7 +945,8 @@ export const grade2: GradeData = {
               prompt: t("قل فاكهتك المفضلة", "Say your favourite fruit", "Sebut buah kegemaran anda", "Sebutkan buah favoritmu", "Dis ton fruit préféré", "Di tu fruta favorita"),
               arabicText: "أُحِبُّ التُّفَّاحَ لِأَنَّهُ لَذِيذٌ وَصِحِّيٌّ",
             },
-          ],
+          
+            { id: "g2u4l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا التُّفَّاحُ" },],
         },
         {
           id: "g2u4l3",
@@ -979,7 +996,8 @@ export const grade2: GradeData = {
               prompt: t("قل مشروبك المفضل", "Say your favourite drink", "Sebut minuman kegemaran anda", "Sebutkan minuman favoritmu", "Dis ta boisson préférée", "Di tu bebida favorita"),
               arabicText: "مَشْرُوبِي الْمُفَضَّلُ هُوَ الْمَاءُ لِأَنَّهُ صِحِّيٌّ",
             },
-          ],
+          
+            { id: "g2u4l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الْمَاءُ" },],
         },
         {
           id: "g2u4l4",
@@ -1029,7 +1047,8 @@ export const grade2: GradeData = {
               prompt: t("قل آداب الطعام التي تعرفها", "Say the table manners you know", "Sebut adab makan yang anda tahu", "Sebutkan adab makan yang kamu ketahui", "Dis les bonnes manières à table que tu connais", "Di los modales en la mesa que conoces"),
               arabicText: "آكُلُ بِالْيَمِينِ وَأَقُولُ بِسْمِ اللهِ قَبْلَ الْأَكْلِ",
             },
-          ],
+          
+            { id: "g2u4l4e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا بِسْمِ اللهِ" },],
         },
         {
           id: "g2u4l5",
@@ -1079,7 +1098,8 @@ export const grade2: GradeData = {
               prompt: t("قل لماذا نختار الطعام الصحي", "Say why we choose healthy food", "Sebut kenapa kita pilih makanan sihat", "Sebutkan mengapa kita memilih makanan sehat", "Dis pourquoi on choisit une nourriture saine", "Di por qué elegimos comida saludable"),
               arabicText: "نَخْتَارُ الطَّعَامَ الصِّحِّيَّ لِأَنَّهُ جَيِّدٌ لِصِحَّتِنَا",
             },
-          ],
+          
+            { id: "g2u4l5e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا صِحِّيٌّ" },],
         },
       ],
     },

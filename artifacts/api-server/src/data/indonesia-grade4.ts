@@ -102,7 +102,8 @@ export const indonesiaGrade4: GradeData = {
             { id: "indonesia-g4u2l1e4", type: "writing", skill: "writing", prompt: t("اُكْتُبْ اسْمَ مِهْنَتَيْنِ", "Write the names of two professions", "Tulis nama dua pekerjaan", "Tulis nama dua profesi", "Écris le nom de deux métiers", "Escribe los nombres de dos profesiones"), answer: "مُعَلِّمٌ، طَبِيبٌ", imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Teacher%20in%20classroom.jpg" },
             { id: "indonesia-g4u2l1e5", type: "matching", skill: "reading", prompt: t("صِلِ الْمِهْنَةَ بِالْمَعْنَى", "Match the profession with the meaning", "Padankan pekerjaan dengan makna", "Cocokkan pekerjaan dengan makna", "Relie le métier à son sens", "Relaciona la profesión con su significado"), pairs: [{ a: "فَلَّاحٌ", b: "farmer" }, { a: "سَائِقٌ", b: "driver" }, { a: "بَائِعٌ", b: "seller" }] },
             { id: "indonesia-g4u2l1e6", type: "fill_in_blank", skill: "writing", prompt: t("اِكْمِلِ: أَبِي .... فِي الْمَدْرَسَةِ", "Complete: My father ... at school", "Lengkapkan: Ayah saya ... di sekolah", "Lengkapi: Ayahku ... di sekolah", "Complète : Mon père ... à l'école", "Completa: Mi padre ... en la escuela"), arabicText: "مُعَلِّمٌ", answer: "مُعَلِّمٌ" },
-          ],
+          
+            { id: "indonesia-g4u2l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "السَّلَامُ عَلَيْكَ يَا حَسَنُ" },],
         },
       ],
     },
@@ -192,7 +193,8 @@ export const indonesiaGrade4: GradeData = {
             { id: "indonesia-g4u4l1e4", type: "writing", skill: "writing", prompt: t("اكْتُبْ ثَلَاثَةَ أَدَوَاتٍ مَدْرَسِيَّةٍ", "Write three school tools", "Tulis tiga alat sekolah", "Tulis tiga alat sekolah", "Écris trois outils scolaires", "Escribe tres útiles escolares"), answer: "قَلَمٌ، كِتَابٌ، دَفْتَرٌ", imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Classroom.jpg" },
             { id: "indonesia-g4u4l1e5", type: "matching", skill: "reading", prompt: t("صِلِ الْكَلِمَةَ بِالْمَعْنَى", "Match the word with the meaning", "Padankan perkataan dengan makna", "Cocokkan kata dengan makna", "Relie le mot au sens", "Relaciona la palabra con el significado"), pairs: [{ a: "مِمْحَاةٌ", b: "eraser" }, { a: "مِقْلَمَةٌ", b: "pencil case" }, { a: "مَكْتَبٌ", b: "desk" }] },
             { id: "indonesia-g4u4l1e6", type: "fill_in_blank", skill: "writing", prompt: t("اِكْمِلِ: نَحْنُ .... وَ.... فِي الْفَصْلِ", "Complete: We ... and ... in class", "Lengkapkan: Kami ... dan ... di kelas", "Lengkapi: Kami ... dan ... di kelas", "Complète : Nous ... et ... en classe", "Completa: Nosotros ... y ... en clase"), arabicText: "نَقْرَأُ وَنَكْتُبُ", answer: "نَقْرَأُ وَنَكْتُبُ", imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/School%20supplies.jpg" },
-          ],
+          
+            { id: "indonesia-g4u4l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَاذَا تَرَى فِي الْفَصْلِ" },],
         },
       ],
     },
@@ -236,7 +238,8 @@ export const indonesiaGrade4: GradeData = {
             { id: "indonesia-g4u5l1e4", type: "writing", skill: "writing", prompt: t("اكْتُبِ الْأَرْقَامَ الثَّلَاثَةَ الْأُولَى", "Write the first three numbers", "Tulis tiga angka pertama", "Tulis tiga angka pertama", "Écris les trois premiers nombres", "Escribe los tres primeros números"), answer: "وَاحِدٌ، اِثْنَانِ، ثَلَاثَةٌ", imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Counting%20blocks.jpg" },
             { id: "indonesia-g4u5l1e5", type: "matching", skill: "reading", prompt: t("صِلِ الْعَدَدَ بِالْكَلِمَةِ", "Match the number with the word", "Padankan angka dengan perkataan", "Cocokkan angka dengan kata", "Relie le nombre au mot", "Relaciona el número con la palabra"), pairs: [{ a: "٣", b: "three" }, { a: "٧", b: "seven" }, { a: "١٠", b: "ten" }] },
             { id: "indonesia-g4u5l1e6", type: "fill_in_blank", skill: "writing", prompt: t("اِكْمِلِ: عُمْرِي .... سِنِينَ", "Complete: I am ... years old", "Lengkapkan: Umur saya ... tahun", "Lengkapi: Umurku ... tahun", "Complète : J'ai ... ans", "Completa: Tengo ... años"), arabicText: "تِسْعُ", answer: "تِسْعُ" },
-          ],
+          
+            { id: "indonesia-g4u5l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "كَمْ عُمْرُكَ" },],
         },
       ],
     },

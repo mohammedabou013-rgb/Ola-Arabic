@@ -47,7 +47,8 @@ export const grade6: GradeData = {
             { id: "g6u1l1e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "الْمُوَاطِنُ", options: ["الشُّرْطِيُّ", "الْمُوَاطِنُ", "الطَّبِيبُ"], correctIndex: 1 },
             { id: "g6u1l1e2", type: "mcq", skill: "reading", prompt: t("ما دور الطبيب في المجتمع؟", "What is the doctor's role in the community?", "Apakah peranan doktor dalam komuniti?", "Apa peran dokter dalam komunitas?", "Quel est le rôle du médecin dans la communauté ?", "¿Cuál es el papel del médico en la comunidad?"), options: ["يَحْفَظُ صِحَّةَ النَّاسِ", "يَبْنِي الْمَنَازِلَ", "يُدَرِّسُ الطُّلَّابَ"], correctIndex: 0 },
             { id: "g6u1l1e3", type: "speaking", skill: "speaking", prompt: t("قل دور كل فرد من أفراد المجتمع", "Say the role of each community member", "Sebut peranan setiap ahli komuniti", "Sebutkan peran setiap anggota komunitas", "Dis le rôle de chaque membre de la communauté", "Di el papel de cada miembro de la comunidad"), arabicText: "الْمُعَلِّمُ يُعَلِّمُنَا وَالطَّبِيبُ يَعْلَجُنَا وَالشُّرْطِيُّ يَحْمِينَا" },
-          ],
+          
+            { id: "g6u1l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَنْ يَحْمِي الْمُجْتَمَعَ" },],
         },
         {
           id: "g6u1l2",
@@ -69,7 +70,8 @@ export const grade6: GradeData = {
             { id: "g6u1l2e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "التَّطَوُّعُ", options: ["الْمَسْؤُولِيَّةُ", "التَّطَوُّعُ", "نَتَعَاوَنُ"], correctIndex: 1 },
             { id: "g6u1l2e2", type: "mcq", skill: "reading", prompt: t("ما فائدة التعاون في المجتمع؟", "What is the benefit of cooperation in the community?", "Apa faedah kerjasama dalam komuniti?", "Apa manfaat kerjasama dalam komunitas?", "Quel est le bienfait de la coopération dans la communauté ?", "¿Cuál es el beneficio de la cooperación en la comunidad?"), options: ["يُقَوِّي الْمُجْتَمَعَ", "يُفَرِّقُ النَّاسَ", "لَا فَائِدَةَ مِنْهُ"], correctIndex: 0 },
             { id: "g6u1l2e3", type: "speaking", skill: "speaking", prompt: t("قل كيف تتطوع في مجتمعك", "Say how you volunteer in your community", "Sebut cara anda membuat kerja sukarela", "Sebutkan cara kamu bersukarela di komunitasmu", "Dis comment tu fais du bénévolat dans ta communauté", "Di cómo haces voluntariado en tu comunidad"), arabicText: "أَتَطَوَّعُ فِي تَنْظِيفِ الشَّارِعِ وَمُسَاعَدَةِ الْجِيرَانِ" },
-          ],
+          
+            { id: "g6u1l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا نَتَعَاوَنُ" },],
         },
         {
           id: "g6u1l3",
@@ -91,7 +93,8 @@ export const grade6: GradeData = {
             { id: "g6u1l3e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "الْمَكْتَبَةُ", options: ["الْمُسْتَشْفَى", "الْمَكْتَبَةُ", "الْمَلْعَبُ"], correctIndex: 1 },
             { id: "g6u1l3e2", type: "mcq", skill: "reading", prompt: t("أين نذهب لنقرأ الكتب؟", "Where do we go to read books?", "Ke mana kita pergi untuk membaca buku?", "Ke mana kita pergi untuk membaca buku?", "Où va-t-on pour lire des livres ?", "¿Adónde vamos a leer libros?"), options: ["الْمَكْتَبَةِ", "الْمُسْتَشْفَى", "الْمَلْعَبِ"], correctIndex: 0 },
             { id: "g6u1l3e3", type: "speaking", skill: "speaking", prompt: t("قل كيف تحافظ على المرافق العامة", "Say how you preserve public facilities", "Sebut cara anda menjaga kemudahan awam", "Sebutkan cara kamu menjaga fasilitas umum", "Dis comment tu préserves les équipements publics", "Di cómo preservas las instalaciones públicas"), arabicText: "أُحَافِظُ عَلَى الْمَرَافِقِ الْعَامَّةِ بِالنَّظَافَةِ وَالِاهْتِمَامِ" },
-          ],
+          
+            { id: "g6u1l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الْمُسْتَشْفَى" },],
         },
         {
           id: "g6u1l4",
@@ -113,7 +116,8 @@ export const grade6: GradeData = {
             { id: "g6u1l4e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "الِانْتِمَاءُ", options: ["الْفَخْرُ", "الِانْتِمَاءُ", "نَحْتَفِلُ"], correctIndex: 1 },
             { id: "g6u1l4e2", type: "mcq", skill: "reading", prompt: t("لماذا نحتفل بالأعياد الوطنية؟", "Why do we celebrate national occasions?", "Kenapa kita raikan hari kebangsaan?", "Mengapa kita merayakan hari nasional?", "Pourquoi célèbre-t-on les fêtes nationales ?", "¿Por qué celebramos las fiestas nacionales?"), options: ["لِتَعْزِيزِ الِانْتِمَاءِ وَالْوَحْدَةِ", "لِلتَّعْطِيلِ فَقَطْ", "بِلَا سَبَبٍ"], correctIndex: 0 },
             { id: "g6u1l4e3", type: "speaking", skill: "speaking", prompt: t("قل كيف تحتفل بالأعياد الوطنية", "Say how you celebrate national occasions", "Sebut cara anda meraikan hari kebangsaan", "Sebutkan cara kamu merayakan hari nasional", "Dis comment tu célèbres les fêtes nationales", "Di cómo celebras las fiestas nacionales"), arabicText: "نَحْتَفِلُ بِالْأَعْيَادِ الْوَطَنِيَّةِ بِالتَّجَمُّعِ وَالْغِنَاءِ وَالْفَرَحِ" },
-          ],
+          
+            { id: "g6u1l4e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا عِيدٌ وَطَنِيٌّ" },],
         },
         {
           id: "g6u1l5",
@@ -135,7 +139,8 @@ export const grade6: GradeData = {
             { id: "g6u1l5e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "الْمُبَادَرَةُ", options: ["التَّطَوُّعُ", "الْمُبَادَرَةُ", "إِيجَابِيٌّ"], correctIndex: 1 },
             { id: "g6u1l5e2", type: "mcq", skill: "reading", prompt: t("كيف يمكن للطالب أن يُسهم في مجتمعه؟", "How can a student contribute to their community?", "Bagaimana pelajar boleh menyumbang kepada komunitinya?", "Bagaimana seorang pelajar dapat berkontribusi kepada komunitasnya?", "Comment un élève peut-il contribuer à sa communauté ?", "¿Cómo puede un estudiante contribuir a su comunidad?"), options: ["بِالتَّطَوُّعِ وَالْمُبَادَرَاتِ الْإِيجَابِيَّةِ", "بِعَدَمِ الِاكْتِرَاثِ", "بِالتَّغَيُّبِ الدَّائِمِ"], correctIndex: 0 },
             { id: "g6u1l5e3", type: "speaking", skill: "speaking", prompt: t("قل مبادرة يمكنك القيام بها في مجتمعك", "Say an initiative you can do in your community", "Sebut inisiatif yang boleh anda lakukan dalam komuniti", "Sebutkan inisiatif yang dapat kamu lakukan di komunitasmu", "Dis une initiative que tu peux faire dans ta communauté", "Di una iniciativa que puedes hacer en tu comunidad"), arabicText: "أَسْتَطِيعُ أَنْ أُبَادِرَ بِتَنْظِيفِ الْحَدِيقَةِ الْعَامَّةِ مَعَ أَصْدِقَائِي" },
-          ],
+          
+            { id: "g6u1l5e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا أُسْهِمُ" },],
         },
         {
           id: "g6u1l6",
@@ -157,7 +162,8 @@ export const grade6: GradeData = {
             { id: "g6u1l6e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "الْعَدْلُ", options: ["الصِّدْقُ", "الْعَدْلُ", "الثِّقَةُ"], correctIndex: 1 },
             { id: "g6u1l6e2", type: "mcq", skill: "reading", prompt: t("ما أهم صفة في القائد الجيد؟", "What is the most important quality in a good leader?", "Apakah sifat terpenting dalam pemimpin yang baik?", "Apa sifat terpenting dalam pemimpin yang baik?", "Quelle est la qualité la plus importante d'un bon leader ?", "¿Cuál es la cualidad más importante de un buen líder?"), options: ["الْعَدْلُ وَالصِّدْقُ", "الْقَسْوَةُ", "الْكَذِبُ"], correctIndex: 0 },
             { id: "g6u1l6e3", type: "speaking", skill: "speaking", prompt: t("قل الصفات التي تريدها في قائد مجتمعك", "Say the qualities you want in your community leader", "Sebut sifat yang anda inginkan dalam pemimpin komuniti", "Sebutkan sifat yang kamu inginkan pada pemimpin komunitasmu", "Dis les qualités que tu veux dans le leader de ta communauté", "Di las cualidades que quieres en el líder de tu comunidad"), arabicText: "أُرِيدُ قَائِدًا عَادِلًا وَصَادِقًا يَخْدُمُ مُجْتَمَعَهُ" },
-          ],
+          
+            { id: "g6u1l6e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الْقَائِدُ" },],
         },
       ],
     },
@@ -189,7 +195,8 @@ export const grade6: GradeData = {
             { id: "g6u2l1e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "التَّلَوُّثُ", options: ["النَّظَافَةُ", "التَّلَوُّثُ", "نَزْرَعُ"], correctIndex: 1 },
             { id: "g6u2l1e2", type: "mcq", skill: "reading", prompt: t("ما الذي يسبب تلوث البيئة؟", "What causes environmental pollution?", "Apa yang menyebabkan pencemaran alam sekitar?", "Apa yang menyebabkan pencemaran lingkungan?", "Qu'est-ce qui provoque la pollution de l'environnement ?", "¿Qué causa la contaminación medioambiental?"), options: ["رَمْيُ الْمُخَلَّفَاتِ فِي غَيْرِ أَمَاكِنِهَا", "زَرْعُ الْأَشْجَارِ", "النَّظَافَةُ الدَّائِمَةُ"], correctIndex: 0 },
             { id: "g6u2l1e3", type: "speaking", skill: "speaking", prompt: t("قل كيف تحافظ على بيئتك", "Say how you preserve your environment", "Sebut cara anda menjaga alam sekitar", "Sebutkan cara kamu menjaga lingkunganmu", "Dis comment tu préserves ton environnement", "Di cómo preservas tu medio ambiente"), arabicText: "أُحَافِظُ عَلَى الْبِيئَةِ بِعَدَمِ رَمْيِ الْقُمَامَةِ وَزَرْعِ الْأَشْجَارِ" },
-          ],
+          
+            { id: "g6u2l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الْبِيئَةُ" },],
         },
         {
           id: "g6u2l2",
@@ -211,7 +218,8 @@ export const grade6: GradeData = {
             { id: "g6u2l2e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "الطَّاقَةُ الشَّمْسِيَّةُ", options: ["الطَّاقَةُ", "الطَّاقَةُ الشَّمْسِيَّةُ", "مُسْتَدَامٌ"], correctIndex: 1 },
             { id: "g6u2l2e2", type: "mcq", skill: "reading", prompt: t("كيف نُرشِّد استهلاك الكهرباء؟", "How do we conserve electricity?", "Bagaimana kita menjimatkan elektrik?", "Bagaimana kita menghemat listrik?", "Comment économise-t-on l'électricité ?", "¿Cómo conservamos la electricidad?"), options: ["نُطْفِئُ الْأَضْوَاءَ عِنْدَ الْخُرُوجِ", "نَتْرُكُ الْأَجْهِزَةَ تَعْمَلُ دَائِمًا", "نَفْتَحُ النَّوَافِذَ فَقَطْ"], correctIndex: 0 },
             { id: "g6u2l2e3", type: "speaking", skill: "speaking", prompt: t("قل طريقة لترشيد الطاقة في منزلك", "Say a way to conserve energy in your home", "Sebut cara menjimatkan tenaga di rumah anda", "Sebutkan cara menghemat energi di rumahmu", "Dis une façon d'économiser l'énergie chez toi", "Di una forma de conservar energía en tu casa"), arabicText: "أُطْفِئُ الْأَنْوَارَ وَأَفْصِلُ الْأَجْهِزَةَ الْكَهْرَبَائِيَّةَ عِنْدَ عَدَمِ الِاسْتِخْدَامِ" },
-          ],
+          
+            { id: "g6u2l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الطَّاقَةُ" },],
         },
         {
           id: "g6u2l3",
@@ -233,7 +241,8 @@ export const grade6: GradeData = {
             { id: "g6u2l3e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "نُفَرِّزُ", options: ["النِّفَايَاتُ", "نُفَرِّزُ", "الزُّجَاجُ"], correctIndex: 1 },
             { id: "g6u2l3e2", type: "mcq", skill: "reading", prompt: t("لماذا نُعِيد تدوير النفايات؟", "Why do we recycle waste?", "Kenapa kita kitar semula sisa?", "Mengapa kita mendaur ulang sampah?", "Pourquoi recycle-t-on les déchets ?", "¿Por qué reciclamos los residuos?"), options: ["لِحِمَايَةِ الْبِيئَةِ وَتَقْلِيلِ التَّلَوُّثِ", "لِزِيَادَةِ النِّفَايَاتِ", "لَا سَبَبَ"], correctIndex: 0 },
             { id: "g6u2l3e3", type: "speaking", skill: "speaking", prompt: t("قل كيف تُعِيد التدوير في مدرستك", "Say how you recycle at school", "Sebut cara anda kitar semula di sekolah", "Sebutkan cara kamu mendaur ulang di sekolah", "Dis comment tu recycles à l'école", "Di cómo reciclas en tu escuela"), arabicText: "نُفَرِّزُ الْوَرَقَ وَالزُّجَاجَ وَنَضَعُهُمَا فِي صَنَادِيقِ إِعَادَةِ التَّدْوِيرِ" },
-          ],
+          
+            { id: "g6u2l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا إِعَادَةُ التَّدْوِيرِ" },],
         },
         {
           id: "g6u2l4",
@@ -255,7 +264,8 @@ export const grade6: GradeData = {
             { id: "g6u2l4e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "الْغَابَةُ", options: ["النَّهْرُ", "الْغَابَةُ", "الْجَبَلُ"], correctIndex: 1 },
             { id: "g6u2l4e2", type: "mcq", skill: "reading", prompt: t("ما الذي يحمي الغابات من الاندثار؟", "What protects forests from disappearing?", "Apa yang melindungi hutan dari kepupusan?", "Apa yang melindungi hutan dari kepunahan?", "Qu'est-ce qui protège les forêts de la disparition ?", "¿Qué protege los bosques de la desaparición?"), options: ["الزِّرَاعَةُ وَالْحِمَايَةُ", "قَطْعُ الْأَشْجَارِ", "إِشْعَالُ النِّيرَانِ"], correctIndex: 0 },
             { id: "g6u2l4e3", type: "speaking", skill: "speaking", prompt: t("صف مشهدًا طبيعيًا جميلًا رأيته", "Describe a beautiful nature scene you saw", "Huraikan pemandangan alam semula jadi yang indah yang anda lihat", "Gambarkan pemandangan alam indah yang pernah kamu lihat", "Décris un beau paysage naturel que tu as vu", "Describe un hermoso paisaje natural que hayas visto"), arabicText: "رَأَيْتُ غَابَةً خَضْرَاءَ بِجَانِبِ نَهْرٍ جَمِيلٍ وَشَعَرْتُ بِالسَّعَادَةِ" },
-          ],
+          
+            { id: "g6u2l4e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الْغَابَةُ" },],
         },
         {
           id: "g6u2l5",
@@ -277,7 +287,8 @@ export const grade6: GradeData = {
             { id: "g6u2l5e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "التَّبْذِيرُ", options: ["نُوَفِّرُ", "التَّبْذِيرُ", "ثَرْوَةٌ"], correctIndex: 1 },
             { id: "g6u2l5e2", type: "mcq", skill: "reading", prompt: t("كيف نوفّر الماء في حياتنا اليومية؟", "How do we save water in our daily lives?", "Bagaimana kita menjimatkan air dalam kehidupan harian?", "Bagaimana kita menghemat air dalam kehidupan sehari-hari?", "Comment économise-t-on l'eau au quotidien ?", "¿Cómo ahorramos agua en nuestra vida diaria?"), options: ["بِإِغْلَاقِ الصُّنْبُورِ عِنْدَ عَدَمِ الِاسْتِخْدَامِ", "بِتَرْكِ الصُّنْبُورِ مَفْتُوحًا", "بِاسْتِخْدَامِ مَاءٍ أَكْثَرَ"], correctIndex: 0 },
             { id: "g6u2l5e3", type: "speaking", skill: "speaking", prompt: t("قل ثلاث طرق لتوفير الماء", "Say three ways to save water", "Sebut tiga cara menjimatkan air", "Sebutkan tiga cara menghemat air", "Dis trois façons d'économiser l'eau", "Di tres formas de ahorrar agua"), arabicText: "نُوَفِّرُ الْمَاءَ بِإِغْلَاقِ الصُّنْبُورِ وَعَدَمِ التَّبْذِيرِ وَإِصْلَاحِ التَّسَرُّبَاتِ" },
-          ],
+          
+            { id: "g6u2l5e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الْمَاءُ" },],
         },
         {
           id: "g6u2l6",
@@ -299,7 +310,8 @@ export const grade6: GradeData = {
             { id: "g6u2l6e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "التَّشْجِيرُ", options: ["الزِّرَاعَةُ", "التَّشْجِيرُ", "الشَّجَرَةُ"], correctIndex: 1 },
             { id: "g6u2l6e2", type: "mcq", skill: "reading", prompt: t("ما فائدة زراعة الأشجار؟", "What is the benefit of planting trees?", "Apa faedah menanam pokok?", "Apa manfaat menanam pohon?", "Quel est le bienfait de la plantation d'arbres ?", "¿Cuál es el beneficio de plantar árboles?"), options: ["تُنَقِّي الْهَوَاءَ وَتُجَمِّلُ الْبِيئَةَ", "تُلَوِّثُ الْهَوَاءَ", "لَا فَائِدَةَ مِنْهَا"], correctIndex: 0 },
             { id: "g6u2l6e3", type: "speaking", skill: "speaking", prompt: t("قل لماذا تحب الزراعة والأشجار", "Say why you love farming and trees", "Sebut kenapa anda suka pertanian dan pokok", "Sebutkan mengapa kamu suka pertanian dan pohon", "Dis pourquoi tu aimes l'agriculture et les arbres", "Di por qué te gusta la agricultura y los árboles"), arabicText: "أُحِبُّ زِرَاعَةَ الْأَشْجَارِ لِأَنَّهَا تُنَقِّي الْهَوَاءَ وَتُجَمِّلُ بِيئَتَنَا" },
-          ],
+          
+            { id: "g6u2l6e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الزِّرَاعَةُ" },],
         },
       ],
     },
@@ -331,7 +343,8 @@ export const grade6: GradeData = {
             { id: "g6u3l1e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "النَّوْمُ الْكَافِي", options: ["الرِّيَاضَةُ", "النَّوْمُ الْكَافِي", "نَشِيطٌ"], correctIndex: 1 },
             { id: "g6u3l1e2", type: "mcq", skill: "reading", prompt: t("ما أساسيات الصحة الجسدية؟", "What are the basics of physical health?", "Apakah asas kesihatan fizikal?", "Apa dasar-dasar kesehatan fisik?", "Quelles sont les bases de la santé physique ?", "¿Cuáles son las bases de la salud física?"), options: ["الرِّيَاضَةُ وَالطَّعَامُ الصِّحِّيُّ وَالنَّوْمُ", "الطَّعَامُ السَّرِيعُ فَقَطْ", "عَدَمُ الْحَرَكَةِ"], correctIndex: 0 },
             { id: "g6u3l1e3", type: "speaking", skill: "speaking", prompt: t("قل كيف تحافظ على صحتك الجسدية", "Say how you maintain your physical health", "Sebut cara anda menjaga kesihatan fizikal", "Sebutkan cara kamu menjaga kesehatan fisikmu", "Dis comment tu maintiens ta santé physique", "Di cómo mantienes tu salud física"), arabicText: "أُحَافِظُ عَلَى صِحَّتِي بِالرِّيَاضَةِ وَتَنَاوُلِ الطَّعَامِ الصِّحِّيِّ" },
-          ],
+          
+            { id: "g6u3l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الصِّحَّةُ" },],
         },
         {
           id: "g6u3l2",
@@ -353,7 +366,8 @@ export const grade6: GradeData = {
             { id: "g6u3l2e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "الطُّمَأْنِينَةُ", options: ["الضَّغْطُ النَّفْسِيُّ", "الطُّمَأْنِينَةُ", "الِاتِّزَانُ"], correctIndex: 1 },
             { id: "g6u3l2e2", type: "mcq", skill: "reading", prompt: t("كيف نحافظ على صحتنا النفسية؟", "How do we maintain our mental health?", "Bagaimana kita menjaga kesihatan mental kita?", "Bagaimana kita menjaga kesehatan mental kita?", "Comment maintient-on sa santé mentale ?", "¿Cómo mantenemos nuestra salud mental?"), options: ["بِالرَّاحَةِ وَالِاتِّزَانِ وَالتَّحَدُّثِ عَنِ الْمَشَاعِرِ", "بِالصَّمْتِ دَائِمًا", "بِالْعَزْلَةِ عَنِ النَّاسِ"], correctIndex: 0 },
             { id: "g6u3l2e3", type: "speaking", skill: "speaking", prompt: t("قل كيف تحافظ على صحتك النفسية", "Say how you maintain your mental health", "Sebut cara anda menjaga kesihatan mental", "Sebutkan cara kamu menjaga kesehatan mentalmu", "Dis comment tu maintiens ta santé mentale", "Di cómo mantienes tu salud mental"), arabicText: "أَسْتَرِيحُ وَأَتَحَدَّثُ مَعَ أَصْدِقَائِي وَأُمَارِسُ هِوَايَاتِي" },
-          ],
+          
+            { id: "g6u3l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الصِّحَّةُ النَّفْسِيَّةُ" },],
         },
         {
           id: "g6u3l3",
@@ -375,7 +389,8 @@ export const grade6: GradeData = {
             { id: "g6u3l3e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "اللِّقَاحُ", options: ["الْوِقَايَةُ", "اللِّقَاحُ", "الْمَرَضُ"], correctIndex: 1 },
             { id: "g6u3l3e2", type: "mcq", skill: "reading", prompt: t("ما أفضل طريقة لتجنب الأمراض؟", "What is the best way to avoid diseases?", "Apakah cara terbaik untuk menghindari penyakit?", "Apa cara terbaik untuk menghindari penyakit?", "Quelle est la meilleure façon d'éviter les maladies ?", "¿Cuál es la mejor forma de evitar enfermedades?"), options: ["النَّظَافَةُ وَاللِّقَاحُ وَتَجَنُّبُ الْمُلَوِّثَاتِ", "عَدَمُ الِاهْتِمَامِ بِالصِّحَّةِ", "تَجَاهُلُ الْأَعْرَاضِ"], correctIndex: 0 },
             { id: "g6u3l3e3", type: "speaking", skill: "speaking", prompt: t("قل كيف تقي نفسك من الأمراض", "Say how you protect yourself from diseases", "Sebut cara anda melindungi diri dari penyakit", "Sebutkan cara kamu melindungi diri dari penyakit", "Dis comment tu te protèges des maladies", "Di cómo te proteges de las enfermedades"), arabicText: "أَتَجَنَّبُ الْأَمْرَاضَ بِالنَّظَافَةِ الشَّخْصِيَّةِ وَالتَّطْعِيمِ" },
-          ],
+          
+            { id: "g6u3l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الْوِقَايَةُ" },],
         },
         {
           id: "g6u3l4",
@@ -397,7 +412,8 @@ export const grade6: GradeData = {
             { id: "g6u3l4e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "الْفِيتَامِينَاتُ", options: ["الْبُرُوتِينُ", "الْفِيتَامِينَاتُ", "الْكَرْبُوهَيْدَرَاتُ"], correctIndex: 1 },
             { id: "g6u3l4e2", type: "mcq", skill: "reading", prompt: t("ما الذي يجعل غذاءنا متوازنًا؟", "What makes our nutrition balanced?", "Apa yang menjadikan pemakanan kita seimbang?", "Apa yang membuat nutrisi kita seimbang?", "Qu'est-ce qui rend notre alimentation équilibrée ?", "¿Qué hace que nuestra nutrición sea equilibrada?"), options: ["تَنَاوُلُ جَمِيعِ الْمَجْمُوعَاتِ الْغِذَائِيَّةِ", "الْأَكْلُ بِكَثْرَةٍ", "تَجَنُّبُ الْخُضَرِ وَالْفَوَاكِهِ"], correctIndex: 0 },
             { id: "g6u3l4e3", type: "speaking", skill: "speaking", prompt: t("قل ما تأكله لتحقيق تغذية متوازنة", "Say what you eat to achieve balanced nutrition", "Sebut apa yang anda makan untuk mencapai pemakanan seimbang", "Sebutkan apa yang kamu makan untuk mencapai nutrisi seimbang", "Dis ce que tu manges pour une nutrition équilibrée", "Di qué comes para lograr una nutrición equilibrada"), arabicText: "آكُلُ خُضَرًا وَفَوَاكِهَ وَبُرُوتِينًا وَكَرْبُوهَيْدَرَاتٍ لِأَحْقِقَ غِذَاءً مُتَوَازِنًا" },
-          ],
+          
+            { id: "g6u3l4e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا التَّغْذِيَةُ" },],
         },
         {
           id: "g6u3l5",
@@ -419,7 +435,8 @@ export const grade6: GradeData = {
             { id: "g6u3l5e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "الِاطْمِئْنَانُ", options: ["الْإِيمَانُ", "الِاطْمِئْنَانُ", "الرِّضَا"], correctIndex: 1 },
             { id: "g6u3l5e2", type: "mcq", skill: "reading", prompt: t("ما الذي يجلب الاطمئنان للقلب؟", "What brings peace to the heart?", "Apa yang membawa ketenangan kepada hati?", "Apa yang membawa ketenangan pada hati?", "Qu'est-ce qui apporte la paix au cœur ?", "¿Qué trae paz al corazón?"), options: ["الذِّكْرُ وَالْإِيمَانُ", "الْغَضَبُ", "الْقَلَقُ الدَّائِمُ"], correctIndex: 0 },
             { id: "g6u3l5e3", type: "speaking", skill: "speaking", prompt: t("قل كيف تُحقِّق الاطمئنان الروحي", "Say how you achieve spiritual peace", "Sebut cara anda mencapai ketenangan rohani", "Sebutkan cara kamu mencapai ketenangan spiritual", "Dis comment tu atteins la paix spirituelle", "Di cómo logras la paz espiritual"), arabicText: "أَجِدُ الِاطْمِئْنَانَ بِالصَّلَاةِ وَالذِّكْرِ وَالرِّضَا بِمَا قَسَمَ اللهُ" },
-          ],
+          
+            { id: "g6u3l5e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الِاطْمِئْنَانُ" },],
         },
         {
           id: "g6u3l6",
@@ -441,7 +458,8 @@ export const grade6: GradeData = {
             { id: "g6u3l6e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "التَّوَازُنُ", options: ["مُتَكَامِلٌ", "التَّوَازُنُ", "الرَّاحَةُ"], correctIndex: 1 },
             { id: "g6u3l6e2", type: "mcq", skill: "reading", prompt: t("ما عناصر الحياة الصحية المتكاملة؟", "What are the elements of a complete healthy life?", "Apakah unsur-unsur gaya hidup sihat menyeluruh?", "Apa unsur-unsur gaya hidup sehat menyeluruh?", "Quels sont les éléments d'une vie saine complète ?", "¿Cuáles son los elementos de una vida saludable completa?"), options: ["صِحَّةُ الْجِسْمِ وَالْعَقْلِ وَالرُّوحِ", "الطَّعَامُ فَقَطْ", "الرِّيَاضَةُ وَحْدَهَا"], correctIndex: 0 },
             { id: "g6u3l6e3", type: "speaking", skill: "speaking", prompt: t("قل ما هي عناصر حياتك الصحية", "Say what the elements of your healthy life are", "Sebut apa unsur-unsur gaya hidup sihat anda", "Sebutkan apa unsur-unsur gaya hidup sehatmu", "Dis quels sont les éléments de ta vie saine", "Di cuáles son los elementos de tu vida saludable"), arabicText: "حَيَاتِي الصِّحِّيَّةُ تَشْمَلُ الرِّيَاضَةَ وَالطَّعَامَ الصِّحِّيَّ وَالرَّاحَةَ وَالِاطْمِئْنَانَ" },
-          ],
+          
+            { id: "g6u3l6e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا مُتَكَامِلٌ" },],
         },
       ],
     },
@@ -473,7 +491,8 @@ export const grade6: GradeData = {
             { id: "g6u4l1e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "الْحَضَارَةُ", options: ["التُّرَاثُ", "الْحَضَارَةُ", "الْأَصَالَةُ"], correctIndex: 1 },
             { id: "g6u4l1e2", type: "mcq", skill: "reading", prompt: t("لماذا يجب أن نحافظ على تراثنا؟", "Why must we preserve our heritage?", "Mengapa kita mesti menjaga warisan kita?", "Mengapa kita harus menjaga warisan kita?", "Pourquoi doit-on préserver notre patrimoine ?", "¿Por qué debemos preservar nuestro patrimonio?"), options: ["لِأَنَّهُ يَحْمِلُ هُوِيَّتَنَا وَتَارِيخَنَا", "لِأَنَّهُ قَدِيمٌ فَقَطْ", "لَا دَاعِيَ لِلْحِفَاظِ عَلَيْهِ"], correctIndex: 0 },
             { id: "g6u4l1e3", type: "speaking", skill: "speaking", prompt: t("قل شيئًا تعتز به من تراثنا العربي", "Say something from Arab heritage you are proud of", "Sebut sesuatu yang anda banggakan dari warisan Arab", "Sebutkan sesuatu dari warisan Arab yang kamu banggakan", "Dis quelque chose du patrimoine arabe dont tu es fier", "Di algo del patrimonio árabe del que estás orgulloso"), arabicText: "أَعْتَزُّ بِتُرَاثِنَا الْعَرَبِيِّ وَحَضَارَتِنَا الْعَظِيمَةِ" },
-          ],
+          
+            { id: "g6u4l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا التُّرَاثُ" },],
         },
         {
           id: "g6u4l2",
@@ -495,7 +514,8 @@ export const grade6: GradeData = {
             { id: "g6u4l2e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "الْحِرَفُ الْيَدَوِيَّةُ", options: ["الشِّعْرُ الشَّعْبِيُّ", "الْحِرَفُ الْيَدَوِيَّةُ", "الرَّقْصُ التَّقْلِيدِيُّ"], correctIndex: 1 },
             { id: "g6u4l2e2", type: "mcq", skill: "reading", prompt: t("ما أهمية الفنون الشعبية؟", "What is the importance of folk arts?", "Apakah kepentingan seni rakyat?", "Apa pentingnya seni rakyat?", "Quelle est l'importance des arts populaires ?", "¿Cuál es la importancia de las artes populares?"), options: ["تَحْفَظُ الثَّقَافَةَ وَالتُّرَاثَ", "لَا أَهَمِّيَّةَ لَهَا", "هِيَ مُجَرَّدُ تَسْلِيَةٍ"], correctIndex: 0 },
             { id: "g6u4l2e3", type: "speaking", skill: "speaking", prompt: t("قل فنًّا شعبيًا تعرفه وتحبه", "Say a folk art you know and love", "Sebut seni rakyat yang anda tahu dan suka", "Sebutkan seni rakyat yang kamu tahu dan suka", "Dis un art populaire que tu connais et aimes", "Di un arte popular que conoces y amas"), arabicText: "أُحِبُّ الشِّعْرَ الشَّعْبِيَّ وَالْحِرَفَ الْيَدَوِيَّةَ لِأَنَّهُمَا يَحْكِيَانِ قِصَّةَ أَجْدَادِنَا" },
-          ],
+          
+            { id: "g6u4l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الشِّعْرُ الشَّعْبِيُّ" },],
         },
         {
           id: "g6u4l3",
@@ -517,7 +537,8 @@ export const grade6: GradeData = {
             { id: "g6u4l3e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "الْهُوِيَّةُ", options: ["الزِّيُّ التَّقْلِيدِيُّ", "الْهُوِيَّةُ", "الْمُنَاسَبَاتُ"], correctIndex: 1 },
             { id: "g6u4l3e2", type: "mcq", skill: "reading", prompt: t("متى نرتدي الأزياء التقليدية؟", "When do we wear traditional clothing?", "Bila kita memakai pakaian tradisional?", "Kapan kita mengenakan pakaian tradisional?", "Quand porte-t-on les vêtements traditionnels ?", "¿Cuándo usamos la vestimenta tradicional?"), options: ["فِي الْمُنَاسَبَاتِ الْوَطَنِيَّةِ وَالثَّقَافِيَّةِ", "يَوْمِيًّا فَقَطْ", "لَا نَرْتَدِيهَا أَبَدًا"], correctIndex: 0 },
             { id: "g6u4l3e3", type: "speaking", skill: "speaking", prompt: t("صف زيًّا تقليديًّا تعرفه", "Describe a traditional outfit you know", "Huraikan pakaian tradisional yang anda kenal", "Gambarkan pakaian tradisional yang kamu kenal", "Décris un costume traditionnel que tu connais", "Describe un traje tradicional que conozcas"), arabicText: "أَعْرِفُ الزِّيَّ التَّقْلِيدِيَّ وَهُوَ مُتَمَيِّزٌ يُعَبِّرُ عَنْ هُوِيَّتِنَا" },
-          ],
+          
+            { id: "g6u4l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الزِّيُّ التَّقْلِيدِيُّ" },],
         },
         {
           id: "g6u4l4",
@@ -539,7 +560,8 @@ export const grade6: GradeData = {
             { id: "g6u4l4e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "التَّوَابِلُ", options: ["لَذِيذٌ", "التَّوَابِلُ", "الطَّابِعُ الْمَحَلِّيُّ"], correctIndex: 1 },
             { id: "g6u4l4e2", type: "mcq", skill: "reading", prompt: t("لماذا نحافظ على الوصفات التقليدية؟", "Why do we preserve traditional recipes?", "Kenapa kita jaga resepi tradisional?", "Mengapa kita menjaga resep tradisional?", "Pourquoi préserve-t-on les recettes traditionnelles ?", "¿Por qué preservamos las recetas tradicionales?"), options: ["لِأَنَّهَا جُزْءٌ مِنْ تُرَاثِنَا وَهُوِيَّتِنَا", "لِأَنَّهَا تُكَلِّفُ كَثِيرًا", "لَا دَاعِيَ لِلْمُحَافَظَةِ عَلَيْهَا"], correctIndex: 0 },
             { id: "g6u4l4e3", type: "speaking", skill: "speaking", prompt: t("قل طبقًا تقليديًّا تحبه", "Say a traditional dish you love", "Sebut hidangan tradisional yang anda suka", "Sebutkan hidangan tradisional yang kamu suka", "Dis un plat traditionnel que tu aimes", "Di un plato tradicional que amas"), arabicText: "أُحِبُّ الطَّعَامَ التَّقْلِيدِيَّ لِأَنَّهُ لَذِيذٌ وَيَحْمِلُ طَابَعَ هُوِيَّتِنَا" },
-          ],
+          
+            { id: "g6u4l4e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الطَّعَامُ التَّقْلِيدِيُّ" },],
         },
         {
           id: "g6u4l5",
@@ -564,7 +586,8 @@ export const grade6: GradeData = {
             { id: "g6u4l5e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "الْحِكْمَةُ", options: ["الْمَثَلُ", "الْحِكْمَةُ", "الْمَعْنَى"], correctIndex: 1 },
             { id: "g6u4l5e2", type: "mcq", skill: "reading", prompt: t("ما معنى مثل: الصبر مفتاح الفرج؟", "What does the proverb 'Patience is the key to relief' mean?", "Apa makna peribahasa: Sabar adalah kunci kelapangan?", "Apa makna peribahasa: Kesabaran adalah kunci kemudahan?", "Que signifie le proverbe : La patience est la clé du soulagement ?", "¿Qué significa el proverbio: La paciencia es la clave del alivio?"), options: ["الصَّبْرُ يُوصِلُنَا إِلَى النَّجَاحِ", "الصَّبْرُ مُضِرٌّ", "لَا مَعْنَى لَهُ"], correctIndex: 0 },
             { id: "g6u4l5e3", type: "speaking", skill: "speaking", prompt: t("قل مثلًا شعبيًّا تعرفه مع شرح معناه", "Say a folk proverb you know with its meaning", "Sebut peribahasa yang anda tahu beserta maknanya", "Sebutkan peribahasa yang kamu tahu beserta maknanya", "Dis un proverbe populaire que tu connais avec sa signification", "Di un proverbio popular que conozcas con su significado"), arabicText: "مَثَلٌ جَمِيلٌ: الصَّبْرُ مِفْتَاحُ الْفَرَجِ، أَيْ أَنَّ الصَّبْرَ يَجْلِبُ النَّجَاحَ" },
-          ],
+          
+            { id: "g6u4l5e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَلْ تَعْرِفُونَ هَذَا الْمَثَلَ: الصَّبْرُ مِفْتَاحُ الْفَرَجِ" },],
         },
         {
           id: "g6u4l6",
@@ -586,7 +609,8 @@ export const grade6: GradeData = {
             { id: "g6u4l6e1", type: "listening", skill: "listening", prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"), arabicText: "نُوَثِّقُ", options: ["نَحْفَظُ", "نُوَثِّقُ", "النَّقْلُ"], correctIndex: 1 },
             { id: "g6u4l6e2", type: "mcq", skill: "reading", prompt: t("ما أهمية نقل التراث للأجيال القادمة؟", "What is the importance of passing heritage to future generations?", "Apakah kepentingan menyampaikan warisan kepada generasi akan datang?", "Apa pentingnya meneruskan warisan kepada generasi mendatang?", "Quelle est l'importance de transmettre le patrimoine aux générations futures ?", "¿Cuál es la importancia de transmitir el patrimonio a las generaciones futuras?"), options: ["لِضَمَانِ اسْتِمْرَارِ الْهُوِيَّةِ وَالثَّقَافَةِ", "لَا أَهَمِّيَّةَ لِذَلِكَ", "لِأَنَّهُ إِجْبَارِيٌّ فَقَطْ"], correctIndex: 0 },
             { id: "g6u4l6e3", type: "speaking", skill: "speaking", prompt: t("قل كيف تحافظ على تراث بلدك", "Say how you preserve your country's heritage", "Sebut cara anda menjaga warisan negara anda", "Sebutkan cara kamu menjaga warisan negaramu", "Dis comment tu préserves le patrimoine de ton pays", "Di cómo preservas el patrimonio de tu país"), arabicText: "أُحَافِظُ عَلَى تُرَاثِنَا بِتَعَلُّمِهِ وَتَعْلِيمِهِ وَتَوْثِيقِهِ لِلْأَجْيَالِ الْقَادِمَةِ" },
-          ],
+          
+            { id: "g6u4l6e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا نَحْفَظُ" },],
         },
       ],
     },
