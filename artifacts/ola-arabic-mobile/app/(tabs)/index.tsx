@@ -168,47 +168,49 @@ export default function HomeScreen() {
 
       <View style={styles.path}>
         {grades?.length ? (
-          grades.map((grade, index) => (
-          <View key={grade.id} style={styles.pathItem}>
-            <View
-              style={[
-                styles.gradeIcon,
-                { backgroundColor: grade.color || colors.primary },
-              ]}
-            >
-              <Text style={styles.iconText}>{iconFor(grade.icon)}</Text>
-            </View>
-            <TouchableOpacity
-              style={[
-                styles.gradeCard,
-                { backgroundColor: colors.card, borderColor: grade.color || colors.primary },
-              ]}
-              onPress={() => router.push(`/grade/${grade.id}`)}
-              activeOpacity={0.9}
-            >
-              <Text
-                style={[styles.gradeTitle, { color: colors.foreground }]}
-                numberOfLines={2}
-              >
-                {getLocalizedText(grade.title, language)}
-              </Text>
-              <Text
-                style={[styles.gradeDesc, { color: colors.mutedForeground }]}
-                numberOfLines={2}
-              >
-                {getLocalizedText(grade.description, language)}
-              </Text>
-              <View style={styles.metaRow}>
-                <Text style={[styles.meta, { color: colors.mutedForeground }]}>
-                  {grade.unitCount} {t('units')}
-                </Text>
-                <Text style={[styles.meta, { color: colors.mutedForeground }]}>
-                  {grade.lessonCount} {t('lessons')}
-                </Text>
+          grades.map((grade) => {
+            return (
+              <View key={grade.id} style={styles.pathItem}>
+                <View
+                  style={[
+                    styles.gradeIcon,
+                    { backgroundColor: grade.color || colors.primary },
+                  ]}
+                >
+                  <Text style={styles.iconText}>{iconFor(grade.icon)}</Text>
+                </View>
+                <TouchableOpacity
+                  style={[
+                    styles.gradeCard,
+                    { backgroundColor: colors.card, borderColor: grade.color || colors.primary },
+                  ]}
+                  onPress={() => router.push(`/grade/${grade.id}`)}
+                  activeOpacity={0.9}
+                >
+                  <Text
+                    style={[styles.gradeTitle, { color: colors.foreground }]}
+                    numberOfLines={2}
+                  >
+                    {getLocalizedText(grade.title, language)}
+                  </Text>
+                  <Text
+                    style={[styles.gradeDesc, { color: colors.mutedForeground }]}
+                    numberOfLines={2}
+                  >
+                    {getLocalizedText(grade.description, language)}
+                  </Text>
+                  <View style={styles.metaRow}>
+                    <Text style={[styles.meta, { color: colors.mutedForeground }]}>
+                      {grade.unitCount} {t('units')}
+                    </Text>
+                    <Text style={[styles.meta, { color: colors.mutedForeground }]}>
+                      {grade.lessonCount} {t('lessons')}
+                    </Text>
+                  </View>
+                </TouchableOpacity>
               </View>
-            </TouchableOpacity>
-          </View>
-          ))
+            );
+          })
         ) : (
           <View style={styles.emptyBox}>
             <Text style={[styles.emptyText, { color: colors.mutedForeground }]}>
