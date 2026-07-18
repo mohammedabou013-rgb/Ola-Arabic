@@ -52,10 +52,10 @@ export default function HomeScreen() {
     try {
       // Try the generated client first; if it fails on some Android devices,
       // fall back to a raw fetch that avoids possible AbortSignal/redirect issues.
-      const data = await fetchJson<{ curriculum: CurriculumId; grades: Grade[] }>(
+      const data = await fetchJson<Grade[]>(
         `/api/grades?curriculum=${encodeURIComponent(curriculum)}`,
       );
-      setGrades(data?.grades);
+      setGrades(data || []);
     } catch (err: any) {
       console.error('grades fetch failed', err);
       setGradesError(err);
