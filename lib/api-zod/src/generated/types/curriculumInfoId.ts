@@ -12,4 +12,5 @@ export type CurriculumInfoId = typeof CurriculumInfoId[keyof typeof CurriculumIn
 export const CurriculumInfoId = {
   malaysia: 'malaysia',
   uae: 'uae',
+  indonesia: 'indonesia',
 } as const;

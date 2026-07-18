@@ -12,4 +12,5 @@ export type ListGradesCurriculum = typeof ListGradesCurriculum[keyof typeof List
 export const ListGradesCurriculum = {
   malaysia: 'malaysia',
   uae: 'uae',
+  indonesia: 'indonesia',
 } as const;

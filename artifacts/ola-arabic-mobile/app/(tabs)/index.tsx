@@ -29,7 +29,6 @@ export default function HomeScreen() {
   const colors = useColors();
   const { t, language } = useI18n();
   const router = useRouter();
-  const { data: allGrades, isLoading } = useListGrades();
   const [curriculum, setCurriculum] = useState<CurriculumId>('malaysia');
   const [progress, setProgress] = useState<UserProgress | null>(null);
 
@@ -41,7 +40,12 @@ export default function HomeScreen() {
     getProgress(curriculum).then(setProgress);
   }, [curriculum]);
 
-  const grades = (allGrades || []).filter((g) => g.id.startsWith(`${curriculum}-`));
+  const {
+    data: grades,
+    isLoading: gradesLoading,
+    error: gradesError,
+    refetch: refetchGrades,
+  } = useListGrades({ curriculum });
 
   const StatCard = ({
     icon,
@@ -67,7 +71,7 @@ export default function HomeScreen() {
     </View>
   );
 
-  if (isLoading || !progress) {
+  if (gradesLoading || !progress) {
     return (
       <View style={[styles.center, { backgroundColor: colors.background }]}>
         <ActivityIndicator color={colors.primary} />
@@ -126,12 +130,45 @@ export default function HomeScreen() {
         </Text>
       </TouchableOpacity>
 
+      <TouchableOpacity
+        style={[
+          styles.startButton,
+          { backgroundColor: colors.primary, borderColor: colors.primary },
+        ]}
+        onPress={() =>
+          grades?.length
+            ? router.push(`/grade/${grades[0].id}`)
+            : router.push('/select-curriculum')
+        }
+        activeOpacity={0.8}
+      >
+        <Feather name="play" color="#fff" size={20} />
+        <Text style={styles.startButtonText}>{t('start_learning')}</Text>
+      </TouchableOpacity>
+
+      {gradesError ? (
+        <View style={styles.errorBox}>
+          <Text style={[styles.errorText, { color: colors.mutedForeground }]}>
+            {t('load_error') || 'Failed to load grades. Pull down to retry.'}
+          </Text>
+          <TouchableOpacity
+            style={[styles.retryButton, { backgroundColor: colors.primary + '20' }]}
+            onPress={() => refetchGrades()}
+          >
+            <Text style={[styles.retryText, { color: colors.primary }]}>
+              {t('retry') || 'Retry'}
+            </Text>
+          </TouchableOpacity>
+        </View>
+      ) : null}
+
       <Text style={[styles.sectionTitle, { color: colors.foreground }]}>
-        {t('start_learning')}
+        {t('grades') || 'Grades'}
       </Text>
 
       <View style={styles.path}>
-        {grades.map((grade, index) => (
+        {grades?.length ? (
+          grades.map((grade, index) => (
           <View key={grade.id} style={styles.pathItem}>
             <View
               style={[
@@ -171,7 +208,22 @@ export default function HomeScreen() {
               </View>
             </TouchableOpacity>
           </View>
-        ))}
+          ))
+        ) : (
+          <View style={styles.emptyBox}>
+            <Text style={[styles.emptyText, { color: colors.mutedForeground }]}>
+              {t('no_grades') || 'No grades available. Choose a curriculum.'}
+            </Text>
+            <TouchableOpacity
+              style={[styles.retryButton, { backgroundColor: colors.primary + '20' }]}
+              onPress={() => router.push('/select-curriculum')}
+            >
+              <Text style={[styles.retryText, { color: colors.primary }]}>
+                {t('select_curriculum')}
+              </Text>
+            </TouchableOpacity>
+          </View>
+        )}
       </View>
     </ScrollView>
   );
@@ -245,4 +297,50 @@ const styles = StyleSheet.create({
   gradeDesc: { fontSize: 13, fontFamily: 'Inter_400Regular', marginBottom: 10 },
   metaRow: { flexDirection: 'row', justifyContent: 'space-between' },
   meta: { fontSize: 12, fontFamily: 'Inter_600SemiBold' },
+  startButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 10,
+    alignSelf: 'center',
+    paddingHorizontal: 28,
+    paddingVertical: 14,
+    borderRadius: 999,
+    marginTop: 10,
+    marginBottom: 10,
+  },
+  startButtonText: {
+    color: '#fff',
+    fontSize: 18,
+    fontFamily: 'Inter_700Bold',
+  },
+  errorBox: {
+    marginHorizontal: 20,
+    marginBottom: 16,
+    padding: 16,
+    borderRadius: 16,
+    alignItems: 'center',
+    gap: 10,
+  },
+  errorText: {
+    fontSize: 14,
+    fontFamily: 'Inter_500Medium',
+    textAlign: 'center',
+  },
+  retryButton: {
+    paddingHorizontal: 18,
+    paddingVertical: 8,
+    borderRadius: 999,
+  },
+  retryText: { fontSize: 14, fontFamily: 'Inter_700Bold' },
+  emptyBox: {
+    padding: 20,
+    alignItems: 'center',
+    gap: 12,
+  },
+  emptyText: {
+    fontSize: 15,
+    fontFamily: 'Inter_500Medium',
+    textAlign: 'center',
+  },
 });

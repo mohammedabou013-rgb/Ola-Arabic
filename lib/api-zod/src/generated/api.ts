@@ -34,7 +34,7 @@ export const GetOverviewResponse = zod.object({
  * @summary List all available curricula
  */
 export const ListCurriculaResponseItem = zod.object({
-  "id": zod.enum(['malaysia', 'uae']),
+  "id": zod.enum(['malaysia', 'uae', 'indonesia']),
   "name": zod.object({
   "ar": zod.string(),
   "en": zod.string(),
@@ -61,7 +61,7 @@ export const ListCurriculaResponse = zod.array(ListCurriculaResponseItem)
  * @summary List all grades with unit summaries
  */
 export const ListGradesQueryParams = zod.object({
-  "curriculum": zod.enum(['malaysia', 'uae']).optional().describe('Filter grades by curriculum ID')
+  "curriculum": zod.enum(['malaysia', 'uae', 'indonesia']).optional().describe('Filter grades by curriculum ID')
 })
 
 export const ListGradesResponseItem = zod.object({
