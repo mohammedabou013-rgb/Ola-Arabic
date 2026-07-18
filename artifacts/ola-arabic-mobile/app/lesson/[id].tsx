@@ -11,6 +11,8 @@ import {
   Platform,
   Image,
 } from 'react-native';
+
+const LessonContainer = Platform.OS === 'web' ? View : KeyboardAvoidingView;
 import { useRouter, useLocalSearchParams } from 'expo-router';
 import { useGetLesson } from '@workspace/api-client-react';
 import { useI18n } from '@/i18n/context';
@@ -122,8 +124,8 @@ export default function LessonScreen() {
           : 0;
 
   return (
-    <KeyboardAvoidingView
-      behavior={Platform.OS === 'ios' ? 'padding' : Platform.OS === 'android' ? 'height' : undefined}
+    <LessonContainer
+      {...(Platform.OS === 'web' ? {} : { behavior: Platform.OS === 'ios' ? 'padding' : 'height' })}
       style={[styles.container, { backgroundColor: colors.background }]}
     >
       {stage !== 'intro' && stage !== 'summary' && (
@@ -209,7 +211,7 @@ export default function LessonScreen() {
           onFinish={() => router.push(`/grade/${lesson.gradeId}`)}
         />
       )}
-    </KeyboardAvoidingView>
+    </LessonContainer>
   );
 }
 
