@@ -123,7 +123,7 @@ export default function LessonScreen() {
 
   return (
     <KeyboardAvoidingView
-      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      behavior={Platform.OS === 'ios' ? 'padding' : Platform.OS === 'android' ? 'height' : undefined}
       style={[styles.container, { backgroundColor: colors.background }]}
     >
       {stage !== 'intro' && stage !== 'summary' && (
