@@ -278,6 +278,7 @@ function ExerciseCard({ exercise, language, colors, t, onCorrect, onWrong, feedb
   const [selB, setSelB] = useState<number | null>(null);
   const [arranged, setArranged] = useState<string[]>([]);
   const [pool, setPool] = useState<string[]>([]);
+  const [shuffledB, setShuffledB] = useState<number[]>([]);
 
   useEffect(() => {
     setSelected(null);
@@ -292,11 +293,18 @@ function ExerciseCard({ exercise, language, colors, t, onCorrect, onWrong, feedb
     } else {
       setPool([]);
     }
+    if (exercise.type === 'matching' && exercise.pairs?.length) {
+      const indices = Array.from({ length: exercise.pairs.length }, (_, i) => i);
+      setShuffledB(shuffle(indices));
+    } else {
+      setShuffledB([]);
+    }
   }, [exercise]);
 
   useEffect(() => {
     if (selA !== null && selB !== null) {
-      if (selA === selB) {
+      const correctB = shuffledB[selB];
+      if (selA === correctB) {
         const next = [...matchedA, selA];
         setMatchedA(next);
         setSelA(null);
@@ -311,7 +319,7 @@ function ExerciseCard({ exercise, language, colors, t, onCorrect, onWrong, feedb
         }, 500);
       }
     }
-  }, [selA, selB]);
+  }, [selA, selB, shuffledB]);
 
   const normalize = (str: string) =>
     str
@@ -322,7 +330,7 @@ function ExerciseCard({ exercise, language, colors, t, onCorrect, onWrong, feedb
       .trim()
       .toLowerCase();
 
-  const shuffle = (array: string[]) => {
+  const shuffle = <T,>(array: T[]) => {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
@@ -484,34 +492,37 @@ function ExerciseCard({ exercise, language, colors, t, onCorrect, onWrong, feedb
             ))}
           </View>
           <View style={{ flex: 1, gap: 8 }}>
-            {exercise.pairs.map((p: any, i: number) => (
-              <TouchableOpacity
-                key={`b-${i}`}
-                style={[
-                  styles.matchItem,
-                  {
-                    backgroundColor: matchedA.includes(i)
-                      ? 'transparent'
-                      : selB === i
-                        ? colors.primary
-                        : colors.card,
-                    borderColor: matchedA.includes(i) ? 'transparent' : colors.border,
-                  },
-                ]}
-                disabled={matchedA.includes(i)}
-                onPress={() => setSelB(i)}
-              >
-                <Text
+            {shuffledB.map((originalIndex, i) => {
+              const p = exercise.pairs[originalIndex];
+              return (
+                <TouchableOpacity
+                  key={`b-${originalIndex}`}
                   style={[
-                    styles.matchText,
-                    { color: selB === i ? colors.primaryForeground : colors.foreground },
-                    matchedA.includes(i) && { opacity: 0 },
+                    styles.matchItem,
+                    {
+                      backgroundColor: matchedA.includes(originalIndex)
+                        ? 'transparent'
+                        : selB === i
+                          ? colors.primary
+                          : colors.card,
+                      borderColor: matchedA.includes(originalIndex) ? 'transparent' : colors.border,
+                    },
                   ]}
+                  disabled={matchedA.includes(originalIndex)}
+                  onPress={() => setSelB(i)}
                 >
-                  {p.b}
-                </Text>
-              </TouchableOpacity>
-            ))}
+                  <Text
+                    style={[
+                      styles.matchText,
+                      { color: selB === i ? colors.primaryForeground : colors.foreground },
+                      matchedA.includes(originalIndex) && { opacity: 0 },
+                    ]}
+                  >
+                    {p.b}
+                  </Text>
+                </TouchableOpacity>
+              );
+            })}
           </View>
         </View>
       )}
