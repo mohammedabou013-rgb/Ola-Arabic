@@ -1,10 +1,10 @@
 import { t, type GradeData } from "./types";
 
-// السنة الثانية — العائلة، الأدوات المدرسية، الجسم، الطعام
+// المستوى الثاني — العائلة، الأدوات المدرسية، الجسم، الطعام
 export const grade2: GradeData = {
   id: "g2",
   number: 2,
-  title: t("السنة الثانية", "Stage 2", "Tahun 2", "Kelas 2", "Année 2", "Año 2"),
+  title: t("المستوى الثاني", "Stage 2", "Tahun 2", "Kelas 2", "Année 2", "Año 2"),
   description: t(
     "نتعلم عن العائلة والأدوات المدرسية وأجزاء الجسم والطعام",
     "Learn about family, school tools, body parts and food",

@@ -5,7 +5,7 @@ export const uaeGrade4: GradeData = {
   curriculumId: "uae" as CurriculumId,
   number: 4,
   color: "#F97316",
-  icon: "globe", title: t("السنة الرابعة — الإمارات", "UAE Stage 4", "Tahun 4 UAE", "Kelas 4 UAE", "Année 4 EAU", "Año 4 EAU"),
+  icon: "globe", title: t("المستوى الرابع", "Stage 4", "Tahun 4", "Kelas 4", "Année 4", "Año 4"),
   description: t(
     "نتعلم عن الإمارات والعالم من خلال التجارب والاحتفالات والحياة الرقمية",
     "Learn about UAE and the world through experiences, celebrations and digital life",

@@ -5,7 +5,7 @@ export const uaeGrade5: GradeData = {
   curriculumId: "uae" as CurriculumId,
   number: 5,
   color: "#10B981",
-  icon: "star", title: t("الصف الخامس", "Stage 5", "Tahun 5", "Kelas 5", "Année 5", "Año 5"),
+  icon: "star", title: t("المستوى الخامس", "Stage 5", "Tahun 5", "Kelas 5", "Année 5", "Año 5"),
   description: t(
     "نتعلم اللغة العربية من خلال الرياضات والمدن والتواصل والذكاء",
     "Learn Arabic through sports, cities, communication and intelligence topics",

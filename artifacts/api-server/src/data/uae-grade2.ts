@@ -6,7 +6,7 @@ export const uaeGrade2: GradeData = {
   curriculumId: "uae" as CurriculumId,
   number: 2,
   color: "#3B82F6",
-  icon: "book", title: t("الصف الثاني", "Stage 2", "Tahun 2", "Kelas 2", "Année 2", "Año 2"),
+  icon: "book", title: t("المستوى الثاني", "Stage 2", "Tahun 2", "Kelas 2", "Année 2", "Año 2"),
   description: t(
     "تعلّم الجسم والعائلة والوقت والأصدقاء وأوقات سعيدة",
     "Learn about the body, family, time, friends and happy times",

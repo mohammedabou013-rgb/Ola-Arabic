@@ -1,11 +1,11 @@
 import { t, type GradeData } from "./types";
 
-// السنة الخامسة — المنهج الإندونيسي للمدارس الابتدائية الإسلامية (MI)
+// المستوى الخامس — المنهج الإندونيسي للمدارس الابتدائية الإسلامية (MI)
 export const indonesiaGrade5: GradeData = {
   curriculumId: "indonesia",
   id: "indonesia-g5",
   number: 4,
-  title: t("السنة الخامسة", "Stage 5", "Tahun 5", "Kelas 5", "Année 5", "Año 5"),
+  title: t("المستوى الخامس", "Stage 5", "Tahun 5", "Kelas 5", "Année 5", "Año 5"),
   description: t(
     "منهج اللغة العربية للصف الرابع في المدرسة الإبتدائية الإسلامية الإندونيسية: التعارف، البيت، المدرسة، والبيئة اليومية",
     "Arabic curriculum for Indonesian Islamic elementary Grade 5: introductions, home, school, and daily surroundings",

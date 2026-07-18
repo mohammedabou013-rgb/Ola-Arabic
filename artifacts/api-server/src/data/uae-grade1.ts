@@ -7,7 +7,7 @@ export const uaeGrade1: GradeData = {
   number: 1,
   curriculumId: "uae" as CurriculumId,
   color: "#EC4899",
-  icon: "star", title: t("الصف الأول", "Stage 1", "Tahun 1", "Kelas 1", "Année 1", "Año 1"),
+  icon: "star", title: t("المستوى الأول", "Stage 1", "Tahun 1", "Kelas 1", "Année 1", "Año 1"),
   description: t(
     "تعلّم التحيات والألوان والحيوانات وحروف الهجاء",
     "Learn greetings, colors, animals and Arabic letters",

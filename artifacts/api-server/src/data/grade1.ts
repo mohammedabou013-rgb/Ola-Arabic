@@ -1,10 +1,10 @@
 import { t, type GradeData } from "./types";
 
-// السنة الأولى — الحروف، المفردات الأساسية، التحيات، الأرقام
+// المستوى الأول — الحروف، المفردات الأساسية، التحيات، الأرقام
 export const grade1: GradeData = {
   id: "g1",
   number: 1,
-  title: t("السنة الأولى", "Stage 1", "Tahun 1", "Kelas 1", "Année 1", "Año 1"),
+  title: t("المستوى الأول", "Stage 1", "Tahun 1", "Kelas 1", "Année 1", "Año 1"),
   description: t(
     "نتعلم حروف الهجاء العربية والكلمات الأساسية والتحيات والأرقام",
     "Learn Arabic letters, basic words, greetings and numbers",

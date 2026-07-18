@@ -1,11 +1,11 @@
 import { t, type GradeData } from "./types";
 
-// السنة الرابعة — المنهج الإندونيسي للمدارس الابتدائية الإسلامية (MI)
+// المستوى الرابع — المنهج الإندونيسي للمدارس الابتدائية الإسلامية (MI)
 export const indonesiaGrade4: GradeData = {
   curriculumId: "indonesia",
   id: "indonesia-g4",
   number: 4,
-  title: t("السنة الرابعة", "Stage 4", "Tahun 4", "Kelas 4", "Année 4", "Año 4"),
+  title: t("المستوى الرابع", "Stage 4", "Tahun 4", "Kelas 4", "Année 4", "Año 4"),
   description: t(
     "منهج اللغة العربية للصف الرابع في المدرسة الإبتدائية الإسلامية الإندونيسية: التعارف، البيت، المدرسة، والبيئة اليومية",
     "Arabic curriculum for Indonesian Islamic elementary Grade 4: introductions, home, school, and daily surroundings",

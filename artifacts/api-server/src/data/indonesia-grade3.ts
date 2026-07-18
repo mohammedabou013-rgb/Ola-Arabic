@@ -4,7 +4,7 @@ export const indonesiaGrade3: GradeData = {
   id: "indonesia-g3",
   curriculumId: "indonesia",
   number: 3,
-  title: t("السَّنَةُ الثَّالِثَةُ", "Grade 3", "Darjah 3", "Kelas 3", "Troisième année", "Tercer grado"),
+  title: t("المستوى الثالث", "Stage 3", "Tahun 3", "Kelas 3", "Année 3", "Año 3"),
   description: t("مِنْهَاجُ اللُّغَةِ الْعَرَبِيَّةِ لِمَدَارِسِ إِبْتِدَائِيَّةِ إِنْدُونِيسِيَّا", "Arabic curriculum for Indonesian MI schools", "Kurikulum bahasa Arab untuk MI Indonesia", "Kurikulum bahasa Arab untuk MI Indonesia", "Programme d’arabe pour les MI d’Indonésie", "Plan de estudios de árabe para MI de Indonesia"),
   color: "#F59E0B",
   icon: "book-open",

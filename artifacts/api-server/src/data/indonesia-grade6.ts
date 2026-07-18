@@ -4,7 +4,7 @@ export const indonesiaGrade6: GradeData = {
   id: "indonesia-g6",
   number: 6,
   curriculumId: "indonesia" as CurriculumId,
-  title: t("السَّنَةُ السَّادِسَةُ", "Stage 6", "Tahun 6", "Kelas 6", "Année 6", "Año 6"),
+  title: t("المستوى السادس", "Stage 6", "Tahun 6", "Kelas 6", "Année 6", "Año 6"),
   description: t(
     "نَتَعَلَّمُ السَّاعَةَ وَالْمَدْرَسَةَ وَالْحَيَاةَ الْيَوْمِيَّةَ وَالْحِوَارَاتِ الْبَسِيطَةَ",
     "We learn time, school life, daily life and simple dialogues",

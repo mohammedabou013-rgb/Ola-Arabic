@@ -1,11 +1,11 @@
 import { t, type GradeData } from "./types";
 
-// السنة الرابعة — روتيني اليومي، بيئة مدرستي، أحب مدرستي، المناسبات
+// المستوى الرابع — روتيني اليومي، بيئة مدرستي، أحب مدرستي، المناسبات
 // Content is original wording; only curriculum vocabulary/themes retained.
 export const grade4: GradeData = {
   id: "g4",
   number: 4,
-  title: t("السنة الرابعة", "Stage 4", "Tahun 4", "Kelas 4", "Année 4", "Año 4"),
+  title: t("المستوى الرابع", "Stage 4", "Tahun 4", "Kelas 4", "Année 4", "Año 4"),
   description: t(
     "نتعلّم الروتين اليومي وبيئة المدرسة وأماكنها والمناسبات السعيدة",
     "Learn daily routine, school environment, school places and happy occasions",

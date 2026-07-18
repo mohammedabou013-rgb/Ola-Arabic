@@ -1,11 +1,11 @@
 import { t, type GradeData } from "./types";
 
-// السنة الخامسة — الطبيعة، الرياضة، التسوق، التكنولوجيا
+// المستوى الخامس — الطبيعة، الرياضة، التسوق، التكنولوجيا
 // Content is original wording; only curriculum vocabulary/themes retained.
 export const grade5: GradeData = {
   id: "g5",
   number: 5,
-  title: t("السنة الخامسة", "Stage 5", "Tahun 5", "Kelas 5", "Année 5", "Año 5"),
+  title: t("المستوى الخامس", "Stage 5", "Tahun 5", "Kelas 5", "Année 5", "Año 5"),
   description: t(
     "نتحدث عن الطبيعة والرياضة والتسوق والتكنولوجيا",
     "Talk about nature, sports, shopping and technology",

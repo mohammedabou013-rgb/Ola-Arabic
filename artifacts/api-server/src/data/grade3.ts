@@ -1,11 +1,11 @@
 import { t, type GradeData } from "./types";
 
-// السنة الثالثة — بيتي، نشاطاتي، هواياتي، مشاعري
+// المستوى الثالث — بيتي، نشاطاتي، هواياتي، مشاعري
 // Content written in original wording; only curriculum vocabulary/themes retained.
 export const grade3: GradeData = {
   id: "g3",
   number: 3,
-  title: t("السنة الثالثة", "Stage 3", "Tahun 3", "Kelas 3", "Année 3", "Año 3"),
+  title: t("المستوى الثالث", "Stage 3", "Tahun 3", "Kelas 3", "Année 3", "Año 3"),
   description: t(
     "نتحدث عن بيتنا ونشاطاتنا وهواياتنا ومشاعرنا",
     "Talk about our home, activities, hobbies and feelings",

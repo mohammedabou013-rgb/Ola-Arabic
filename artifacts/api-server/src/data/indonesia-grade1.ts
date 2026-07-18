@@ -4,7 +4,7 @@ export const indonesiaGrade1: GradeData = {
   id: "indonesia-g1",
   number: 1,
   curriculumId: "indonesia" as CurriculumId,
-  title: t("السَّنَةُ الأُولَى", "Stage 1", "Tahun 1", "Kelas 1", "Année 1", "Año 1"),
+  title: t("المستوى الأول", "Stage 1", "Tahun 1", "Kelas 1", "Année 1", "Año 1"),
   description: t(
     "مِنْ كِتَابِ اللُّغَةِ العَرَبِيَّةِ لِلمَدْرَسَةِ الابْتِدَائِيَّةِ الإِندُونِيسِيَّةِ: التَّعَارُفُ، أَسْمَاءُ الأَشْيَاءِ، أَسْرَتِي، هَوَايَاتِي، بَيْتِي، وَأَلْوَانِي",
     "From the Indonesian MI Arabic textbook: greetings, things, my family, my hobbies, my home, and my colours",

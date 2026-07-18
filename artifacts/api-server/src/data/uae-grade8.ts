@@ -5,7 +5,7 @@ export const uaeGrade8: GradeData = {
   curriculumId: "uae" as CurriculumId,
   number: 8,
   color: "#F59E0B",
-  icon: "star", title: t("السنة الثامنة — الإمارات", "UAE Stage 8", "Tahun 8 UAE", "Kelas 8 UAE", "Année 8 EAU", "Año 8 EAU"),
+  icon: "star", title: t("المستوى الثامن", "Stage 8", "Tahun 8", "Kelas 8", "Année 8", "Año 8"),
   description: t(
     "نتعلم عن التسامح والانفعالات والبيئة والعلوم والهوية الإماراتية",
     "Learn about tolerance, emotions, environment, science and Emirati identity",

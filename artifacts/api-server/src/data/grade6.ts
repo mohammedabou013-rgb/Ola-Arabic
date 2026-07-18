@@ -1,10 +1,10 @@
 import { t, type GradeData } from "./types";
 
-// السنة السادسة — المجتمع، البيئة، الصحة، الثقافة والتراث
+// المستوى السادس — المجتمع، البيئة، الصحة، الثقافة والتراث
 export const grade6: GradeData = {
   id: "g6",
   number: 6,
-  title: t("السنة السادسة", "Stage 6", "Tahun 6", "Kelas 6", "Année 6", "Año 6"),
+  title: t("المستوى السادس", "Stage 6", "Tahun 6", "Kelas 6", "Année 6", "Año 6"),
   description: t(
     "نتعلم عن المجتمع والبيئة والصحة والثقافة والتراث",
     "Learn about community, environment, health and culture & heritage",
