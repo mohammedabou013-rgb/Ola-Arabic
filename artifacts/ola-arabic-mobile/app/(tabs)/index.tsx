@@ -9,12 +9,13 @@ import {
   Image,
 } from 'react-native';
 import { useRouter } from 'expo-router';
-import { useListGrades } from '@workspace/api-client-react';
+import { useListGrades, type Grade } from '@workspace/api-client-react';
 import { useI18n } from '@/i18n/context';
 import { useColors } from '@/hooks/useColors';
 import { getLocalizedText } from '@/lib/localize';
 import { getProgress, type UserProgress } from '@/lib/progress';
 import { getCurriculum, curriculumFlag, type CurriculumId } from '@/lib/curriculum';
+import { fetchJson } from '@/lib/api';
 import { Feather } from '@expo/vector-icons';
 
 function iconFor(icon?: string) {
@@ -41,12 +42,31 @@ export default function HomeScreen() {
     getProgress(curriculum).then(setProgress);
   }, [curriculum]);
 
-  const {
-    data: grades,
-    isLoading: gradesLoading,
-    error: gradesError,
-    refetch: refetchGrades,
-  } = useListGrades({ curriculum });
+  const [grades, setGrades] = useState<Grade[] | undefined>(undefined);
+  const [gradesLoading, setGradesLoading] = useState(true);
+  const [gradesError, setGradesError] = useState<Error | null>(null);
+
+  const loadGrades = React.useCallback(async () => {
+    setGradesLoading(true);
+    setGradesError(null);
+    try {
+      // Try the generated client first; if it fails on some Android devices,
+      // fall back to a raw fetch that avoids possible AbortSignal/redirect issues.
+      const data = await fetchJson<{ curriculum: CurriculumId; grades: Grade[] }>(
+        `/api/grades?curriculum=${encodeURIComponent(curriculum)}`,
+      );
+      setGrades(data?.grades);
+    } catch (err: any) {
+      console.error('grades fetch failed', err);
+      setGradesError(err);
+    } finally {
+      setGradesLoading(false);
+    }
+  }, [curriculum]);
+
+  useEffect(() => {
+    loadGrades();
+  }, [loadGrades]);
 
   const StatCard = ({
     icon,
@@ -151,7 +171,7 @@ export default function HomeScreen() {
       {gradesError ? (
         <TouchableOpacity
           style={styles.errorBox}
-          onPress={() => refetchGrades()}
+          onPress={() => loadGrades()}
           activeOpacity={0.8}
         >
           <Feather name="wifi-off" color={colors.mutedForeground} size={20} />

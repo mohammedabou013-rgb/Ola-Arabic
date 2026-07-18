@@ -8,12 +8,13 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import { useRouter, useLocalSearchParams } from 'expo-router';
-import { useGetGrade } from '@workspace/api-client-react';
+import { useGetGrade, type Grade } from '@workspace/api-client-react';
 import { useI18n } from '@/i18n/context';
 import { useColors } from '@/hooks/useColors';
 import { getLocalizedText } from '@/lib/localize';
 import { getProgress } from '@/lib/progress';
 import { getCurriculum, type CurriculumId } from '@/lib/curriculum';
+import { fetchJson } from '@/lib/api';
 import { Feather } from '@expo/vector-icons';
 import { useEffect, useState } from 'react';
 
@@ -37,9 +38,26 @@ export default function GradeScreen() {
   const colors = useColors();
   const { t, language } = useI18n();
   const router = useRouter();
-  const { data: grade, isLoading } = useGetGrade(id);
+  const [grade, setGrade] = useState<Grade | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
   const [progress, setProgress] = useState<Record<string, number>>({});
   const [completed, setCompleted] = useState<string[]>([]);
+
+  useEffect(() => {
+    let cancelled = false;
+    setIsLoading(true);
+    fetchJson<Grade>(`/api/grades/${id}`)
+      .then((g) => {
+        if (!cancelled) setGrade(g);
+      })
+      .catch((err) => {
+        console.error('grade fetch failed', err);
+      })
+      .finally(() => {
+        if (!cancelled) setIsLoading(false);
+      });
+    return () => { cancelled = true; };
+  }, [id]);
 
   useEffect(() => {
     if (!grade) return;

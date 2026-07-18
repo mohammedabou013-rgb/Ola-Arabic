@@ -14,12 +14,13 @@ import {
 
 const LessonContainer = Platform.OS === 'web' ? View : KeyboardAvoidingView;
 import { useRouter, useLocalSearchParams } from 'expo-router';
-import { useGetLesson } from '@workspace/api-client-react';
+import { useGetLesson, type Lesson } from '@workspace/api-client-react';
 import { useI18n } from '@/i18n/context';
 import { useColors } from '@/hooks/useColors';
 import { getLocalizedText } from '@/lib/localize';
 import { addLessonCompletion } from '@/lib/progress';
 import { getCurriculum } from '@/lib/curriculum';
+import { fetchJson } from '@/lib/api';
 import { Feather } from '@expo/vector-icons';
 import * as Speech from 'expo-speech';
 
@@ -50,8 +51,25 @@ export default function LessonScreen() {
   const colors = useColors();
   const { t, language } = useI18n();
   const router = useRouter();
-  const { data: lesson, isLoading } = useGetLesson(id);
+  const [lesson, setLesson] = useState<Lesson | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
   const [stage, setStage] = useState<Stage>('intro');
+
+  useEffect(() => {
+    let cancelled = false;
+    setIsLoading(true);
+    fetchJson<Lesson>(`/api/lessons/${id}`)
+      .then((l) => {
+        if (!cancelled) setLesson(l);
+      })
+      .catch((err) => {
+        console.error('lesson fetch failed', err);
+      })
+      .finally(() => {
+        if (!cancelled) setIsLoading(false);
+      });
+    return () => { cancelled = true; };
+  }, [id]);
   const [subIndex, setSubIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [feedback, setFeedback] = useState<'correct' | 'wrong' | null>(null);

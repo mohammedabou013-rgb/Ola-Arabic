@@ -11,7 +11,7 @@ import { useI18n } from '@/i18n/context';
 import { useColors } from '@/hooks/useColors';
 import { getCurriculum } from '@/lib/curriculum';
 import { getLocalizedText } from '@/lib/localize';
-import { API_BASE_URL } from '@/lib/api';
+import { fetchJson } from '@/lib/api';
 import { Feather } from '@expo/vector-icons';
 
 type VocabItem = {
@@ -51,9 +51,9 @@ export default function PracticeScreen() {
     setError('');
     try {
       const curriculum = await getCurriculum();
-      const res = await fetch(`${API_BASE_URL}/vocab?curriculum=${curriculum}`);
-      if (!res.ok) throw new Error('Failed to load vocab');
-      const data: VocabItem[] = await res.json();
+      const data = await fetchJson<VocabItem[]>(
+        `/vocab?curriculum=${encodeURIComponent(curriculum)}`,
+      );
       if (data.length < 8) throw new Error('Not enough vocabulary');
       setVocab(shuffle(data));
       setPhase('playing');
