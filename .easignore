@@ -4,6 +4,7 @@ node_modules/
 apk-preview/
 attached_assets/
 screenshots/
+.agents/outputs/
 .cache/
 .local/
 .env
