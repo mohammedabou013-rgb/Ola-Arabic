@@ -22,6 +22,7 @@ import LoginPage from '@/pages/login';
 import RegisterPage from '@/pages/register';
 import ForgotPasswordPage from '@/pages/forgot-password';
 import DeleteDataPage from '@/pages/delete-data';
+import PrivacyPolicyPage from '@/pages/privacy-policy';
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,7 @@ function Router() {
       <Route path="/register" component={RegisterPage} />
       <Route path="/forgot-password" component={ForgotPasswordPage} />
       <Route path="/delete-data" component={DeleteDataPage} />
+      <Route path="/privacy-policy" component={PrivacyPolicyPage} />
       <Route>
         {() => {
           if (!user) return <Redirect to="/login" />;
