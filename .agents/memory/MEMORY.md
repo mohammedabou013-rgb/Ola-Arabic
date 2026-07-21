@@ -4,3 +4,4 @@
 - [GitHub push size limits](github-push-size-limits.md) — large PDFs in attached_assets block GitHub pushes; remove them from git history before pushing.
 - [Indonesian curriculum enrichment](indonesia-curriculum-enrichment.md) — after any enrichment of grade files, run `pnpm --filter @workspace/api-server run typecheck` and fix all errors before finishing.
 - [Mobile production API URL](mobile-production-api-url.md) — set `EXPO_PUBLIC_API_BASE_URL` to the real deployed API root before running an EAS production build; the fallback `api.olaarabic.com` may not exist.
+- [EAS upload exclusions](eas-upload-exclusions.md) — EAS uses the workspace-root `.easignore`; large `.agents/outputs/` must be excluded there or the upload fails with error -122.
