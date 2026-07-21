@@ -1,13 +1,16 @@
 import { setBaseUrl } from '@workspace/api-client-react';
 
-// Primary production URL. Replit deployments may have SSL/redirect issues on some
-// Android devices (e.g. Honor EMUI), so the runtime also falls back to a direct
-// fetch if the generated client request fails.
+// The real production deployment URL. EAS embeds EXPO_PUBLIC_API_BASE_URL at
+// build time, but older code and some fallback paths were still pointing to the
+// placeholder domain api.olaarabic.com which does not exist. Always default to
+// the live Replit deployment so the app works on real devices.
+const PRODUCTION_API_BASE_URL = 'https://attached-assets-mohammedabou013.replit.app';
+
 const base =
-  (process as any).env.EXPO_PUBLIC_API_BASE_URL ||
-  (typeof process !== 'undefined' && (process as any).env.EXPO_PUBLIC_DOMAIN
-    ? `https://${(process as any).env.EXPO_PUBLIC_DOMAIN}`
-    : 'https://api.olaarabic.com');
+  process.env.EXPO_PUBLIC_API_BASE_URL ||
+  (process.env.EXPO_PUBLIC_DOMAIN
+    ? `https://${process.env.EXPO_PUBLIC_DOMAIN}`
+    : PRODUCTION_API_BASE_URL);
 
 setBaseUrl(base);
 export const API_BASE_URL = base;
