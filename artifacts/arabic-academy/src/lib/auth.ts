@@ -45,3 +45,20 @@ export async function getMe(): Promise<AuthUser | null> {
 }
 
 export function logout() { clearToken(); }
+
+export async function deleteMyAccount(): Promise<void> {
+  const token = getToken();
+  const res = await fetch(`${API}/api/auth/me`, {
+    method: 'DELETE',
+    headers: token ? { 'Authorization': `Bearer ${token}` } : {},
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'خطأ في حذف الحساب');
+  clearToken();
+  // Clear all local app data as well
+  if (typeof window !== 'undefined') {
+    Object.keys(localStorage).forEach(key => {
+      if (key.startsWith('ola_')) localStorage.removeItem(key);
+    });
+  }
+}

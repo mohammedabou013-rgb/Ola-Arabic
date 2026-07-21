@@ -2,7 +2,7 @@ import { Router, type IRouter } from 'express';
 import { z } from 'zod';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import { findUserByEmail, addUser, updateUser, getUsers } from '../services/userStore.js';
+import { findUserByEmail, addUser, updateUser, getUsers, deleteUser } from '../services/userStore.js';
 import { randomUUID } from 'node:crypto';
 
 const router: IRouter = Router();
@@ -85,6 +85,20 @@ router.get('/me', async (req, res): Promise<void> => {
     const user = getUsers().find(u => u.id === payload.id);
     if (!user) { res.status(404).json({ error: 'المستخدم غير موجود' }); return; }
     res.json({ id: user.id, email: user.email, name: user.name });
+  } catch {
+    res.status(401).json({ error: 'جلسة منتهية، يرجى تسجيل الدخول مجدداً' });
+  }
+});
+
+// Delete current user account and all associated data (JWT-protected)
+router.delete('/me', async (req, res): Promise<void> => {
+  const auth = req.headers['authorization'];
+  if (!auth?.startsWith('Bearer ')) { res.status(401).json({ error: 'غير مصرح' }); return; }
+  try {
+    const payload = jwt.verify(auth.slice(7), JWT_SECRET) as { id: string; email: string; name: string };
+    const ok = deleteUser(payload.id);
+    if (!ok) { res.status(404).json({ error: 'المستخدم غير موجود' }); return; }
+    res.json({ message: 'تم حذف الحساب والبيانات المرتبطة به بنجاح' });
   } catch {
     res.status(401).json({ error: 'جلسة منتهية، يرجى تسجيل الدخول مجدداً' });
   }

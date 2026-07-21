@@ -44,3 +44,11 @@ export function updateUser(id: string, updates: Partial<User>) {
   const idx = users.findIndex(u => u.id === id);
   if (idx >= 0) { users[idx] = { ...users[idx], ...updates }; saveUsers(users); }
 }
+
+export function deleteUser(id: string): boolean {
+  const users = getUsers();
+  const next = users.filter(u => u.id !== id);
+  if (next.length === users.length) return false;
+  saveUsers(next);
+  return true;
+}

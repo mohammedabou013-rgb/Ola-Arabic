@@ -21,6 +21,7 @@ import CurriculumSelectPage from '@/pages/curriculum-select';
 import LoginPage from '@/pages/login';
 import RegisterPage from '@/pages/register';
 import ForgotPasswordPage from '@/pages/forgot-password';
+import DeleteDataPage from '@/pages/delete-data';
 
 const queryClient = new QueryClient();
 
@@ -40,6 +41,7 @@ function Router() {
       <Route path="/login" component={LoginPage} />
       <Route path="/register" component={RegisterPage} />
       <Route path="/forgot-password" component={ForgotPasswordPage} />
+      <Route path="/delete-data" component={DeleteDataPage} />
       <Route>
         {() => {
           if (!user) return <Redirect to="/login" />;
