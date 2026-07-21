@@ -1,11 +1,26 @@
+# Build artifacts
 builds/
 *.aab
 *.apk
+*.ipa
+
+# Dependencies and caches
 node_modules/
 .expo/
 .expo-shared/
 dist/
 tmp/
+.cache/
+
+# Large local data directories
+.agents/outputs/
+attached_assets/
+screenshots/
+.local/
+
+# System files
 .DS_Store
 Thumbs.db
+
+# Git
 .git/
