@@ -3,20 +3,21 @@ const path = require('path');
 
 const config = getDefaultConfig(__dirname);
 
-// Replit + pnpm create temporary directories under eas-cli that disappear
-// while Metro is watching them, causing ENOENT crashes. Exclude them from
-// Metro's file watcher.
-const blockList = config.resolver?.blockList;
-const easTmpPattern = /node_modules[/\\]\.pnpm[/\\]eas-cli.*[/\\]node_modules[/\\]eas-cli_tmp_\d+/;
+// Replit + pnpm create temporary directories while Metro is watching them,
+// causing ENOENT crashes. Exclude common package tmp folders from Metro's watcher.
+const tmpPattern = /node_modules[/\\]\.pnpm[/\\][^/\\]+[/\\]node_modules[/\\][^/\\]*_tmp_\d+/;
+const existing = config.resolver?.blockList;
 
-if (blockList) {
+if (Array.isArray(existing)) {
+  config.resolver.blockList = [...existing, tmpPattern];
+} else if (existing && typeof existing.source === 'string') {
   config.resolver.blockList = new RegExp(
-    `(?:${blockList.source})|(?:${easTmpPattern.source})`,
-    blockList.flags,
+    `(?:${existing.source})|(?:${tmpPattern.source})`,
+    existing.flags,
   );
 } else {
   config.resolver = config.resolver || {};
-  config.resolver.blockList = easTmpPattern;
+  config.resolver.blockList = [tmpPattern];
 }
 
 module.exports = config;

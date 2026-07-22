@@ -18,6 +18,8 @@ const languages: { id: Language; label: string; nativeLabel: string }[] = [
   { id: 'en', label: 'English', nativeLabel: '🇬🇧 English' },
   { id: 'ms', label: 'Bahasa Melayu', nativeLabel: '🇲🇾 Bahasa Melayu' },
   { id: 'id', label: 'Bahasa Indonesia', nativeLabel: '🇮🇩 Bahasa Indonesia' },
+  { id: 'es', label: 'Español', nativeLabel: '🇪🇸 Español' },
+  { id: 'fr', label: 'Français', nativeLabel: '🇫🇷 Français' },
 ];
 
 export default function ProfileScreen() {

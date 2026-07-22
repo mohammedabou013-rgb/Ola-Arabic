@@ -54,7 +54,7 @@ export default function PracticeScreen() {
       const data = await fetchJson<VocabItem[]>(
         `/vocab?curriculum=${encodeURIComponent(curriculum)}`,
       );
-      if (data.length < 8) throw new Error('Not enough vocabulary');
+      if (data.length < 8) throw new Error(t('practice_error'));
       setVocab(shuffle(data));
       setPhase('playing');
     } catch (e) {

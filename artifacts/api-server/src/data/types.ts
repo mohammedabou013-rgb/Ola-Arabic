@@ -33,7 +33,8 @@ export type ExerciseType =
   | "writing"
   | "matching"
   | "arrange"
-  | "fill_in_blank";
+  | "fill_in_blank"
+  | "spell";
 
 export type Skill = "listening" | "speaking" | "reading" | "writing";
 

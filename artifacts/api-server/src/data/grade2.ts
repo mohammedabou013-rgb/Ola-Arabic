@@ -1,22 +1,13 @@
 import { t, type GradeData } from "./types";
 
-// المستوى الثاني — العائلة، الأدوات المدرسية، الجسم، الطعام
 export const grade2: GradeData = {
   id: "g2",
   number: 2,
   title: t("المستوى الثاني", "Stage 2", "Tahun 2", "Kelas 2", "Année 2", "Año 2"),
-  description: t(
-    "نتعلم عن العائلة والأدوات المدرسية وأجزاء الجسم والطعام",
-    "Learn about family, school tools, body parts and food",
-    "Belajar tentang keluarga, alat sekolah, anggota badan dan makanan",
-    "Belajar tentang keluarga, alat sekolah, anggota tubuh dan makanan",
-    "Apprendre la famille, les fournitures scolaires, les parties du corps et la nourriture",
-    "Aprender sobre la familia, útiles escolares, partes del cuerpo y comida",
-  ),
+  description: t("نتعلم عن العائلة والأدوات المدرسية وأجزاء الجسم والطعام", "Learn about family, school tools, body parts and food", "Belajar tentang keluarga, alat sekolah, anggota badan dan makanan", "Belajar tentang keluarga, alat sekolah, anggota tubuh dan makanan", "Apprendre la famille, les fournitures scolaires, les parties du corps et la nourriture", "Aprender sobre la familia, útiles escolares, partes del cuerpo y comida"),
   color: "#10B981",
   icon: "users",
   units: [
-    // ─── UNIT 1: العائلة ──────────────────────────────────────────────
     {
       id: "g2u1",
       gradeId: "g2",
@@ -30,25 +21,60 @@ export const grade2: GradeData = {
           gradeId: "g2",
           order: 1,
           title: t("أَفْرَادُ الْعَائِلَةِ", "Family Members", "Ahli Keluarga", "Anggota Keluarga", "Les membres de la famille", "Los miembros de la familia"),
-          skills: ["listening", "speaking", "reading"],
-          intro: t(
-            "العائلة هي أحبّ الناس إلينا! لنتعلّم أسماء أفراد العائلة.",
-            "Family are the people dearest to us! Let's learn family members' names.",
-            "Keluarga adalah orang yang paling kita sayangi! Jom belajar nama ahli keluarga.",
-            "Keluarga adalah orang yang paling kita sayangi! Ayo pelajari nama anggota keluarga.",
-            "La famille ce sont les personnes les plus chères ! Apprenons leurs noms.",
-            "¡La familia son las personas más queridas! Aprendamos los nombres de los miembros.",
-          ),
+          skills: [
+            "listening",
+            "speaking",
+            "reading"
+          ],
+          intro: t("العائلة هي أحبّ الناس إلينا! لنتعلّم أسماء أفراد العائلة.", "Family are the people dearest to us! Let's learn family members' names.", "Keluarga adalah orang yang paling kita sayangi! Jom belajar nama ahli keluarga.", "Keluarga adalah orang yang paling kita sayangi! Ayo pelajari nama anggota keluarga.", "La famille ce sont les personnes les plus chères ! Apprenons leurs noms.", "¡La familia son las personas más queridas! Aprendamos los nombres de los miembros."),
           vocabulary: [
-            { id: "g2u1l1v1", arabic: "الْأَبُ", transliteration: "al-ab", translation: t("الْأَبُ", "father", "ayah", "ayah", "le père", "el padre"), emoji: "👨" },
-            { id: "g2u1l1v2", arabic: "الْأُمُّ", transliteration: "al-umm", translation: t("الْأُمُّ", "mother", "ibu", "ibu", "la mère", "la madre"), emoji: "👩" },
-            { id: "g2u1l1v3", arabic: "الْأَخُ", transliteration: "al-akh", translation: t("الْأَخُ", "brother", "abang/adik lelaki", "kakak/adik laki-laki", "le frère", "el hermano"), emoji: "👦" },
-            { id: "g2u1l1v4", arabic: "الْأُخْتُ", transliteration: "al-ukht", translation: t("الْأُخْتُ", "sister", "kakak/adik perempuan", "kakak/adik perempuan", "la sœur", "la hermana"), emoji: "👧" },
-            { id: "g2u1l1v5", arabic: "الْجَدُّ", transliteration: "al-jadd", translation: t("الْجَدُّ", "grandfather", "datuk", "kakek", "le grand-père", "el abuelo"), emoji: "👴" },
+            {
+              id: "g2u1l1v1",
+              arabic: "الْأَبُ",
+              transliteration: "al-ab",
+              translation: t("الْأَبُ", "father", "ayah", "ayah", "le père", "el padre"),
+              emoji: "👨"
+            },
+            {
+              id: "g2u1l1v2",
+              arabic: "الْأُمُّ",
+              transliteration: "al-umm",
+              translation: t("الْأُمُّ", "mother", "ibu", "ibu", "la mère", "la madre"),
+              emoji: "👩"
+            },
+            {
+              id: "g2u1l1v3",
+              arabic: "الْأَخُ",
+              transliteration: "al-akh",
+              translation: t("الْأَخُ", "brother", "abang/adik lelaki", "kakak/adik laki-laki", "le frère", "el hermano"),
+              emoji: "👦"
+            },
+            {
+              id: "g2u1l1v4",
+              arabic: "الْأُخْتُ",
+              transliteration: "al-ukht",
+              translation: t("الْأُخْتُ", "sister", "kakak/adik perempuan", "kakak/adik perempuan", "la sœur", "la hermana"),
+              emoji: "👧"
+            },
+            {
+              id: "g2u1l1v5",
+              arabic: "الْجَدُّ",
+              transliteration: "al-jadd",
+              translation: t("الْجَدُّ", "grandfather", "datuk", "kakek", "le grand-père", "el abuelo"),
+              emoji: "👴"
+            }
           ],
           dialogue: [
-            { speaker: "مَرْيَم", arabic: "مَنْ هَذَا؟", translation: t("مَنْ هَذَا؟", "Who is this?", "Siapa ini?", "Siapa ini?", "Qui est-ce ?", "¿Quién es este?") },
-            { speaker: "أَحْمَد", arabic: "هَذَا أَبِي وَهَذِهِ أُمِّي.", translation: t("هَذَا أَبِي وَهَذِهِ أُمِّي.", "This is my father and this is my mother.", "Ini ayah saya dan ini ibu saya.", "Ini ayah saya dan ini ibu saya.", "C'est mon père et c'est ma mère.", "Este es mi padre y esta es mi madre.") },
+            {
+              speaker: "مَرْيَم",
+              arabic: "مَنْ هَذَا؟",
+              translation: t("مَنْ هَذَا؟", "Who is this?", "Siapa ini?", "Siapa ini?", "Qui est-ce ?", "¿Quién es este?")
+            },
+            {
+              speaker: "أَحْمَد",
+              arabic: "هَذَا أَبِي وَهَذِهِ أُمِّي.",
+              translation: t("هَذَا أَبِي وَهَذِهِ أُمِّي.", "This is my father and this is my mother.", "Ini ayah saya dan ini ibu saya.", "Ini ayah saya dan ini ibu saya.", "C'est mon père et c'est ma mère.", "Este es mi padre y esta es mi madre.")
+            }
           ],
           exercises: [
             {
@@ -57,8 +83,13 @@ export const grade2: GradeData = {
               skill: "listening",
               prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
               arabicText: "الْأُمُّ",
-              options: ["الْأَبُ", "الْأُمُّ", "الْأَخُ"],
+              options: [
+                "الْأَبُ",
+                "الْأُمُّ",
+                "الْأَخُ"
+              ],
               correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f469/512.webp"
             },
             {
               id: "g2u1l1e2",
@@ -66,11 +97,24 @@ export const grade2: GradeData = {
               skill: "reading",
               prompt: t("صل كل فرد بالصورة المناسبة", "Match each member to the correct image", "Padankan ahli dengan gambar yang betul", "Cocokkan anggota dengan gambar yang benar", "Relie chaque membre à l'image correcte", "Une cada miembro con la imagen correcta"),
               pairs: [
-                { a: "الْأَبُ", b: "👨" },
-                { a: "الْأُمُّ", b: "👩" },
-                { a: "الْأَخُ", b: "👦" },
-                { a: "الْأُخْتُ", b: "👧" },
+                {
+                  a: "الْأَبُ",
+                  b: "👨"
+                },
+                {
+                  a: "الْأُمُّ",
+                  b: "👩"
+                },
+                {
+                  a: "الْأَخُ",
+                  b: "👦"
+                },
+                {
+                  a: "الْأُخْتُ",
+                  b: "👧"
+                }
               ],
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f468/512.webp"
             },
             {
               id: "g2u1l1e3",
@@ -78,9 +122,57 @@ export const grade2: GradeData = {
               skill: "speaking",
               prompt: t("قدِّم أفراد عائلتك", "Introduce your family members", "Perkenalkan ahli keluarga anda", "Perkenalkan anggota keluargamu", "Présente les membres de ta famille", "Presenta a los miembros de tu familia"),
               arabicText: "عَائِلَتِي: أَبِي وَأُمِّي وَأَخِي وَأُخْتِي",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f468/512.webp"
             },
-          
-            { id: "g2u1l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَنْ هَذَا" },],
+            {
+              id: "g2u1l1e-arrange",
+              type: "arrange",
+              skill: "reading",
+              prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"),
+              answer: "مَنْ هَذَا",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f468/512.webp"
+            },
+            {
+              id: "g2u1l1speakg2u1l1v1",
+              type: "speaking",
+              skill: "speaking",
+              prompt: t("انطق الكلمة", "Say this word", "Sebut perkataan ini", "Ucapkan kata ini", "Dis ce mot", "Di esta palabra"),
+              arabicText: "الْأَبُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f468/512.webp"
+            },
+            {
+              id: "g2u1l1spellg2u1l1v3",
+              type: "spell",
+              skill: "writing",
+              prompt: t("كون الكلمة من الحروف", "Build the word from the letters", "Bina perkataan dari huruf-huruf", "Susun kata dari huruf-hurufnya", "Forme le mot avec les lettres", "Forma la palabra con las letras"),
+              arabicText: "الْأَخُ",
+              answer: "الْأَخُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f466/512.webp"
+            },
+            {
+              id: "g2u1l1writeg2u1l1v3",
+              type: "writing",
+              skill: "writing",
+              prompt: t("اكتب الكلمة: \"الْأَخُ\"", "Type the Arabic word for: \"brother\"", "Taip perkataan Arab untuk: \"abang/adik lelaki\"", "Ketik kata Arab untuk: \"kakak/adik laki-laki\"", "Tape le mot arabe pour : \"le frère\"", "Escribe la palabra árabe para: \"el hermano\""),
+              arabicText: "الْأَخُ",
+              answer: "الْأَخُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f466/512.webp"
+            },
+            {
+              id: "g2u1l1listeng2u1l1v1",
+              type: "listening",
+              skill: "listening",
+              prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
+              arabicText: "الْأَبُ",
+              options: [
+                "الْبَابُ",
+                "الْأَبُ",
+                "الْيَدُ"
+              ],
+              correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f468/512.webp"
+            }
+          ]
         },
         {
           id: "g2u1l2",
@@ -88,21 +180,48 @@ export const grade2: GradeData = {
           gradeId: "g2",
           order: 2,
           title: t("الْجَدَّةُ وَالْجَدُّ", "Grandparents", "Datuk dan Nenek", "Kakek dan Nenek", "Les grands-parents", "Los abuelos"),
-          skills: ["listening", "speaking", "reading"],
-          intro: t(
-            "الجدّ والجدة كنز نفيس! لنتعلّم كيف نتحدث عنهما.",
-            "Grandparents are a precious treasure! Let's learn how to talk about them.",
-            "Datuk dan nenek adalah harta berharga! Jom belajar cara bercakap tentang mereka.",
-            "Kakek dan nenek adalah harta berharga! Ayo pelajari cara berbicara tentang mereka.",
-            "Les grands-parents sont un trésor précieux ! Apprenons à parler d'eux.",
-            "¡Los abuelos son un tesoro precioso! Aprendamos a hablar de ellos.",
-          ),
+          skills: [
+            "listening",
+            "speaking",
+            "reading"
+          ],
+          intro: t("الجدّ والجدة كنز نفيس! لنتعلّم كيف نتحدث عنهما.", "Grandparents are a precious treasure! Let's learn how to talk about them.", "Datuk dan nenek adalah harta berharga! Jom belajar cara bercakap tentang mereka.", "Kakek dan nenek adalah harta berharga! Ayo pelajari cara berbicara tentang mereka.", "Les grands-parents sont un trésor précieux ! Apprenons à parler d'eux.", "¡Los abuelos son un tesoro precioso! Aprendamos a hablar de ellos."),
           vocabulary: [
-            { id: "g2u1l2v1", arabic: "الْجَدَّةُ", transliteration: "al-jadda", translation: t("الْجَدَّةُ", "grandmother", "nenek", "nenek", "la grand-mère", "la abuela"), emoji: "👵" },
-            { id: "g2u1l2v2", arabic: "الْجَدُّ", transliteration: "al-jadd", translation: t("الْجَدُّ", "grandfather", "datuk", "kakek", "le grand-père", "el abuelo"), emoji: "👴" },
-            { id: "g2u1l2v3", arabic: "أَزُورُهُمْ", transliteration: "azūruhum", translation: t("أَزُورُهُمْ", "I visit them", "saya melawat mereka", "saya mengunjungi mereka", "je leur rends visite", "los visito"), emoji: "🚗" },
-            { id: "g2u1l2v4", arabic: "مُحَبَّةٌ", transliteration: "muḥabba", translation: t("مُحَبَّةٌ", "love", "kasih sayang", "kasih sayang", "amour", "amor"), emoji: "❤️" },
-            { id: "g2u1l2v5", arabic: "كَبِيرٌ", transliteration: "kabīr", translation: t("كَبِيرٌ", "old/big", "tua/besar", "tua/besar", "vieux/grand", "viejo/grande"), emoji: "🧓" },
+            {
+              id: "g2u1l2v1",
+              arabic: "الْجَدَّةُ",
+              transliteration: "al-jadda",
+              translation: t("الْجَدَّةُ", "grandmother", "nenek", "nenek", "la grand-mère", "la abuela"),
+              emoji: "👵"
+            },
+            {
+              id: "g2u1l2v2",
+              arabic: "الْجَدُّ",
+              transliteration: "al-jadd",
+              translation: t("الْجَدُّ", "grandfather", "datuk", "kakek", "le grand-père", "el abuelo"),
+              emoji: "👴"
+            },
+            {
+              id: "g2u1l2v3",
+              arabic: "أَزُورُهُمْ",
+              transliteration: "azūruhum",
+              translation: t("أَزُورُهُمْ", "I visit them", "saya melawat mereka", "saya mengunjungi mereka", "je leur rends visite", "los visito"),
+              emoji: "🚗"
+            },
+            {
+              id: "g2u1l2v4",
+              arabic: "مُحَبَّةٌ",
+              transliteration: "muḥabba",
+              translation: t("مُحَبَّةٌ", "love", "kasih sayang", "kasih sayang", "amour", "amor"),
+              emoji: "❤️"
+            },
+            {
+              id: "g2u1l2v5",
+              arabic: "كَبِيرٌ",
+              transliteration: "kabīr",
+              translation: t("كَبِيرٌ", "old/big", "tua/besar", "tua/besar", "vieux/grand", "viejo/grande"),
+              emoji: "🧓"
+            }
           ],
           dialogue: [],
           exercises: [
@@ -112,16 +231,26 @@ export const grade2: GradeData = {
               skill: "listening",
               prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
               arabicText: "الْجَدَّةُ",
-              options: ["الْجَدُّ", "الْجَدَّةُ", "الْأُمُّ"],
+              options: [
+                "الْجَدُّ",
+                "الْجَدَّةُ",
+                "الْأُمُّ"
+              ],
               correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f475/512.webp"
             },
             {
               id: "g2u1l2e2",
               type: "mcq",
               skill: "reading",
               prompt: t("كيف نحترم جدّنا وجدّتنا؟", "How do we respect our grandparents?", "Bagaimana kita hormati datuk nenek?", "Bagaimana kita menghormati kakek nenek?", "Comment respecte-t-on ses grands-parents ?", "¿Cómo respetamos a nuestros abuelos?"),
-              options: ["بِالطَّاعَةِ وَالزِّيَارَةِ", "بِالتَّجَاهُلِ", "بِالشَّجَارِ"],
+              options: [
+                "بِالطَّاعَةِ وَالزِّيَارَةِ",
+                "بِالتَّجَاهُلِ",
+                "بِالشَّجَارِ"
+              ],
               correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f475/512.webp"
             },
             {
               id: "g2u1l2e3",
@@ -129,9 +258,56 @@ export const grade2: GradeData = {
               skill: "speaking",
               prompt: t("قل كيف تحب جدّك وجدّتك", "Say how you love your grandparents", "Sebut cara anda menyayangi datuk nenek", "Sebutkan bagaimana kamu menyayangi kakek nenek", "Dis comment tu aimes tes grands-parents", "Di cómo amas a tus abuelos"),
               arabicText: "أُحِبُّ جَدِّي وَجَدَّتِي وَأَزُورُهُمَا كَثِيرًا",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f475/512.webp"
             },
-          
-            { id: "g2u1l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الْجَدَّةُ" },],
+            {
+              id: "g2u1l2e-arrange",
+              type: "arrange",
+              skill: "reading",
+              prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"),
+              answer: "هَذَا الْجَدَّةُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f475/512.webp"
+            },
+            {
+              id: "g2u1l2speakg2u1l2v1",
+              type: "speaking",
+              skill: "speaking",
+              prompt: t("انطق الكلمة", "Say this word", "Sebut perkataan ini", "Ucapkan kata ini", "Dis ce mot", "Di esta palabra"),
+              arabicText: "الْجَدَّةُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f475/512.webp"
+            },
+            {
+              id: "g2u1l2spellg2u1l2v4",
+              type: "spell",
+              skill: "writing",
+              prompt: t("كون الكلمة من الحروف", "Build the word from the letters", "Bina perkataan dari huruf-huruf", "Susun kata dari huruf-hurufnya", "Forme le mot avec les lettres", "Forma la palabra con las letras"),
+              arabicText: "مُحَبَّةٌ",
+              answer: "مُحَبَّةٌ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/2764-fe0f/512.webp"
+            },
+            {
+              id: "g2u1l2speakg2u1l2v2",
+              type: "speaking",
+              skill: "speaking",
+              prompt: t("انطق الكلمة", "Say this word", "Sebut perkataan ini", "Ucapkan kata ini", "Dis ce mot", "Di esta palabra"),
+              arabicText: "الْجَدُّ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f474/512.webp"
+            },
+            {
+              id: "g2u1l2listeng2u1l2v4",
+              type: "listening",
+              skill: "listening",
+              prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
+              arabicText: "مُحَبَّةٌ",
+              options: [
+                "مُحَبَّةٌ",
+                "نَخْتَارُ",
+                "كَبِيرٌ"
+              ],
+              correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/2764-fe0f/512.webp"
+            }
+          ]
         },
         {
           id: "g2u1l3",
@@ -139,21 +315,48 @@ export const grade2: GradeData = {
           gradeId: "g2",
           order: 3,
           title: t("الْعَمُّ وَالْعَمَّةُ", "Uncle and Aunt", "Bapa Saudara dan Ibu Saudara", "Paman dan Bibi", "L'oncle et la tante", "El tío y la tía"),
-          skills: ["listening", "speaking", "reading"],
-          intro: t(
-            "الأقارب جزء مهم من العائلة! لنتعلّم كيف نتحدث عنهم.",
-            "Relatives are an important part of the family! Let's learn how to talk about them.",
-            "Saudara mara adalah sebahagian penting keluarga! Jom belajar cara bercakap tentang mereka.",
-            "Kerabat adalah bagian penting dari keluarga! Ayo pelajari cara berbicara tentang mereka.",
-            "Les proches sont une partie importante de la famille ! Apprenons à parler d'eux.",
-            "¡Los parientes son una parte importante de la familia! Aprendamos a hablar de ellos.",
-          ),
+          skills: [
+            "listening",
+            "speaking",
+            "reading"
+          ],
+          intro: t("الأقارب جزء مهم من العائلة! لنتعلّم كيف نتحدث عنهم.", "Relatives are an important part of the family! Let's learn how to talk about them.", "Saudara mara adalah sebahagian penting keluarga! Jom belajar cara bercakap tentang mereka.", "Kerabat adalah bagian penting dari keluarga! Ayo pelajari cara berbicara tentang mereka.", "Les proches sont une partie importante de la famille ! Apprenons à parler d'eux.", "¡Los parientes son una parte importante de la familia! Aprendamos a hablar de ellos."),
           vocabulary: [
-            { id: "g2u1l3v1", arabic: "الْعَمُّ", transliteration: "al-ʿamm", translation: t("الْعَمُّ", "uncle (paternal)", "bapa saudara", "paman", "l'oncle", "el tío"), emoji: "👨" },
-            { id: "g2u1l3v2", arabic: "الْعَمَّةُ", transliteration: "al-ʿamma", translation: t("الْعَمَّةُ", "aunt (paternal)", "ibu saudara", "bibi", "la tante", "la tía"), emoji: "👩" },
-            { id: "g2u1l3v3", arabic: "الْخَالُ", transliteration: "al-khāl", translation: t("الْخَالُ", "uncle (maternal)", "bapa saudara sebelah ibu", "paman dari pihak ibu", "l'oncle maternel", "el tío materno"), emoji: "👨‍🦳" },
-            { id: "g2u1l3v4", arabic: "ابْنُ الْعَمِّ", transliteration: "ibnu l-ʿamm", translation: t("ابْنُ الْعَمِّ", "male cousin", "sepupu lelaki", "sepupu laki-laki", "le cousin", "el primo"), emoji: "🧑" },
-            { id: "g2u1l3v5", arabic: "قَرِيبٌ", transliteration: "qarīb", translation: t("قَرِيبٌ", "relative", "saudara mara", "kerabat", "le proche", "el pariente"), emoji: "👨‍👩‍👧‍👦" },
+            {
+              id: "g2u1l3v1",
+              arabic: "الْعَمُّ",
+              transliteration: "al-ʿamm",
+              translation: t("الْعَمُّ", "uncle (paternal)", "bapa saudara", "paman", "l'oncle", "el tío"),
+              emoji: "👨"
+            },
+            {
+              id: "g2u1l3v2",
+              arabic: "الْعَمَّةُ",
+              transliteration: "al-ʿamma",
+              translation: t("الْعَمَّةُ", "aunt (paternal)", "ibu saudara", "bibi", "la tante", "la tía"),
+              emoji: "👩"
+            },
+            {
+              id: "g2u1l3v3",
+              arabic: "الْخَالُ",
+              transliteration: "al-khāl",
+              translation: t("الْخَالُ", "uncle (maternal)", "bapa saudara sebelah ibu", "paman dari pihak ibu", "l'oncle maternel", "el tío materno"),
+              emoji: "👨‍🦳"
+            },
+            {
+              id: "g2u1l3v4",
+              arabic: "ابْنُ الْعَمِّ",
+              transliteration: "ibnu l-ʿamm",
+              translation: t("ابْنُ الْعَمِّ", "male cousin", "sepupu lelaki", "sepupu laki-laki", "le cousin", "el primo"),
+              emoji: "🧑"
+            },
+            {
+              id: "g2u1l3v5",
+              arabic: "قَرِيبٌ",
+              transliteration: "qarīb",
+              translation: t("قَرِيبٌ", "relative", "saudara mara", "kerabat", "le proche", "el pariente"),
+              emoji: "👨‍👩‍👧‍👦"
+            }
           ],
           dialogue: [],
           exercises: [
@@ -163,16 +366,26 @@ export const grade2: GradeData = {
               skill: "listening",
               prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
               arabicText: "الْعَمَّةُ",
-              options: ["الْعَمُّ", "الْعَمَّةُ", "الْخَالُ"],
+              options: [
+                "الْعَمُّ",
+                "الْعَمَّةُ",
+                "الْخَالُ"
+              ],
               correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f469/512.webp"
             },
             {
               id: "g2u1l3e2",
               type: "mcq",
               skill: "reading",
               prompt: t("ما اسم أخ الأب؟", "What is the father's brother called?", "Siapakah nama abang/adik lelaki ayah?", "Apa sebutan saudara laki-laki ayah?", "Comment appelle-t-on le frère du père ?", "¿Cómo se llama el hermano del padre?"),
-              options: ["الْعَمُّ", "الْخَالُ", "الْجَدُّ"],
+              options: [
+                "الْعَمُّ",
+                "الْخَالُ",
+                "الْجَدُّ"
+              ],
               correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f468/512.webp"
             },
             {
               id: "g2u1l3e3",
@@ -180,9 +393,75 @@ export const grade2: GradeData = {
               skill: "speaking",
               prompt: t("قل اسم عمّك أو خالك", "Say your uncle's name", "Sebut nama bapa saudara anda", "Sebutkan nama pamanmu", "Dis le nom de ton oncle", "Di el nombre de tu tío"),
               arabicText: "عَمِّي اسْمُهُ مُحَمَّد وَأَزُورُهُ كُلَّ أُسْبُوع",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f468/512.webp"
             },
-          
-            { id: "g2u1l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الْعَمُّ" },],
+            {
+              id: "g2u1l3e-arrange",
+              type: "arrange",
+              skill: "reading",
+              prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"),
+              answer: "هَذَا الْعَمُّ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f468/512.webp"
+            },
+            {
+              id: "g2u1l3listeng2u1l3v1",
+              type: "listening",
+              skill: "listening",
+              prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
+              arabicText: "الْعَمُّ",
+              options: [
+                "التِّلْمِيذُ",
+                "الْكِتَابُ",
+                "الْعَمُّ"
+              ],
+              correctIndex: 2,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f468/512.webp"
+            },
+            {
+              id: "g2u1l3mcqg2u1l3v2",
+              type: "mcq",
+              skill: "reading",
+              prompt: t("ماذا تعني كلمة \"الْعَمَّةُ\"؟", "What does \"aunt (paternal)\" mean?", "Apakah maksud \"ibu saudara\"?", "Apa arti \"bibi\"?", "Que signifie \"la tante\" ?", "¿Qué significa \"la tía\"?"),
+              arabicText: "الْعَمَّةُ",
+              options: [
+                "aunt (paternal)",
+                "banana",
+                "nose",
+                "healthy"
+              ],
+              correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f469/512.webp"
+            },
+            {
+              id: "g2u1l3listeng2u1l3v4",
+              type: "listening",
+              skill: "listening",
+              prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
+              arabicText: "ابْنُ الْعَمِّ",
+              options: [
+                "مُرَتَّبٌ",
+                "أَسْبَحُ",
+                "ابْنُ الْعَمِّ"
+              ],
+              correctIndex: 2,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f9d1/512.webp"
+            },
+            {
+              id: "g2u1l3mcqg2u1l3v4",
+              type: "mcq",
+              skill: "reading",
+              prompt: t("ماذا تعني كلمة \"ابْنُ الْعَمِّ\"؟", "What does \"male cousin\" mean?", "Apakah maksud \"sepupu lelaki\"?", "Apa arti \"sepupu laki-laki\"?", "Que signifie \"le cousin\" ?", "¿Qué significa \"el primo\"?"),
+              arabicText: "ابْنُ الْعَمِّ",
+              options: [
+                "desk/seat",
+                "uncle (maternal)",
+                "water",
+                "male cousin"
+              ],
+              correctIndex: 3,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f9d1/512.webp"
+            }
+          ]
         },
         {
           id: "g2u1l4",
@@ -190,21 +469,48 @@ export const grade2: GradeData = {
           gradeId: "g2",
           order: 4,
           title: t("مَنَازِلُ الْعَائِلَةِ", "Family Homes", "Rumah Keluarga", "Rumah Keluarga", "Les maisons de la famille", "Las casas de la familia"),
-          skills: ["listening", "speaking", "reading"],
-          intro: t(
-            "عائلتنا تسكن في مناطق مختلفة! لنتعلّم كيف نصف مكان السكن.",
-            "Our family lives in different places! Let's learn to describe where we live.",
-            "Keluarga kita tinggal di tempat berbeza! Jom belajar cara menerangkan tempat tinggal.",
-            "Keluarga kita tinggal di berbagai tempat! Ayo pelajari cara menggambarkan tempat tinggal.",
-            "Notre famille vit dans différents endroits ! Apprenons à décrire où on habite.",
-            "¡Nuestra familia vive en diferentes lugares! Aprendamos a describir dónde vivimos.",
-          ),
+          skills: [
+            "listening",
+            "speaking",
+            "reading"
+          ],
+          intro: t("عائلتنا تسكن في مناطق مختلفة! لنتعلّم كيف نصف مكان السكن.", "Our family lives in different places! Let's learn to describe where we live.", "Keluarga kita tinggal di tempat berbeza! Jom belajar cara menerangkan tempat tinggal.", "Keluarga kita tinggal di berbagai tempat! Ayo pelajari cara menggambarkan tempat tinggal.", "Notre famille vit dans différents endroits ! Apprenons à décrire où on habite.", "¡Nuestra familia vive en diferentes lugares! Aprendamos a describir dónde vivimos."),
           vocabulary: [
-            { id: "g2u1l4v1", arabic: "يَسْكُنُ", transliteration: "yaskunu", translation: t("يَسْكُنُ", "lives/resides", "tinggal", "tinggal", "habite", "vive"), emoji: "🏠" },
-            { id: "g2u1l4v2", arabic: "قَرِيبٌ", transliteration: "qarīb", translation: t("قَرِيبٌ", "near", "dekat", "dekat", "proche", "cerca"), emoji: "📍" },
-            { id: "g2u1l4v3", arabic: "بَعِيدٌ", transliteration: "baʿīd", translation: t("بَعِيدٌ", "far", "jauh", "jauh", "loin", "lejos"), emoji: "🗺️" },
-            { id: "g2u1l4v4", arabic: "الشَّقَّةُ", transliteration: "ash-shaqqa", translation: t("الشَّقَّةُ", "apartment", "pangsapuri", "apartemen", "l'appartement", "el apartamento"), emoji: "🏢" },
-            { id: "g2u1l4v5", arabic: "الْمَدِينَةُ", transliteration: "al-madīna", translation: t("الْمَدِينَةُ", "city", "bandar", "kota", "la ville", "la ciudad"), emoji: "🏙️" },
+            {
+              id: "g2u1l4v1",
+              arabic: "يَسْكُنُ",
+              transliteration: "yaskunu",
+              translation: t("يَسْكُنُ", "lives/resides", "tinggal", "tinggal", "habite", "vive"),
+              emoji: "🏠"
+            },
+            {
+              id: "g2u1l4v2",
+              arabic: "قَرِيبٌ",
+              transliteration: "qarīb",
+              translation: t("قَرِيبٌ", "near", "dekat", "dekat", "proche", "cerca"),
+              emoji: "📍"
+            },
+            {
+              id: "g2u1l4v3",
+              arabic: "بَعِيدٌ",
+              transliteration: "baʿīd",
+              translation: t("بَعِيدٌ", "far", "jauh", "jauh", "loin", "lejos"),
+              emoji: "🗺️"
+            },
+            {
+              id: "g2u1l4v4",
+              arabic: "الشَّقَّةُ",
+              transliteration: "ash-shaqqa",
+              translation: t("الشَّقَّةُ", "apartment", "pangsapuri", "apartemen", "l'appartement", "el apartamento"),
+              emoji: "🏢"
+            },
+            {
+              id: "g2u1l4v5",
+              arabic: "الْمَدِينَةُ",
+              transliteration: "al-madīna",
+              translation: t("الْمَدِينَةُ", "city", "bandar", "kota", "la ville", "la ciudad"),
+              emoji: "🏙️"
+            }
           ],
           dialogue: [],
           exercises: [
@@ -214,16 +520,26 @@ export const grade2: GradeData = {
               skill: "listening",
               prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
               arabicText: "الشَّقَّةُ",
-              options: ["الْبَيْتُ", "الشَّقَّةُ", "الْمَدِينَةُ"],
+              options: [
+                "الْبَيْتُ",
+                "الشَّقَّةُ",
+                "الْمَدِينَةُ"
+              ],
               correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f3e2/512.webp"
             },
             {
               id: "g2u1l4e2",
               type: "mcq",
               skill: "reading",
               prompt: t("ما عكس كلمة قريب؟", "What is the opposite of near?", "Apa antonim perkataan 'dekat'?", "Apa antonim kata 'dekat'?", "Quel est l'opposé de proche ?", "¿Cuál es el opuesto de cerca?"),
-              options: ["بَعِيدٌ", "كَبِيرٌ", "قَدِيمٌ"],
+              options: [
+                "بَعِيدٌ",
+                "كَبِيرٌ",
+                "قَدِيمٌ"
+              ],
               correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f3e0/512.webp"
             },
             {
               id: "g2u1l4e3",
@@ -231,9 +547,52 @@ export const grade2: GradeData = {
               skill: "speaking",
               prompt: t("قل أين تسكن عائلتك", "Say where your family lives", "Sebut di mana keluarga anda tinggal", "Sebutkan di mana keluargamu tinggal", "Dis où habite ta famille", "Di dónde vive tu familia"),
               arabicText: "عَائِلَتِي تَسْكُنُ فِي شَقَّةٍ فِي الْمَدِينَةِ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f3e0/512.webp"
             },
-          
-            { id: "g2u1l4e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا يَسْكُنُ" },],
+            {
+              id: "g2u1l4e-arrange",
+              type: "arrange",
+              skill: "reading",
+              prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"),
+              answer: "هَذَا يَسْكُنُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f3e0/512.webp"
+            },
+            {
+              id: "g2u1l4writeg2u1l4v4",
+              type: "writing",
+              skill: "writing",
+              prompt: t("اكتب الكلمة: \"الشَّقَّةُ\"", "Type the Arabic word for: \"apartment\"", "Taip perkataan Arab untuk: \"pangsapuri\"", "Ketik kata Arab untuk: \"apartemen\"", "Tape le mot arabe pour : \"l'appartement\"", "Escribe la palabra árabe para: \"el apartamento\""),
+              arabicText: "الشَّقَّةُ",
+              answer: "الشَّقَّةُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f3e2/512.webp"
+            },
+            {
+              id: "g2u1l4spellg2u1l4v3",
+              type: "spell",
+              skill: "writing",
+              prompt: t("كون الكلمة من الحروف", "Build the word from the letters", "Bina perkataan dari huruf-huruf", "Susun kata dari huruf-hurufnya", "Forme le mot avec les lettres", "Forma la palabra con las letras"),
+              arabicText: "بَعِيدٌ",
+              answer: "بَعِيدٌ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f5fa-fe0f/512.webp"
+            },
+            {
+              id: "g2u1l4speakg2u1l4v5",
+              type: "speaking",
+              skill: "speaking",
+              prompt: t("انطق الكلمة", "Say this word", "Sebut perkataan ini", "Ucapkan kata ini", "Dis ce mot", "Di esta palabra"),
+              arabicText: "الْمَدِينَةُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f3d9-fe0f/512.webp"
+            },
+            {
+              id: "g2u1l4spellg2u1l4v5",
+              type: "spell",
+              skill: "writing",
+              prompt: t("كون الكلمة من الحروف", "Build the word from the letters", "Bina perkataan dari huruf-huruf", "Susun kata dari huruf-hurufnya", "Forme le mot avec les lettres", "Forma la palabra con las letras"),
+              arabicText: "الْمَدِينَةُ",
+              answer: "الْمَدِينَةُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f3d9-fe0f/512.webp"
+            }
+          ]
         },
         {
           id: "g2u1l5",
@@ -241,25 +600,60 @@ export const grade2: GradeData = {
           gradeId: "g2",
           order: 5,
           title: t("أُحِبُّ عَائِلَتِي", "I Love My Family", "Saya Sayang Keluargaku", "Saya Sayang Keluargaku", "J'aime ma famille", "Amo a mi familia"),
-          skills: ["listening", "speaking", "reading"],
-          intro: t(
-            "العائلة سعادتنا ودفء حياتنا! لنعبّر عن حبّنا لعائلاتنا.",
-            "Family is our happiness and the warmth of our lives! Let's express our love for our families.",
-            "Keluarga adalah kebahagiaan dan kehangatan hidup kita! Jom luahkan kasih sayang kepada keluarga.",
-            "Keluarga adalah kebahagiaan dan kehangatan hidup kita! Ayo ungkapkan cinta kita kepada keluarga.",
-            "La famille est notre bonheur et la chaleur de notre vie ! Exprimons notre amour.",
-            "¡La familia es nuestra felicidad y el calor de nuestra vida! Expresemos nuestro amor.",
-          ),
+          skills: [
+            "listening",
+            "speaking",
+            "reading"
+          ],
+          intro: t("العائلة سعادتنا ودفء حياتنا! لنعبّر عن حبّنا لعائلاتنا.", "Family is our happiness and the warmth of our lives! Let's express our love for our families.", "Keluarga adalah kebahagiaan dan kehangatan hidup kita! Jom luahkan kasih sayang kepada keluarga.", "Keluarga adalah kebahagiaan dan kehangatan hidup kita! Ayo ungkapkan cinta kita kepada keluarga.", "La famille est notre bonheur et la chaleur de notre vie ! Exprimons notre amour.", "¡La familia es nuestra felicidad y el calor de nuestra vida! Expresemos nuestro amor."),
           vocabulary: [
-            { id: "g2u1l5v1", arabic: "أُحِبُّ", transliteration: "uḥibbu", translation: t("أُحِبُّ", "I love", "saya cinta", "saya cinta", "j'aime", "amo"), emoji: "❤️" },
-            { id: "g2u1l5v2", arabic: "سَعِيدٌ", transliteration: "saʿīd", translation: t("سَعِيدٌ", "happy", "gembira", "bahagia", "heureux", "feliz"), emoji: "😊" },
-            { id: "g2u1l5v3", arabic: "مَعًا", transliteration: "maʿan", translation: t("مَعًا", "together", "bersama", "bersama", "ensemble", "juntos"), emoji: "👨‍👩‍👧‍👦" },
-            { id: "g2u1l5v4", arabic: "نَتَعَاوَنُ", transliteration: "nataʿāwanu", translation: t("نَتَعَاوَنُ", "we cooperate", "kita bekerjasama", "kita bekerjasama", "nous coopérons", "cooperamos"), emoji: "🤝" },
-            { id: "g2u1l5v5", arabic: "الْحُبُّ", transliteration: "al-ḥubb", translation: t("الْحُبُّ", "love", "kasih sayang", "cinta", "l'amour", "el amor"), emoji: "💕" },
+            {
+              id: "g2u1l5v1",
+              arabic: "أُحِبُّ",
+              transliteration: "uḥibbu",
+              translation: t("أُحِبُّ", "I love", "saya cinta", "saya cinta", "j'aime", "amo"),
+              emoji: "❤️"
+            },
+            {
+              id: "g2u1l5v2",
+              arabic: "سَعِيدٌ",
+              transliteration: "saʿīd",
+              translation: t("سَعِيدٌ", "happy", "gembira", "bahagia", "heureux", "feliz"),
+              emoji: "😊"
+            },
+            {
+              id: "g2u1l5v3",
+              arabic: "مَعًا",
+              transliteration: "maʿan",
+              translation: t("مَعًا", "together", "bersama", "bersama", "ensemble", "juntos"),
+              emoji: "👨‍👩‍👧‍👦"
+            },
+            {
+              id: "g2u1l5v4",
+              arabic: "نَتَعَاوَنُ",
+              transliteration: "nataʿāwanu",
+              translation: t("نَتَعَاوَنُ", "we cooperate", "kita bekerjasama", "kita bekerjasama", "nous coopérons", "cooperamos"),
+              emoji: "🤝"
+            },
+            {
+              id: "g2u1l5v5",
+              arabic: "الْحُبُّ",
+              transliteration: "al-ḥubb",
+              translation: t("الْحُبُّ", "love", "kasih sayang", "cinta", "l'amour", "el amor"),
+              emoji: "💕"
+            }
           ],
           dialogue: [
-            { speaker: "سَارَة", arabic: "أُحِبُّ عَائِلَتِي كَثِيرًا!", translation: t("أُحِبُّ عَائِلَتِي كَثِيرًا!", "I love my family very much!", "Saya sangat sayang keluarga saya!", "Saya sangat cinta keluargaku!", "J'aime beaucoup ma famille !", "¡Amo mucho a mi familia!") },
-            { speaker: "مَاهِر", arabic: "وَأَنَا أَيْضًا! نَحْنُ سُعَدَاءُ مَعًا.", translation: t("وَأَنَا أَيْضًا! نَحْنُ سُعَدَاءُ مَعًا.", "Me too! We are happy together.", "Saya pun! Kita gembira bersama.", "Saya juga! Kita bahagia bersama.", "Moi aussi ! Nous sommes heureux ensemble.", "¡Yo también! Somos felices juntos.") },
+            {
+              speaker: "سَارَة",
+              arabic: "أُحِبُّ عَائِلَتِي كَثِيرًا!",
+              translation: t("أُحِبُّ عَائِلَتِي كَثِيرًا!", "I love my family very much!", "Saya sangat sayang keluarga saya!", "Saya sangat cinta keluargaku!", "J'aime beaucoup ma famille !", "¡Amo mucho a mi familia!")
+            },
+            {
+              speaker: "مَاهِر",
+              arabic: "وَأَنَا أَيْضًا! نَحْنُ سُعَدَاءُ مَعًا.",
+              translation: t("وَأَنَا أَيْضًا! نَحْنُ سُعَدَاءُ مَعًا.", "Me too! We are happy together.", "Saya pun! Kita gembira bersama.", "Saya juga! Kita bahagia bersama.", "Moi aussi ! Nous sommes heureux ensemble.", "¡Yo también! Somos felices juntos.")
+            }
           ],
           exercises: [
             {
@@ -268,16 +662,26 @@ export const grade2: GradeData = {
               skill: "listening",
               prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
               arabicText: "نَتَعَاوَنُ",
-              options: ["أُحِبُّ", "نَتَعَاوَنُ", "مَعًا"],
+              options: [
+                "أُحِبُّ",
+                "نَتَعَاوَنُ",
+                "مَعًا"
+              ],
               correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f91d/512.webp"
             },
             {
               id: "g2u1l5e2",
               type: "mcq",
               skill: "reading",
               prompt: t("ما الذي يجعل العائلة سعيدة؟", "What makes a family happy?", "Apa yang menjadikan keluarga bahagia?", "Apa yang membuat keluarga bahagia?", "Qu'est-ce qui rend une famille heureuse ?", "¿Qué hace feliz a una familia?"),
-              options: ["الْحُبُّ وَالتَّعَاوُنُ", "الشِّجَارُ", "الِابْتِعَادُ"],
+              options: [
+                "الْحُبُّ وَالتَّعَاوُنُ",
+                "الشِّجَارُ",
+                "الِابْتِعَادُ"
+              ],
               correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/2764-fe0f/512.webp"
             },
             {
               id: "g2u1l5e3",
@@ -285,13 +689,206 @@ export const grade2: GradeData = {
               skill: "speaking",
               prompt: t("قل لماذا تحب عائلتك", "Say why you love your family", "Sebut kenapa anda sayang keluarga anda", "Sebutkan mengapa kamu menyayangi keluargamu", "Dis pourquoi tu aimes ta famille", "Di por qué amas a tu familia"),
               arabicText: "أُحِبُّ عَائِلَتِي لِأَنَّهَا تَجْعَلُنِي سَعِيدًا",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/2764-fe0f/512.webp"
             },
-          
-            { id: "g2u1l5e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "أُحِبُّ عَائِلَتِي كَثِيرًا" },],
+            {
+              id: "g2u1l5e-arrange",
+              type: "arrange",
+              skill: "reading",
+              prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"),
+              answer: "أُحِبُّ عَائِلَتِي كَثِيرًا",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/2764-fe0f/512.webp"
+            },
+            {
+              id: "g2u1l5writeg2u1l5v5",
+              type: "writing",
+              skill: "writing",
+              prompt: t("اكتب الكلمة: \"الْحُبُّ\"", "Type the Arabic word for: \"love\"", "Taip perkataan Arab untuk: \"kasih sayang\"", "Ketik kata Arab untuk: \"cinta\"", "Tape le mot arabe pour : \"l'amour\"", "Escribe la palabra árabe para: \"el amor\""),
+              arabicText: "الْحُبُّ",
+              answer: "الْحُبُّ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f495/512.webp"
+            },
+            {
+              id: "g2u1l5mcqg2u1l5v4",
+              type: "mcq",
+              skill: "reading",
+              prompt: t("ماذا تعني كلمة \"نَتَعَاوَنُ\"؟", "What does \"we cooperate\" mean?", "Apakah maksud \"kita bekerjasama\"?", "Apa arti \"kita bekerjasama\"?", "Que signifie \"nous coopérons\" ?", "¿Qué significa \"cooperamos\"?"),
+              arabicText: "نَتَعَاوَنُ",
+              options: [
+                "we cooperate",
+                "tomatoes",
+                "in God's name (before eating)",
+                "apple"
+              ],
+              correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f91d/512.webp"
+            },
+            {
+              id: "g2u1l5speakg2u1l5v1",
+              type: "speaking",
+              skill: "speaking",
+              prompt: t("انطق الكلمة", "Say this word", "Sebut perkataan ini", "Ucapkan kata ini", "Dis ce mot", "Di esta palabra"),
+              arabicText: "أُحِبُّ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/2764-fe0f/512.webp"
+            },
+            {
+              id: "g2u1l5writeg2u1l5v1",
+              type: "writing",
+              skill: "writing",
+              prompt: t("اكتب الكلمة: \"أُحِبُّ\"", "Type the Arabic word for: \"I love\"", "Taip perkataan Arab untuk: \"saya cinta\"", "Ketik kata Arab untuk: \"saya cinta\"", "Tape le mot arabe pour : \"j'aime\"", "Escribe la palabra árabe para: \"amo\""),
+              arabicText: "أُحِبُّ",
+              answer: "أُحِبُّ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/2764-fe0f/512.webp"
+            }
+          ]
         },
-      ],
+        {
+          id: "g2u1review",
+          unitId: "g2u1",
+          gradeId: "g2",
+          order: 6,
+          title: t("مراجعة الوحدة", "Unit Review", "Ulangan Unit", "Ulangan Unit", "Révision de l’unité", "Revisión de la unidad"),
+          skills: [
+            "listening",
+            "reading",
+            "writing"
+          ],
+          intro: t("لنراجع ما تعلّمناه في هذه الوحدة!", "Let’s review what we learned in this unit!", "Mari ulangkaji apa yang kita pelajari dalam unit ini!", "Mari kita ulang apa yang kita pelajari dalam unit ini!", "Révisons ce que nous avons appris dans cette unité !", "¡Repasemos lo que aprendimos en esta unidad!"),
+          vocabulary: [
+            {
+              id: "g2u1l1v1",
+              arabic: "الْأَبُ",
+              transliteration: "al-ab",
+              translation: t("الْأَبُ", "father", "ayah", "ayah", "le père", "el padre"),
+              emoji: "👨"
+            },
+            {
+              id: "g2u1l1v2",
+              arabic: "الْأُمُّ",
+              transliteration: "al-umm",
+              translation: t("الْأُمُّ", "mother", "ibu", "ibu", "la mère", "la madre"),
+              emoji: "👩"
+            },
+            {
+              id: "g2u1l1v3",
+              arabic: "الْأَخُ",
+              transliteration: "al-akh",
+              translation: t("الْأَخُ", "brother", "abang/adik lelaki", "kakak/adik laki-laki", "le frère", "el hermano"),
+              emoji: "👦"
+            },
+            {
+              id: "g2u1l1v4",
+              arabic: "الْأُخْتُ",
+              transliteration: "al-ukht",
+              translation: t("الْأُخْتُ", "sister", "kakak/adik perempuan", "kakak/adik perempuan", "la sœur", "la hermana"),
+              emoji: "👧"
+            },
+            {
+              id: "g2u1l1v5",
+              arabic: "الْجَدُّ",
+              transliteration: "al-jadd",
+              translation: t("الْجَدُّ", "grandfather", "datuk", "kakek", "le grand-père", "el abuelo"),
+              emoji: "👴"
+            },
+            {
+              id: "g2u1l2v1",
+              arabic: "الْجَدَّةُ",
+              transliteration: "al-jadda",
+              translation: t("الْجَدَّةُ", "grandmother", "nenek", "nenek", "la grand-mère", "la abuela"),
+              emoji: "👵"
+            },
+            {
+              id: "g2u1l2v2",
+              arabic: "الْجَدُّ",
+              transliteration: "al-jadd",
+              translation: t("الْجَدُّ", "grandfather", "datuk", "kakek", "le grand-père", "el abuelo"),
+              emoji: "👴"
+            },
+            {
+              id: "g2u1l2v3",
+              arabic: "أَزُورُهُمْ",
+              transliteration: "azūruhum",
+              translation: t("أَزُورُهُمْ", "I visit them", "saya melawat mereka", "saya mengunjungi mereka", "je leur rends visite", "los visito"),
+              emoji: "🚗"
+            }
+          ],
+          dialogue: [],
+          exercises: [
+            {
+              id: "g2u1reviewspellg2u1l1v4",
+              type: "spell",
+              skill: "writing",
+              prompt: t("كون الكلمة من الحروف", "Build the word from the letters", "Bina perkataan dari huruf-huruf", "Susun kata dari huruf-hurufnya", "Forme le mot avec les lettres", "Forma la palabra con las letras"),
+              arabicText: "الْأُخْتُ",
+              answer: "الْأُخْتُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f467/512.webp"
+            },
+            {
+              id: "g2u1reviewmcqg2u1l1v3",
+              type: "mcq",
+              skill: "reading",
+              prompt: t("ماذا تعني كلمة \"الْأَخُ\"؟", "What does \"brother\" mean?", "Apakah maksud \"abang/adik lelaki\"?", "Apa arti \"kakak/adik laki-laki\"?", "Que signifie \"le frère\" ?", "¿Qué significa \"el hermano\"?"),
+              arabicText: "الْأَخُ",
+              options: [
+                "I listen",
+                "nose",
+                "brother",
+                "teacher"
+              ],
+              correctIndex: 2,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f466/512.webp"
+            },
+            {
+              id: "g2u1reviewspellg2u1l1v2",
+              type: "spell",
+              skill: "writing",
+              prompt: t("كون الكلمة من الحروف", "Build the word from the letters", "Bina perkataan dari huruf-huruf", "Susun kata dari huruf-hurufnya", "Forme le mot avec les lettres", "Forma la palabra con las letras"),
+              arabicText: "الْأُمُّ",
+              answer: "الْأُمُّ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f469/512.webp"
+            },
+            {
+              id: "g2u1reviewlisteng2u1l1v4",
+              type: "listening",
+              skill: "listening",
+              prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
+              arabicText: "الْأُخْتُ",
+              options: [
+                "الْأُخْتُ",
+                "أَمْشِي",
+                "صِحِّيٌّ"
+              ],
+              correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f467/512.webp"
+            },
+            {
+              id: "g2u1reviewmcqg2u1l1v1",
+              type: "mcq",
+              skill: "reading",
+              prompt: t("ماذا تعني كلمة \"الْأَبُ\"؟", "What does \"father\" mean?", "Apakah maksud \"ayah\"?", "Apa arti \"ayah\"?", "Que signifie \"le père\" ?", "¿Qué significa \"el padre\"?"),
+              arabicText: "الْأَبُ",
+              options: [
+                "uncle (maternal)",
+                "delicious",
+                "I raise my hand",
+                "father"
+              ],
+              correctIndex: 3,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f468/512.webp"
+            },
+            {
+              id: "g2u1reviewspellg2u1l1v3",
+              type: "spell",
+              skill: "writing",
+              prompt: t("كون الكلمة من الحروف", "Build the word from the letters", "Bina perkataan dari huruf-huruf", "Susun kata dari huruf-hurufnya", "Forme le mot avec les lettres", "Forma la palabra con las letras"),
+              arabicText: "الْأَخُ",
+              answer: "الْأَخُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f466/512.webp"
+            }
+          ]
+        }
+      ]
     },
-    // ─── UNIT 2: الأدوات المدرسية ─────────────────────────────────────
     {
       id: "g2u2",
       gradeId: "g2",
@@ -305,25 +902,60 @@ export const grade2: GradeData = {
           gradeId: "g2",
           order: 1,
           title: t("فِي حَقِيبَتِي", "In My Bag", "Dalam Begku", "Di Tasku", "Dans mon sac", "En mi mochila"),
-          skills: ["listening", "speaking", "reading"],
-          intro: t(
-            "حقيبتي مليئة بالأدوات المفيدة! لنتعرف على ما بداخلها.",
-            "My bag is full of useful tools! Let's find out what's inside.",
-            "Beg saya penuh alatan berguna! Jom kenali apa yang ada di dalamnya.",
-            "Tasku penuh alat berguna! Ayo kenali apa yang ada di dalamnya.",
-            "Mon sac est plein d'outils utiles ! Découvrons ce qu'il y a dedans.",
-            "¡Mi mochila está llena de útiles herramientas! Descubramos qué hay dentro.",
-          ),
+          skills: [
+            "listening",
+            "speaking",
+            "reading"
+          ],
+          intro: t("حقيبتي مليئة بالأدوات المفيدة! لنتعرف على ما بداخلها.", "My bag is full of useful tools! Let's find out what's inside.", "Beg saya penuh alatan berguna! Jom kenali apa yang ada di dalamnya.", "Tasku penuh alat berguna! Ayo kenali apa yang ada di dalamnya.", "Mon sac est plein d'outils utiles ! Découvrons ce qu'il y a dedans.", "¡Mi mochila está llena de útiles herramientas! Descubramos qué hay dentro."),
           vocabulary: [
-            { id: "g2u2l1v1", arabic: "الْقَلَمُ", transliteration: "al-qalam", translation: t("الْقَلَمُ", "pen/pencil", "pensel/pen", "pensil/pena", "le crayon", "el lápiz"), emoji: "✏️" },
-            { id: "g2u2l1v2", arabic: "الْكِتَابُ", transliteration: "al-kitāb", translation: t("الْكِتَابُ", "book", "buku", "buku", "le livre", "el libro"), emoji: "📚" },
-            { id: "g2u2l1v3", arabic: "الدَّفْتَرُ", transliteration: "ad-daftar", translation: t("الدَّفْتَرُ", "notebook", "buku latihan", "buku catatan", "le cahier", "el cuaderno"), emoji: "📓" },
-            { id: "g2u2l1v4", arabic: "الْمِسْطَرَةُ", transliteration: "al-misṭara", translation: t("الْمِسْطَرَةُ", "ruler", "pembaris", "penggaris", "la règle", "la regla"), emoji: "📏" },
-            { id: "g2u2l1v5", arabic: "الْمَحَّايَةُ", transliteration: "al-maḥḥāya", translation: t("الْمَحَّايَةُ", "eraser", "pemadam", "penghapus", "la gomme", "la goma"), emoji: "📝" },
+            {
+              id: "g2u2l1v1",
+              arabic: "الْقَلَمُ",
+              transliteration: "al-qalam",
+              translation: t("الْقَلَمُ", "pen/pencil", "pensel/pen", "pensil/pena", "le crayon", "el lápiz"),
+              emoji: "✏️"
+            },
+            {
+              id: "g2u2l1v2",
+              arabic: "الْكِتَابُ",
+              transliteration: "al-kitāb",
+              translation: t("الْكِتَابُ", "book", "buku", "buku", "le livre", "el libro"),
+              emoji: "📚"
+            },
+            {
+              id: "g2u2l1v3",
+              arabic: "الدَّفْتَرُ",
+              transliteration: "ad-daftar",
+              translation: t("الدَّفْتَرُ", "notebook", "buku latihan", "buku catatan", "le cahier", "el cuaderno"),
+              emoji: "📓"
+            },
+            {
+              id: "g2u2l1v4",
+              arabic: "الْمِسْطَرَةُ",
+              transliteration: "al-misṭara",
+              translation: t("الْمِسْطَرَةُ", "ruler", "pembaris", "penggaris", "la règle", "la regla"),
+              emoji: "📏"
+            },
+            {
+              id: "g2u2l1v5",
+              arabic: "الْمَحَّايَةُ",
+              transliteration: "al-maḥḥāya",
+              translation: t("الْمَحَّايَةُ", "eraser", "pemadam", "penghapus", "la gomme", "la goma"),
+              emoji: "📝"
+            }
           ],
           dialogue: [
-            { speaker: "مُعَلِّمٌ", arabic: "افْتَحُوا كُتُبَكُمْ وَأَخْرِجُوا أَقْلَامَكُمْ!", translation: t("افْتَحُوا كُتُبَكُمْ وَأَخْرِجُوا أَقْلَامَكُمْ!", "Open your books and take out your pencils!", "Buka buku anda dan keluarkan pensel!", "Buka buku kalian dan keluarkan pensil!", "Ouvrez vos livres et sortez vos crayons !", "¡Abran sus libros y saquen sus lápices!") },
-            { speaker: "تَلَامِيذُ", arabic: "حَاضِرٌ يَا أُسْتَاذُ!", translation: t("حَاضِرٌ يَا أُسْتَاذُ!", "Yes, teacher!", "Sedia, cikgu!", "Siap, pak guru!", "Oui, monsieur !", "¡Sí, maestro!") },
+            {
+              speaker: "مُعَلِّمٌ",
+              arabic: "افْتَحُوا كُتُبَكُمْ وَأَخْرِجُوا أَقْلَامَكُمْ!",
+              translation: t("افْتَحُوا كُتُبَكُمْ وَأَخْرِجُوا أَقْلَامَكُمْ!", "Open your books and take out your pencils!", "Buka buku anda dan keluarkan pensel!", "Buka buku kalian dan keluarkan pensil!", "Ouvrez vos livres et sortez vos crayons !", "¡Abran sus libros y saquen sus lápices!")
+            },
+            {
+              speaker: "تَلَامِيذُ",
+              arabic: "حَاضِرٌ يَا أُسْتَاذُ!",
+              translation: t("حَاضِرٌ يَا أُسْتَاذُ!", "Yes, teacher!", "Sedia, cikgu!", "Siap, pak guru!", "Oui, monsieur !", "¡Sí, maestro!")
+            }
           ],
           exercises: [
             {
@@ -332,8 +964,13 @@ export const grade2: GradeData = {
               skill: "listening",
               prompt: t("استمع واختر الأداة الصحيحة", "Listen and choose the correct tool", "Dengar dan pilih alatan yang betul", "Dengarkan dan pilih alat yang benar", "Écoute et choisis le bon outil", "Escucha y elige el útil correcto"),
               arabicText: "الدَّفْتَرُ",
-              options: ["الْقَلَمُ", "الدَّفْتَرُ", "الْكِتَابُ"],
+              options: [
+                "الْقَلَمُ",
+                "الدَّفْتَرُ",
+                "الْكِتَابُ"
+              ],
               correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f4d3/512.webp"
             },
             {
               id: "g2u2l1e2",
@@ -341,11 +978,24 @@ export const grade2: GradeData = {
               skill: "reading",
               prompt: t("صل الأداة باستخدامها", "Match the tool to its use", "Padankan alatan dengan kegunaannya", "Cocokkan alat dengan kegunaannya", "Relie l'outil à son usage", "Une el útil con su uso"),
               pairs: [
-                { a: "الْقَلَمُ", b: "نَكْتُبُ" },
-                { a: "الْمَحَّايَةُ", b: "نَمْحُو" },
-                { a: "الْمِسْطَرَةُ", b: "نَقِيسُ" },
-                { a: "الْكِتَابُ", b: "نَقْرَأُ" },
+                {
+                  a: "الْقَلَمُ",
+                  b: "نَكْتُبُ"
+                },
+                {
+                  a: "الْمَحَّايَةُ",
+                  b: "نَمْحُو"
+                },
+                {
+                  a: "الْمِسْطَرَةُ",
+                  b: "نَقِيسُ"
+                },
+                {
+                  a: "الْكِتَابُ",
+                  b: "نَقْرَأُ"
+                }
               ],
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/270f-fe0f/512.webp"
             },
             {
               id: "g2u2l1e3",
@@ -353,9 +1003,57 @@ export const grade2: GradeData = {
               skill: "speaking",
               prompt: t("سمِّ ما في حقيبتك", "Name what is in your bag", "Namakan isi beg anda", "Sebutkan isi tasku", "Nomme ce qu'il y a dans ton sac", "Nombra lo que hay en tu mochila"),
               arabicText: "فِي حَقِيبَتِي قَلَمٌ وَدَفْتَرٌ وَكِتَابٌ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/270f-fe0f/512.webp"
             },
-          
-            { id: "g2u2l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "افْتَحُوا كُتُبَكُمْ وَأَخْرِجُوا أَقْلَامَكُمْ" },],
+            {
+              id: "g2u2l1e-arrange",
+              type: "arrange",
+              skill: "reading",
+              prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"),
+              answer: "افْتَحُوا كُتُبَكُمْ وَأَخْرِجُوا أَقْلَامَكُمْ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/270f-fe0f/512.webp"
+            },
+            {
+              id: "g2u2l1listeng2u2l1v5",
+              type: "listening",
+              skill: "listening",
+              prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
+              arabicText: "الْمَحَّايَةُ",
+              options: [
+                "الْجَدُّ",
+                "الْمَحَّايَةُ",
+                "بَعِيدٌ"
+              ],
+              correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f4dd/512.webp"
+            },
+            {
+              id: "g2u2l1spellg2u2l1v2",
+              type: "spell",
+              skill: "writing",
+              prompt: t("كون الكلمة من الحروف", "Build the word from the letters", "Bina perkataan dari huruf-huruf", "Susun kata dari huruf-hurufnya", "Forme le mot avec les lettres", "Forma la palabra con las letras"),
+              arabicText: "الْكِتَابُ",
+              answer: "الْكِتَابُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f4da/512.webp"
+            },
+            {
+              id: "g2u2l1speakg2u2l1v4",
+              type: "speaking",
+              skill: "speaking",
+              prompt: t("انطق الكلمة", "Say this word", "Sebut perkataan ini", "Ucapkan kata ini", "Dis ce mot", "Di esta palabra"),
+              arabicText: "الْمِسْطَرَةُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f4cf/512.webp"
+            },
+            {
+              id: "g2u2l1writeg2u2l1v1",
+              type: "writing",
+              skill: "writing",
+              prompt: t("اكتب الكلمة: \"الْقَلَمُ\"", "Type the Arabic word for: \"pen/pencil\"", "Taip perkataan Arab untuk: \"pensel/pen\"", "Ketik kata Arab untuk: \"pensil/pena\"", "Tape le mot arabe pour : \"le crayon\"", "Escribe la palabra árabe para: \"el lápiz\""),
+              arabicText: "الْقَلَمُ",
+              answer: "الْقَلَمُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/270f-fe0f/512.webp"
+            }
+          ]
         },
         {
           id: "g2u2l2",
@@ -363,21 +1061,48 @@ export const grade2: GradeData = {
           gradeId: "g2",
           order: 2,
           title: t("أَلْوَانُ الطِّلَاءِ", "Paint Colours", "Warna Cat", "Warna Cat", "Les couleurs de peinture", "Los colores de pintura"),
-          skills: ["listening", "speaking", "reading"],
-          intro: t(
-            "الألوان تجعل دراستنا مبهجة! لنتعلّم أسماء الألوان بالعربية.",
-            "Colours make our studies joyful! Let's learn colour names in Arabic.",
-            "Warna menjadikan pelajaran kita ceria! Jom belajar nama warna dalam bahasa Arab.",
-            "Warna membuat pelajaran kita menyenangkan! Ayo pelajari nama warna dalam bahasa Arab.",
-            "Les couleurs rendent notre apprentissage joyeux ! Apprenons les noms des couleurs en arabe.",
-            "¡Los colores hacen nuestro aprendizaje alegre! Aprendamos los nombres de los colores en árabe.",
-          ),
+          skills: [
+            "listening",
+            "speaking",
+            "reading"
+          ],
+          intro: t("الألوان تجعل دراستنا مبهجة! لنتعلّم أسماء الألوان بالعربية.", "Colours make our studies joyful! Let's learn colour names in Arabic.", "Warna menjadikan pelajaran kita ceria! Jom belajar nama warna dalam bahasa Arab.", "Warna membuat pelajaran kita menyenangkan! Ayo pelajari nama warna dalam bahasa Arab.", "Les couleurs rendent notre apprentissage joyeux ! Apprenons les noms des couleurs en arabe.", "¡Los colores hacen nuestro aprendizaje alegre! Aprendamos los nombres de los colores en árabe."),
           vocabulary: [
-            { id: "g2u2l2v1", arabic: "أَحْمَرُ", transliteration: "aḥmar", translation: t("أَحْمَرُ", "red", "merah", "merah", "rouge", "rojo"), emoji: "🔴" },
-            { id: "g2u2l2v2", arabic: "أَزْرَقُ", transliteration: "azraq", translation: t("أَزْرَقُ", "blue", "biru", "biru", "bleu", "azul"), emoji: "🔵" },
-            { id: "g2u2l2v3", arabic: "أَخْضَرُ", transliteration: "akhḍar", translation: t("أَخْضَرُ", "green", "hijau", "hijau", "vert", "verde"), emoji: "🟢" },
-            { id: "g2u2l2v4", arabic: "أَصْفَرُ", transliteration: "aṣfar", translation: t("أَصْفَرُ", "yellow", "kuning", "kuning", "jaune", "amarillo"), emoji: "🟡" },
-            { id: "g2u2l2v5", arabic: "أَبْيَضُ", transliteration: "abyaḍ", translation: t("أَبْيَضُ", "white", "putih", "putih", "blanc", "blanco"), emoji: "⚪" },
+            {
+              id: "g2u2l2v1",
+              arabic: "أَحْمَرُ",
+              transliteration: "aḥmar",
+              translation: t("أَحْمَرُ", "red", "merah", "merah", "rouge", "rojo"),
+              emoji: "🔴"
+            },
+            {
+              id: "g2u2l2v2",
+              arabic: "أَزْرَقُ",
+              transliteration: "azraq",
+              translation: t("أَزْرَقُ", "blue", "biru", "biru", "bleu", "azul"),
+              emoji: "🔵"
+            },
+            {
+              id: "g2u2l2v3",
+              arabic: "أَخْضَرُ",
+              transliteration: "akhḍar",
+              translation: t("أَخْضَرُ", "green", "hijau", "hijau", "vert", "verde"),
+              emoji: "🟢"
+            },
+            {
+              id: "g2u2l2v4",
+              arabic: "أَصْفَرُ",
+              transliteration: "aṣfar",
+              translation: t("أَصْفَرُ", "yellow", "kuning", "kuning", "jaune", "amarillo"),
+              emoji: "🟡"
+            },
+            {
+              id: "g2u2l2v5",
+              arabic: "أَبْيَضُ",
+              transliteration: "abyaḍ",
+              translation: t("أَبْيَضُ", "white", "putih", "putih", "blanc", "blanco"),
+              emoji: "⚪"
+            }
           ],
           dialogue: [],
           exercises: [
@@ -387,16 +1112,26 @@ export const grade2: GradeData = {
               skill: "listening",
               prompt: t("استمع واختر اللون الصحيح", "Listen and choose the correct colour", "Dengar dan pilih warna yang betul", "Dengarkan dan pilih warna yang benar", "Écoute et choisis la bonne couleur", "Escucha y elige el color correcto"),
               arabicText: "أَخْضَرُ",
-              options: ["أَحْمَرُ", "أَخْضَرُ", "أَزْرَقُ"],
+              options: [
+                "أَحْمَرُ",
+                "أَخْضَرُ",
+                "أَزْرَقُ"
+              ],
               correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f7e2/512.webp"
             },
             {
               id: "g2u2l2e2",
               type: "mcq",
               skill: "reading",
               prompt: t("ما لون السماء في الغالب؟", "What colour is the sky usually?", "Apa warna langit biasanya?", "Apa warna langit biasanya?", "De quelle couleur est généralement le ciel ?", "¿De qué color es el cielo normalmente?"),
-              options: ["أَزْرَقُ", "أَحْمَرُ", "أَصْفَرُ"],
+              options: [
+                "أَزْرَقُ",
+                "أَحْمَرُ",
+                "أَصْفَرُ"
+              ],
               correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f534/512.webp"
             },
             {
               id: "g2u2l2e3",
@@ -404,9 +1139,58 @@ export const grade2: GradeData = {
               skill: "speaking",
               prompt: t("قل لون كل شيء حولك", "Say the colour of things around you", "Sebut warna benda di sekeliling anda", "Sebutkan warna benda-benda di sekitarmu", "Dis la couleur des choses autour de toi", "Di el color de las cosas a tu alrededor"),
               arabicText: "قَلَمِي أَحْمَرُ وَدَفْتَرِي أَزْرَقُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f534/512.webp"
             },
-          
-            { id: "g2u2l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا أَحْمَرُ" },],
+            {
+              id: "g2u2l2e-arrange",
+              type: "arrange",
+              skill: "reading",
+              prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"),
+              answer: "هَذَا أَحْمَرُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f534/512.webp"
+            },
+            {
+              id: "g2u2l2writeg2u2l2v2",
+              type: "writing",
+              skill: "writing",
+              prompt: t("اكتب الكلمة: \"أَزْرَقُ\"", "Type the Arabic word for: \"blue\"", "Taip perkataan Arab untuk: \"biru\"", "Ketik kata Arab untuk: \"biru\"", "Tape le mot arabe pour : \"bleu\"", "Escribe la palabra árabe para: \"azul\""),
+              arabicText: "أَزْرَقُ",
+              answer: "أَزْرَقُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f535/512.webp"
+            },
+            {
+              id: "g2u2l2mcqg2u2l2v2",
+              type: "mcq",
+              skill: "reading",
+              prompt: t("ماذا تعني كلمة \"أَزْرَقُ\"؟", "What does \"blue\" mean?", "Apakah maksud \"biru\"?", "Apa arti \"biru\"?", "Que signifie \"bleu\" ?", "¿Qué significa \"azul\"?"),
+              arabicText: "أَزْرَقُ",
+              options: [
+                "blue",
+                "I walk",
+                "white",
+                "love"
+              ],
+              correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f535/512.webp"
+            },
+            {
+              id: "g2u2l2writeg2u2l2v4",
+              type: "writing",
+              skill: "writing",
+              prompt: t("اكتب الكلمة: \"أَصْفَرُ\"", "Type the Arabic word for: \"yellow\"", "Taip perkataan Arab untuk: \"kuning\"", "Ketik kata Arab untuk: \"kuning\"", "Tape le mot arabe pour : \"jaune\"", "Escribe la palabra árabe para: \"amarillo\""),
+              arabicText: "أَصْفَرُ",
+              answer: "أَصْفَرُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f7e1/512.webp"
+            },
+            {
+              id: "g2u2l2speakg2u2l2v1",
+              type: "speaking",
+              skill: "speaking",
+              prompt: t("انطق الكلمة", "Say this word", "Sebut perkataan ini", "Ucapkan kata ini", "Dis ce mot", "Di esta palabra"),
+              arabicText: "أَحْمَرُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f534/512.webp"
+            }
+          ]
         },
         {
           id: "g2u2l3",
@@ -414,21 +1198,48 @@ export const grade2: GradeData = {
           gradeId: "g2",
           order: 3,
           title: t("الْفَصْلُ الدِّرَاسِيُّ", "The Classroom", "Bilik Darjah", "Ruang Kelas", "La salle de classe", "El aula"),
-          skills: ["listening", "speaking", "reading"],
-          intro: t(
-            "الفصل الدراسي مكان التعلّم والمعرفة! لنتعلّم ما فيه.",
-            "The classroom is a place of learning and knowledge! Let's learn what's in it.",
-            "Bilik darjah adalah tempat belajar dan ilmu! Jom belajar apa yang ada di dalamnya.",
-            "Ruang kelas adalah tempat belajar dan ilmu! Ayo pelajari apa yang ada di dalamnya.",
-            "La salle de classe est un lieu d'apprentissage ! Apprenons ce qu'il y a dedans.",
-            "¡El aula es un lugar de aprendizaje! Aprendamos qué hay en ella.",
-          ),
+          skills: [
+            "listening",
+            "speaking",
+            "reading"
+          ],
+          intro: t("الفصل الدراسي مكان التعلّم والمعرفة! لنتعلّم ما فيه.", "The classroom is a place of learning and knowledge! Let's learn what's in it.", "Bilik darjah adalah tempat belajar dan ilmu! Jom belajar apa yang ada di dalamnya.", "Ruang kelas adalah tempat belajar dan ilmu! Ayo pelajari apa yang ada di dalamnya.", "La salle de classe est un lieu d'apprentissage ! Apprenons ce qu'il y a dedans.", "¡El aula es un lugar de aprendizaje! Aprendamos qué hay en ella."),
           vocabulary: [
-            { id: "g2u2l3v1", arabic: "السَّبُّورَةُ", transliteration: "as-sabbūra", translation: t("السَّبُّورَةُ", "blackboard", "papan hitam", "papan tulis", "le tableau", "la pizarra"), emoji: "🖤" },
-            { id: "g2u2l3v2", arabic: "الْمَقْعَدُ", transliteration: "al-maqʿad", translation: t("الْمَقْعَدُ", "desk/seat", "meja/kerusi", "bangku", "le bureau", "el pupitre"), emoji: "🪑" },
-            { id: "g2u2l3v3", arabic: "الْمُعَلِّمُ", transliteration: "al-muʿallim", translation: t("الْمُعَلِّمُ", "teacher", "cikgu", "guru", "le professeur", "el maestro"), emoji: "👨‍🏫" },
-            { id: "g2u2l3v4", arabic: "التِّلْمِيذُ", transliteration: "at-tilmīdh", translation: t("التِّلْمِيذُ", "student", "murid", "murid", "l'élève", "el alumno"), emoji: "🎒" },
-            { id: "g2u2l3v5", arabic: "الْبَابُ", transliteration: "al-bāb", translation: t("الْبَابُ", "door", "pintu", "pintu", "la porte", "la puerta"), emoji: "🚪" },
+            {
+              id: "g2u2l3v1",
+              arabic: "السَّبُّورَةُ",
+              transliteration: "as-sabbūra",
+              translation: t("السَّبُّورَةُ", "blackboard", "papan hitam", "papan tulis", "le tableau", "la pizarra"),
+              emoji: "🖤"
+            },
+            {
+              id: "g2u2l3v2",
+              arabic: "الْمَقْعَدُ",
+              transliteration: "al-maqʿad",
+              translation: t("الْمَقْعَدُ", "desk/seat", "meja/kerusi", "bangku", "le bureau", "el pupitre"),
+              emoji: "🪑"
+            },
+            {
+              id: "g2u2l3v3",
+              arabic: "الْمُعَلِّمُ",
+              transliteration: "al-muʿallim",
+              translation: t("الْمُعَلِّمُ", "teacher", "cikgu", "guru", "le professeur", "el maestro"),
+              emoji: "👨‍🏫"
+            },
+            {
+              id: "g2u2l3v4",
+              arabic: "التِّلْمِيذُ",
+              transliteration: "at-tilmīdh",
+              translation: t("التِّلْمِيذُ", "student", "murid", "murid", "l'élève", "el alumno"),
+              emoji: "🎒"
+            },
+            {
+              id: "g2u2l3v5",
+              arabic: "الْبَابُ",
+              transliteration: "al-bāb",
+              translation: t("الْبَابُ", "door", "pintu", "pintu", "la porte", "la puerta"),
+              emoji: "🚪"
+            }
           ],
           dialogue: [],
           exercises: [
@@ -438,16 +1249,26 @@ export const grade2: GradeData = {
               skill: "listening",
               prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
               arabicText: "الْمُعَلِّمُ",
-              options: ["التِّلْمِيذُ", "الْمُعَلِّمُ", "الْبَابُ"],
+              options: [
+                "التِّلْمِيذُ",
+                "الْمُعَلِّمُ",
+                "الْبَابُ"
+              ],
               correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f468-200d-1f3eb/512.webp"
             },
             {
               id: "g2u2l3e2",
               type: "mcq",
               skill: "reading",
               prompt: t("أين يكتب المعلم في الفصل؟", "Where does the teacher write in class?", "Di mana cikgu menulis di dalam kelas?", "Di mana guru menulis di kelas?", "Où le professeur écrit-il en classe ?", "¿Dónde escribe el maestro en clase?"),
-              options: ["عَلَى السَّبُّورَةِ", "فِي الدَّفْتَرِ", "عَلَى الْأَرْضِ"],
+              options: [
+                "عَلَى السَّبُّورَةِ",
+                "فِي الدَّفْتَرِ",
+                "عَلَى الْأَرْضِ"
+              ],
               correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f5a4/512.webp"
             },
             {
               id: "g2u2l3e3",
@@ -455,9 +1276,63 @@ export const grade2: GradeData = {
               skill: "speaking",
               prompt: t("صف فصلك الدراسي", "Describe your classroom", "Huraikan bilik darjah anda", "Gambarkan ruang kelasmu", "Décris ta salle de classe", "Describe tu aula"),
               arabicText: "فِي فَصْلِي سَبُّورَةٌ وَمَقَاعِدُ وَبَابٌ كَبِيرٌ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f5a4/512.webp"
             },
-          
-            { id: "g2u2l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا السَّبُّورَةُ" },],
+            {
+              id: "g2u2l3e-arrange",
+              type: "arrange",
+              skill: "reading",
+              prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"),
+              answer: "هَذَا السَّبُّورَةُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f5a4/512.webp"
+            },
+            {
+              id: "g2u2l3speakg2u2l3v5",
+              type: "speaking",
+              skill: "speaking",
+              prompt: t("انطق الكلمة", "Say this word", "Sebut perkataan ini", "Ucapkan kata ini", "Dis ce mot", "Di esta palabra"),
+              arabicText: "الْبَابُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f6aa/512.webp"
+            },
+            {
+              id: "g2u2l3mcqg2u2l3v4",
+              type: "mcq",
+              skill: "reading",
+              prompt: t("ماذا تعني كلمة \"التِّلْمِيذُ\"؟", "What does \"student\" mean?", "Apakah maksud \"murid\"?", "Apa arti \"murid\"?", "Que signifie \"l'élève\" ?", "¿Qué significa \"el alumno\"?"),
+              arabicText: "التِّلْمِيذُ",
+              options: [
+                "green",
+                "grandmother",
+                "nose",
+                "student"
+              ],
+              correctIndex: 3,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f392/512.webp"
+            },
+            {
+              id: "g2u2l3writeg2u2l3v3",
+              type: "writing",
+              skill: "writing",
+              prompt: t("اكتب الكلمة: \"الْمُعَلِّمُ\"", "Type the Arabic word for: \"teacher\"", "Taip perkataan Arab untuk: \"cikgu\"", "Ketik kata Arab untuk: \"guru\"", "Tape le mot arabe pour : \"le professeur\"", "Escribe la palabra árabe para: \"el maestro\""),
+              arabicText: "الْمُعَلِّمُ",
+              answer: "الْمُعَلِّمُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f468-200d-1f3eb/512.webp"
+            },
+            {
+              id: "g2u2l3listeng2u2l3v3",
+              type: "listening",
+              skill: "listening",
+              prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
+              arabicText: "الْمُعَلِّمُ",
+              options: [
+                "الرَّأْسُ",
+                "الْمُعَلِّمُ",
+                "الْجَدُّ"
+              ],
+              correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f468-200d-1f3eb/512.webp"
+            }
+          ]
         },
         {
           id: "g2u2l4",
@@ -465,21 +1340,48 @@ export const grade2: GradeData = {
           gradeId: "g2",
           order: 4,
           title: t("نَظَامُ الدِّرَاسَةِ", "Study Routine", "Rutin Belajar", "Rutinitas Belajar", "La routine d'étude", "La rutina de estudio"),
-          skills: ["listening", "speaking", "reading"],
-          intro: t(
-            "النظام في الدراسة يساعدنا على النجاح! لنتعلّم كلمات الروتين الدراسي.",
-            "Order in studying helps us succeed! Let's learn study routine words.",
-            "Keteraturan dalam belajar membantu kita berjaya! Jom belajar perkataan rutin belajar.",
-            "Keteraturan dalam belajar membantu kita sukses! Ayo pelajari kata-kata rutinitas belajar.",
-            "L'ordre dans les études nous aide à réussir ! Apprenons les mots de la routine.",
-            "¡El orden en el estudio nos ayuda a tener éxito! Aprendamos palabras de la rutina de estudio.",
-          ),
+          skills: [
+            "listening",
+            "speaking",
+            "reading"
+          ],
+          intro: t("النظام في الدراسة يساعدنا على النجاح! لنتعلّم كلمات الروتين الدراسي.", "Order in studying helps us succeed! Let's learn study routine words.", "Keteraturan dalam belajar membantu kita berjaya! Jom belajar perkataan rutin belajar.", "Keteraturan dalam belajar membantu kita sukses! Ayo pelajari kata-kata rutinitas belajar.", "L'ordre dans les études nous aide à réussir ! Apprenons les mots de la routine.", "¡El orden en el estudio nos ayuda a tener éxito! Aprendamos palabras de la rutina de estudio."),
           vocabulary: [
-            { id: "g2u2l4v1", arabic: "أَسْتَمِعُ", transliteration: "astamiʿu", translation: t("أَسْتَمِعُ", "I listen", "saya mendengar", "saya mendengarkan", "j'écoute", "escucho"), emoji: "👂" },
-            { id: "g2u2l4v2", arabic: "أَكْتُبُ", transliteration: "aktubu", translation: t("أَكْتُبُ", "I write", "saya menulis", "saya menulis", "j'écris", "escribo"), emoji: "✍️" },
-            { id: "g2u2l4v3", arabic: "أَرْفَعُ يَدِي", transliteration: "arfaʿu yadī", translation: t("أَرْفَعُ يَدِي", "I raise my hand", "saya angkat tangan", "saya mengangkat tangan", "je lève la main", "levanto la mano"), emoji: "🙋" },
-            { id: "g2u2l4v4", arabic: "أُجِيبُ", transliteration: "ujību", translation: t("أُجِيبُ", "I answer", "saya menjawab", "saya menjawab", "je réponds", "respondo"), emoji: "💬" },
-            { id: "g2u2l4v5", arabic: "مُنْتَبِهٌ", transliteration: "muntabih", translation: t("مُنْتَبِهٌ", "attentive", "perhatian", "perhatian", "attentif", "atento"), emoji: "👀" },
+            {
+              id: "g2u2l4v1",
+              arabic: "أَسْتَمِعُ",
+              transliteration: "astamiʿu",
+              translation: t("أَسْتَمِعُ", "I listen", "saya mendengar", "saya mendengarkan", "j'écoute", "escucho"),
+              emoji: "👂"
+            },
+            {
+              id: "g2u2l4v2",
+              arabic: "أَكْتُبُ",
+              transliteration: "aktubu",
+              translation: t("أَكْتُبُ", "I write", "saya menulis", "saya menulis", "j'écris", "escribo"),
+              emoji: "✍️"
+            },
+            {
+              id: "g2u2l4v3",
+              arabic: "أَرْفَعُ يَدِي",
+              transliteration: "arfaʿu yadī",
+              translation: t("أَرْفَعُ يَدِي", "I raise my hand", "saya angkat tangan", "saya mengangkat tangan", "je lève la main", "levanto la mano"),
+              emoji: "🙋"
+            },
+            {
+              id: "g2u2l4v4",
+              arabic: "أُجِيبُ",
+              transliteration: "ujību",
+              translation: t("أُجِيبُ", "I answer", "saya menjawab", "saya menjawab", "je réponds", "respondo"),
+              emoji: "💬"
+            },
+            {
+              id: "g2u2l4v5",
+              arabic: "مُنْتَبِهٌ",
+              transliteration: "muntabih",
+              translation: t("مُنْتَبِهٌ", "attentive", "perhatian", "perhatian", "attentif", "atento"),
+              emoji: "👀"
+            }
           ],
           dialogue: [],
           exercises: [
@@ -489,16 +1391,26 @@ export const grade2: GradeData = {
               skill: "listening",
               prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
               arabicText: "أَرْفَعُ يَدِي",
-              options: ["أَسْتَمِعُ", "أَرْفَعُ يَدِي", "أَكْتُبُ"],
+              options: [
+                "أَسْتَمِعُ",
+                "أَرْفَعُ يَدِي",
+                "أَكْتُبُ"
+              ],
               correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f64b/512.webp"
             },
             {
               id: "g2u2l4e2",
               type: "mcq",
               skill: "reading",
               prompt: t("ماذا يفعل التلميذ المجتهد في الفصل؟", "What does a diligent student do in class?", "Apa yang murid rajin buat di kelas?", "Apa yang murid rajin lakukan di kelas?", "Que fait un élève appliqué en classe ?", "¿Qué hace un alumno diligente en clase?"),
-              options: ["يَسْتَمِعُ وَيَكْتُبُ", "يَنَامُ", "يَلْعَبُ"],
+              options: [
+                "يَسْتَمِعُ وَيَكْتُبُ",
+                "يَنَامُ",
+                "يَلْعَبُ"
+              ],
               correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f442/512.webp"
             },
             {
               id: "g2u2l4e3",
@@ -506,9 +1418,57 @@ export const grade2: GradeData = {
               skill: "speaking",
               prompt: t("قل ما تفعله في الفصل", "Say what you do in class", "Sebut apa yang anda buat di kelas", "Sebutkan apa yang kamu lakukan di kelas", "Dis ce que tu fais en classe", "Di qué haces en clase"),
               arabicText: "فِي الْفَصْلِ أَسْتَمِعُ وَأَكْتُبُ وَأُجِيبُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f442/512.webp"
             },
-          
-            { id: "g2u2l4e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا أَسْتَمِعُ" },],
+            {
+              id: "g2u2l4e-arrange",
+              type: "arrange",
+              skill: "reading",
+              prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"),
+              answer: "هَذَا أَسْتَمِعُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f442/512.webp"
+            },
+            {
+              id: "g2u2l4speakg2u2l4v4",
+              type: "speaking",
+              skill: "speaking",
+              prompt: t("انطق الكلمة", "Say this word", "Sebut perkataan ini", "Ucapkan kata ini", "Dis ce mot", "Di esta palabra"),
+              arabicText: "أُجِيبُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f4ac/512.webp"
+            },
+            {
+              id: "g2u2l4writeg2u2l4v2",
+              type: "writing",
+              skill: "writing",
+              prompt: t("اكتب الكلمة: \"أَكْتُبُ\"", "Type the Arabic word for: \"I write\"", "Taip perkataan Arab untuk: \"saya menulis\"", "Ketik kata Arab untuk: \"saya menulis\"", "Tape le mot arabe pour : \"j'écris\"", "Escribe la palabra árabe para: \"escribo\""),
+              arabicText: "أَكْتُبُ",
+              answer: "أَكْتُبُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/270d-fe0f/512.webp"
+            },
+            {
+              id: "g2u2l4speakg2u2l4v2",
+              type: "speaking",
+              skill: "speaking",
+              prompt: t("انطق الكلمة", "Say this word", "Sebut perkataan ini", "Ucapkan kata ini", "Dis ce mot", "Di esta palabra"),
+              arabicText: "أَكْتُبُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/270d-fe0f/512.webp"
+            },
+            {
+              id: "g2u2l4mcqg2u2l4v1",
+              type: "mcq",
+              skill: "reading",
+              prompt: t("ماذا تعني كلمة \"أَسْتَمِعُ\"؟", "What does \"I listen\" mean?", "Apakah maksud \"saya mendengar\"?", "Apa arti \"saya mendengarkan\"?", "Que signifie \"j'écoute\" ?", "¿Qué significa \"escucho\"?"),
+              arabicText: "أَسْتَمِعُ",
+              options: [
+                "grandmother",
+                "I wash my hands",
+                "I love",
+                "I listen"
+              ],
+              correctIndex: 3,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f442/512.webp"
+            }
+          ]
         },
         {
           id: "g2u2l5",
@@ -516,21 +1476,48 @@ export const grade2: GradeData = {
           gradeId: "g2",
           order: 5,
           title: t("أَحْمِلُ حَقِيبَتِي", "I Carry My Bag", "Saya Bawa Begku", "Saya Membawa Tasku", "Je porte mon sac", "Llevo mi mochila"),
-          skills: ["listening", "speaking", "reading"],
-          intro: t(
-            "نُعِدُّ حقيبتنا كل يوم قبل الذهاب إلى المدرسة! لنتعلّم ما نضعه فيها.",
-            "We prepare our bag every day before going to school! Let's learn what we put in it.",
-            "Kita sediakan beg setiap hari sebelum ke sekolah! Jom belajar apa yang kita masukkan.",
-            "Kita menyiapkan tas setiap hari sebelum ke sekolah! Ayo pelajari apa yang kita masukkan.",
-            "On prépare son sac chaque jour avant d'aller à l'école ! Apprenons ce qu'on y met.",
-            "¡Preparamos nuestra mochila cada día antes de ir a la escuela! Aprendamos qué ponemos.",
-          ),
+          skills: [
+            "listening",
+            "speaking",
+            "reading"
+          ],
+          intro: t("نُعِدُّ حقيبتنا كل يوم قبل الذهاب إلى المدرسة! لنتعلّم ما نضعه فيها.", "We prepare our bag every day before going to school! Let's learn what we put in it.", "Kita sediakan beg setiap hari sebelum ke sekolah! Jom belajar apa yang kita masukkan.", "Kita menyiapkan tas setiap hari sebelum ke sekolah! Ayo pelajari apa yang kita masukkan.", "On prépare son sac chaque jour avant d'aller à l'école ! Apprenons ce qu'on y met.", "¡Preparamos nuestra mochila cada día antes de ir a la escuela! Aprendamos qué ponemos."),
           vocabulary: [
-            { id: "g2u2l5v1", arabic: "أُعِدُّ", transliteration: "uʿiddu", translation: t("أُعِدُّ", "I prepare", "saya sediakan", "saya menyiapkan", "je prépare", "preparo"), emoji: "📦" },
-            { id: "g2u2l5v2", arabic: "أَضَعُ", transliteration: "aḍaʿu", translation: t("أَضَعُ", "I put", "saya letak", "saya meletakkan", "je mets", "pongo"), emoji: "✋" },
-            { id: "g2u2l5v3", arabic: "لَا أَنْسَى", transliteration: "lā ansā", translation: t("لَا أَنْسَى", "I don't forget", "saya tidak lupa", "saya tidak lupa", "je n'oublie pas", "no olvido"), emoji: "🧠" },
-            { id: "g2u2l5v4", arabic: "مُرَتَّبٌ", transliteration: "murattab", translation: t("مُرَتَّبٌ", "organised", "teratur", "teratur", "organisé", "organizado"), emoji: "✅" },
-            { id: "g2u2l5v5", arabic: "جَاهِزٌ", transliteration: "jāhiz", translation: t("جَاهِزٌ", "ready", "sedia", "siap", "prêt", "listo"), emoji: "👍" },
+            {
+              id: "g2u2l5v1",
+              arabic: "أُعِدُّ",
+              transliteration: "uʿiddu",
+              translation: t("أُعِدُّ", "I prepare", "saya sediakan", "saya menyiapkan", "je prépare", "preparo"),
+              emoji: "📦"
+            },
+            {
+              id: "g2u2l5v2",
+              arabic: "أَضَعُ",
+              transliteration: "aḍaʿu",
+              translation: t("أَضَعُ", "I put", "saya letak", "saya meletakkan", "je mets", "pongo"),
+              emoji: "✋"
+            },
+            {
+              id: "g2u2l5v3",
+              arabic: "لَا أَنْسَى",
+              transliteration: "lā ansā",
+              translation: t("لَا أَنْسَى", "I don't forget", "saya tidak lupa", "saya tidak lupa", "je n'oublie pas", "no olvido"),
+              emoji: "🧠"
+            },
+            {
+              id: "g2u2l5v4",
+              arabic: "مُرَتَّبٌ",
+              transliteration: "murattab",
+              translation: t("مُرَتَّبٌ", "organised", "teratur", "teratur", "organisé", "organizado"),
+              emoji: "✅"
+            },
+            {
+              id: "g2u2l5v5",
+              arabic: "جَاهِزٌ",
+              transliteration: "jāhiz",
+              translation: t("جَاهِزٌ", "ready", "sedia", "siap", "prêt", "listo"),
+              emoji: "👍"
+            }
           ],
           dialogue: [],
           exercises: [
@@ -540,16 +1527,26 @@ export const grade2: GradeData = {
               skill: "listening",
               prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
               arabicText: "جَاهِزٌ",
-              options: ["مُرَتَّبٌ", "جَاهِزٌ", "أُعِدُّ"],
+              options: [
+                "مُرَتَّبٌ",
+                "جَاهِزٌ",
+                "أُعِدُّ"
+              ],
               correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f44d/512.webp"
             },
             {
               id: "g2u2l5e2",
               type: "mcq",
               skill: "reading",
               prompt: t("متى نُعِدُّ حقيبتنا المدرسية؟", "When do we prepare our school bag?", "Bila kita sediakan beg sekolah?", "Kapan kita menyiapkan tas sekolah?", "Quand prépare-t-on son sac scolaire ?", "¿Cuándo preparamos nuestra mochila escolar?"),
-              options: ["قَبْلَ الذَّهَابِ إِلَى الْمَدْرَسَةِ", "بَعْدَ الدِّرَاسَةِ", "فِي الْفَصْلِ"],
+              options: [
+                "قَبْلَ الذَّهَابِ إِلَى الْمَدْرَسَةِ",
+                "بَعْدَ الدِّرَاسَةِ",
+                "فِي الْفَصْلِ"
+              ],
               correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f4e6/512.webp"
             },
             {
               id: "g2u2l5e3",
@@ -557,13 +1554,218 @@ export const grade2: GradeData = {
               skill: "speaking",
               prompt: t("قل ماذا تضع في حقيبتك كل يوم", "Say what you put in your bag every day", "Sebut apa yang anda masukkan ke dalam beg setiap hari", "Sebutkan apa yang kamu masukkan ke tas setiap hari", "Dis ce que tu mets dans ton sac chaque jour", "Di qué pones en tu mochila cada día"),
               arabicText: "كُلَّ يَوْمٍ أَضَعُ كِتَابِي وَدَفْتَرِي وَقَلَمِي فِي حَقِيبَتِي",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/270b/512.webp"
             },
-          
-            { id: "g2u2l5e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا أُعِدُّ" },],
+            {
+              id: "g2u2l5e-arrange",
+              type: "arrange",
+              skill: "reading",
+              prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"),
+              answer: "هَذَا أُعِدُّ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f4e6/512.webp"
+            },
+            {
+              id: "g2u2l5writeg2u2l5v3",
+              type: "writing",
+              skill: "writing",
+              prompt: t("اكتب الكلمة: \"لَا أَنْسَى\"", "Type the Arabic word for: \"I don't forget\"", "Taip perkataan Arab untuk: \"saya tidak lupa\"", "Ketik kata Arab untuk: \"saya tidak lupa\"", "Tape le mot arabe pour : \"je n'oublie pas\"", "Escribe la palabra árabe para: \"no olvido\""),
+              arabicText: "لَا أَنْسَى",
+              answer: "لَا أَنْسَى",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f9e0/512.webp"
+            },
+            {
+              id: "g2u2l5mcqg2u2l5v2",
+              type: "mcq",
+              skill: "reading",
+              prompt: t("ماذا تعني كلمة \"أَضَعُ\"؟", "What does \"I put\" mean?", "Apakah maksud \"saya letak\"?", "Apa arti \"saya meletakkan\"?", "Que signifie \"je mets\" ?", "¿Qué significa \"pongo\"?"),
+              arabicText: "أَضَعُ",
+              options: [
+                "I don't waste",
+                "fresh food",
+                "student",
+                "I put"
+              ],
+              correctIndex: 3,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/270b/512.webp"
+            },
+            {
+              id: "g2u2l5mcqg2u2l5v4",
+              type: "mcq",
+              skill: "reading",
+              prompt: t("ماذا تعني كلمة \"مُرَتَّبٌ\"؟", "What does \"organised\" mean?", "Apakah maksud \"teratur\"?", "Apa arti \"teratur\"?", "Que signifie \"organisé\" ?", "¿Qué significa \"organizado\"?"),
+              arabicText: "مُرَتَّبٌ",
+              options: [
+                "banana",
+                "I clean myself",
+                "organised",
+                "I run"
+              ],
+              correctIndex: 2,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/2705/512.webp"
+            },
+            {
+              id: "g2u2l5writeg2u2l5v1",
+              type: "writing",
+              skill: "writing",
+              prompt: t("اكتب الكلمة: \"أُعِدُّ\"", "Type the Arabic word for: \"I prepare\"", "Taip perkataan Arab untuk: \"saya sediakan\"", "Ketik kata Arab untuk: \"saya menyiapkan\"", "Tape le mot arabe pour : \"je prépare\"", "Escribe la palabra árabe para: \"preparo\""),
+              arabicText: "أُعِدُّ",
+              answer: "أُعِدُّ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f4e6/512.webp"
+            }
+          ]
         },
-      ],
+        {
+          id: "g2u2review",
+          unitId: "g2u2",
+          gradeId: "g2",
+          order: 6,
+          title: t("مراجعة الوحدة", "Unit Review", "Ulangan Unit", "Ulangan Unit", "Révision de l’unité", "Revisión de la unidad"),
+          skills: [
+            "listening",
+            "reading",
+            "writing"
+          ],
+          intro: t("لنراجع ما تعلّمناه في هذه الوحدة!", "Let’s review what we learned in this unit!", "Mari ulangkaji apa yang kita pelajari dalam unit ini!", "Mari kita ulang apa yang kita pelajari dalam unit ini!", "Révisons ce que nous avons appris dans cette unité !", "¡Repasemos lo que aprendimos en esta unidad!"),
+          vocabulary: [
+            {
+              id: "g2u2l1v1",
+              arabic: "الْقَلَمُ",
+              transliteration: "al-qalam",
+              translation: t("الْقَلَمُ", "pen/pencil", "pensel/pen", "pensil/pena", "le crayon", "el lápiz"),
+              emoji: "✏️"
+            },
+            {
+              id: "g2u2l1v2",
+              arabic: "الْكِتَابُ",
+              transliteration: "al-kitāb",
+              translation: t("الْكِتَابُ", "book", "buku", "buku", "le livre", "el libro"),
+              emoji: "📚"
+            },
+            {
+              id: "g2u2l1v3",
+              arabic: "الدَّفْتَرُ",
+              transliteration: "ad-daftar",
+              translation: t("الدَّفْتَرُ", "notebook", "buku latihan", "buku catatan", "le cahier", "el cuaderno"),
+              emoji: "📓"
+            },
+            {
+              id: "g2u2l1v4",
+              arabic: "الْمِسْطَرَةُ",
+              transliteration: "al-misṭara",
+              translation: t("الْمِسْطَرَةُ", "ruler", "pembaris", "penggaris", "la règle", "la regla"),
+              emoji: "📏"
+            },
+            {
+              id: "g2u2l1v5",
+              arabic: "الْمَحَّايَةُ",
+              transliteration: "al-maḥḥāya",
+              translation: t("الْمَحَّايَةُ", "eraser", "pemadam", "penghapus", "la gomme", "la goma"),
+              emoji: "📝"
+            },
+            {
+              id: "g2u2l2v1",
+              arabic: "أَحْمَرُ",
+              transliteration: "aḥmar",
+              translation: t("أَحْمَرُ", "red", "merah", "merah", "rouge", "rojo"),
+              emoji: "🔴"
+            },
+            {
+              id: "g2u2l2v2",
+              arabic: "أَزْرَقُ",
+              transliteration: "azraq",
+              translation: t("أَزْرَقُ", "blue", "biru", "biru", "bleu", "azul"),
+              emoji: "🔵"
+            },
+            {
+              id: "g2u2l2v3",
+              arabic: "أَخْضَرُ",
+              transliteration: "akhḍar",
+              translation: t("أَخْضَرُ", "green", "hijau", "hijau", "vert", "verde"),
+              emoji: "🟢"
+            }
+          ],
+          dialogue: [],
+          exercises: [
+            {
+              id: "g2u2reviewlisteng2u2l1v2",
+              type: "listening",
+              skill: "listening",
+              prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
+              arabicText: "الْكِتَابُ",
+              options: [
+                "الْكِتَابُ",
+                "الْعَشَاءُ",
+                "عَصِيرُ الْبُرْتُقَالِ"
+              ],
+              correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f4da/512.webp"
+            },
+            {
+              id: "g2u2reviewspellg2u2l1v5",
+              type: "spell",
+              skill: "writing",
+              prompt: t("كون الكلمة من الحروف", "Build the word from the letters", "Bina perkataan dari huruf-huruf", "Susun kata dari huruf-hurufnya", "Forme le mot avec les lettres", "Forma la palabra con las letras"),
+              arabicText: "الْمَحَّايَةُ",
+              answer: "الْمَحَّايَةُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f4dd/512.webp"
+            },
+            {
+              id: "g2u2reviewwriteg2u2l2v1",
+              type: "writing",
+              skill: "writing",
+              prompt: t("اكتب الكلمة: \"أَحْمَرُ\"", "Type the Arabic word for: \"red\"", "Taip perkataan Arab untuk: \"merah\"", "Ketik kata Arab untuk: \"merah\"", "Tape le mot arabe pour : \"rouge\"", "Escribe la palabra árabe para: \"rojo\""),
+              arabicText: "أَحْمَرُ",
+              answer: "أَحْمَرُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f534/512.webp"
+            },
+            {
+              id: "g2u2reviewlisteng2u2l1v3",
+              type: "listening",
+              skill: "listening",
+              prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
+              arabicText: "الدَّفْتَرُ",
+              options: [
+                "أَتَعَافَى",
+                "الْقَلَمُ",
+                "الدَّفْتَرُ"
+              ],
+              correctIndex: 2,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f4d3/512.webp"
+            },
+            {
+              id: "g2u2reviewmcqg2u2l2v2",
+              type: "mcq",
+              skill: "reading",
+              prompt: t("ماذا تعني كلمة \"أَزْرَقُ\"؟", "What does \"blue\" mean?", "Apakah maksud \"biru\"?", "Apa arti \"biru\"?", "Que signifie \"bleu\" ?", "¿Qué significa \"azul\"?"),
+              arabicText: "أَزْرَقُ",
+              options: [
+                "unhealthy",
+                "blue",
+                "I raise my hand",
+                "I jump"
+              ],
+              correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f535/512.webp"
+            },
+            {
+              id: "g2u2reviewmcqg2u2l1v3",
+              type: "mcq",
+              skill: "reading",
+              prompt: t("ماذا تعني كلمة \"الدَّفْتَرُ\"؟", "What does \"notebook\" mean?", "Apakah maksud \"buku latihan\"?", "Apa arti \"buku catatan\"?", "Que signifie \"le cahier\" ?", "¿Qué significa \"el cuaderno\"?"),
+              arabicText: "الدَّفْتَرُ",
+              options: [
+                "uncle (paternal)",
+                "I don't waste",
+                "orange juice",
+                "notebook"
+              ],
+              correctIndex: 3,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f4d3/512.webp"
+            }
+          ]
+        }
+      ]
     },
-    // ─── UNIT 3: الجسم ────────────────────────────────────────────────
     {
       id: "g2u3",
       gradeId: "g2",
@@ -577,21 +1779,48 @@ export const grade2: GradeData = {
           gradeId: "g2",
           order: 1,
           title: t("أَعْضَاءُ الْجِسْمِ", "Body Parts", "Anggota Badan", "Anggota Tubuh", "Les parties du corps", "Las partes del cuerpo"),
-          skills: ["listening", "speaking", "reading"],
-          intro: t(
-            "جسمنا نعمة من الله! لنتعلّم أسماء أجزائه بالعربية.",
-            "Our body is a blessing from God! Let's learn the Arabic names of its parts.",
-            "Tubuh kita adalah nikmat Allah! Jom belajar nama-nama bahagiannya dalam bahasa Arab.",
-            "Tubuh kita adalah nikmat dari Allah! Ayo pelajari nama-nama bagiannya dalam bahasa Arab.",
-            "Notre corps est une bénédiction de Dieu ! Apprenons les noms arabes de ses parties.",
-            "¡Nuestro cuerpo es una bendición de Dios! Aprendamos los nombres árabes de sus partes.",
-          ),
+          skills: [
+            "listening",
+            "speaking",
+            "reading"
+          ],
+          intro: t("جسمنا نعمة من الله! لنتعلّم أسماء أجزائه بالعربية.", "Our body is a blessing from God! Let's learn the Arabic names of its parts.", "Tubuh kita adalah nikmat Allah! Jom belajar nama-nama bahagiannya dalam bahasa Arab.", "Tubuh kita adalah nikmat dari Allah! Ayo pelajari nama-nama bagiannya dalam bahasa Arab.", "Notre corps est une bénédiction de Dieu ! Apprenons les noms arabes de ses parties.", "¡Nuestro cuerpo es una bendición de Dios! Aprendamos los nombres árabes de sus partes."),
           vocabulary: [
-            { id: "g2u3l1v1", arabic: "الرَّأْسُ", transliteration: "ar-raʾs", translation: t("الرَّأْسُ", "head", "kepala", "kepala", "la tête", "la cabeza"), emoji: "🗣️" },
-            { id: "g2u3l1v2", arabic: "الْيَدُ", transliteration: "al-yad", translation: t("الْيَدُ", "hand", "tangan", "tangan", "la main", "la mano"), emoji: "✋" },
-            { id: "g2u3l1v3", arabic: "الرِّجْلُ", transliteration: "ar-rijl", translation: t("الرِّجْلُ", "leg/foot", "kaki", "kaki", "la jambe/le pied", "la pierna/el pie"), emoji: "🦵" },
-            { id: "g2u3l1v4", arabic: "الْعَيْنُ", transliteration: "al-ʿayn", translation: t("الْعَيْنُ", "eye", "mata", "mata", "l'œil", "el ojo"), emoji: "👁️" },
-            { id: "g2u3l1v5", arabic: "الْأُذُنُ", transliteration: "al-udhun", translation: t("الْأُذُنُ", "ear", "telinga", "telinga", "l'oreille", "la oreja"), emoji: "👂" },
+            {
+              id: "g2u3l1v1",
+              arabic: "الرَّأْسُ",
+              transliteration: "ar-raʾs",
+              translation: t("الرَّأْسُ", "head", "kepala", "kepala", "la tête", "la cabeza"),
+              emoji: "🗣️"
+            },
+            {
+              id: "g2u3l1v2",
+              arabic: "الْيَدُ",
+              transliteration: "al-yad",
+              translation: t("الْيَدُ", "hand", "tangan", "tangan", "la main", "la mano"),
+              emoji: "✋"
+            },
+            {
+              id: "g2u3l1v3",
+              arabic: "الرِّجْلُ",
+              transliteration: "ar-rijl",
+              translation: t("الرِّجْلُ", "leg/foot", "kaki", "kaki", "la jambe/le pied", "la pierna/el pie"),
+              emoji: "🦵"
+            },
+            {
+              id: "g2u3l1v4",
+              arabic: "الْعَيْنُ",
+              transliteration: "al-ʿayn",
+              translation: t("الْعَيْنُ", "eye", "mata", "mata", "l'œil", "el ojo"),
+              emoji: "👁️"
+            },
+            {
+              id: "g2u3l1v5",
+              arabic: "الْأُذُنُ",
+              transliteration: "al-udhun",
+              translation: t("الْأُذُنُ", "ear", "telinga", "telinga", "l'oreille", "la oreja"),
+              emoji: "👂"
+            }
           ],
           dialogue: [],
           exercises: [
@@ -601,8 +1830,13 @@ export const grade2: GradeData = {
               skill: "listening",
               prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
               arabicText: "الْيَدُ",
-              options: ["الرَّأْسُ", "الْيَدُ", "الرِّجْلُ"],
+              options: [
+                "الرَّأْسُ",
+                "الْيَدُ",
+                "الرِّجْلُ"
+              ],
               correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/270b/512.webp"
             },
             {
               id: "g2u3l1e2",
@@ -610,11 +1844,24 @@ export const grade2: GradeData = {
               skill: "reading",
               prompt: t("صل كل عضو بوظيفته", "Match each body part to its function", "Padankan setiap anggota dengan fungsinya", "Cocokkan setiap anggota dengan fungsinya", "Relie chaque partie du corps à sa fonction", "Une cada parte del cuerpo a su función"),
               pairs: [
-                { a: "الْعَيْنُ", b: "نَرَى" },
-                { a: "الْأُذُنُ", b: "نَسْمَعُ" },
-                { a: "الْيَدُ", b: "نَكْتُبُ" },
-                { a: "الرِّجْلُ", b: "نَمْشِي" },
+                {
+                  a: "الْعَيْنُ",
+                  b: "نَرَى"
+                },
+                {
+                  a: "الْأُذُنُ",
+                  b: "نَسْمَعُ"
+                },
+                {
+                  a: "الْيَدُ",
+                  b: "نَكْتُبُ"
+                },
+                {
+                  a: "الرِّجْلُ",
+                  b: "نَمْشِي"
+                }
               ],
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f5e3-fe0f/512.webp"
             },
             {
               id: "g2u3l1e3",
@@ -622,9 +1869,65 @@ export const grade2: GradeData = {
               skill: "speaking",
               prompt: t("أشر إلى أعضاء جسمك وسمِّها", "Point to and name your body parts", "Tunjuk dan namakan anggota badan anda", "Tunjuk dan sebutkan anggota tubuhmu", "Montre et nomme les parties de ton corps", "Señala y nombra las partes de tu cuerpo"),
               arabicText: "هَذَا رَأْسِي وَهَذِهِ يَدِي وَهَذِهِ رِجْلِي",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f5e3-fe0f/512.webp"
             },
-          
-            { id: "g2u3l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الرَّأْسُ" },],
+            {
+              id: "g2u3l1e-arrange",
+              type: "arrange",
+              skill: "reading",
+              prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"),
+              answer: "هَذَا الرَّأْسُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f5e3-fe0f/512.webp"
+            },
+            {
+              id: "g2u3l1spellg2u3l1v3",
+              type: "spell",
+              skill: "writing",
+              prompt: t("كون الكلمة من الحروف", "Build the word from the letters", "Bina perkataan dari huruf-huruf", "Susun kata dari huruf-hurufnya", "Forme le mot avec les lettres", "Forma la palabra con las letras"),
+              arabicText: "الرِّجْلُ",
+              answer: "الرِّجْلُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f9b5/512.webp"
+            },
+            {
+              id: "g2u3l1mcqg2u3l1v3",
+              type: "mcq",
+              skill: "reading",
+              prompt: t("ماذا تعني كلمة \"الرِّجْلُ\"؟", "What does \"leg/foot\" mean?", "Apakah maksud \"kaki\"?", "Apa arti \"kaki\"?", "Que signifie \"la jambe/le pied\" ?", "¿Qué significa \"la pierna/el pie\"?"),
+              arabicText: "الرِّجْلُ",
+              options: [
+                "apple",
+                "leg/foot",
+                "doctor",
+                "apartment"
+              ],
+              correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f9b5/512.webp"
+            },
+            {
+              id: "g2u3l1mcqg2u3l1v2",
+              type: "mcq",
+              skill: "reading",
+              prompt: t("ماذا تعني كلمة \"الْيَدُ\"؟", "What does \"hand\" mean?", "Apakah maksud \"tangan\"?", "Apa arti \"tangan\"?", "Que signifie \"la main\" ?", "¿Qué significa \"la mano\"?"),
+              arabicText: "الْيَدُ",
+              options: [
+                "white",
+                "banana",
+                "hand",
+                "uncle (maternal)"
+              ],
+              correctIndex: 2,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/270b/512.webp"
+            },
+            {
+              id: "g2u3l1writeg2u3l1v1",
+              type: "writing",
+              skill: "writing",
+              prompt: t("اكتب الكلمة: \"الرَّأْسُ\"", "Type the Arabic word for: \"head\"", "Taip perkataan Arab untuk: \"kepala\"", "Ketik kata Arab untuk: \"kepala\"", "Tape le mot arabe pour : \"la tête\"", "Escribe la palabra árabe para: \"la cabeza\""),
+              arabicText: "الرَّأْسُ",
+              answer: "الرَّأْسُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f5e3-fe0f/512.webp"
+            }
+          ]
         },
         {
           id: "g2u3l2",
@@ -632,21 +1935,48 @@ export const grade2: GradeData = {
           gradeId: "g2",
           order: 2,
           title: t("الْوَجْهُ", "The Face", "Wajah", "Wajah", "Le visage", "El rostro"),
-          skills: ["listening", "speaking", "reading"],
-          intro: t(
-            "وجهنا يعبّر عن مشاعرنا! لنتعلّم أجزاء الوجه.",
-            "Our face expresses our feelings! Let's learn facial parts.",
-            "Wajah kita melahirkan perasaan kita! Jom belajar bahagian-bahagian wajah.",
-            "Wajah kita mengungkapkan perasaan kita! Ayo pelajari bagian-bagian wajah.",
-            "Notre visage exprime nos sentiments ! Apprenons les parties du visage.",
-            "¡Nuestro rostro expresa nuestros sentimientos! Aprendamos las partes de la cara.",
-          ),
+          skills: [
+            "listening",
+            "speaking",
+            "reading"
+          ],
+          intro: t("وجهنا يعبّر عن مشاعرنا! لنتعلّم أجزاء الوجه.", "Our face expresses our feelings! Let's learn facial parts.", "Wajah kita melahirkan perasaan kita! Jom belajar bahagian-bahagian wajah.", "Wajah kita mengungkapkan perasaan kita! Ayo pelajari bagian-bagian wajah.", "Notre visage exprime nos sentiments ! Apprenons les parties du visage.", "¡Nuestro rostro expresa nuestros sentimientos! Aprendamos las partes de la cara."),
           vocabulary: [
-            { id: "g2u3l2v1", arabic: "الْعَيْنَانِ", transliteration: "al-ʿaynān", translation: t("الْعَيْنَانِ", "eyes (dual)", "dua mata", "dua mata", "les deux yeux", "los ojos"), emoji: "👀" },
-            { id: "g2u3l2v2", arabic: "الْأَنْفُ", transliteration: "al-anf", translation: t("الْأَنْفُ", "nose", "hidung", "hidung", "le nez", "la nariz"), emoji: "👃" },
-            { id: "g2u3l2v3", arabic: "الْفَمُ", transliteration: "al-fam", translation: t("الْفَمُ", "mouth", "mulut", "mulut", "la bouche", "la boca"), emoji: "👄" },
-            { id: "g2u3l2v4", arabic: "الشَّعْرُ", transliteration: "ash-shaʿr", translation: t("الشَّعْرُ", "hair", "rambut", "rambut", "les cheveux", "el cabello"), emoji: "💇" },
-            { id: "g2u3l2v5", arabic: "الْخَدُّ", transliteration: "al-khadd", translation: t("الْخَدُّ", "cheek", "pipi", "pipi", "la joue", "la mejilla"), emoji: "😊" },
+            {
+              id: "g2u3l2v1",
+              arabic: "الْعَيْنَانِ",
+              transliteration: "al-ʿaynān",
+              translation: t("الْعَيْنَانِ", "eyes (dual)", "dua mata", "dua mata", "les deux yeux", "los ojos"),
+              emoji: "👀"
+            },
+            {
+              id: "g2u3l2v2",
+              arabic: "الْأَنْفُ",
+              transliteration: "al-anf",
+              translation: t("الْأَنْفُ", "nose", "hidung", "hidung", "le nez", "la nariz"),
+              emoji: "👃"
+            },
+            {
+              id: "g2u3l2v3",
+              arabic: "الْفَمُ",
+              transliteration: "al-fam",
+              translation: t("الْفَمُ", "mouth", "mulut", "mulut", "la bouche", "la boca"),
+              emoji: "👄"
+            },
+            {
+              id: "g2u3l2v4",
+              arabic: "الشَّعْرُ",
+              transliteration: "ash-shaʿr",
+              translation: t("الشَّعْرُ", "hair", "rambut", "rambut", "les cheveux", "el cabello"),
+              emoji: "💇"
+            },
+            {
+              id: "g2u3l2v5",
+              arabic: "الْخَدُّ",
+              transliteration: "al-khadd",
+              translation: t("الْخَدُّ", "cheek", "pipi", "pipi", "la joue", "la mejilla"),
+              emoji: "😊"
+            }
           ],
           dialogue: [],
           exercises: [
@@ -656,16 +1986,26 @@ export const grade2: GradeData = {
               skill: "listening",
               prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
               arabicText: "الْأَنْفُ",
-              options: ["الْفَمُ", "الْأَنْفُ", "الشَّعْرُ"],
+              options: [
+                "الْفَمُ",
+                "الْأَنْفُ",
+                "الشَّعْرُ"
+              ],
               correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f443/512.webp"
             },
             {
               id: "g2u3l2e2",
               type: "mcq",
               skill: "reading",
               prompt: t("بماذا نشمّ؟", "What do we smell with?", "Dengan apa kita menghidu?", "Dengan apa kita mencium?", "Avec quoi sent-on ?", "¿Con qué olemos?"),
-              options: ["بِالْأَنْفِ", "بِالْفَمِ", "بِالشَّعْرِ"],
+              options: [
+                "بِالْأَنْفِ",
+                "بِالْفَمِ",
+                "بِالشَّعْرِ"
+              ],
               correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f440/512.webp"
             },
             {
               id: "g2u3l2e3",
@@ -673,9 +2013,63 @@ export const grade2: GradeData = {
               skill: "speaking",
               prompt: t("صف وجهك", "Describe your face", "Huraikan wajah anda", "Gambarkan wajahmu", "Décris ton visage", "Describe tu cara"),
               arabicText: "وَجْهِي فِيهِ عَيْنَانِ وَأَنْفٌ وَفَمٌ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f440/512.webp"
             },
-          
-            { id: "g2u3l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الْعَيْنَانِ" },],
+            {
+              id: "g2u3l2e-arrange",
+              type: "arrange",
+              skill: "reading",
+              prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"),
+              answer: "هَذَا الْعَيْنَانِ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f440/512.webp"
+            },
+            {
+              id: "g2u3l2spellg2u3l2v1",
+              type: "spell",
+              skill: "writing",
+              prompt: t("كون الكلمة من الحروف", "Build the word from the letters", "Bina perkataan dari huruf-huruf", "Susun kata dari huruf-hurufnya", "Forme le mot avec les lettres", "Forma la palabra con las letras"),
+              arabicText: "الْعَيْنَانِ",
+              answer: "الْعَيْنَانِ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f440/512.webp"
+            },
+            {
+              id: "g2u3l2writeg2u3l2v2",
+              type: "writing",
+              skill: "writing",
+              prompt: t("اكتب الكلمة: \"الْأَنْفُ\"", "Type the Arabic word for: \"nose\"", "Taip perkataan Arab untuk: \"hidung\"", "Ketik kata Arab untuk: \"hidung\"", "Tape le mot arabe pour : \"le nez\"", "Escribe la palabra árabe para: \"la nariz\""),
+              arabicText: "الْأَنْفُ",
+              answer: "الْأَنْفُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f443/512.webp"
+            },
+            {
+              id: "g2u3l2listeng2u3l2v3",
+              type: "listening",
+              skill: "listening",
+              prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
+              arabicText: "الْفَمُ",
+              options: [
+                "الْأَبُ",
+                "الْجَزَرُ",
+                "الْفَمُ"
+              ],
+              correctIndex: 2,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f444/512.webp"
+            },
+            {
+              id: "g2u3l2listeng2u3l2v4",
+              type: "listening",
+              skill: "listening",
+              prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
+              arabicText: "الشَّعْرُ",
+              options: [
+                "قَرِيبٌ",
+                "نَظِيفٌ",
+                "الشَّعْرُ"
+              ],
+              correctIndex: 2,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f487/512.webp"
+            }
+          ]
         },
         {
           id: "g2u3l3",
@@ -683,21 +2077,48 @@ export const grade2: GradeData = {
           gradeId: "g2",
           order: 3,
           title: t("أَعْتَنِي بِجِسْمِي", "I Take Care of My Body", "Saya Jaga Tubuh Saya", "Saya Merawat Tubuhku", "Je prends soin de mon corps", "Cuido mi cuerpo"),
-          skills: ["listening", "speaking", "reading"],
-          intro: t(
-            "الجسم السليم في العقل السليم! لنتعلّم كيف نعتني بأجسامنا.",
-            "A healthy body houses a healthy mind! Let's learn how to take care of our bodies.",
-            "Badan yang sihat dari akal yang sihat! Jom belajar cara menjaga badan kita.",
-            "Tubuh yang sehat adalah tempat akal yang sehat! Ayo pelajari cara merawat tubuh kita.",
-            "Un corps sain abrite un esprit sain ! Apprenons à prendre soin de notre corps.",
-            "¡Un cuerpo sano alberga una mente sana! Aprendamos a cuidar nuestro cuerpo.",
-          ),
+          skills: [
+            "listening",
+            "speaking",
+            "reading"
+          ],
+          intro: t("الجسم السليم في العقل السليم! لنتعلّم كيف نعتني بأجسامنا.", "A healthy body houses a healthy mind! Let's learn how to take care of our bodies.", "Badan yang sihat dari akal yang sihat! Jom belajar cara menjaga badan kita.", "Tubuh yang sehat adalah tempat akal yang sehat! Ayo pelajari cara merawat tubuh kita.", "Un corps sain abrite un esprit sain ! Apprenons à prendre soin de notre corps.", "¡Un cuerpo sano alberga una mente sana! Aprendamos a cuidar nuestro cuerpo."),
           vocabulary: [
-            { id: "g2u3l3v1", arabic: "أَغْسِلُ يَدَيَّ", transliteration: "aghsilu yadayya", translation: t("أَغْسِلُ يَدَيَّ", "I wash my hands", "saya basuh tangan saya", "saya mencuci tangan", "je me lave les mains", "me lavo las manos"), emoji: "🙌" },
-            { id: "g2u3l3v2", arabic: "أَتَنَظَّفُ", transliteration: "atanaẓẓafu", translation: t("أَتَنَظَّفُ", "I clean myself", "saya membersihkan diri", "saya membersihkan diri", "je me nettoie", "me limpio"), emoji: "🧼" },
-            { id: "g2u3l3v3", arabic: "أَنَامُ مُبَكِّرًا", transliteration: "anāmu mubakkiran", translation: t("أَنَامُ مُبَكِّرًا", "I sleep early", "saya tidur awal", "saya tidur lebih awal", "je dors tôt", "duermo temprano"), emoji: "😴" },
-            { id: "g2u3l3v4", arabic: "صِحِّيٌّ", transliteration: "ṣiḥḥiyy", translation: t("صِحِّيٌّ", "healthy", "sihat", "sehat", "sain", "saludable"), emoji: "💪" },
-            { id: "g2u3l3v5", arabic: "نَظِيفٌ", transliteration: "naẓīf", translation: t("نَظِيفٌ", "clean", "bersih", "bersih", "propre", "limpio"), emoji: "✨" },
+            {
+              id: "g2u3l3v1",
+              arabic: "أَغْسِلُ يَدَيَّ",
+              transliteration: "aghsilu yadayya",
+              translation: t("أَغْسِلُ يَدَيَّ", "I wash my hands", "saya basuh tangan saya", "saya mencuci tangan", "je me lave les mains", "me lavo las manos"),
+              emoji: "🙌"
+            },
+            {
+              id: "g2u3l3v2",
+              arabic: "أَتَنَظَّفُ",
+              transliteration: "atanaẓẓafu",
+              translation: t("أَتَنَظَّفُ", "I clean myself", "saya membersihkan diri", "saya membersihkan diri", "je me nettoie", "me limpio"),
+              emoji: "🧼"
+            },
+            {
+              id: "g2u3l3v3",
+              arabic: "أَنَامُ مُبَكِّرًا",
+              transliteration: "anāmu mubakkiran",
+              translation: t("أَنَامُ مُبَكِّرًا", "I sleep early", "saya tidur awal", "saya tidur lebih awal", "je dors tôt", "duermo temprano"),
+              emoji: "😴"
+            },
+            {
+              id: "g2u3l3v4",
+              arabic: "صِحِّيٌّ",
+              transliteration: "ṣiḥḥiyy",
+              translation: t("صِحِّيٌّ", "healthy", "sihat", "sehat", "sain", "saludable"),
+              emoji: "💪"
+            },
+            {
+              id: "g2u3l3v5",
+              arabic: "نَظِيفٌ",
+              transliteration: "naẓīf",
+              translation: t("نَظِيفٌ", "clean", "bersih", "bersih", "propre", "limpio"),
+              emoji: "✨"
+            }
           ],
           dialogue: [],
           exercises: [
@@ -707,16 +2128,26 @@ export const grade2: GradeData = {
               skill: "listening",
               prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
               arabicText: "أَتَنَظَّفُ",
-              options: ["أَغْسِلُ يَدَيَّ", "أَتَنَظَّفُ", "أَنَامُ مُبَكِّرًا"],
+              options: [
+                "أَغْسِلُ يَدَيَّ",
+                "أَتَنَظَّفُ",
+                "أَنَامُ مُبَكِّرًا"
+              ],
               correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f9fc/512.webp"
             },
             {
               id: "g2u3l3e2",
               type: "mcq",
               skill: "reading",
               prompt: t("متى يجب أن نغسل أيدينا؟", "When must we wash our hands?", "Bila kita mesti basuh tangan?", "Kapan kita harus mencuci tangan?", "Quand doit-on se laver les mains ?", "¿Cuándo debemos lavarnos las manos?"),
-              options: ["قَبْلَ الْأَكْلِ وَبَعْدَ الْحَمَّامِ", "مَرَّةً فِي الْأُسْبُوعِ", "فَقَطْ فِي الصَّبَاحِ"],
+              options: [
+                "قَبْلَ الْأَكْلِ وَبَعْدَ الْحَمَّامِ",
+                "مَرَّةً فِي الْأُسْبُوعِ",
+                "فَقَطْ فِي الصَّبَاحِ"
+              ],
               correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f64c/512.webp"
             },
             {
               id: "g2u3l3e3",
@@ -724,9 +2155,57 @@ export const grade2: GradeData = {
               skill: "speaking",
               prompt: t("قل كيف تعتني بصحتك", "Say how you take care of your health", "Sebut cara anda menjaga kesihatan", "Sebutkan cara kamu merawat kesehatanmu", "Dis comment tu prends soin de ta santé", "Di cómo cuidas tu salud"),
               arabicText: "أَغْسِلُ يَدَيَّ وَأَتَنَظَّفُ وَأَنَامُ مُبَكِّرًا",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f64c/512.webp"
             },
-          
-            { id: "g2u3l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا أَغْسِلُ يَدَيَّ" },],
+            {
+              id: "g2u3l3e-arrange",
+              type: "arrange",
+              skill: "reading",
+              prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"),
+              answer: "هَذَا أَغْسِلُ يَدَيَّ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f64c/512.webp"
+            },
+            {
+              id: "g2u3l3mcqg2u3l3v1",
+              type: "mcq",
+              skill: "reading",
+              prompt: t("ماذا تعني كلمة \"أَغْسِلُ يَدَيَّ\"؟", "What does \"I wash my hands\" mean?", "Apakah maksud \"saya basuh tangan saya\"?", "Apa arti \"saya mencuci tangan\"?", "Que signifie \"je me lave les mains\" ?", "¿Qué significa \"me lavo las manos\"?"),
+              arabicText: "أَغْسِلُ يَدَيَّ",
+              options: [
+                "mouth",
+                "uncle (maternal)",
+                "I wash my hands",
+                "lives/resides"
+              ],
+              correctIndex: 2,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f64c/512.webp"
+            },
+            {
+              id: "g2u3l3spellg2u3l3v5",
+              type: "spell",
+              skill: "writing",
+              prompt: t("كون الكلمة من الحروف", "Build the word from the letters", "Bina perkataan dari huruf-huruf", "Susun kata dari huruf-hurufnya", "Forme le mot avec les lettres", "Forma la palabra con las letras"),
+              arabicText: "نَظِيفٌ",
+              answer: "نَظِيفٌ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/2728/512.webp"
+            },
+            {
+              id: "g2u3l3speakg2u3l3v4",
+              type: "speaking",
+              skill: "speaking",
+              prompt: t("انطق الكلمة", "Say this word", "Sebut perkataan ini", "Ucapkan kata ini", "Dis ce mot", "Di esta palabra"),
+              arabicText: "صِحِّيٌّ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f4aa/512.webp"
+            },
+            {
+              id: "g2u3l3speakg2u3l3v1",
+              type: "speaking",
+              skill: "speaking",
+              prompt: t("انطق الكلمة", "Say this word", "Sebut perkataan ini", "Ucapkan kata ini", "Dis ce mot", "Di esta palabra"),
+              arabicText: "أَغْسِلُ يَدَيَّ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f64c/512.webp"
+            }
+          ]
         },
         {
           id: "g2u3l4",
@@ -734,25 +2213,60 @@ export const grade2: GradeData = {
           gradeId: "g2",
           order: 4,
           title: t("عِنْدِي مَرَضٌ", "I Am Sick", "Saya Sakit", "Saya Sakit", "Je suis malade", "Estoy enfermo"),
-          skills: ["listening", "speaking", "reading"],
-          intro: t(
-            "أحيانًا نمرض وهذا طبيعي! لنتعلّم كيف نعبّر عن مرضنا.",
-            "Sometimes we get sick and that's normal! Let's learn how to express our illness.",
-            "Kadang-kadang kita sakit dan itu normal! Jom belajar cara melahirkan perasaan sakit.",
-            "Kadang-kadang kita sakit dan itu normal! Ayo pelajari cara mengungkapkan rasa sakit.",
-            "Parfois on tombe malade et c'est normal ! Apprenons à exprimer notre maladie.",
-            "¡A veces nos enfermamos y eso es normal! Aprendamos a expresar nuestra enfermedad.",
-          ),
+          skills: [
+            "listening",
+            "speaking",
+            "reading"
+          ],
+          intro: t("أحيانًا نمرض وهذا طبيعي! لنتعلّم كيف نعبّر عن مرضنا.", "Sometimes we get sick and that's normal! Let's learn how to express our illness.", "Kadang-kadang kita sakit dan itu normal! Jom belajar cara melahirkan perasaan sakit.", "Kadang-kadang kita sakit dan itu normal! Ayo pelajari cara mengungkapkan rasa sakit.", "Parfois on tombe malade et c'est normal ! Apprenons à exprimer notre maladie.", "¡A veces nos enfermamos y eso es normal! Aprendamos a expresar nuestra enfermedad."),
           vocabulary: [
-            { id: "g2u3l4v1", arabic: "أَشْعُرُ بِأَلَمٍ", transliteration: "ashʿuru bi-alam", translation: t("أَشْعُرُ بِأَلَمٍ", "I feel pain", "saya rasa sakit", "saya merasa sakit", "j'ai mal", "siento dolor"), emoji: "🤒" },
-            { id: "g2u3l4v2", arabic: "رَأْسِي يُؤْلِمُنِي", transliteration: "raʾsī yuʾlimunī", translation: t("رَأْسِي يُؤْلِمُنِي", "My head hurts", "kepala saya sakit", "kepala saya sakit", "j'ai mal à la tête", "me duele la cabeza"), emoji: "🤕" },
-            { id: "g2u3l4v3", arabic: "الطَّبِيبُ", transliteration: "aṭ-ṭabīb", translation: t("الطَّبِيبُ", "doctor", "doktor", "dokter", "le médecin", "el médico"), emoji: "👨‍⚕️" },
-            { id: "g2u3l4v4", arabic: "الدَّوَاءُ", transliteration: "ad-dawāʾ", translation: t("الدَّوَاءُ", "medicine", "ubat", "obat", "le médicament", "el medicamento"), emoji: "💊" },
-            { id: "g2u3l4v5", arabic: "أَتَعَافَى", transliteration: "ataʿāfā", translation: t("أَتَعَافَى", "I recover", "saya sembuh", "saya sembuh", "je guéris", "me recupero"), emoji: "💚" },
+            {
+              id: "g2u3l4v1",
+              arabic: "أَشْعُرُ بِأَلَمٍ",
+              transliteration: "ashʿuru bi-alam",
+              translation: t("أَشْعُرُ بِأَلَمٍ", "I feel pain", "saya rasa sakit", "saya merasa sakit", "j'ai mal", "siento dolor"),
+              emoji: "🤒"
+            },
+            {
+              id: "g2u3l4v2",
+              arabic: "رَأْسِي يُؤْلِمُنِي",
+              transliteration: "raʾsī yuʾlimunī",
+              translation: t("رَأْسِي يُؤْلِمُنِي", "My head hurts", "kepala saya sakit", "kepala saya sakit", "j'ai mal à la tête", "me duele la cabeza"),
+              emoji: "🤕"
+            },
+            {
+              id: "g2u3l4v3",
+              arabic: "الطَّبِيبُ",
+              transliteration: "aṭ-ṭabīb",
+              translation: t("الطَّبِيبُ", "doctor", "doktor", "dokter", "le médecin", "el médico"),
+              emoji: "👨‍⚕️"
+            },
+            {
+              id: "g2u3l4v4",
+              arabic: "الدَّوَاءُ",
+              transliteration: "ad-dawāʾ",
+              translation: t("الدَّوَاءُ", "medicine", "ubat", "obat", "le médicament", "el medicamento"),
+              emoji: "💊"
+            },
+            {
+              id: "g2u3l4v5",
+              arabic: "أَتَعَافَى",
+              transliteration: "ataʿāfā",
+              translation: t("أَتَعَافَى", "I recover", "saya sembuh", "saya sembuh", "je guéris", "me recupero"),
+              emoji: "💚"
+            }
           ],
           dialogue: [
-            { speaker: "طِفْلٌ", arabic: "يَا أُمِّي، رَأْسِي يُؤْلِمُنِي.", translation: t("يَا أُمِّي، رَأْسِي يُؤْلِمُنِي.", "Mum, my head hurts.", "Ibu, kepala saya sakit.", "Ibu, kepala saya sakit.", "Maman, j'ai mal à la tête.", "Mamá, me duele la cabeza.") },
-            { speaker: "أُمٌّ", arabic: "سَنَذْهَبُ إِلَى الطَّبِيبِ الْآنَ.", translation: t("سَنَذْهَبُ إِلَى الطَّبِيبِ الْآنَ.", "We will go to the doctor now.", "Kita akan pergi ke doktor sekarang.", "Kita akan pergi ke dokter sekarang.", "Nous allons aller chez le médecin maintenant.", "Iremos al médico ahora.") },
+            {
+              speaker: "طِفْلٌ",
+              arabic: "يَا أُمِّي، رَأْسِي يُؤْلِمُنِي.",
+              translation: t("يَا أُمِّي، رَأْسِي يُؤْلِمُنِي.", "Mum, my head hurts.", "Ibu, kepala saya sakit.", "Ibu, kepala saya sakit.", "Maman, j'ai mal à la tête.", "Mamá, me duele la cabeza.")
+            },
+            {
+              speaker: "أُمٌّ",
+              arabic: "سَنَذْهَبُ إِلَى الطَّبِيبِ الْآنَ.",
+              translation: t("سَنَذْهَبُ إِلَى الطَّبِيبِ الْآنَ.", "We will go to the doctor now.", "Kita akan pergi ke doktor sekarang.", "Kita akan pergi ke dokter sekarang.", "Nous allons aller chez le médecin maintenant.", "Iremos al médico ahora.")
+            }
           ],
           exercises: [
             {
@@ -761,16 +2275,26 @@ export const grade2: GradeData = {
               skill: "listening",
               prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
               arabicText: "الطَّبِيبُ",
-              options: ["الدَّوَاءُ", "الطَّبِيبُ", "أَتَعَافَى"],
+              options: [
+                "الدَّوَاءُ",
+                "الطَّبِيبُ",
+                "أَتَعَافَى"
+              ],
               correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f468-200d-2695-fe0f/512.webp"
             },
             {
               id: "g2u3l4e2",
               type: "mcq",
               skill: "reading",
               prompt: t("من نزور عندما نمرض؟", "Whom do we visit when we are sick?", "Siapa yang kita lawati bila kita sakit?", "Siapa yang kita kunjungi saat kita sakit?", "Qui consulte-t-on quand on est malade ?", "¿A quién visitamos cuando estamos enfermos?"),
-              options: ["الطَّبِيبَ", "الْمُعَلِّمَ", "الصَّدِيقَ"],
+              options: [
+                "الطَّبِيبَ",
+                "الْمُعَلِّمَ",
+                "الصَّدِيقَ"
+              ],
               correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f912/512.webp"
             },
             {
               id: "g2u3l4e3",
@@ -778,9 +2302,57 @@ export const grade2: GradeData = {
               skill: "speaking",
               prompt: t("قل كيف تشعر عندما تمرض", "Say how you feel when you are sick", "Sebut bagaimana anda rasa apabila sakit", "Sebutkan bagaimana perasaanmu saat sakit", "Dis comment tu te sens quand tu es malade", "Di cómo te sientes cuando estás enfermo"),
               arabicText: "عِنْدَمَا أَمْرَضُ أَشْعُرُ بِأَلَمٍ وَأَذْهَبُ إِلَى الطَّبِيبِ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f912/512.webp"
             },
-          
-            { id: "g2u3l4e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "يَا أُمِّي، رَأْسِي يُؤْلِمُنِي" },],
+            {
+              id: "g2u3l4e-arrange",
+              type: "arrange",
+              skill: "reading",
+              prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"),
+              answer: "يَا أُمِّي، رَأْسِي يُؤْلِمُنِي",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f915/512.webp"
+            },
+            {
+              id: "g2u3l4writeg2u3l4v5",
+              type: "writing",
+              skill: "writing",
+              prompt: t("اكتب الكلمة: \"أَتَعَافَى\"", "Type the Arabic word for: \"I recover\"", "Taip perkataan Arab untuk: \"saya sembuh\"", "Ketik kata Arab untuk: \"saya sembuh\"", "Tape le mot arabe pour : \"je guéris\"", "Escribe la palabra árabe para: \"me recupero\""),
+              arabicText: "أَتَعَافَى",
+              answer: "أَتَعَافَى",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f49a/512.webp"
+            },
+            {
+              id: "g2u3l4spellg2u3l4v4",
+              type: "spell",
+              skill: "writing",
+              prompt: t("كون الكلمة من الحروف", "Build the word from the letters", "Bina perkataan dari huruf-huruf", "Susun kata dari huruf-hurufnya", "Forme le mot avec les lettres", "Forma la palabra con las letras"),
+              arabicText: "الدَّوَاءُ",
+              answer: "الدَّوَاءُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f48a/512.webp"
+            },
+            {
+              id: "g2u3l4speakg2u3l4v5",
+              type: "speaking",
+              skill: "speaking",
+              prompt: t("انطق الكلمة", "Say this word", "Sebut perkataan ini", "Ucapkan kata ini", "Dis ce mot", "Di esta palabra"),
+              arabicText: "أَتَعَافَى",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f49a/512.webp"
+            },
+            {
+              id: "g2u3l4listeng2u3l4v4",
+              type: "listening",
+              skill: "listening",
+              prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
+              arabicText: "الدَّوَاءُ",
+              options: [
+                "الْكِتَابُ",
+                "الْعَمُّ",
+                "الدَّوَاءُ"
+              ],
+              correctIndex: 2,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f48a/512.webp"
+            }
+          ]
         },
         {
           id: "g2u3l5",
@@ -788,21 +2360,48 @@ export const grade2: GradeData = {
           gradeId: "g2",
           order: 5,
           title: t("أَتَحَرَّكُ وَأَتَمَرَّنُ", "I Move and Exercise", "Saya Bergerak dan Bersenam", "Saya Bergerak dan Berolahraga", "Je bouge et je fais de l'exercice", "Me muevo y hago ejercicio"),
-          skills: ["listening", "speaking", "reading"],
-          intro: t(
-            "الحركة هي الحياة! لنتعلّم أفعال الحركة والتمرين.",
-            "Movement is life! Let's learn movement and exercise verbs.",
-            "Pergerakan adalah kehidupan! Jom belajar kata kerja pergerakan dan senaman.",
-            "Gerakan adalah kehidupan! Ayo pelajari kata kerja gerak dan olahraga.",
-            "Le mouvement c'est la vie ! Apprenons les verbes de mouvement et d'exercice.",
-            "¡El movimiento es vida! Aprendamos los verbos de movimiento y ejercicio.",
-          ),
+          skills: [
+            "listening",
+            "speaking",
+            "reading"
+          ],
+          intro: t("الحركة هي الحياة! لنتعلّم أفعال الحركة والتمرين.", "Movement is life! Let's learn movement and exercise verbs.", "Pergerakan adalah kehidupan! Jom belajar kata kerja pergerakan dan senaman.", "Gerakan adalah kehidupan! Ayo pelajari kata kerja gerak dan olahraga.", "Le mouvement c'est la vie ! Apprenons les verbes de mouvement et d'exercice.", "¡El movimiento es vida! Aprendamos los verbos de movimiento y ejercicio."),
           vocabulary: [
-            { id: "g2u3l5v1", arabic: "أَرْكُضُ", transliteration: "arkuḍu", translation: t("أَرْكُضُ", "I run", "saya berlari", "saya berlari", "je cours", "corro"), emoji: "🏃" },
-            { id: "g2u3l5v2", arabic: "أَقْفِزُ", transliteration: "aqfizu", translation: t("أَقْفِزُ", "I jump", "saya melompat", "saya melompat", "je saute", "salto"), emoji: "⬆️" },
-            { id: "g2u3l5v3", arabic: "أَمْشِي", transliteration: "amshī", translation: t("أَمْشِي", "I walk", "saya berjalan", "saya berjalan", "je marche", "camino"), emoji: "🚶" },
-            { id: "g2u3l5v4", arabic: "أَسْبَحُ", transliteration: "asbaḥu", translation: t("أَسْبَحُ", "I swim", "saya berenang", "saya berenang", "je nage", "nado"), emoji: "🏊" },
-            { id: "g2u3l5v5", arabic: "قَوِيٌّ", transliteration: "qawiyy", translation: t("قَوِيٌّ", "strong", "kuat", "kuat", "fort", "fuerte"), emoji: "💪" },
+            {
+              id: "g2u3l5v1",
+              arabic: "أَرْكُضُ",
+              transliteration: "arkuḍu",
+              translation: t("أَرْكُضُ", "I run", "saya berlari", "saya berlari", "je cours", "corro"),
+              emoji: "🏃"
+            },
+            {
+              id: "g2u3l5v2",
+              arabic: "أَقْفِزُ",
+              transliteration: "aqfizu",
+              translation: t("أَقْفِزُ", "I jump", "saya melompat", "saya melompat", "je saute", "salto"),
+              emoji: "⬆️"
+            },
+            {
+              id: "g2u3l5v3",
+              arabic: "أَمْشِي",
+              transliteration: "amshī",
+              translation: t("أَمْشِي", "I walk", "saya berjalan", "saya berjalan", "je marche", "camino"),
+              emoji: "🚶"
+            },
+            {
+              id: "g2u3l5v4",
+              arabic: "أَسْبَحُ",
+              transliteration: "asbaḥu",
+              translation: t("أَسْبَحُ", "I swim", "saya berenang", "saya berenang", "je nage", "nado"),
+              emoji: "🏊"
+            },
+            {
+              id: "g2u3l5v5",
+              arabic: "قَوِيٌّ",
+              transliteration: "qawiyy",
+              translation: t("قَوِيٌّ", "strong", "kuat", "kuat", "fort", "fuerte"),
+              emoji: "💪"
+            }
           ],
           dialogue: [],
           exercises: [
@@ -812,16 +2411,26 @@ export const grade2: GradeData = {
               skill: "listening",
               prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
               arabicText: "أَقْفِزُ",
-              options: ["أَرْكُضُ", "أَقْفِزُ", "أَمْشِي"],
+              options: [
+                "أَرْكُضُ",
+                "أَقْفِزُ",
+                "أَمْشِي"
+              ],
               correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/2b06-fe0f/512.webp"
             },
             {
               id: "g2u3l5e2",
               type: "mcq",
               skill: "reading",
               prompt: t("ما الذي يجعل جسمنا قويًا؟", "What makes our body strong?", "Apa yang menjadikan badan kita kuat?", "Apa yang membuat tubuh kita kuat?", "Qu'est-ce qui rend notre corps fort ?", "¿Qué hace nuestro cuerpo fuerte?"),
-              options: ["التَّمَرُّنُ وَالرِّيَاضَةُ", "النَّوْمُ فَقَطْ", "الْجُلُوسُ دَائِمًا"],
+              options: [
+                "التَّمَرُّنُ وَالرِّيَاضَةُ",
+                "النَّوْمُ فَقَطْ",
+                "الْجُلُوسُ دَائِمًا"
+              ],
               correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f3c3/512.webp"
             },
             {
               id: "g2u3l5e3",
@@ -829,13 +2438,197 @@ export const grade2: GradeData = {
               skill: "speaking",
               prompt: t("قل كيف تتمرن", "Say how you exercise", "Sebut cara anda bersenam", "Sebutkan cara kamu berolahraga", "Dis comment tu fais de l'exercice", "Di cómo haces ejercicio"),
               arabicText: "أَتَمَرَّنُ بِالرَّكْضِ وَالْقَفْزِ كُلَّ يَوْمٍ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f3c3/512.webp"
             },
-          
-            { id: "g2u3l5e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا أَرْكُضُ" },],
+            {
+              id: "g2u3l5e-arrange",
+              type: "arrange",
+              skill: "reading",
+              prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"),
+              answer: "هَذَا أَرْكُضُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f3c3/512.webp"
+            },
+            {
+              id: "g2u3l5mcqg2u3l5v4",
+              type: "mcq",
+              skill: "reading",
+              prompt: t("ماذا تعني كلمة \"أَسْبَحُ\"؟", "What does \"I swim\" mean?", "Apakah maksud \"saya berenang\"?", "Apa arti \"saya berenang\"?", "Que signifie \"je nage\" ?", "¿Qué significa \"nado\"?"),
+              arabicText: "أَسْبَحُ",
+              options: [
+                "mouth",
+                "I feel pain",
+                "I swim",
+                "praise God (after eating)"
+              ],
+              correctIndex: 2,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f3ca/512.webp"
+            },
+            {
+              id: "g2u3l5listeng2u3l5v4",
+              type: "listening",
+              skill: "listening",
+              prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
+              arabicText: "أَسْبَحُ",
+              options: [
+                "بَعِيدٌ",
+                "أَسْبَحُ",
+                "أُعِدُّ"
+              ],
+              correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f3ca/512.webp"
+            },
+            {
+              id: "g2u3l5spellg2u3l5v2",
+              type: "spell",
+              skill: "writing",
+              prompt: t("كون الكلمة من الحروف", "Build the word from the letters", "Bina perkataan dari huruf-huruf", "Susun kata dari huruf-hurufnya", "Forme le mot avec les lettres", "Forma la palabra con las letras"),
+              arabicText: "أَقْفِزُ",
+              answer: "أَقْفِزُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/2b06-fe0f/512.webp"
+            },
+            {
+              id: "g2u3l5speakg2u3l5v1",
+              type: "speaking",
+              skill: "speaking",
+              prompt: t("انطق الكلمة", "Say this word", "Sebut perkataan ini", "Ucapkan kata ini", "Dis ce mot", "Di esta palabra"),
+              arabicText: "أَرْكُضُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f3c3/512.webp"
+            }
+          ]
         },
-      ],
+        {
+          id: "g2u3review",
+          unitId: "g2u3",
+          gradeId: "g2",
+          order: 6,
+          title: t("مراجعة الوحدة", "Unit Review", "Ulangan Unit", "Ulangan Unit", "Révision de l’unité", "Revisión de la unidad"),
+          skills: [
+            "listening",
+            "reading",
+            "writing"
+          ],
+          intro: t("لنراجع ما تعلّمناه في هذه الوحدة!", "Let’s review what we learned in this unit!", "Mari ulangkaji apa yang kita pelajari dalam unit ini!", "Mari kita ulang apa yang kita pelajari dalam unit ini!", "Révisons ce que nous avons appris dans cette unité !", "¡Repasemos lo que aprendimos en esta unidad!"),
+          vocabulary: [
+            {
+              id: "g2u3l1v1",
+              arabic: "الرَّأْسُ",
+              transliteration: "ar-raʾs",
+              translation: t("الرَّأْسُ", "head", "kepala", "kepala", "la tête", "la cabeza"),
+              emoji: "🗣️"
+            },
+            {
+              id: "g2u3l1v2",
+              arabic: "الْيَدُ",
+              transliteration: "al-yad",
+              translation: t("الْيَدُ", "hand", "tangan", "tangan", "la main", "la mano"),
+              emoji: "✋"
+            },
+            {
+              id: "g2u3l1v3",
+              arabic: "الرِّجْلُ",
+              transliteration: "ar-rijl",
+              translation: t("الرِّجْلُ", "leg/foot", "kaki", "kaki", "la jambe/le pied", "la pierna/el pie"),
+              emoji: "🦵"
+            },
+            {
+              id: "g2u3l1v4",
+              arabic: "الْعَيْنُ",
+              transliteration: "al-ʿayn",
+              translation: t("الْعَيْنُ", "eye", "mata", "mata", "l'œil", "el ojo"),
+              emoji: "👁️"
+            },
+            {
+              id: "g2u3l1v5",
+              arabic: "الْأُذُنُ",
+              transliteration: "al-udhun",
+              translation: t("الْأُذُنُ", "ear", "telinga", "telinga", "l'oreille", "la oreja"),
+              emoji: "👂"
+            },
+            {
+              id: "g2u3l2v1",
+              arabic: "الْعَيْنَانِ",
+              transliteration: "al-ʿaynān",
+              translation: t("الْعَيْنَانِ", "eyes (dual)", "dua mata", "dua mata", "les deux yeux", "los ojos"),
+              emoji: "👀"
+            },
+            {
+              id: "g2u3l2v2",
+              arabic: "الْأَنْفُ",
+              transliteration: "al-anf",
+              translation: t("الْأَنْفُ", "nose", "hidung", "hidung", "le nez", "la nariz"),
+              emoji: "👃"
+            },
+            {
+              id: "g2u3l2v3",
+              arabic: "الْفَمُ",
+              transliteration: "al-fam",
+              translation: t("الْفَمُ", "mouth", "mulut", "mulut", "la bouche", "la boca"),
+              emoji: "👄"
+            }
+          ],
+          dialogue: [],
+          exercises: [
+            {
+              id: "g2u3reviewspellg2u3l2v3",
+              type: "spell",
+              skill: "writing",
+              prompt: t("كون الكلمة من الحروف", "Build the word from the letters", "Bina perkataan dari huruf-huruf", "Susun kata dari huruf-hurufnya", "Forme le mot avec les lettres", "Forma la palabra con las letras"),
+              arabicText: "الْفَمُ",
+              answer: "الْفَمُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f444/512.webp"
+            },
+            {
+              id: "g2u3reviewspeakg2u3l1v4",
+              type: "speaking",
+              skill: "speaking",
+              prompt: t("انطق الكلمة", "Say this word", "Sebut perkataan ini", "Ucapkan kata ini", "Dis ce mot", "Di esta palabra"),
+              arabicText: "الْعَيْنُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f441-fe0f/512.webp"
+            },
+            {
+              id: "g2u3reviewspeakg2u3l1v3",
+              type: "speaking",
+              skill: "speaking",
+              prompt: t("انطق الكلمة", "Say this word", "Sebut perkataan ini", "Ucapkan kata ini", "Dis ce mot", "Di esta palabra"),
+              arabicText: "الرِّجْلُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f9b5/512.webp"
+            },
+            {
+              id: "g2u3reviewspeakg2u3l2v1",
+              type: "speaking",
+              skill: "speaking",
+              prompt: t("انطق الكلمة", "Say this word", "Sebut perkataan ini", "Ucapkan kata ini", "Dis ce mot", "Di esta palabra"),
+              arabicText: "الْعَيْنَانِ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f440/512.webp"
+            },
+            {
+              id: "g2u3reviewwriteg2u3l2v1",
+              type: "writing",
+              skill: "writing",
+              prompt: t("اكتب الكلمة: \"الْعَيْنَانِ\"", "Type the Arabic word for: \"eyes (dual)\"", "Taip perkataan Arab untuk: \"dua mata\"", "Ketik kata Arab untuk: \"dua mata\"", "Tape le mot arabe pour : \"les deux yeux\"", "Escribe la palabra árabe para: \"los ojos\""),
+              arabicText: "الْعَيْنَانِ",
+              answer: "الْعَيْنَانِ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f440/512.webp"
+            },
+            {
+              id: "g2u3reviewmcqg2u3l2v3",
+              type: "mcq",
+              skill: "reading",
+              prompt: t("ماذا تعني كلمة \"الْفَمُ\"؟", "What does \"mouth\" mean?", "Apakah maksud \"mulut\"?", "Apa arti \"mulut\"?", "Que signifie \"la bouche\" ?", "¿Qué significa \"la boca\"?"),
+              arabicText: "الْفَمُ",
+              options: [
+                "fresh food",
+                "mouth",
+                "healthy",
+                "hand"
+              ],
+              correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f444/512.webp"
+            }
+          ]
+        }
+      ]
     },
-    // ─── UNIT 4: الطعام ───────────────────────────────────────────────
     {
       id: "g2u4",
       gradeId: "g2",
@@ -849,25 +2642,60 @@ export const grade2: GradeData = {
           gradeId: "g2",
           order: 1,
           title: t("وَجَبَاتِي", "My Meals", "Hidanganku", "Makananku", "Mes repas", "Mis comidas"),
-          skills: ["listening", "speaking", "reading"],
-          intro: t(
-            "نأكل ثلاث وجبات يوميًا لنبقى بصحة جيدة! لنتعلّم أسماءها.",
-            "We eat three meals a day to stay healthy! Let's learn their names.",
-            "Kita makan tiga hidangan sehari untuk kekal sihat! Jom belajar nama mereka.",
-            "Kita makan tiga kali sehari untuk tetap sehat! Ayo pelajari nama-namanya.",
-            "On mange trois repas par jour pour rester en bonne santé ! Apprenons leurs noms.",
-            "¡Comemos tres comidas al día para mantenernos sanos! Aprendamos sus nombres.",
-          ),
+          skills: [
+            "listening",
+            "speaking",
+            "reading"
+          ],
+          intro: t("نأكل ثلاث وجبات يوميًا لنبقى بصحة جيدة! لنتعلّم أسماءها.", "We eat three meals a day to stay healthy! Let's learn their names.", "Kita makan tiga hidangan sehari untuk kekal sihat! Jom belajar nama mereka.", "Kita makan tiga kali sehari untuk tetap sehat! Ayo pelajari nama-namanya.", "On mange trois repas par jour pour rester en bonne santé ! Apprenons leurs noms.", "¡Comemos tres comidas al día para mantenernos sanos! Aprendamos sus nombres."),
           vocabulary: [
-            { id: "g2u4l1v1", arabic: "الْإِفْطَارُ", transliteration: "al-ifṭār", translation: t("الْإِفْطَارُ", "breakfast", "sarapan", "sarapan pagi", "le petit-déjeuner", "el desayuno"), emoji: "🍳" },
-            { id: "g2u4l1v2", arabic: "الْغَدَاءُ", transliteration: "al-ghadāʾ", translation: t("الْغَدَاءُ", "lunch", "makan tengahari", "makan siang", "le déjeuner", "el almuerzo"), emoji: "🍱" },
-            { id: "g2u4l1v3", arabic: "الْعَشَاءُ", transliteration: "al-ʿashāʾ", translation: t("الْعَشَاءُ", "dinner", "makan malam", "makan malam", "le dîner", "la cena"), emoji: "🍽️" },
-            { id: "g2u4l1v4", arabic: "أَتَنَاوَلُ", transliteration: "atanāwalu", translation: t("أَتَنَاوَلُ", "I eat/have", "saya makan", "saya makan", "je prends", "tomo"), emoji: "🥄" },
-            { id: "g2u4l1v5", arabic: "لَذِيذٌ", transliteration: "ladhīdh", translation: t("لَذِيذٌ", "delicious", "sedap", "lezat", "délicieux", "delicioso"), emoji: "😋" },
+            {
+              id: "g2u4l1v1",
+              arabic: "الْإِفْطَارُ",
+              transliteration: "al-ifṭār",
+              translation: t("الْإِفْطَارُ", "breakfast", "sarapan", "sarapan pagi", "le petit-déjeuner", "el desayuno"),
+              emoji: "🍳"
+            },
+            {
+              id: "g2u4l1v2",
+              arabic: "الْغَدَاءُ",
+              transliteration: "al-ghadāʾ",
+              translation: t("الْغَدَاءُ", "lunch", "makan tengahari", "makan siang", "le déjeuner", "el almuerzo"),
+              emoji: "🍱"
+            },
+            {
+              id: "g2u4l1v3",
+              arabic: "الْعَشَاءُ",
+              transliteration: "al-ʿashāʾ",
+              translation: t("الْعَشَاءُ", "dinner", "makan malam", "makan malam", "le dîner", "la cena"),
+              emoji: "🍽️"
+            },
+            {
+              id: "g2u4l1v4",
+              arabic: "أَتَنَاوَلُ",
+              transliteration: "atanāwalu",
+              translation: t("أَتَنَاوَلُ", "I eat/have", "saya makan", "saya makan", "je prends", "tomo"),
+              emoji: "🥄"
+            },
+            {
+              id: "g2u4l1v5",
+              arabic: "لَذِيذٌ",
+              transliteration: "ladhīdh",
+              translation: t("لَذِيذٌ", "delicious", "sedap", "lezat", "délicieux", "delicioso"),
+              emoji: "😋"
+            }
           ],
           dialogue: [
-            { speaker: "أَبٌ", arabic: "مَاذَا تُرِيدُ لِلْغَدَاءِ يَا وَلَدِي؟", translation: t("مَاذَا تُرِيدُ لِلْغَدَاءِ يَا وَلَدِي؟", "What do you want for lunch, son?", "Apa yang kamu mahu untuk makan tengahari, anakku?", "Apa yang kamu mau untuk makan siang, anakku?", "Que veux-tu pour le déjeuner, mon fils ?", "¿Qué quieres para almorzar, hijo?") },
-            { speaker: "وَلَدٌ", arabic: "أُرِيدُ أَرُزًّا مَعَ دَجَاجٍ، شُكْرًا!", translation: t("أُرِيدُ أَرُزًّا مَعَ دَجَاجٍ، شُكْرًا!", "I want rice with chicken, thank you!", "Saya mahu nasi dengan ayam, terima kasih!", "Saya mau nasi dengan ayam, terima kasih!", "Je veux du riz avec du poulet, merci !", "¡Quiero arroz con pollo, gracias!") },
+            {
+              speaker: "أَبٌ",
+              arabic: "مَاذَا تُرِيدُ لِلْغَدَاءِ يَا وَلَدِي؟",
+              translation: t("مَاذَا تُرِيدُ لِلْغَدَاءِ يَا وَلَدِي؟", "What do you want for lunch, son?", "Apa yang kamu mahu untuk makan tengahari, anakku?", "Apa yang kamu mau untuk makan siang, anakku?", "Que veux-tu pour le déjeuner, mon fils ?", "¿Qué quieres para almorzar, hijo?")
+            },
+            {
+              speaker: "وَلَدٌ",
+              arabic: "أُرِيدُ أَرُزًّا مَعَ دَجَاجٍ، شُكْرًا!",
+              translation: t("أُرِيدُ أَرُزًّا مَعَ دَجَاجٍ، شُكْرًا!", "I want rice with chicken, thank you!", "Saya mahu nasi dengan ayam, terima kasih!", "Saya mau nasi dengan ayam, terima kasih!", "Je veux du riz avec du poulet, merci !", "¡Quiero arroz con pollo, gracias!")
+            }
           ],
           exercises: [
             {
@@ -876,16 +2704,26 @@ export const grade2: GradeData = {
               skill: "listening",
               prompt: t("استمع واختر الوجبة الصحيحة", "Listen and choose the correct meal", "Dengar dan pilih hidangan yang betul", "Dengarkan dan pilih makanan yang benar", "Écoute et choisis le bon repas", "Escucha y elige la comida correcta"),
               arabicText: "الْغَدَاءُ",
-              options: ["الْإِفْطَارُ", "الْغَدَاءُ", "الْعَشَاءُ"],
+              options: [
+                "الْإِفْطَارُ",
+                "الْغَدَاءُ",
+                "الْعَشَاءُ"
+              ],
               correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f371/512.webp"
             },
             {
               id: "g2u4l1e2",
               type: "mcq",
               skill: "reading",
               prompt: t("ما أول وجبة نأكلها في اليوم؟", "What is the first meal we eat in the day?", "Apa hidangan pertama yang kita makan dalam sehari?", "Apa makanan pertama yang kita makan dalam sehari?", "Quel est le premier repas de la journée ?", "¿Cuál es la primera comida del día?"),
-              options: ["الْإِفْطَارُ", "الْغَدَاءُ", "الْعَشَاءُ"],
+              options: [
+                "الْإِفْطَارُ",
+                "الْغَدَاءُ",
+                "الْعَشَاءُ"
+              ],
               correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f373/512.webp"
             },
             {
               id: "g2u4l1e3",
@@ -893,9 +2731,57 @@ export const grade2: GradeData = {
               skill: "speaking",
               prompt: t("قل وجباتك المفضلة", "Say your favourite meals", "Sebut hidangan kegemaran anda", "Sebutkan makanan favoritmu", "Dis tes repas préférés", "Di tus comidas favoritas"),
               arabicText: "وَجْبَتِي الْمُفَضَّلَةُ هِيَ الْغَدَاءُ مَعَ الْعَائِلَةِ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f371/512.webp"
             },
-          
-            { id: "g2u4l1e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "مَاذَا تُرِيدُ لِلْغَدَاءِ يَا وَلَدِي" },],
+            {
+              id: "g2u4l1e-arrange",
+              type: "arrange",
+              skill: "reading",
+              prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"),
+              answer: "مَاذَا تُرِيدُ لِلْغَدَاءِ يَا وَلَدِي",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f373/512.webp"
+            },
+            {
+              id: "g2u4l1writeg2u4l1v3",
+              type: "writing",
+              skill: "writing",
+              prompt: t("اكتب الكلمة: \"الْعَشَاءُ\"", "Type the Arabic word for: \"dinner\"", "Taip perkataan Arab untuk: \"makan malam\"", "Ketik kata Arab untuk: \"makan malam\"", "Tape le mot arabe pour : \"le dîner\"", "Escribe la palabra árabe para: \"la cena\""),
+              arabicText: "الْعَشَاءُ",
+              answer: "الْعَشَاءُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f37d-fe0f/512.webp"
+            },
+            {
+              id: "g2u4l1writeg2u4l1v5",
+              type: "writing",
+              skill: "writing",
+              prompt: t("اكتب الكلمة: \"لَذِيذٌ\"", "Type the Arabic word for: \"delicious\"", "Taip perkataan Arab untuk: \"sedap\"", "Ketik kata Arab untuk: \"lezat\"", "Tape le mot arabe pour : \"délicieux\"", "Escribe la palabra árabe para: \"delicioso\""),
+              arabicText: "لَذِيذٌ",
+              answer: "لَذِيذٌ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f60b/512.webp"
+            },
+            {
+              id: "g2u4l1listeng2u4l1v1",
+              type: "listening",
+              skill: "listening",
+              prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
+              arabicText: "الْإِفْطَارُ",
+              options: [
+                "الْأُخْتُ",
+                "الْإِفْطَارُ",
+                "الْعَيْنَانِ"
+              ],
+              correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f373/512.webp"
+            },
+            {
+              id: "g2u4l1speakg2u4l1v3",
+              type: "speaking",
+              skill: "speaking",
+              prompt: t("انطق الكلمة", "Say this word", "Sebut perkataan ini", "Ucapkan kata ini", "Dis ce mot", "Di esta palabra"),
+              arabicText: "الْعَشَاءُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f37d-fe0f/512.webp"
+            }
+          ]
         },
         {
           id: "g2u4l2",
@@ -903,21 +2789,48 @@ export const grade2: GradeData = {
           gradeId: "g2",
           order: 2,
           title: t("الْخُضَرُ وَالْفَوَاكِهُ", "Vegetables and Fruits", "Sayur-sayuran dan Buah-buahan", "Sayuran dan Buah-buahan", "Les légumes et les fruits", "Las verduras y las frutas"),
-          skills: ["listening", "speaking", "reading"],
-          intro: t(
-            "الخضروات والفواكه صحية ولذيذة! لنتعلّم أسماءها بالعربية.",
-            "Vegetables and fruits are healthy and delicious! Let's learn their names in Arabic.",
-            "Sayur-sayuran dan buah-buahan sihat dan sedap! Jom belajar nama mereka dalam bahasa Arab.",
-            "Sayuran dan buah-buahan sehat dan lezat! Ayo pelajari nama-namanya dalam bahasa Arab.",
-            "Les légumes et les fruits sont sains et délicieux ! Apprenons leurs noms en arabe.",
-            "¡Las verduras y frutas son sanas y deliciosas! Aprendamos sus nombres en árabe.",
-          ),
+          skills: [
+            "listening",
+            "speaking",
+            "reading"
+          ],
+          intro: t("الخضروات والفواكه صحية ولذيذة! لنتعلّم أسماءها بالعربية.", "Vegetables and fruits are healthy and delicious! Let's learn their names in Arabic.", "Sayur-sayuran dan buah-buahan sihat dan sedap! Jom belajar nama mereka dalam bahasa Arab.", "Sayuran dan buah-buahan sehat dan lezat! Ayo pelajari nama-namanya dalam bahasa Arab.", "Les légumes et les fruits sont sains et délicieux ! Apprenons leurs noms en arabe.", "¡Las verduras y frutas son sanas y deliciosas! Aprendamos sus nombres en árabe."),
           vocabulary: [
-            { id: "g2u4l2v1", arabic: "التُّفَّاحُ", transliteration: "at-tuffāḥ", translation: t("التُّفَّاحُ", "apple", "epal", "apel", "la pomme", "la manzana"), emoji: "🍎" },
-            { id: "g2u4l2v2", arabic: "الْمَوْزُ", transliteration: "al-mawz", translation: t("الْمَوْزُ", "banana", "pisang", "pisang", "la banane", "el plátano"), emoji: "🍌" },
-            { id: "g2u4l2v3", arabic: "الطَّمَاطِمُ", transliteration: "aṭ-ṭamāṭim", translation: t("الطَّمَاطِمُ", "tomatoes", "tomato", "tomat", "les tomates", "los tomates"), emoji: "🍅" },
-            { id: "g2u4l2v4", arabic: "الْجَزَرُ", transliteration: "al-jazar", translation: t("الْجَزَرُ", "carrot", "lobak merah", "wortel", "la carotte", "la zanahoria"), emoji: "🥕" },
-            { id: "g2u4l2v5", arabic: "الْبُرْتُقَالُ", transliteration: "al-burtuqāl", translation: t("الْبُرْتُقَالُ", "orange", "oren", "jeruk", "l'orange", "la naranja"), emoji: "🍊" },
+            {
+              id: "g2u4l2v1",
+              arabic: "التُّفَّاحُ",
+              transliteration: "at-tuffāḥ",
+              translation: t("التُّفَّاحُ", "apple", "epal", "apel", "la pomme", "la manzana"),
+              emoji: "🍎"
+            },
+            {
+              id: "g2u4l2v2",
+              arabic: "الْمَوْزُ",
+              transliteration: "al-mawz",
+              translation: t("الْمَوْزُ", "banana", "pisang", "pisang", "la banane", "el plátano"),
+              emoji: "🍌"
+            },
+            {
+              id: "g2u4l2v3",
+              arabic: "الطَّمَاطِمُ",
+              transliteration: "aṭ-ṭamāṭim",
+              translation: t("الطَّمَاطِمُ", "tomatoes", "tomato", "tomat", "les tomates", "los tomates"),
+              emoji: "🍅"
+            },
+            {
+              id: "g2u4l2v4",
+              arabic: "الْجَزَرُ",
+              transliteration: "al-jazar",
+              translation: t("الْجَزَرُ", "carrot", "lobak merah", "wortel", "la carotte", "la zanahoria"),
+              emoji: "🥕"
+            },
+            {
+              id: "g2u4l2v5",
+              arabic: "الْبُرْتُقَالُ",
+              transliteration: "al-burtuqāl",
+              translation: t("الْبُرْتُقَالُ", "orange", "oren", "jeruk", "l'orange", "la naranja"),
+              emoji: "🍊"
+            }
           ],
           dialogue: [],
           exercises: [
@@ -927,16 +2840,26 @@ export const grade2: GradeData = {
               skill: "listening",
               prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
               arabicText: "الْجَزَرُ",
-              options: ["الطَّمَاطِمُ", "الْجَزَرُ", "التُّفَّاحُ"],
+              options: [
+                "الطَّمَاطِمُ",
+                "الْجَزَرُ",
+                "التُّفَّاحُ"
+              ],
               correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f955/512.webp"
             },
             {
               id: "g2u4l2e2",
               type: "mcq",
               skill: "reading",
               prompt: t("ما الفاكهة الصفراء الطويلة؟", "Which fruit is long and yellow?", "Buah apa yang panjang dan kuning?", "Buah apa yang panjang dan kuning?", "Quel fruit est long et jaune ?", "¿Qué fruta es larga y amarilla?"),
-              options: ["الْمَوْزُ", "التُّفَّاحُ", "الْبُرْتُقَالُ"],
+              options: [
+                "الْمَوْزُ",
+                "التُّفَّاحُ",
+                "الْبُرْتُقَالُ"
+              ],
               correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f34e/512.webp"
             },
             {
               id: "g2u4l2e3",
@@ -944,9 +2867,58 @@ export const grade2: GradeData = {
               skill: "speaking",
               prompt: t("قل فاكهتك المفضلة", "Say your favourite fruit", "Sebut buah kegemaran anda", "Sebutkan buah favoritmu", "Dis ton fruit préféré", "Di tu fruta favorita"),
               arabicText: "أُحِبُّ التُّفَّاحَ لِأَنَّهُ لَذِيذٌ وَصِحِّيٌّ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f34e/512.webp"
             },
-          
-            { id: "g2u4l2e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا التُّفَّاحُ" },],
+            {
+              id: "g2u4l2e-arrange",
+              type: "arrange",
+              skill: "reading",
+              prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"),
+              answer: "هَذَا التُّفَّاحُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f34e/512.webp"
+            },
+            {
+              id: "g2u4l2spellg2u4l2v2",
+              type: "spell",
+              skill: "writing",
+              prompt: t("كون الكلمة من الحروف", "Build the word from the letters", "Bina perkataan dari huruf-huruf", "Susun kata dari huruf-hurufnya", "Forme le mot avec les lettres", "Forma la palabra con las letras"),
+              arabicText: "الْمَوْزُ",
+              answer: "الْمَوْزُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f34c/512.webp"
+            },
+            {
+              id: "g2u4l2speakg2u4l2v5",
+              type: "speaking",
+              skill: "speaking",
+              prompt: t("انطق الكلمة", "Say this word", "Sebut perkataan ini", "Ucapkan kata ini", "Dis ce mot", "Di esta palabra"),
+              arabicText: "الْبُرْتُقَالُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f34a/512.webp"
+            },
+            {
+              id: "g2u4l2mcqg2u4l2v3",
+              type: "mcq",
+              skill: "reading",
+              prompt: t("ماذا تعني كلمة \"الطَّمَاطِمُ\"؟", "What does \"tomatoes\" mean?", "Apakah maksud \"tomato\"?", "Apa arti \"tomat\"?", "Que signifie \"les tomates\" ?", "¿Qué significa \"los tomates\"?"),
+              arabicText: "الطَّمَاطِمُ",
+              options: [
+                "in God's name (before eating)",
+                "banana",
+                "tomatoes",
+                "I love"
+              ],
+              correctIndex: 2,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f345/512.webp"
+            },
+            {
+              id: "g2u4l2spellg2u4l2v4",
+              type: "spell",
+              skill: "writing",
+              prompt: t("كون الكلمة من الحروف", "Build the word from the letters", "Bina perkataan dari huruf-huruf", "Susun kata dari huruf-hurufnya", "Forme le mot avec les lettres", "Forma la palabra con las letras"),
+              arabicText: "الْجَزَرُ",
+              answer: "الْجَزَرُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f955/512.webp"
+            }
+          ]
         },
         {
           id: "g2u4l3",
@@ -954,21 +2926,48 @@ export const grade2: GradeData = {
           gradeId: "g2",
           order: 3,
           title: t("أَشْرَبُ مَاذَا؟", "What Do I Drink?", "Saya Minum Apa?", "Saya Minum Apa?", "Que bois-je ?", "¿Qué bebo?"),
-          skills: ["listening", "speaking", "reading"],
-          intro: t(
-            "الشراب الصحي يحفظ صحتنا! لنتعلّم أسماء المشروبات.",
-            "Healthy drinks maintain our health! Let's learn the names of beverages.",
-            "Minuman sihat menjaga kesihatan kita! Jom belajar nama-nama minuman.",
-            "Minuman sehat menjaga kesehatan kita! Ayo pelajari nama-nama minuman.",
-            "Les boissons saines maintiennent notre santé ! Apprenons les noms des boissons.",
-            "¡Las bebidas saludables mantienen nuestra salud! Aprendamos los nombres de las bebidas.",
-          ),
+          skills: [
+            "listening",
+            "speaking",
+            "reading"
+          ],
+          intro: t("الشراب الصحي يحفظ صحتنا! لنتعلّم أسماء المشروبات.", "Healthy drinks maintain our health! Let's learn the names of beverages.", "Minuman sihat menjaga kesihatan kita! Jom belajar nama-nama minuman.", "Minuman sehat menjaga kesehatan kita! Ayo pelajari nama-nama minuman.", "Les boissons saines maintiennent notre santé ! Apprenons les noms des boissons.", "¡Las bebidas saludables mantienen nuestra salud! Aprendamos los nombres de las bebidas."),
           vocabulary: [
-            { id: "g2u4l3v1", arabic: "الْمَاءُ", transliteration: "al-māʾ", translation: t("الْمَاءُ", "water", "air", "air", "l'eau", "el agua"), emoji: "💧" },
-            { id: "g2u4l3v2", arabic: "الْحَلِيبُ", transliteration: "al-ḥalīb", translation: t("الْحَلِيبُ", "milk", "susu", "susu", "le lait", "la leche"), emoji: "🥛" },
-            { id: "g2u4l3v3", arabic: "عَصِيرُ الْبُرْتُقَالِ", transliteration: "ʿaṣīru l-burtuqāl", translation: t("عَصِيرُ الْبُرْتُقَالِ", "orange juice", "jus oren", "jus jeruk", "le jus d'orange", "el zumo de naranja"), emoji: "🍊" },
-            { id: "g2u4l3v4", arabic: "أَشْرَبُ", transliteration: "ashrabu", translation: t("أَشْرَبُ", "I drink", "saya minum", "saya minum", "je bois", "bebo"), emoji: "🥤" },
-            { id: "g2u4l3v5", arabic: "مُنَعِّشٌ", transliteration: "munaʿʿish", translation: t("مُنَعِّشٌ", "refreshing", "menyegarkan", "menyegarkan", "rafraîchissant", "refrescante"), emoji: "🌟" },
+            {
+              id: "g2u4l3v1",
+              arabic: "الْمَاءُ",
+              transliteration: "al-māʾ",
+              translation: t("الْمَاءُ", "water", "air", "air", "l'eau", "el agua"),
+              emoji: "💧"
+            },
+            {
+              id: "g2u4l3v2",
+              arabic: "الْحَلِيبُ",
+              transliteration: "al-ḥalīb",
+              translation: t("الْحَلِيبُ", "milk", "susu", "susu", "le lait", "la leche"),
+              emoji: "🥛"
+            },
+            {
+              id: "g2u4l3v3",
+              arabic: "عَصِيرُ الْبُرْتُقَالِ",
+              transliteration: "ʿaṣīru l-burtuqāl",
+              translation: t("عَصِيرُ الْبُرْتُقَالِ", "orange juice", "jus oren", "jus jeruk", "le jus d'orange", "el zumo de naranja"),
+              emoji: "🍊"
+            },
+            {
+              id: "g2u4l3v4",
+              arabic: "أَشْرَبُ",
+              transliteration: "ashrabu",
+              translation: t("أَشْرَبُ", "I drink", "saya minum", "saya minum", "je bois", "bebo"),
+              emoji: "🥤"
+            },
+            {
+              id: "g2u4l3v5",
+              arabic: "مُنَعِّشٌ",
+              transliteration: "munaʿʿish",
+              translation: t("مُنَعِّشٌ", "refreshing", "menyegarkan", "menyegarkan", "rafraîchissant", "refrescante"),
+              emoji: "🌟"
+            }
           ],
           dialogue: [],
           exercises: [
@@ -978,16 +2977,26 @@ export const grade2: GradeData = {
               skill: "listening",
               prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
               arabicText: "الْحَلِيبُ",
-              options: ["الْمَاءُ", "الْحَلِيبُ", "عَصِيرُ الْبُرْتُقَالِ"],
+              options: [
+                "الْمَاءُ",
+                "الْحَلِيبُ",
+                "عَصِيرُ الْبُرْتُقَالِ"
+              ],
               correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f95b/512.webp"
             },
             {
               id: "g2u4l3e2",
               type: "mcq",
               skill: "reading",
               prompt: t("ما أفضل مشروب للصحة؟", "What is the best drink for health?", "Apa minuman terbaik untuk kesihatan?", "Apa minuman terbaik untuk kesehatan?", "Quelle est la meilleure boisson pour la santé ?", "¿Cuál es la mejor bebida para la salud?"),
-              options: ["الْمَاءُ", "الْعَصِيرُ الصِّنَاعِيُّ", "الْمَشْرُوبَاتُ الْغَازِيَّةُ"],
+              options: [
+                "الْمَاءُ",
+                "الْعَصِيرُ الصِّنَاعِيُّ",
+                "الْمَشْرُوبَاتُ الْغَازِيَّةُ"
+              ],
               correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f4a7/512.webp"
             },
             {
               id: "g2u4l3e3",
@@ -995,9 +3004,69 @@ export const grade2: GradeData = {
               skill: "speaking",
               prompt: t("قل مشروبك المفضل", "Say your favourite drink", "Sebut minuman kegemaran anda", "Sebutkan minuman favoritmu", "Dis ta boisson préférée", "Di tu bebida favorita"),
               arabicText: "مَشْرُوبِي الْمُفَضَّلُ هُوَ الْمَاءُ لِأَنَّهُ صِحِّيٌّ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f4a7/512.webp"
             },
-          
-            { id: "g2u4l3e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا الْمَاءُ" },],
+            {
+              id: "g2u4l3e-arrange",
+              type: "arrange",
+              skill: "reading",
+              prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"),
+              answer: "هَذَا الْمَاءُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f4a7/512.webp"
+            },
+            {
+              id: "g2u4l3listeng2u4l3v5",
+              type: "listening",
+              skill: "listening",
+              prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
+              arabicText: "مُنَعِّشٌ",
+              options: [
+                "الْخَالُ",
+                "يَسْكُنُ",
+                "مُنَعِّشٌ"
+              ],
+              correctIndex: 2,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f31f/512.webp"
+            },
+            {
+              id: "g2u4l3mcqg2u4l3v2",
+              type: "mcq",
+              skill: "reading",
+              prompt: t("ماذا تعني كلمة \"الْحَلِيبُ\"؟", "What does \"milk\" mean?", "Apakah maksud \"susu\"?", "Apa arti \"susu\"?", "Que signifie \"le lait\" ?", "¿Qué significa \"la leche\"?"),
+              arabicText: "الْحَلِيبُ",
+              options: [
+                "milk",
+                "I clean myself",
+                "in God's name (before eating)",
+                "book"
+              ],
+              correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f95b/512.webp"
+            },
+            {
+              id: "g2u4l3writeg2u4l3v4",
+              type: "writing",
+              skill: "writing",
+              prompt: t("اكتب الكلمة: \"أَشْرَبُ\"", "Type the Arabic word for: \"I drink\"", "Taip perkataan Arab untuk: \"saya minum\"", "Ketik kata Arab untuk: \"saya minum\"", "Tape le mot arabe pour : \"je bois\"", "Escribe la palabra árabe para: \"bebo\""),
+              arabicText: "أَشْرَبُ",
+              answer: "أَشْرَبُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f964/512.webp"
+            },
+            {
+              id: "g2u4l3listeng2u4l3v4",
+              type: "listening",
+              skill: "listening",
+              prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
+              arabicText: "أَشْرَبُ",
+              options: [
+                "رَأْسِي يُؤْلِمُنِي",
+                "أَشْرَبُ",
+                "الْمَحَّايَةُ"
+              ],
+              correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f964/512.webp"
+            }
+          ]
         },
         {
           id: "g2u4l4",
@@ -1005,21 +3074,48 @@ export const grade2: GradeData = {
           gradeId: "g2",
           order: 4,
           title: t("نَأْكُلُ بِأَدَبٍ", "We Eat Politely", "Kita Makan dengan Sopan", "Kita Makan dengan Sopan", "On mange poliment", "Comemos con educación"),
-          skills: ["listening", "speaking", "reading"],
-          intro: t(
-            "آداب الطعام تدل على حسن التربية! لنتعلّم كيف نأكل بأدب.",
-            "Table manners show good upbringing! Let's learn how to eat politely.",
-            "Adab makan menunjukkan didikan yang baik! Jom belajar cara makan dengan sopan.",
-            "Adab makan menunjukkan pendidikan yang baik! Ayo pelajari cara makan dengan sopan.",
-            "Les bonnes manières à table montrent une bonne éducation ! Apprenons à manger poliment.",
-            "¡Los modales en la mesa muestran buena educación! Aprendamos a comer con educación.",
-          ),
+          skills: [
+            "listening",
+            "speaking",
+            "reading"
+          ],
+          intro: t("آداب الطعام تدل على حسن التربية! لنتعلّم كيف نأكل بأدب.", "Table manners show good upbringing! Let's learn how to eat politely.", "Adab makan menunjukkan didikan yang baik! Jom belajar cara makan dengan sopan.", "Adab makan menunjukkan pendidikan yang baik! Ayo pelajari cara makan dengan sopan.", "Les bonnes manières à table montrent une bonne éducation ! Apprenons à manger poliment.", "¡Los modales en la mesa muestran buena educación! Aprendamos a comer con educación."),
           vocabulary: [
-            { id: "g2u4l4v1", arabic: "بِسْمِ اللهِ", transliteration: "bismi llāh", translation: t("بِسْمِ اللهِ", "in God's name (before eating)", "Bismillah", "Bismillah", "Au nom de Dieu", "En nombre de Dios"), emoji: "🤲" },
-            { id: "g2u4l4v2", arabic: "شُكْرًا", transliteration: "shukran", translation: t("شُكْرًا", "thank you", "terima kasih", "terima kasih", "merci", "gracias"), emoji: "🙏" },
-            { id: "g2u4l4v3", arabic: "أَتَنَاوَلُ بِالْيَمِينِ", transliteration: "atanāwalu bil-yamīn", translation: t("أَتَنَاوَلُ بِالْيَمِينِ", "I eat with my right hand", "saya makan dengan tangan kanan", "saya makan dengan tangan kanan", "je mange avec la main droite", "como con la mano derecha"), emoji: "✋" },
-            { id: "g2u4l4v4", arabic: "لَا أُسْرِفُ", transliteration: "lā usrifu", translation: t("لَا أُسْرِفُ", "I don't waste", "saya tidak membazir", "saya tidak boros", "je ne gaspille pas", "no desperdicio"), emoji: "♻️" },
-            { id: "g2u4l4v5", arabic: "الْحَمْدُ لِلَّهِ", transliteration: "al-ḥamdu lillāh", translation: t("الْحَمْدُ لِلَّهِ", "praise God (after eating)", "Alhamdulillah", "Alhamdulillah", "Louange à Dieu", "Alabado sea Dios"), emoji: "😊" },
+            {
+              id: "g2u4l4v1",
+              arabic: "بِسْمِ اللهِ",
+              transliteration: "bismi llāh",
+              translation: t("بِسْمِ اللهِ", "in God's name (before eating)", "Bismillah", "Bismillah", "Au nom de Dieu", "En nombre de Dios"),
+              emoji: "🤲"
+            },
+            {
+              id: "g2u4l4v2",
+              arabic: "شُكْرًا",
+              transliteration: "shukran",
+              translation: t("شُكْرًا", "thank you", "terima kasih", "terima kasih", "merci", "gracias"),
+              emoji: "🙏"
+            },
+            {
+              id: "g2u4l4v3",
+              arabic: "أَتَنَاوَلُ بِالْيَمِينِ",
+              transliteration: "atanāwalu bil-yamīn",
+              translation: t("أَتَنَاوَلُ بِالْيَمِينِ", "I eat with my right hand", "saya makan dengan tangan kanan", "saya makan dengan tangan kanan", "je mange avec la main droite", "como con la mano derecha"),
+              emoji: "✋"
+            },
+            {
+              id: "g2u4l4v4",
+              arabic: "لَا أُسْرِفُ",
+              transliteration: "lā usrifu",
+              translation: t("لَا أُسْرِفُ", "I don't waste", "saya tidak membazir", "saya tidak boros", "je ne gaspille pas", "no desperdicio"),
+              emoji: "♻️"
+            },
+            {
+              id: "g2u4l4v5",
+              arabic: "الْحَمْدُ لِلَّهِ",
+              transliteration: "al-ḥamdu lillāh",
+              translation: t("الْحَمْدُ لِلَّهِ", "praise God (after eating)", "Alhamdulillah", "Alhamdulillah", "Louange à Dieu", "Alabado sea Dios"),
+              emoji: "😊"
+            }
           ],
           dialogue: [],
           exercises: [
@@ -1029,16 +3125,26 @@ export const grade2: GradeData = {
               skill: "listening",
               prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
               arabicText: "الْحَمْدُ لِلَّهِ",
-              options: ["بِسْمِ اللهِ", "شُكْرًا", "الْحَمْدُ لِلَّهِ"],
+              options: [
+                "بِسْمِ اللهِ",
+                "شُكْرًا",
+                "الْحَمْدُ لِلَّهِ"
+              ],
               correctIndex: 2,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f60a/512.webp"
             },
             {
               id: "g2u4l4e2",
               type: "mcq",
               skill: "reading",
               prompt: t("ماذا نقول قبل الأكل؟", "What do we say before eating?", "Apa yang kita ucap sebelum makan?", "Apa yang kita ucapkan sebelum makan?", "Que dit-on avant de manger ?", "¿Qué decimos antes de comer?"),
-              options: ["بِسْمِ اللهِ", "الْحَمْدُ لِلَّهِ", "شُكْرًا"],
+              options: [
+                "بِسْمِ اللهِ",
+                "الْحَمْدُ لِلَّهِ",
+                "شُكْرًا"
+              ],
               correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f932/512.webp"
             },
             {
               id: "g2u4l4e3",
@@ -1046,9 +3152,63 @@ export const grade2: GradeData = {
               skill: "speaking",
               prompt: t("قل آداب الطعام التي تعرفها", "Say the table manners you know", "Sebut adab makan yang anda tahu", "Sebutkan adab makan yang kamu ketahui", "Dis les bonnes manières à table que tu connais", "Di los modales en la mesa que conoces"),
               arabicText: "آكُلُ بِالْيَمِينِ وَأَقُولُ بِسْمِ اللهِ قَبْلَ الْأَكْلِ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f932/512.webp"
             },
-          
-            { id: "g2u4l4e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا بِسْمِ اللهِ" },],
+            {
+              id: "g2u4l4e-arrange",
+              type: "arrange",
+              skill: "reading",
+              prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"),
+              answer: "هَذَا بِسْمِ اللهِ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f932/512.webp"
+            },
+            {
+              id: "g2u4l4speakg2u4l4v4",
+              type: "speaking",
+              skill: "speaking",
+              prompt: t("انطق الكلمة", "Say this word", "Sebut perkataan ini", "Ucapkan kata ini", "Dis ce mot", "Di esta palabra"),
+              arabicText: "لَا أُسْرِفُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/267b-fe0f/512.webp"
+            },
+            {
+              id: "g2u4l4spellg2u4l4v5",
+              type: "spell",
+              skill: "writing",
+              prompt: t("كون الكلمة من الحروف", "Build the word from the letters", "Bina perkataan dari huruf-huruf", "Susun kata dari huruf-hurufnya", "Forme le mot avec les lettres", "Forma la palabra con las letras"),
+              arabicText: "الْحَمْدُ لِلَّهِ",
+              answer: "الْحَمْدُ لِلَّهِ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f60a/512.webp"
+            },
+            {
+              id: "g2u4l4listeng2u4l4v1",
+              type: "listening",
+              skill: "listening",
+              prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
+              arabicText: "بِسْمِ اللهِ",
+              options: [
+                "بِسْمِ اللهِ",
+                "أَزُورُهُمْ",
+                "الطَّعَامُ الطَّازَجُ"
+              ],
+              correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f932/512.webp"
+            },
+            {
+              id: "g2u4l4mcqg2u4l4v3",
+              type: "mcq",
+              skill: "reading",
+              prompt: t("ماذا تعني كلمة \"أَتَنَاوَلُ بِالْيَمِينِ\"؟", "What does \"I eat with my right hand\" mean?", "Apakah maksud \"saya makan dengan tangan kanan\"?", "Apa arti \"saya makan dengan tangan kanan\"?", "Que signifie \"je mange avec la main droite\" ?", "¿Qué significa \"como con la mano derecha\"?"),
+              arabicText: "أَتَنَاوَلُ بِالْيَمِينِ",
+              options: [
+                "I answer",
+                "I love",
+                "I eat with my right hand",
+                "healthy"
+              ],
+              correctIndex: 2,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/270b/512.webp"
+            }
+          ]
         },
         {
           id: "g2u4l5",
@@ -1056,21 +3216,48 @@ export const grade2: GradeData = {
           gradeId: "g2",
           order: 5,
           title: t("طَعَامٌ صِحِّيٌّ", "Healthy Food", "Makanan Sihat", "Makanan Sehat", "Nourriture saine", "Comida saludable"),
-          skills: ["listening", "speaking", "reading"],
-          intro: t(
-            "الطعام الصحي هو طريقنا للصحة! لنتعلّم الفرق بين الطعام الصحي وغير الصحي.",
-            "Healthy food is our path to health! Let's learn the difference between healthy and unhealthy food.",
-            "Makanan sihat adalah laluan kita menuju kesihatan! Jom belajar beza makanan sihat dan tidak sihat.",
-            "Makanan sehat adalah jalan kita menuju kesehatan! Ayo pelajari perbedaan makanan sehat dan tidak sehat.",
-            "La nourriture saine est notre chemin vers la santé ! Apprenons la différence entre aliments sains et non sains.",
-            "¡La comida saludable es nuestro camino hacia la salud! Aprendamos la diferencia entre comida sana y no sana.",
-          ),
+          skills: [
+            "listening",
+            "speaking",
+            "reading"
+          ],
+          intro: t("الطعام الصحي هو طريقنا للصحة! لنتعلّم الفرق بين الطعام الصحي وغير الصحي.", "Healthy food is our path to health! Let's learn the difference between healthy and unhealthy food.", "Makanan sihat adalah laluan kita menuju kesihatan! Jom belajar beza makanan sihat dan tidak sihat.", "Makanan sehat adalah jalan kita menuju kesehatan! Ayo pelajari perbedaan makanan sehat dan tidak sehat.", "La nourriture saine est notre chemin vers la santé ! Apprenons la différence entre aliments sains et non sains.", "¡La comida saludable es nuestro camino hacia la salud! Aprendamos la diferencia entre comida sana y no sana."),
           vocabulary: [
-            { id: "g2u4l5v1", arabic: "صِحِّيٌّ", transliteration: "ṣiḥḥiyy", translation: t("صِحِّيٌّ", "healthy", "sihat", "sehat", "sain", "saludable"), emoji: "💚" },
-            { id: "g2u4l5v2", arabic: "غَيْرُ صِحِّيٍّ", transliteration: "ghayru ṣiḥḥiyy", translation: t("غَيْرُ صِحِّيٍّ", "unhealthy", "tidak sihat", "tidak sehat", "malsain", "no saludable"), emoji: "🔴" },
-            { id: "g2u4l5v3", arabic: "الطَّعَامُ الطَّازَجُ", transliteration: "aṭ-ṭaʿāmu ṭ-ṭāzaj", translation: t("الطَّعَامُ الطَّازَجُ", "fresh food", "makanan segar", "makanan segar", "la nourriture fraîche", "la comida fresca"), emoji: "🥗" },
-            { id: "g2u4l5v4", arabic: "نَخْتَارُ", transliteration: "nakhṭāru", translation: t("نَخْتَارُ", "we choose", "kita pilih", "kita pilih", "nous choisissons", "elegimos"), emoji: "👆" },
-            { id: "g2u4l5v5", arabic: "جَيِّدٌ لِلصِّحَّةِ", transliteration: "jayyidun liṣ-ṣiḥḥa", translation: t("جَيِّدٌ لِلصِّحَّةِ", "good for health", "baik untuk kesihatan", "baik untuk kesehatan", "bon pour la santé", "bueno para la salud"), emoji: "✅" },
+            {
+              id: "g2u4l5v1",
+              arabic: "صِحِّيٌّ",
+              transliteration: "ṣiḥḥiyy",
+              translation: t("صِحِّيٌّ", "healthy", "sihat", "sehat", "sain", "saludable"),
+              emoji: "💚"
+            },
+            {
+              id: "g2u4l5v2",
+              arabic: "غَيْرُ صِحِّيٍّ",
+              transliteration: "ghayru ṣiḥḥiyy",
+              translation: t("غَيْرُ صِحِّيٍّ", "unhealthy", "tidak sihat", "tidak sehat", "malsain", "no saludable"),
+              emoji: "🔴"
+            },
+            {
+              id: "g2u4l5v3",
+              arabic: "الطَّعَامُ الطَّازَجُ",
+              transliteration: "aṭ-ṭaʿāmu ṭ-ṭāzaj",
+              translation: t("الطَّعَامُ الطَّازَجُ", "fresh food", "makanan segar", "makanan segar", "la nourriture fraîche", "la comida fresca"),
+              emoji: "🥗"
+            },
+            {
+              id: "g2u4l5v4",
+              arabic: "نَخْتَارُ",
+              transliteration: "nakhṭāru",
+              translation: t("نَخْتَارُ", "we choose", "kita pilih", "kita pilih", "nous choisissons", "elegimos"),
+              emoji: "👆"
+            },
+            {
+              id: "g2u4l5v5",
+              arabic: "جَيِّدٌ لِلصِّحَّةِ",
+              transliteration: "jayyidun liṣ-ṣiḥḥa",
+              translation: t("جَيِّدٌ لِلصِّحَّةِ", "good for health", "baik untuk kesihatan", "baik untuk kesehatan", "bon pour la santé", "bueno para la salud"),
+              emoji: "✅"
+            }
           ],
           dialogue: [],
           exercises: [
@@ -1080,16 +3267,26 @@ export const grade2: GradeData = {
               skill: "listening",
               prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
               arabicText: "صِحِّيٌّ",
-              options: ["غَيْرُ صِحِّيٍّ", "صِحِّيٌّ", "نَخْتَارُ"],
+              options: [
+                "غَيْرُ صِحِّيٍّ",
+                "صِحِّيٌّ",
+                "نَخْتَارُ"
+              ],
               correctIndex: 1,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f49a/512.webp"
             },
             {
               id: "g2u4l5e2",
               type: "mcq",
               skill: "reading",
               prompt: t("ما الطعام الأفضل للصحة؟", "Which food is best for health?", "Makanan apa yang terbaik untuk kesihatan?", "Makanan apa yang terbaik untuk kesehatan?", "Quel aliment est le meilleur pour la santé ?", "¿Qué comida es mejor para la salud?"),
-              options: ["الْخُضَرُ وَالْفَوَاكِهُ", "الْحَلْوَى الْكَثِيرَةُ", "الطَّعَامُ الْمَقْلِيُّ دَائِمًا"],
+              options: [
+                "الْخُضَرُ وَالْفَوَاكِهُ",
+                "الْحَلْوَى الْكَثِيرَةُ",
+                "الطَّعَامُ الْمَقْلِيُّ دَائِمًا"
+              ],
               correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f49a/512.webp"
             },
             {
               id: "g2u4l5e3",
@@ -1097,11 +3294,207 @@ export const grade2: GradeData = {
               skill: "speaking",
               prompt: t("قل لماذا نختار الطعام الصحي", "Say why we choose healthy food", "Sebut kenapa kita pilih makanan sihat", "Sebutkan mengapa kita memilih makanan sehat", "Dis pourquoi on choisit une nourriture saine", "Di por qué elegimos comida saludable"),
               arabicText: "نَخْتَارُ الطَّعَامَ الصِّحِّيَّ لِأَنَّهُ جَيِّدٌ لِصِحَّتِنَا",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f446/512.webp"
             },
-          
-            { id: "g2u4l5e-arrange", type: "arrange", skill: "reading", prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"), answer: "هَذَا صِحِّيٌّ" },],
+            {
+              id: "g2u4l5e-arrange",
+              type: "arrange",
+              skill: "reading",
+              prompt: t("رتّب الكلمات لتكوّن جملة", "Arrange the words to make a sentence", "Susun perkataan untuk membina ayat", "Susun kata untuk membuat kalimat", "Rangez les mots pour former une phrase", "Ordena las palabras para formar una oración"),
+              answer: "هَذَا صِحِّيٌّ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f49a/512.webp"
+            },
+            {
+              id: "g2u4l5speakg2u4l5v4",
+              type: "speaking",
+              skill: "speaking",
+              prompt: t("انطق الكلمة", "Say this word", "Sebut perkataan ini", "Ucapkan kata ini", "Dis ce mot", "Di esta palabra"),
+              arabicText: "نَخْتَارُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f446/512.webp"
+            },
+            {
+              id: "g2u4l5writeg2u4l5v3",
+              type: "writing",
+              skill: "writing",
+              prompt: t("اكتب الكلمة: \"الطَّعَامُ الطَّازَجُ\"", "Type the Arabic word for: \"fresh food\"", "Taip perkataan Arab untuk: \"makanan segar\"", "Ketik kata Arab untuk: \"makanan segar\"", "Tape le mot arabe pour : \"la nourriture fraîche\"", "Escribe la palabra árabe para: \"la comida fresca\""),
+              arabicText: "الطَّعَامُ الطَّازَجُ",
+              answer: "الطَّعَامُ الطَّازَجُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f957/512.webp"
+            },
+            {
+              id: "g2u4l5speakg2u4l5v5",
+              type: "speaking",
+              skill: "speaking",
+              prompt: t("انطق الكلمة", "Say this word", "Sebut perkataan ini", "Ucapkan kata ini", "Dis ce mot", "Di esta palabra"),
+              arabicText: "جَيِّدٌ لِلصِّحَّةِ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/2705/512.webp"
+            },
+            {
+              id: "g2u4l5listeng2u4l5v4",
+              type: "listening",
+              skill: "listening",
+              prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
+              arabicText: "نَخْتَارُ",
+              options: [
+                "الدَّوَاءُ",
+                "سَعِيدٌ",
+                "نَخْتَارُ"
+              ],
+              correctIndex: 2,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f446/512.webp"
+            }
+          ]
         },
-      ],
-    },
-  ],
+        {
+          id: "g2u4review",
+          unitId: "g2u4",
+          gradeId: "g2",
+          order: 6,
+          title: t("مراجعة الوحدة", "Unit Review", "Ulangan Unit", "Ulangan Unit", "Révision de l’unité", "Revisión de la unidad"),
+          skills: [
+            "listening",
+            "reading",
+            "writing"
+          ],
+          intro: t("لنراجع ما تعلّمناه في هذه الوحدة!", "Let’s review what we learned in this unit!", "Mari ulangkaji apa yang kita pelajari dalam unit ini!", "Mari kita ulang apa yang kita pelajari dalam unit ini!", "Révisons ce que nous avons appris dans cette unité !", "¡Repasemos lo que aprendimos en esta unidad!"),
+          vocabulary: [
+            {
+              id: "g2u4l1v1",
+              arabic: "الْإِفْطَارُ",
+              transliteration: "al-ifṭār",
+              translation: t("الْإِفْطَارُ", "breakfast", "sarapan", "sarapan pagi", "le petit-déjeuner", "el desayuno"),
+              emoji: "🍳"
+            },
+            {
+              id: "g2u4l1v2",
+              arabic: "الْغَدَاءُ",
+              transliteration: "al-ghadāʾ",
+              translation: t("الْغَدَاءُ", "lunch", "makan tengahari", "makan siang", "le déjeuner", "el almuerzo"),
+              emoji: "🍱"
+            },
+            {
+              id: "g2u4l1v3",
+              arabic: "الْعَشَاءُ",
+              transliteration: "al-ʿashāʾ",
+              translation: t("الْعَشَاءُ", "dinner", "makan malam", "makan malam", "le dîner", "la cena"),
+              emoji: "🍽️"
+            },
+            {
+              id: "g2u4l1v4",
+              arabic: "أَتَنَاوَلُ",
+              transliteration: "atanāwalu",
+              translation: t("أَتَنَاوَلُ", "I eat/have", "saya makan", "saya makan", "je prends", "tomo"),
+              emoji: "🥄"
+            },
+            {
+              id: "g2u4l1v5",
+              arabic: "لَذِيذٌ",
+              transliteration: "ladhīdh",
+              translation: t("لَذِيذٌ", "delicious", "sedap", "lezat", "délicieux", "delicioso"),
+              emoji: "😋"
+            },
+            {
+              id: "g2u4l2v1",
+              arabic: "التُّفَّاحُ",
+              transliteration: "at-tuffāḥ",
+              translation: t("التُّفَّاحُ", "apple", "epal", "apel", "la pomme", "la manzana"),
+              emoji: "🍎"
+            },
+            {
+              id: "g2u4l2v2",
+              arabic: "الْمَوْزُ",
+              transliteration: "al-mawz",
+              translation: t("الْمَوْزُ", "banana", "pisang", "pisang", "la banane", "el plátano"),
+              emoji: "🍌"
+            },
+            {
+              id: "g2u4l2v3",
+              arabic: "الطَّمَاطِمُ",
+              transliteration: "aṭ-ṭamāṭim",
+              translation: t("الطَّمَاطِمُ", "tomatoes", "tomato", "tomat", "les tomates", "los tomates"),
+              emoji: "🍅"
+            }
+          ],
+          dialogue: [],
+          exercises: [
+            {
+              id: "g2u4reviewmcqg2u4l1v2",
+              type: "mcq",
+              skill: "reading",
+              prompt: t("ماذا تعني كلمة \"الْغَدَاءُ\"؟", "What does \"lunch\" mean?", "Apakah maksud \"makan tengahari\"?", "Apa arti \"makan siang\"?", "Que signifie \"le déjeuner\" ?", "¿Qué significa \"el almuerzo\"?"),
+              arabicText: "الْغَدَاءُ",
+              options: [
+                "unhealthy",
+                "uncle (maternal)",
+                "orange",
+                "lunch"
+              ],
+              correctIndex: 3,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f371/512.webp"
+            },
+            {
+              id: "g2u4reviewmcqg2u4l1v3",
+              type: "mcq",
+              skill: "reading",
+              prompt: t("ماذا تعني كلمة \"الْعَشَاءُ\"؟", "What does \"dinner\" mean?", "Apakah maksud \"makan malam\"?", "Apa arti \"makan malam\"?", "Que signifie \"le dîner\" ?", "¿Qué significa \"la cena\"?"),
+              arabicText: "الْعَشَاءُ",
+              options: [
+                "I eat with my right hand",
+                "carrot",
+                "grandfather",
+                "dinner"
+              ],
+              correctIndex: 3,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f37d-fe0f/512.webp"
+            },
+            {
+              id: "g2u4reviewspeakg2u4l1v4",
+              type: "speaking",
+              skill: "speaking",
+              prompt: t("انطق الكلمة", "Say this word", "Sebut perkataan ini", "Ucapkan kata ini", "Dis ce mot", "Di esta palabra"),
+              arabicText: "أَتَنَاوَلُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f944/512.webp"
+            },
+            {
+              id: "g2u4reviewlisteng2u4l2v3",
+              type: "listening",
+              skill: "listening",
+              prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
+              arabicText: "الطَّمَاطِمُ",
+              options: [
+                "الطَّمَاطِمُ",
+                "أُجِيبُ",
+                "الْغَدَاءُ"
+              ],
+              correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f345/512.webp"
+            },
+            {
+              id: "g2u4reviewwriteg2u4l2v1",
+              type: "writing",
+              skill: "writing",
+              prompt: t("اكتب الكلمة: \"التُّفَّاحُ\"", "Type the Arabic word for: \"apple\"", "Taip perkataan Arab untuk: \"epal\"", "Ketik kata Arab untuk: \"apel\"", "Tape le mot arabe pour : \"la pomme\"", "Escribe la palabra árabe para: \"la manzana\""),
+              arabicText: "التُّفَّاحُ",
+              answer: "التُّفَّاحُ",
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f34e/512.webp"
+            },
+            {
+              id: "g2u4reviewlisteng2u4l2v2",
+              type: "listening",
+              skill: "listening",
+              prompt: t("استمع واختر الكلمة الصحيحة", "Listen and choose the correct word", "Dengar dan pilih perkataan yang betul", "Dengarkan dan pilih kata yang benar", "Écoute et choisis le bon mot", "Escucha y elige la palabra correcta"),
+              arabicText: "الْمَوْزُ",
+              options: [
+                "الْمَوْزُ",
+                "صِحِّيٌّ",
+                "أُعِدُّ"
+              ],
+              correctIndex: 0,
+              imageUrl: "https://fonts.gstatic.com/s/e/notoemoji/latest/1f34c/512.webp"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 };

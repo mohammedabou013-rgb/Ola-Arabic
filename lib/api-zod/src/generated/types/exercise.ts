@@ -10,7 +10,7 @@ import type { LocalizedText } from './localizedText';
 
 export interface Exercise {
   id: string;
-  /** One of mcq, listening, speaking, writing, matching, arrange */
+  /** One of mcq, listening, speaking, writing, matching, arrange, fill_in_blank, spell */
   type: string;
   /** One of listening, speaking, reading, writing */
   skill: string;

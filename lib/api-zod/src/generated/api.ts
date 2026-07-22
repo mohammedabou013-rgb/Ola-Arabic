@@ -243,7 +243,7 @@ export const GetLessonResponse = zod.object({
 })),
   "exercises": zod.array(zod.object({
   "id": zod.string(),
-  "type": zod.string().describe('One of mcq, listening, speaking, writing, matching, arrange'),
+  "type": zod.string().describe('One of mcq, listening, speaking, writing, matching, arrange, fill_in_blank, spell'),
   "skill": zod.string().describe('One of listening, speaking, reading, writing'),
   "prompt": zod.object({
   "ar": zod.string(),

@@ -19,7 +19,7 @@
     },
     "android": {
       "package": "com.olaarabic.mobile",
-      "versionCode": 4,
+      "versionCode": 5,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"

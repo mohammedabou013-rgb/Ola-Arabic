@@ -296,7 +296,7 @@ components:
         id: { type: string }
         type:
           type: string
-          description: One of mcq, listening, speaking, writing, matching, arrange
+          description: One of mcq, listening, speaking, writing, matching, arrange, fill_in_blank, spell
         skill:
           type: string
           description: One of listening, speaking, reading, writing

@@ -23,6 +23,7 @@ import { getCurriculum } from '@/lib/curriculum';
 import { fetchJson } from '@/lib/api';
 import { Feather } from '@expo/vector-icons';
 import * as Speech from 'expo-speech';
+import { useAudioRecorder, RecordingPresets, AudioModule } from 'expo-audio';
 
 type Stage = 'intro' | 'vocab' | 'dialogue' | 'exercises' | 'summary';
 
@@ -73,12 +74,29 @@ export default function LessonScreen() {
   const [subIndex, setSubIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [feedback, setFeedback] = useState<'correct' | 'wrong' | null>(null);
+  const [attempts, setAttempts] = useState(0);
+  const [skipped, setSkipped] = useState<string[]>([]);
+  const [exercises, setExercises] = useState(lesson?.exercises || []);
+  const recorder = useAudioRecorder(RecordingPresets.HIGH_QUALITY);
 
   useEffect(() => {
     return () => {
       Speech.stop();
+      if (recorder.isRecording) {
+        recorder.stop().catch(() => {});
+      }
     };
-  }, []);
+  }, [recorder]);
+
+  useEffect(() => {
+    if (!lesson) return;
+    setSubIndex(0);
+    setScore(0);
+    setFeedback(null);
+    setAttempts(0);
+    setSkipped([]);
+    setExercises(lesson.exercises);
+  }, [lesson]);
 
   if (isLoading || !lesson) {
     return (
@@ -94,8 +112,28 @@ export default function LessonScreen() {
     Speech.speak(text, { language: 'ar', rate: 0.85 });
   };
 
+  const handleHome = () => {
+    if (lesson.gradeId) router.push(`/grade/${lesson.gradeId}`);
+    else router.back();
+  };
+
+  const handleSkip = () => {
+    const current = exercises[subIndex];
+    if (current && !skipped.includes(current.id)) {
+      setSkipped((s) => [...s, current.id]);
+    }
+    setFeedback(null);
+    setAttempts(0);
+    handleNext();
+  };
+
+  const handleRetry = () => {
+    setFeedback(null);
+  };
+
   const handleNext = () => {
     setFeedback(null);
+    setAttempts(0);
     Speech.stop();
     if (stage === 'intro') {
       if (lesson.vocabulary?.length) setStage('vocab');
@@ -116,13 +154,22 @@ export default function LessonScreen() {
         setSubIndex(0);
       }
     } else if (stage === 'exercises') {
-      if (subIndex < lesson.exercises.length - 1) setSubIndex((s) => s + 1);
-      else finishLesson();
+      if (subIndex < exercises.length - 1) {
+        setSubIndex((s) => s + 1);
+      } else if (skipped.length > 0) {
+        const review = lesson.exercises.filter((ex) => skipped.includes(ex.id));
+        setExercises(review);
+        setSkipped([]);
+        setSubIndex(0);
+      } else {
+        finishLesson();
+      }
     }
   };
 
   const finishLesson = () => {
-    const accuracy = lesson.exercises.length > 0 ? score / lesson.exercises.length : 1;
+    const total = lesson.exercises.length || 1;
+    const accuracy = total > 0 ? score / total : 1;
     let stars = 1;
     if (accuracy >= 0.8) stars = 3;
     else if (accuracy >= 0.5) stars = 2;
@@ -148,10 +195,16 @@ export default function LessonScreen() {
     >
       {stage !== 'intro' && stage !== 'summary' && (
         <View style={styles.progressBar}>
+          <View style={styles.progressTop}>
+            <TouchableOpacity onPress={handleHome} style={styles.homeButton}>
+              <Feather name="x" color={colors.mutedForeground} size={24} />
+            </TouchableOpacity>
+            <Text style={[styles.progressText, { color: colors.mutedForeground }]}>
+              {stage === 'vocab' ? t('vocabulary') : stage === 'dialogue' ? t('dialogue') : t('exercises')}
+            </Text>
+            <View style={styles.homeButton} />
+          </View>
           <View style={[styles.progressFill, { width: `${progress}%`, backgroundColor: colors.primary }]} />
-          <Text style={[styles.progressText, { color: colors.mutedForeground }]}>
-            {stage === 'vocab' ? t('vocabulary') : stage === 'dialogue' ? t('dialogue') : t('exercises')}
-          </Text>
         </View>
       )}
 
@@ -203,7 +256,7 @@ export default function LessonScreen() {
 
       {stage === 'exercises' && (
         <ExerciseCard
-          exercise={lesson.exercises[subIndex]}
+          exercise={exercises[subIndex]}
           vocabulary={lesson.vocabulary}
           language={language}
           colors={colors}
@@ -213,10 +266,17 @@ export default function LessonScreen() {
             setFeedback('correct');
             setTimeout(handleNext, 1200);
           }}
-          onWrong={() => setFeedback('wrong')}
+          onWrong={() => {
+            setAttempts((a) => a + 1);
+            setFeedback('wrong');
+          }}
+          onSkip={handleSkip}
+          onRetry={handleRetry}
           feedback={feedback}
           onReset={() => setFeedback(null)}
           onSpeak={speak}
+          attempts={attempts}
+          recorder={recorder}
         />
       )}
 
@@ -312,7 +372,7 @@ function DialogueCard({ lines, index, language, colors, t, onNext, onSpeak }: an
   );
 }
 
-function ExerciseCard({ exercise, vocabulary, language, colors, t, onCorrect, onWrong, feedback, onReset, onSpeak }: any) {
+function ExerciseCard({ exercise, vocabulary, language, colors, t, onCorrect, onWrong, onSkip, onRetry, feedback, onReset, onSpeak, attempts, recorder }: any) {
   const [selected, setSelected] = useState<number | null>(null);
   const [inputValue, setInputValue] = useState('');
   const [matchedA, setMatchedA] = useState<number[]>([]);
@@ -332,6 +392,10 @@ function ExerciseCard({ exercise, vocabulary, language, colors, t, onCorrect, on
     if (exercise.type === 'arrange' && exercise.answer) {
       const words = exercise.answer.split(' ').filter(Boolean);
       setPool(shuffle([...words]));
+    } else if (exercise.type === 'spell' && exercise.answer) {
+      const answer = exercise.answer as string;
+      const letters = Array.from(answer).filter((c: string) => !/\s/.test(c));
+      setPool(shuffle([...letters]));
     } else {
       setPool([]);
     }
@@ -363,6 +427,30 @@ function ExerciseCard({ exercise, vocabulary, language, colors, t, onCorrect, on
     }
   }, [selA, selB, shuffledB]);
 
+  const startRecording = async () => {
+    try {
+      const { status } = await AudioModule.requestRecordingPermissionsAsync();
+      if (status !== 'granted') return;
+      await recorder.prepareToRecordAsync();
+      recorder.record();
+    } catch (err) {
+      console.error('start recording failed', err);
+    }
+  };
+
+  const stopRecording = async () => {
+    try {
+      await recorder.stop();
+      const durationMs = (recorder.duration * 1000) || 0;
+      // Accept any genuine attempt that lasted at least half a second.
+      if (durationMs > 500) onCorrect();
+      else onWrong();
+    } catch (err) {
+      console.error('stop recording failed', err);
+      onWrong();
+    }
+  };
+
   const normalize = (str: string) =>
     str
       .replace(/[\u064B-\u065F]/g, '')
@@ -384,6 +472,14 @@ function ExerciseCard({ exercise, vocabulary, language, colors, t, onCorrect, on
     if (feedback || arranged.length === 0) return;
     const input = normalize(arranged.join(' '));
     const expected = normalize(exercise.answer || '');
+    if (input === expected) onCorrect();
+    else onWrong();
+  };
+
+  const handleSpell = () => {
+    if (feedback || arranged.length === 0) return;
+    const input = arranged.join('');
+    const expected = exercise.answer || '';
     if (input === expected) onCorrect();
     else onWrong();
   };
@@ -411,7 +507,11 @@ function ExerciseCard({ exercise, vocabulary, language, colors, t, onCorrect, on
   const exerciseImageUrl = getExerciseImageUrl(exercise, vocabulary);
 
   return (
-    <ScrollView style={[styles.container, { paddingHorizontal: 16 }]} contentContainerStyle={styles.center}>
+    <ScrollView
+      style={[styles.container, { paddingHorizontal: 16 }]}
+      contentContainerStyle={[styles.center, { flexGrow: 1, paddingBottom: 40 }]}
+      keyboardShouldPersistTaps="handled"
+    >
       <Text style={[styles.prompt, { color: colors.foreground }]}>
         {getLocalizedText(exercise.prompt, language)}
       </Text>
@@ -493,16 +593,20 @@ function ExerciseCard({ exercise, vocabulary, language, colors, t, onCorrect, on
             </TouchableOpacity>
           </View>
           <TouchableOpacity
-            style={[styles.micButton, { backgroundColor: colors.secondary }]}
+            style={[
+              styles.micButton,
+              { backgroundColor: recorder.isRecording ? '#ef4444' : colors.secondary },
+            ]}
             onPress={() => {
-              onSpeak(exercise.arabicText);
-              setTimeout(onCorrect, 1500);
+              if (recorder.isRecording) stopRecording();
+              else startRecording();
             }}
+            disabled={feedback === 'correct'}
           >
-            <Feather name="mic" color={colors.secondaryForeground} size={36} />
+            <Feather name={recorder.isRecording ? 'square' : 'mic'} color="#fff" size={36} />
           </TouchableOpacity>
           <Text style={[styles.hint, { color: colors.mutedForeground }]}>
-            Tap the microphone to practise
+            {recorder.isRecording ? t('recording') : t('tap_mic_to_record')}
           </Text>
         </View>
       )}
@@ -601,11 +705,13 @@ function ExerciseCard({ exercise, vocabulary, language, colors, t, onCorrect, on
         </View>
       )}
 
-      {exercise.type === 'arrange' && (
+      {(exercise.type === 'arrange' || exercise.type === 'spell') && (
         <View style={{ width: '100%', gap: 16 }}>
           <View style={[styles.arrangeSlot, { borderColor: colors.border, backgroundColor: colors.card }]}>
             {arranged.length === 0 ? (
-              <Text style={[styles.arrangeHint, { color: colors.mutedForeground }]}>{t('tap_words')}</Text>
+              <Text style={[styles.arrangeHint, { color: colors.mutedForeground }]}>
+                {exercise.type === 'spell' ? t('tap_letters') : t('tap_words')}
+              </Text>
             ) : (
               arranged.map((word, i) => (
                 <TouchableOpacity
@@ -641,7 +747,7 @@ function ExerciseCard({ exercise, vocabulary, language, colors, t, onCorrect, on
           </View>
           <TouchableOpacity
             style={[styles.button, { backgroundColor: colors.primary }]}
-            onPress={handleArrange}
+            onPress={exercise.type === 'spell' ? handleSpell : handleArrange}
             disabled={feedback === 'correct' || arranged.length === 0}
           >
             <Text style={[styles.buttonText, { color: colors.primaryForeground }]}>{t('check')}</Text>
@@ -670,6 +776,26 @@ function ExerciseCard({ exercise, vocabulary, language, colors, t, onCorrect, on
                   {t('correct_answer')}: {exercise.answer}
                 </Text>
               )}
+              <View style={styles.feedbackActions}>
+                {attempts <= 1 && (
+                  <TouchableOpacity
+                    style={[styles.feedbackButton, { backgroundColor: colors.primary }]}
+                    onPress={onRetry}
+                  >
+                    <Text style={[styles.feedbackButtonText, { color: colors.primaryForeground }]}>
+                      {t('try_again')}
+                    </Text>
+                  </TouchableOpacity>
+                )}
+                <TouchableOpacity
+                  style={[styles.feedbackButton, { backgroundColor: colors.mutedForeground + '30' }]}
+                  onPress={onSkip}
+                >
+                  <Text style={[styles.feedbackButtonText, { color: colors.foreground }]}>
+                    {t('skip')}
+                  </Text>
+                </TouchableOpacity>
+              </View>
             </View>
           )}
         </View>
@@ -716,7 +842,20 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingBottom: 12,
   },
-  progressFill: { height: 8, borderRadius: 4, marginBottom: 8 },
+  progressTop: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 8,
+  },
+  homeButton: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  progressFill: { height: 8, borderRadius: 4 },
   progressText: { fontSize: 14, fontFamily: 'Inter_600SemiBold', textAlign: 'center' },
   introBadge: {
     paddingHorizontal: 28,
@@ -836,6 +975,20 @@ const styles = StyleSheet.create({
   },
   feedbackText: { fontSize: 18, fontFamily: 'Inter_700Bold' },
   correctAnswerText: { fontSize: 16, fontFamily: 'Inter_600SemiBold', marginTop: 6 },
+  feedbackActions: {
+    flexDirection: 'row',
+    gap: 12,
+    marginTop: 12,
+    justifyContent: 'center',
+  },
+  feedbackButton: {
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 20,
+    minWidth: 120,
+    alignItems: 'center',
+  },
+  feedbackButtonText: { fontSize: 16, fontFamily: 'Inter_700Bold' },
   arrangeSlot: {
     width: '100%',
     minHeight: 64,
